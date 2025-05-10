@@ -76,6 +76,7 @@ public class ProductControllerTest {
         client.updateProduct(id, dto);
         Product updatedProduct = client.getProduct(id);
         assertEquals(updatedName, updatedProduct.getName());
+        assertEquals(id, updatedProduct.getId());
     }
 
     @Test
