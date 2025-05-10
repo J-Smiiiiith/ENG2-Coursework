@@ -1,10 +1,8 @@
 package uk.ac.york.eng2.products.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.micronaut.serde.annotation.Serdeable;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 @Serdeable
@@ -18,6 +16,10 @@ public class OrdersByDay {
 
     @Column
     private int count;
+
+    @OneToOne
+    @JsonIgnore
+    private Product product;
 
     public long getId() {
         return id;
