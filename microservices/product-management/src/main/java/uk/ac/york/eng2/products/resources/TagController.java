@@ -35,7 +35,7 @@ public class TagController {
         Tag tag = new Tag();
         tag.setName(dto.getName());
         repo.save(tag);
-        return HttpResponse.created(URI.create("/tags/" + tag.getId()));
+        return HttpResponse.created(URI.create(PREFIX + "/" + tag.getId()));
     }
 
     @Put("/{id}")

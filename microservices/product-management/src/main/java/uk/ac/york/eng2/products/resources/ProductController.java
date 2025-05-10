@@ -35,7 +35,7 @@ public class ProductController {
         product.setName(dto.getName());
         product.setUnitPrice(dto.getUnitPrice());
         repo.save(product);
-        return HttpResponse.created(URI.create("/products/" + product.getId()));
+        return HttpResponse.created(URI.create(PREFIX + "/" + product.getId()));
     }
 
     @Put("/{id}")
