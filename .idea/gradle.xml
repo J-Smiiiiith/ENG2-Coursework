@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/microservices/end2end-tests" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/microservices/end2end-tests" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/microservices/order-management" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/microservices/order-management" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/microservices/product-management" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/microservices/product-management" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
