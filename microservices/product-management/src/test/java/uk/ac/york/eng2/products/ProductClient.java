@@ -22,7 +22,7 @@ public interface ProductClient {
     HttpResponse<Void> createProduct(@Body ProductDTO dto);
 
     @Put("/{id}")
-    void updateProduct(@PathVariable long id, ProductDTO dto);
+    void updateProduct(@PathVariable long id, @Body ProductDTO dto);
 
     @Delete("/{id}")
     void deleteProduct(@PathVariable long id);

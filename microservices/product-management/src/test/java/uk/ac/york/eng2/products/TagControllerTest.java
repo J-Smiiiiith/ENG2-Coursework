@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import uk.ac.york.eng2.products.domain.Tag;
 import uk.ac.york.eng2.products.dto.TagDTO;
+import uk.ac.york.eng2.products.repository.ProductTagRepository;
 import uk.ac.york.eng2.products.repository.TagRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -19,11 +20,15 @@ public class TagControllerTest {
     TagClient client;
 
     @Inject
-    TagRepository repo;
+    TagRepository tagRepo;
+
+    @Inject
+    ProductTagRepository prodTagRepo;
 
     @BeforeEach
     void setup() {
-        repo.deleteAll();
+        prodTagRepo.deleteAll();
+        tagRepo.deleteAll();
     }
 
     @Test
@@ -39,10 +44,8 @@ public class TagControllerTest {
 
     @Test
     public void getTagsTest() {
-        String name = "Test";
-
-        long id1 = createTag(name);
-        long id2 = createTag(name);
+        long id1 = createTag("Test 1");
+        long id2 = createTag("Test 2");
         assertEquals(2, client.getTags().size());
     }
 

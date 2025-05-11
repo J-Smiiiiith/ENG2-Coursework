@@ -1,11 +1,21 @@
 package uk.ac.york.eng2.products.dto;
 
 import io.micronaut.serde.annotation.Serdeable;
+import uk.ac.york.eng2.products.domain.Product;
 
 @Serdeable
 public class OrdersByDayDTO {
     private String day;
-    private int count;
+    private Integer count;
+    private Product product;
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
     public String getDay() {
         return day;
@@ -15,11 +25,11 @@ public class OrdersByDayDTO {
         this.day = day;
     }
 
-    public int getCount() {
+    public Integer getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    public void setCount(Integer count) {
         this.count = count;
     }
 }

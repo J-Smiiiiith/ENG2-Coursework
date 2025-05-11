@@ -1,20 +1,12 @@
-package uk.ac.york.eng2.products.domain;
+package uk.ac.york.eng2.products.dto;
 
 import io.micronaut.serde.annotation.Serdeable;
-import jakarta.persistence.*;
+import uk.ac.york.eng2.products.domain.Product;
+import uk.ac.york.eng2.products.domain.Tag;
 
-@Entity
 @Serdeable
-@IdClass(ProductTagId.class)
-public class ProductTag {
-    @Id
-    @ManyToOne
-    @JoinColumn(name = "products_id")
+public class ProductTagDTO {
     private Product product;
-
-    @Id
-    @ManyToOne
-    @JoinColumn(name = "tags_id")
     private Tag tag;
 
     public Product getProduct() {

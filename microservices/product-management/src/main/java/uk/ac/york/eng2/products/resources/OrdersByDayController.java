@@ -35,6 +35,7 @@ public class OrdersByDayController {
         OrdersByDay ordersByDay = new OrdersByDay();
         ordersByDay.setDay(dto.getDay());
         ordersByDay.setCount(dto.getCount());
+        ordersByDay.setProduct(dto.getProduct());
         repo.save(ordersByDay);
         return HttpResponse.created(URI.create(PREFIX + "/" + ordersByDay.getId()));
     }
@@ -46,8 +47,15 @@ public class OrdersByDayController {
         if (ordersByDay == null) {
             throw new HttpStatusException(HttpStatus.NOT_FOUND, "OrdersByDay not found");
         } else {
-            ordersByDay.setDay(dto.getDay());
-            ordersByDay.setCount(dto.getCount());
+            if (dto.getDay() != null) {
+                ordersByDay.setDay(dto.getDay());
+            }
+            if (dto.getCount() != null) {
+                ordersByDay.setCount(dto.getCount());
+            }
+            if (dto.getProduct() != null) {
+                ordersByDay.setProduct(dto.getProduct());
+            }
             repo.save(ordersByDay);
         }
     }
