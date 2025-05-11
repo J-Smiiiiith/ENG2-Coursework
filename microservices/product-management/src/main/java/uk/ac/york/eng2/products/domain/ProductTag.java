@@ -1,33 +1,21 @@
 package uk.ac.york.eng2.products.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.*;
 
-import java.util.Set;
-
 @Entity
 @Serdeable
+@IdClass(ProductTagId.class)
 public class ProductTag {
     @Id
-    @GeneratedValue
-    private long id;
-
     @ManyToOne
-    @JsonIgnore
+    @JoinColumn(name = "products_id")
     private Product product;
 
-    @OneToMany
-    @JsonIgnore
-    private Set<Tag> tags;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "tags_id")
+    private Tag tag;
 
     public Product getProduct() {
         return product;
@@ -37,11 +25,11 @@ public class ProductTag {
         this.product = product;
     }
 
-    public Set<Tag> getTags() {
-        return tags;
+    public Tag getTag() {
+        return tag;
     }
 
-    public void setTags(Set<Tag> tags) {
-        this.tags = tags;
+    public void setTag(Tag tag) {
+        this.tag = tag;
     }
 }

@@ -1,25 +1,27 @@
 package uk.ac.york.eng2.products.dto;
 
 import io.micronaut.serde.annotation.Serdeable;
+import uk.ac.york.eng2.products.domain.Product;
+import uk.ac.york.eng2.products.domain.Tag;
 
 @Serdeable
 public class ProductTagDTO {
-    private Long productId;
-    private Long tagId;
+    private Product product;
+    private Tag tag;
 
-    public Long getProductId() {
-        return productId;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
-    public Long getTagId() {
-        return tagId;
+    public Tag getTag() {
+        return tag;
     }
 
-    public void setTagId(long tagId) {
-        this.tagId = tagId;
+    public void setTag(Tag tag) {
+        this.tag = tag;
     }
 }
