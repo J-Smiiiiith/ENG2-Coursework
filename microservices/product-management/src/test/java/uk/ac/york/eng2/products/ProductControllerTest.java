@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import uk.ac.york.eng2.products.domain.Product;
 import uk.ac.york.eng2.products.dto.ProductDTO;
 import uk.ac.york.eng2.products.repository.ProductRepository;
+import uk.ac.york.eng2.products.repository.ProductTagRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -19,11 +20,15 @@ public class ProductControllerTest {
     ProductClient client;
 
     @Inject
-    ProductRepository repo;
+    ProductRepository prodRepo;
+
+    @Inject
+    ProductTagRepository prodTagRepo;
 
     @BeforeEach
     void setup() {
-        repo.deleteAll();
+        prodTagRepo.deleteAll();
+        prodRepo.deleteAll();
     }
 
     @Test
@@ -92,8 +97,10 @@ public class ProductControllerTest {
         ProductDTO dto = new ProductDTO();
         dto.setUnitPrice(updatedPrice);
         client.updateProduct(id, dto);
+
         Product updatedProduct = client.getProduct(id);
         assertEquals(updatedPrice, updatedProduct.getUnitPrice());
+        assertEquals(id, updatedProduct.getId());
     }
 
     @Test

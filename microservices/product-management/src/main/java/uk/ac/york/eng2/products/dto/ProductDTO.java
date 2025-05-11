@@ -5,7 +5,7 @@ import io.micronaut.serde.annotation.Serdeable;
 @Serdeable
 public class ProductDTO {
     private String name;
-    private float unitPrice;
+    private Float unitPrice;
 
     public String getName() {
         return name;
@@ -15,11 +15,11 @@ public class ProductDTO {
         this.name = name;
     }
 
-    public float getUnitPrice() {
+    public Float getUnitPrice() {
         return unitPrice;
     }
 
-    public void setUnitPrice(float unitPrice) {
+    public void setUnitPrice(Float unitPrice) {
         this.unitPrice = unitPrice;
     }
 }

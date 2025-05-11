@@ -55,8 +55,12 @@ public class ProductController {
             throw new HttpStatusException(HttpStatus.NOT_FOUND, "Product not found");
         }
         else {
-            product.setName(dto.getName());
-            product.setUnitPrice(dto.getUnitPrice());
+            if (dto.getName() != null) {
+                product.setName(dto.getName());
+            }
+            if (dto.getUnitPrice() != null) {
+                product.setUnitPrice(dto.getUnitPrice());
+            }
             prodRepo.save(product);
         }
     }

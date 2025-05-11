@@ -7,8 +7,10 @@ import jakarta.inject.Inject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import uk.ac.york.eng2.products.domain.OrdersByDay;
+import uk.ac.york.eng2.products.domain.Product;
 import uk.ac.york.eng2.products.dto.OrdersByDayDTO;
 import uk.ac.york.eng2.products.repository.OrdersByDayRepository;
+import uk.ac.york.eng2.products.repository.ProductRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -19,11 +21,14 @@ public class OrdersByDayControllerTest {
     OrdersByDayClient client;
 
     @Inject
-    OrdersByDayRepository repo;
+    OrdersByDayRepository OrdersRepo;
+
+    @Inject
+    ProductRepository prodRepo;
 
     @BeforeEach
     void setup() {
-        repo.deleteAll();
+        OrdersRepo.deleteAll();
     }
 
     @Test
@@ -33,26 +38,39 @@ public class OrdersByDayControllerTest {
 
     @Test
     public void createOrdersByDayTest() {
-        long id = createOrdersByDay("2023-10-01", 5);
+        Product product = new Product();
+        product.setName("Test Product");
+        product.setUnitPrice(1.99f);
+        prodRepo.save(product);
+        long id = createOrdersByDay("2023-10-01", 5, product);
         assertEquals(1, client.getOrdersByDay().size());
     }
 
     @Test
     public void getAllOrdersByDayTest() {
-        String day = "2023-10-01";
+        Product product = new Product();
+        product.setName("Test Product");
+        product.setUnitPrice(1.99f);
+        prodRepo.save(product);
+        String day1 = "2023-10-01";
+        String day2 = "2023-10-02";
         int count = 5;
 
-        long id1 = createOrdersByDay(day, count);
-        long id2 = createOrdersByDay(day, count);
+        long id1 = createOrdersByDay(day1, count, product);
+        long id2 = createOrdersByDay(day2, count, product);
         assertEquals(2, client.getOrdersByDay().size());
     }
 
     @Test
     public void getOrdersByDayTest() {
+        Product product = new Product();
+        product.setName("Test Product");
+        product.setUnitPrice(1.99f);
+        prodRepo.save(product);
         String day = "2023-10-01";
         int count = 5;
 
-        long id = createOrdersByDay(day, count);
+        long id = createOrdersByDay(day, count, product);
         OrdersByDay createdOrder = client.getOrdersByDay(id);
 
         assertNotNull(createdOrder);
@@ -63,11 +81,15 @@ public class OrdersByDayControllerTest {
 
     @Test
     public void updateOrdersByDayDayTest() {
+        Product product = new Product();
+        product.setName("Test Product");
+        product.setUnitPrice(1.99f);
+        prodRepo.save(product);
         String day = "2023-10-01";
         String updatedDay = "2023-10-02";
         int count = 5;
 
-        long id = createOrdersByDay(day, count);
+        long id = createOrdersByDay(day, count, product);
         OrdersByDay createdOrder = client.getOrdersByDay(id);
         assertEquals(day, createdOrder.getDay());
 
@@ -82,11 +104,15 @@ public class OrdersByDayControllerTest {
 
     @Test
     public void updateOrdersByDayCountTest() {
+        Product product = new Product();
+        product.setName("Test Product");
+        product.setUnitPrice(1.99f);
+        prodRepo.save(product);
         String day = "2023-10-01";
         int count = 5;
         int updatedCount = 10;
 
-        long id = createOrdersByDay(day, count);
+        long id = createOrdersByDay(day, count, product);
         OrdersByDay createdOrder = client.getOrdersByDay(id);
         assertEquals(count, createdOrder.getCount());
 
@@ -101,20 +127,25 @@ public class OrdersByDayControllerTest {
 
     @Test
     public void deleteOrdersByDayTest() {
+        Product product = new Product();
+        product.setName("Test Product");
+        product.setUnitPrice(1.99f);
+        prodRepo.save(product);
         String day = "2023-10-01";
         int count = 5;
 
-        long id = createOrdersByDay(day, count);
+        long id = createOrdersByDay(day, count, product);
         assertEquals(1, client.getOrdersByDay().size());
 
         client.deleteOrdersByDay(id);
         assertEquals(0, client.getOrdersByDay().size());
     }
 
-    private long createOrdersByDay(String day, int count) {
+    private long createOrdersByDay(String day, int count, Product product) {
         OrdersByDayDTO dto = new OrdersByDayDTO();
         dto.setDay(day);
         dto.setCount(count);
+        dto.setProduct(product);
         HttpResponse<Void> res = client.createOrdersByDay(dto);
         return Long.parseLong(res.header(HttpHeaders.LOCATION).split("/")[2]);
     }
