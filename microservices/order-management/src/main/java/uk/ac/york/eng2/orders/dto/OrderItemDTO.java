@@ -1,10 +1,12 @@
 package uk.ac.york.eng2.orders.dto;
 
 import io.micronaut.serde.annotation.Serdeable;
+import uk.ac.york.eng2.orders.domain.Orders;
 
 @Serdeable
 public class OrderItemDTO {
     private long productId;
+    private Orders orderId;
     private int quantity;
     private float unitPrice;
 
@@ -30,5 +32,13 @@ public class OrderItemDTO {
 
     public void setUnitPrice(float unitPrice) {
         this.unitPrice = unitPrice;
+    }
+
+    public Orders getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Orders orderId) {
+        this.orderId = orderId;
     }
 }
