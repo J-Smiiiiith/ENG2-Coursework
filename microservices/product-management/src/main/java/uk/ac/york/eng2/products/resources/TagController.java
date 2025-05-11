@@ -13,6 +13,7 @@ import uk.ac.york.eng2.products.repository.TagRepository;
 import java.net.URI;
 import java.util.List;
 
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Tags")
 @Controller(TagController.PREFIX)
 public class TagController {
     public static final String PREFIX = "/tags";

@@ -5,6 +5,7 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.transaction.annotation.Transactional;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import uk.ac.york.eng2.products.domain.OrdersByDay;
 import uk.ac.york.eng2.products.dto.OrdersByDayDTO;
@@ -13,6 +14,7 @@ import uk.ac.york.eng2.products.repository.OrdersByDayRepository;
 import java.net.URI;
 import java.util.List;
 
+@Tag(name = "Orders By Day")
 @Controller(OrdersByDayController.PREFIX)
 public class OrdersByDayController {
     public static final String PREFIX = "/orders-by-day";

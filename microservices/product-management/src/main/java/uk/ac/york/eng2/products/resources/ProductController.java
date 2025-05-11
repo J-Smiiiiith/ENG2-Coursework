@@ -7,20 +7,14 @@ import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.transaction.annotation.Transactional;
 import jakarta.inject.Inject;
 import uk.ac.york.eng2.products.domain.Product;
-import uk.ac.york.eng2.products.domain.ProductTag;
-import uk.ac.york.eng2.products.domain.Tag;
 import uk.ac.york.eng2.products.dto.ProductDTO;
-import uk.ac.york.eng2.products.dto.ProductTagDTO;
 import uk.ac.york.eng2.products.repository.ProductRepository;
-import uk.ac.york.eng2.products.repository.ProductTagRepository;
-import uk.ac.york.eng2.products.repository.TagRepository;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.net.URI;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.Set;
 
+@Tag(name = "Products")
 @Controller(ProductController.PREFIX)
 public class ProductController {
     public static final String PREFIX = "/products";
