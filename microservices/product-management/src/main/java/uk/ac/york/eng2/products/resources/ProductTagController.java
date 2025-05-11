@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Product Tags")
 @Controller(ProductTagController.PREFIX)
 public class ProductTagController {
     public static final String PREFIX = "/product-tags";
