@@ -1,11 +1,10 @@
-package uk.ac.york.eng2.orders;
+package uk.ac.york.eng2.orders.resources;
 
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.*;
 import io.micronaut.http.client.annotation.Client;
 import uk.ac.york.eng2.orders.domain.Customer;
 import uk.ac.york.eng2.orders.dto.CustomerDTO;
-import uk.ac.york.eng2.orders.resources.CustomerController;
 
 import java.util.List;
 
