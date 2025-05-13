@@ -12,6 +12,7 @@ import java.util.Map;
 public interface ProductManagementClientApi {
 
     @Post("/products/validate")
+    Map<String, Map<Long, Integer>> checkProductsValidity(@Body Map<Long, Integer> products);
 
     @Post("/products/total_price")
     float getProductsPrice(@Body Map<Long, Integer> products);
