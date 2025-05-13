@@ -11,8 +11,10 @@ import uk.ac.york.eng2.products.dto.ProductDTO;
 import uk.ac.york.eng2.products.repository.ProductRepository;
 import uk.ac.york.eng2.products.repository.ProductTagRepository;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @MicronautTest(transactional = false)
 public class ProductControllerTest {
@@ -113,6 +115,47 @@ public class ProductControllerTest {
 
         client.deleteProduct(id);
         assertEquals(0, client.getProducts().size());
+    }
+
+    @Test
+    public void checkProductsValidityTest() {
+        String name = "Test";
+        float unitPrice = 10.50f;
+
+        long id1 = createProduct(name, unitPrice);
+        long id2 = createProduct(name, unitPrice);
+
+        Map<Long, Integer> products = new HashMap<>();
+        products.put(id1, 2); // Valid product ID
+        products.put(id2, 3); // Valid product ID
+        products.put(999L, 1); // Invalid product ID
+        products.put(1000L, 1); // Invalid product ID
+        Map<String, Map<Long, Integer>> response = client.checkProductsValidity(products);
+
+        Map<Long, Integer> validProducts = response.get("Valid Products");
+        Map<Long, Integer> invalidProducts = response.get("Invalid Products");
+        assertEquals(2, validProducts.size());
+        assertTrue(validProducts.containsKey(id1));
+        assertTrue(validProducts.containsKey(id2));
+        assertEquals(2, invalidProducts.size());
+        assertTrue(invalidProducts.containsKey(999L));
+        assertTrue(invalidProducts.containsKey(1000L));
+    }
+
+    @Test
+    public void getProductsPriceTest() {
+        String name = "Test";
+        float unitPrice = 10.50f;
+
+        long id1 = createProduct(name, unitPrice);
+        long id2 = createProduct(name, unitPrice);
+
+        Map<Long, Integer> products = new HashMap<>();
+        products.put(id1, 2);
+        products.put(id2, 3);
+
+        float totalPrice = client.getProductsPrice(products);
+        assertEquals(2 * unitPrice + 3 * unitPrice, totalPrice);
     }
 
     private long createProduct(String name, float unitPrice) {

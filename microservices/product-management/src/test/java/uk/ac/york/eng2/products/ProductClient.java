@@ -8,6 +8,7 @@ import uk.ac.york.eng2.products.dto.ProductDTO;
 import uk.ac.york.eng2.products.resources.ProductController;
 
 import java.util.List;
+import java.util.Map;
 
 @Client(ProductController.PREFIX)
 public interface ProductClient {
@@ -20,6 +21,12 @@ public interface ProductClient {
 
     @Post
     HttpResponse<Void> createProduct(@Body ProductDTO dto);
+
+    @Post("/products/validate")
+    Map<String, Map<Long, Integer>> checkProductsValidity(@Body Map<Long, Integer> products);
+
+    @Post("/products/total_price")
+    float getProductsPrice(@Body Map<Long, Integer> products);
 
     @Put("/{id}")
     void updateProduct(@PathVariable long id, @Body ProductDTO dto);

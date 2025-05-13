@@ -64,6 +64,7 @@ public class OrdersController {
         ordersRepo.save(order);
 
         Map<Long, Integer> products = dto.getProducts();
+        // send to product management to check validity
         for (Long productId : products.keySet()) {
             OrderItem item = new OrderItem();
             item.setProductId(productId);
