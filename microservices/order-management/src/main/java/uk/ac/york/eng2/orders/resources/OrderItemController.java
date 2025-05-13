@@ -29,7 +29,6 @@ public class OrderItemController {
 
     @Post
     public HttpResponse<Void> createOrderItem(@Body OrderItemDTO dto) {
-        // get product from client and check its validity
         OrderItem orderItem = new OrderItem();
         orderItem.setProductId(dto.getProductId());
         orderItem.setQuantity(dto.getQuantity());

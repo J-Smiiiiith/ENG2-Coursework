@@ -12,7 +12,7 @@ import uk.ac.york.eng2.products.repository.ProductRepository;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.net.URI;
-import java.util.List;
+import java.util.*;
 
 @Tag(name = "Products")
 @Controller(ProductController.PREFIX)
@@ -39,6 +39,39 @@ public class ProductController {
         product.setUnitPrice(dto.getUnitPrice());
         prodRepo.save(product);
         return HttpResponse.created(URI.create(PREFIX + "/" + product.getId()));
+    }
+
+    @Post("/products/validate")
+    @Transactional
+    public Map<String, Map<Long, Integer>> checkProductsValidity(@Body Map<Long, Integer> products) {
+        List<Long> productIds = List.copyOf(products.keySet());
+        Map<Long, Integer> invalidProductIds = new HashMap<>();
+        Map<String, Map<Long, Integer>> response = new HashMap<>();
+
+        for (Long productId : productIds) {
+            Product product = prodRepo.findById(productId).orElse(null);
+            if (product == null) {
+                invalidProductIds.put(productId, products.get(productId));
+                products.remove(productId);
+            }
+        }
+        response.put("Products", products);
+        response.put("Invalid Products", invalidProductIds);
+        return response;
+    }
+
+    @Post("/products/total_price")
+    @Transactional
+    public float getProductsPrice(@Body Map<Long, Integer> products) {
+        float totalPrice = 0;
+        List<Long> productIds = List.copyOf(products.keySet());
+        for (Long productId : productIds) {
+            Product product = prodRepo.findById(productId).orElse(null);
+            if (product != null) {
+                totalPrice += product.getUnitPrice() * products.get(productId);
+            }
+        }
+        return totalPrice;
     }
 
     @Put("/{id}")
