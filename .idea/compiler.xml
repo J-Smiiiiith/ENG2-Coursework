@@ -4,10 +4,10 @@
     <annotationProcessing>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
-        <option name="micronaut.processing.annotations" value="uk.ac.york.eng2.products.*" />
+        <option name="micronaut.processing.annotations" value="uk.ac.york.eng2.orders.*" />
         <option name="micronaut.processing.group" value="uk.ac.york.cs.eng2.products" />
         <option name="micronaut.processing.incremental" value="true" />
-        <option name="micronaut.processing.module" value="product-management" />
+        <option name="micronaut.processing.module" value="order-management" />
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut.data/micronaut-data-processor/4.9.4/be5efa55c4083deeff94ac90f73f93e9740e5e80/micronaut-data-processor-4.9.4.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut.openapi/micronaut-openapi/6.12.3/3d2219399ee9d8e92ed4286fabb8960bd4c97358/micronaut-openapi-6.12.3.jar" />
@@ -80,14 +80,14 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.vladsch.flexmark/flexmark-util-visitor/0.64.8/a8178ba6dfd7a958353a60b3a51fe7edb1578b49/flexmark-util-visitor-0.64.8.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.javaparser/javaparser-core/3.26.2/795eca30f20fdc110d1a02a1f0e7ad207e17e7c1/javaparser-core-3.26.2.jar" />
         </processorPath>
-        <module name="product-management.main" />
+        <module name="order-management.main" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
-        <option name="micronaut.processing.annotations" value="uk.ac.york.eng2.products.*" />
+        <option name="micronaut.processing.annotations" value="uk.ac.york.eng2.orders.*" />
         <option name="micronaut.processing.group" value="uk.ac.york.cs.eng2.products" />
         <option name="micronaut.processing.incremental" value="true" />
-        <option name="micronaut.processing.module" value="product-management" />
+        <option name="micronaut.processing.module" value="order-management" />
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut.data/micronaut-data-processor/4.9.4/be5efa55c4083deeff94ac90f73f93e9740e5e80/micronaut-data-processor-4.9.4.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut.openapi/micronaut-openapi/6.12.3/3d2219399ee9d8e92ed4286fabb8960bd4c97358/micronaut-openapi-6.12.3.jar" />
@@ -154,7 +154,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.vladsch.flexmark/flexmark-util-visitor/0.64.8/a8178ba6dfd7a958353a60b3a51fe7edb1578b49/flexmark-util-visitor-0.64.8.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.javaparser/javaparser-core/3.26.2/795eca30f20fdc110d1a02a1f0e7ad207e17e7c1/javaparser-core-3.26.2.jar" />
         </processorPath>
-        <module name="product-management.test" />
+        <module name="order-management.test" />
       </profile>
     </annotationProcessing>
   </component>
