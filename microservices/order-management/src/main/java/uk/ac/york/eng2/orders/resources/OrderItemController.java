@@ -1,10 +1,7 @@
 package uk.ac.york.eng2.orders.resources;
 
 import io.micronaut.http.HttpResponse;
-import io.micronaut.http.annotation.Body;
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Get;
-import io.micronaut.http.annotation.Post;
+import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import uk.ac.york.eng2.orders.domain.OrderItem;
 import uk.ac.york.eng2.orders.dto.OrderItemDTO;
@@ -26,7 +23,7 @@ public class OrderItemController {
     }
 
     @Get("/{id}")
-    public OrderItem getOrderItem(Long id) {
+    public OrderItem getOrderItem(@PathVariable Long id) {
         return orderItemRepo.findById(id).orElse(null);
     }
 
