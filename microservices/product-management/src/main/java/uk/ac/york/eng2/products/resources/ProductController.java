@@ -55,7 +55,7 @@ public class ProductController {
                 products.remove(productId);
             }
         }
-        response.put("Products", products);
+        response.put("Valid Products", products);
         response.put("Invalid Products", invalidProductIds);
         return response;
     }
