@@ -12,6 +12,9 @@ public class Orders {
     private long id;
 
     @Column
+    private String dateCreated;
+
+    @Column
     private String address;
 
     @Column
@@ -24,11 +27,19 @@ public class Orders {
     private float totalAmount;
 
     @ManyToOne
-    @JsonIgnore
-    private Customer customerId;
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 
     public long getId() {
         return id;
+    }
+
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
     }
 
     public void setId(long id) {
@@ -67,11 +78,11 @@ public class Orders {
         this.totalAmount = totalAmount;
     }
 
-    public Customer getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustomerId(Customer customerId) {
-        this.customerId = customerId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }

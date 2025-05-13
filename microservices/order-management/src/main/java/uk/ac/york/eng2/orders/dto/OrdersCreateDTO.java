@@ -2,11 +2,12 @@ package uk.ac.york.eng2.orders.dto;
 
 import io.micronaut.serde.annotation.Serdeable;
 
+import java.util.Map;
+
 @Serdeable
-public class OrdersDTO {
+public class OrdersCreateDTO {
     private String address;
-    private boolean paid;
-    private boolean delivered;
+    private Map<Long, Integer> products;
     private long customerId;
 
     public String getAddress() {
@@ -17,20 +18,12 @@ public class OrdersDTO {
         this.address = address;
     }
 
-    public boolean isPaid() {
-        return paid;
+    public Map<Long, Integer> getProducts() {
+        return products;
     }
 
-    public void setPaid(boolean paid) {
-        this.paid = paid;
-    }
-
-    public boolean isDelivered() {
-        return delivered;
-    }
-
-    public void setDelivered(boolean delivered) {
-        this.delivered = delivered;
+    public void setProducts(Map<Long, Integer> products) {
+        this.products = products;
     }
 
     public long getCustomerId() {

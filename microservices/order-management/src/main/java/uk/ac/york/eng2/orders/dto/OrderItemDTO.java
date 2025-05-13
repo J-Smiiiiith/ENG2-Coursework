@@ -8,7 +8,6 @@ public class OrderItemDTO {
     private long productId;
     private Orders orderId;
     private int quantity;
-    private float unitPrice;
 
     public long getProductId() {
         return productId;
@@ -24,14 +23,6 @@ public class OrderItemDTO {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public float getUnitPrice() {
-        return unitPrice;
-    }
-
-    public void setUnitPrice(float unitPrice) {
-        this.unitPrice = unitPrice;
     }
 
     public Orders getOrderId() {
