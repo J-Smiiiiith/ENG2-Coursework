@@ -5,9 +5,9 @@ import io.micronaut.serde.annotation.Serdeable;
 @Serdeable
 public class OrdersDTO {
     private String address;
-    private Boolean paid;
-    private Boolean delivered;
-    private Long customerId;
+    private boolean paid;
+    private boolean delivered;
+    private long customerId;
 
     public String getAddress() {
         return address;
@@ -17,7 +17,7 @@ public class OrdersDTO {
         this.address = address;
     }
 
-    public Boolean isPaid() {
+    public boolean isPaid() {
         return paid;
     }
 
@@ -25,7 +25,7 @@ public class OrdersDTO {
         this.paid = paid;
     }
 
-    public Boolean isDelivered() {
+    public boolean isDelivered() {
         return delivered;
     }
 
@@ -33,11 +33,11 @@ public class OrdersDTO {
         this.delivered = delivered;
     }
 
-    public Long getCustomerId() {
+    public long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(Long customerId) {
+    public void setCustomerId(long customerId) {
         this.customerId = customerId;
     }
 }

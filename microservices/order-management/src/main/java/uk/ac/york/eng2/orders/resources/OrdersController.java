@@ -10,8 +10,7 @@ import jakarta.inject.Inject;
 import uk.ac.york.eng2.orders.domain.Customer;
 import uk.ac.york.eng2.orders.domain.OrderItem;
 import uk.ac.york.eng2.orders.domain.Orders;
-import uk.ac.york.eng2.orders.dto.OrderCreateDTO;
-import uk.ac.york.eng2.orders.dto.OrderItemDTO;
+import uk.ac.york.eng2.orders.dto.OrdersCreateDTO;
 import uk.ac.york.eng2.orders.dto.OrdersDTO;
 import uk.ac.york.eng2.orders.repository.CustomerRepository;
 import uk.ac.york.eng2.orders.repository.OrderItemRepository;
@@ -48,7 +47,7 @@ public class OrdersController {
 
     @Post
     @Transactional
-    public HttpResponse<Void> createOrders(@Body OrderCreateDTO dto) {
+    public HttpResponse<Void> createOrders(@Body OrdersCreateDTO dto) {
         Orders order = new Orders();
         order.setDateCreated(LocalDate.now().toString());
         order.setAddress(dto.getAddress());
@@ -78,34 +77,29 @@ public class OrdersController {
     }
 
     @Put("/{id}")
+    @Transactional
     public void updateOrders(@PathVariable long id, @Body OrdersDTO dto) {
         Orders order = ordersRepo.findById(id).orElse(null);
         if (order == null) {
             throw new HttpStatusException(HttpStatus.NOT_FOUND, "Orders not found");
         } else {
-            if (dto.getAddress() != null) {
-                order.setAddress(dto.getAddress());
+            Customer customer = customerRepo.findById(dto.getCustomerId()).orElse(null);
+            if (customer == null) {
+                throw new HttpStatusException(HttpStatus.NOT_FOUND, "Customer not found");
             }
-            if (dto.isPaid() != null) {
-                order.setPaid(dto.isPaid());
+            else {
+                order.setCustomer(customer);
             }
-            if (dto.isDelivered() != null) {
-                order.setDelivered(dto.isDelivered());
-            }
-            if (dto.getCustomerId() != null) {
-                Customer customer = customerRepo.findById(dto.getCustomerId()).orElse(null);
-                if (customer == null) {
-                    throw new HttpStatusException(HttpStatus.NOT_FOUND, "Customer not found");
-                }
-                else {
-                    order.setCustomer(customer);
-                }
-            }
-            ordersRepo.update(order);
+            order.setAddress(dto.getAddress());
+            order.setPaid(dto.isPaid());
+            order.setDelivered(dto.isDelivered());
+            order.setCustomer(customer);
+            ordersRepo.save(order);
         }
     }
 
     @Delete("/{id}")
+    @Transactional
     public void deleteOrders(@PathVariable long id) {
         Orders order = ordersRepo.findById(id).orElse(null);
         if (order == null) {

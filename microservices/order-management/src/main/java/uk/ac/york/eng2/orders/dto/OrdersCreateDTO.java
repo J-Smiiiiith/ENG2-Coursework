@@ -1,12 +1,11 @@
 package uk.ac.york.eng2.orders.dto;
 
 import io.micronaut.serde.annotation.Serdeable;
-import uk.ac.york.eng2.orders.domain.Customer;
 
 import java.util.Map;
 
 @Serdeable
-public class OrderCreateDTO {
+public class OrdersCreateDTO {
     private String address;
     private Map<Long, Integer> products;
     private long customerId;

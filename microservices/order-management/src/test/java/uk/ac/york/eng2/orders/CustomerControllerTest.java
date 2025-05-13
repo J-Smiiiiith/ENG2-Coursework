@@ -39,18 +39,6 @@ public class CustomerControllerTest {
     }
 
     @Test
-    public void getCustomersTest() {
-        String fName = "firstName";
-        String lName = "familyName";
-        String email1 = "example1@email.com";
-        String email2 = "example2@email.com";
-
-        long id1 = createCustomer(email1, fName, lName);
-        long id2 = createCustomer(email2, fName, lName);
-        assertEquals(2, client.getCustomers().size());
-    }
-
-    @Test
     public void getCustomerTest() {
         String fName = "firstName";
         String lName = "familyName";
@@ -64,6 +52,18 @@ public class CustomerControllerTest {
         assertEquals(lName, createdCustomer.getFamilyName());
         assertEquals(email, createdCustomer.getEmail());
         assertEquals(id, createdCustomer.getId());
+    }
+
+    @Test
+    public void getCustomersTest() {
+        String fName = "firstName";
+        String lName = "familyName";
+        String email1 = "example1@email.com";
+        String email2 = "example2@email.com";
+
+        long id1 = createCustomer(email1, fName, lName);
+        long id2 = createCustomer(email2, fName, lName);
+        assertEquals(2, client.getCustomers().size());
     }
 
     @Test
