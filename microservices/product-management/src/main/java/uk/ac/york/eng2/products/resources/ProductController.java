@@ -41,7 +41,7 @@ public class ProductController {
         return HttpResponse.created(URI.create(PREFIX + "/" + product.getId()));
     }
 
-    @Post("/products/validate")
+    @Post("/validate")
     @Transactional
     public Map<String, Map<Long, Integer>> checkProductsValidity(@Body Map<Long, Integer> products) {
         List<Long> productIds = List.copyOf(products.keySet());
@@ -60,7 +60,7 @@ public class ProductController {
         return response;
     }
 
-    @Post("/products/total_price")
+    @Post("/total_price")
     @Transactional
     public float getProductsPrice(@Body Map<Long, Integer> products) {
         float totalPrice = 0;

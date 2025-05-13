@@ -4,6 +4,8 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import io.micronaut.http.exceptions.HttpStatusException;
+import io.micronaut.scheduling.TaskExecutors;
+import io.micronaut.scheduling.annotation.ExecuteOn;
 import io.micronaut.transaction.annotation.Transactional;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
@@ -12,6 +14,7 @@ import uk.ac.york.eng2.orders.domain.OrderItem;
 import uk.ac.york.eng2.orders.domain.Orders;
 import uk.ac.york.eng2.orders.dto.OrdersCreateDTO;
 import uk.ac.york.eng2.orders.dto.OrdersDTO;
+import uk.ac.york.eng2.orders.gateways.ProductManagementGateway;
 import uk.ac.york.eng2.orders.repository.CustomerRepository;
 import uk.ac.york.eng2.orders.repository.OrderItemRepository;
 import uk.ac.york.eng2.orders.repository.OrdersRepository;
@@ -35,6 +38,9 @@ public class OrdersController {
     @Inject
     CustomerRepository customerRepo;
 
+    @Inject
+    ProductManagementGateway productManagementGateway;
+
     @Get
     public List<Orders> getOrders() {
         return ordersRepo.findAll();
@@ -47,6 +53,7 @@ public class OrdersController {
 
     @Post
     @Transactional
+    @ExecuteOn(TaskExecutors.BLOCKING)
     public HttpResponse<Void> createOrders(@Body OrdersCreateDTO dto) {
         Orders order = new Orders();
         order.setDateCreated(LocalDate.now().toString());
@@ -64,8 +71,9 @@ public class OrdersController {
         ordersRepo.save(order);
 
         Map<Long, Integer> products = dto.getProducts();
-        // send to product management to check validity
-        for (Long productId : products.keySet()) {
+        Map<String, Map<Long, Integer>> validInvalidProducts = productManagementGateway.checkProductsValidity(products);
+        Map<Long, Integer> validProducts = validInvalidProducts.get("Valid Products");
+        for (Long productId : validProducts.keySet()) {
             OrderItem item = new OrderItem();
             item.setProductId(productId);
             item.setQuantity(products.get(productId));
@@ -73,7 +81,8 @@ public class OrdersController {
             orderItemRepo.save(item);
         }
         order.setTotalAmount(0);
-        // set to 0 for now, use product client to get price
+        order.setTotalAmount(productManagementGateway.getProductsPrice(validProducts));
+        ordersRepo.save(order);
         return HttpResponse.created(URI.create(PREFIX + "/" + order.getId()));
     }
 
