@@ -36,7 +36,7 @@ public class OrderItemController {
         OrderItem orderItem = new OrderItem();
         orderItem.setProductId(dto.getProductId());
         orderItem.setQuantity(dto.getQuantity());
-        orderItem.setOrderId(dto.getOrderId());
+        orderItem.setOrder(dto.getOrderId());
         orderItem.setUnitPrice(0); //temp - will be taken from product client
         orderItemRepo.save(orderItem);
         return HttpResponse.created(URI.create(PREFIX + "/" + orderItem.getId()));

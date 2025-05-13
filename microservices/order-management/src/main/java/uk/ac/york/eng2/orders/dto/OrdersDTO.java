@@ -1,13 +1,13 @@
 package uk.ac.york.eng2.orders.dto;
 
-import uk.ac.york.eng2.orders.domain.Customer;
+import io.micronaut.serde.annotation.Serdeable;
 
+@Serdeable
 public class OrdersDTO {
     private String address;
-    private boolean paid;
-    private boolean delivered;
-    private float totalAmount;
-    private Customer customerId;
+    private Boolean paid;
+    private Boolean delivered;
+    private Long customerId;
 
     public String getAddress() {
         return address;
@@ -17,7 +17,7 @@ public class OrdersDTO {
         this.address = address;
     }
 
-    public boolean isPaid() {
+    public Boolean isPaid() {
         return paid;
     }
 
@@ -25,7 +25,7 @@ public class OrdersDTO {
         this.paid = paid;
     }
 
-    public boolean isDelivered() {
+    public Boolean isDelivered() {
         return delivered;
     }
 
@@ -33,19 +33,11 @@ public class OrdersDTO {
         this.delivered = delivered;
     }
 
-    public float getTotalAmount() {
-        return totalAmount;
-    }
-
-    public void setTotalAmount(float totalAmount) {
-        this.totalAmount = totalAmount;
-    }
-
-    public Customer getCustomerId() {
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(Customer customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 }
