@@ -24,6 +24,7 @@ import uk.ac.york.eng2.orders.repository.OrdersRepository;
 
 import java.net.URI;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -80,17 +81,24 @@ public class OrdersController {
         Map<Long, Integer> products = dto.getProducts();
         Map<String, Map<Long, Integer>> validInvalidProducts = productManagementGateway.checkProductsValidity(products);
         Map<Long, Integer> validProducts = validInvalidProducts.get("Valid Products");
+
+        List<ProductDayQuantity> productDayQuantities = new ArrayList<>();
+
         for (Long productId : validProducts.keySet()) {
             OrderItem item = new OrderItem();
             item.setProductId(productId);
-            item.setQuantity(products.get(productId));
+            int quantity = products.get(productId);
+            item.setQuantity(quantity);
             item.setOrder(order);
             orderItemRepo.save(item);
-            producer.orderPlaced(order.getId(), new ProductDayQuantity(item.getProductId(), order.getDateCreated(),
-                    item.getQuantity()));
+            productDayQuantities.add(new ProductDayQuantity(item.getProductId(), order.getDateCreated(), quantity));
         }
         order.setTotalAmount(productManagementGateway.getProductsPrice(validProducts));
         ordersRepo.save(order);
+
+        for (ProductDayQuantity productDayQuantity : productDayQuantities) {
+            producer.orderPlaced(order.getId(), productDayQuantity);
+        }
         return HttpResponse.created(URI.create(PREFIX + "/" + order.getId()));
     }
 
