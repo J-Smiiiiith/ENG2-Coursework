@@ -15,6 +15,8 @@ import uk.ac.york.eng2.orders.domain.Orders;
 import uk.ac.york.eng2.orders.dto.OrderItemDTO;
 import uk.ac.york.eng2.orders.dto.OrdersCreateDTO;
 import uk.ac.york.eng2.orders.dto.OrdersDTO;
+import uk.ac.york.eng2.orders.events.OrdersByDayProducer;
+import uk.ac.york.eng2.orders.events.ProductDayQuantity;
 import uk.ac.york.eng2.orders.gateways.ProductManagementGateway;
 import uk.ac.york.eng2.orders.repository.CustomerRepository;
 import uk.ac.york.eng2.orders.repository.OrderItemRepository;
@@ -42,6 +44,9 @@ public class OrdersController {
 
     @Inject
     ProductManagementGateway productManagementGateway;
+
+    @Inject
+    OrdersByDayProducer producer;
 
     @Get
     public List<Orders> getOrders() {
@@ -81,6 +86,8 @@ public class OrdersController {
             item.setQuantity(products.get(productId));
             item.setOrder(order);
             orderItemRepo.save(item);
+            producer.orderPlaced(order.getId(), new ProductDayQuantity(item.getProductId(), order.getDateCreated(),
+                    item.getQuantity()));
         }
         order.setTotalAmount(productManagementGateway.getProductsPrice(validProducts));
         ordersRepo.save(order);
