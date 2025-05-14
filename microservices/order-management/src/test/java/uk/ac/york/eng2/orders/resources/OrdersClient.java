@@ -1,4 +1,4 @@
-package uk.ac.york.eng2.orders;
+package uk.ac.york.eng2.orders.resources;
 
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.*;
@@ -6,7 +6,6 @@ import io.micronaut.http.client.annotation.Client;
 import uk.ac.york.eng2.orders.domain.Orders;
 import uk.ac.york.eng2.orders.dto.OrdersCreateDTO;
 import uk.ac.york.eng2.orders.dto.OrdersDTO;
-import uk.ac.york.eng2.orders.resources.OrdersController;
 
 import java.util.List;
 

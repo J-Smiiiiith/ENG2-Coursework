@@ -2,6 +2,7 @@ package uk.ac.york.eng2.orders.resources;
 
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import uk.ac.york.eng2.orders.domain.OrderItem;
 import uk.ac.york.eng2.orders.dto.OrderItemDTO;
@@ -10,6 +11,7 @@ import uk.ac.york.eng2.orders.repository.OrderItemRepository;
 import java.net.URI;
 import java.util.List;
 
+@Tag(name = "Order Items")
 @Controller(OrderItemController.PREFIX)
 public class OrderItemController {
     public static final String PREFIX = "/order-items";
