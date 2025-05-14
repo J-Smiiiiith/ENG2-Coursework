@@ -87,7 +87,7 @@ public class OrdersController {
         return HttpResponse.created(URI.create(PREFIX + "/" + order.getId()));
     }
 
-    @Put("/{orderId}/products/{products}")
+    @Put("/{orderId}/add/products")
     @Transactional
     @ExecuteOn(TaskExecutors.BLOCKING)
     public void addItemToOrder(@PathVariable long orderId, @Body Map<Long, Integer> products) {
