@@ -15,6 +15,8 @@ import uk.ac.york.eng2.orders.domain.Orders;
 import uk.ac.york.eng2.orders.dto.OrderItemDTO;
 import uk.ac.york.eng2.orders.dto.OrdersCreateDTO;
 import uk.ac.york.eng2.orders.dto.OrdersDTO;
+import uk.ac.york.eng2.orders.events.OrdersByDayProducer;
+import uk.ac.york.eng2.orders.events.ProductDayQuantity;
 import uk.ac.york.eng2.orders.gateways.ProductManagementGateway;
 import uk.ac.york.eng2.orders.repository.CustomerRepository;
 import uk.ac.york.eng2.orders.repository.OrderItemRepository;
@@ -22,6 +24,7 @@ import uk.ac.york.eng2.orders.repository.OrdersRepository;
 
 import java.net.URI;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +45,9 @@ public class OrdersController {
 
     @Inject
     ProductManagementGateway productManagementGateway;
+
+    @Inject
+    OrdersByDayProducer producer;
 
     @Get
     public List<Orders> getOrders() {
@@ -75,15 +81,24 @@ public class OrdersController {
         Map<Long, Integer> products = dto.getProducts();
         Map<String, Map<Long, Integer>> validInvalidProducts = productManagementGateway.checkProductsValidity(products);
         Map<Long, Integer> validProducts = validInvalidProducts.get("Valid Products");
+
+        List<ProductDayQuantity> productDayQuantities = new ArrayList<>();
+
         for (Long productId : validProducts.keySet()) {
             OrderItem item = new OrderItem();
             item.setProductId(productId);
-            item.setQuantity(products.get(productId));
+            int quantity = products.get(productId);
+            item.setQuantity(quantity);
             item.setOrder(order);
             orderItemRepo.save(item);
+            productDayQuantities.add(new ProductDayQuantity(item.getProductId(), order.getDateCreated(), quantity));
         }
         order.setTotalAmount(productManagementGateway.getProductsPrice(validProducts));
         ordersRepo.save(order);
+
+        for (ProductDayQuantity productDayQuantity : productDayQuantities) {
+            producer.orderPlaced(order.getId(), productDayQuantity);
+        }
         return HttpResponse.created(URI.create(PREFIX + "/" + order.getId()));
     }
 
