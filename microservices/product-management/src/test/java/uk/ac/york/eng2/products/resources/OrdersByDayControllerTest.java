@@ -1,4 +1,4 @@
-package uk.ac.york.eng2.products;
+package uk.ac.york.eng2.products.resources;
 
 import io.micronaut.http.HttpHeaders;
 import io.micronaut.http.HttpResponse;

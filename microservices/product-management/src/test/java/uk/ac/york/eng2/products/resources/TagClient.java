@@ -1,11 +1,10 @@
-package uk.ac.york.eng2.products;
+package uk.ac.york.eng2.products.resources;
 
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.*;
 import io.micronaut.http.client.annotation.Client;
 import uk.ac.york.eng2.products.domain.Tag;
 import uk.ac.york.eng2.products.dto.TagDTO;
-import uk.ac.york.eng2.products.resources.TagController;
 
 import java.util.List;
 
