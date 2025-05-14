@@ -19,6 +19,7 @@ public class OrdersByDay {
 
     @OneToOne
     @JsonIgnore
+    @JoinColumn(name = "products_id")
     private Product product;
 
     public Product getProduct() {
