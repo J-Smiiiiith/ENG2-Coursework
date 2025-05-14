@@ -18,7 +18,7 @@ public class OrdersByDay {
     private int count;
 
     @OneToOne
-    @JsonIgnore
+    @JoinColumn(name = "product_id")
     private Product product;
 
     public Product getProduct() {

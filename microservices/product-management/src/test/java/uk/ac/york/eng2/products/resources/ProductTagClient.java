@@ -1,4 +1,4 @@
-package uk.ac.york.eng2.products;
+package uk.ac.york.eng2.products.resources;
 
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
@@ -7,7 +7,6 @@ import io.micronaut.http.client.annotation.Client;
 import uk.ac.york.eng2.products.domain.Product;
 import uk.ac.york.eng2.products.domain.ProductTag;
 import uk.ac.york.eng2.products.domain.Tag;
-import uk.ac.york.eng2.products.resources.ProductTagController;
 
 import java.util.List;
 
