@@ -187,7 +187,7 @@ paths:
       responses:
         "200":
           description: createProduct 200 response
-  /products/products/total_price:
+  /products/total_price:
     post:
       tags:
         - Products
@@ -209,7 +209,7 @@ paths:
               schema:
                 type: number
                 format: float
-  /products/products/validate:
+  /products/validate:
     post:
       tags:
         - Products
@@ -236,24 +236,6 @@ paths:
                     type: integer
                     format: int32
   /products/{id}:
-    get:
-      tags:
-        - Products
-      operationId: getProduct
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: integer
-            format: int64
-      responses:
-        "200":
-          description: getProduct 200 response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Product"
     put:
       tags:
         - Products
@@ -288,6 +270,45 @@ paths:
       responses:
         "200":
           description: deleteProduct 200 response
+  /products/{productId}:
+    get:
+      tags:
+        - Products
+      operationId: getProduct
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: getProduct 200 response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+  /products/{productId}/unit_price:
+    get:
+      tags:
+        - Products
+      operationId: getProductUnitPrice
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: getProductUnitPrice 200 response
+          content:
+            application/json:
+              schema:
+                type: number
+                format: float
   /tags:
     get:
       tags:
@@ -373,6 +394,10 @@ components:
     OrdersByDay:
       type: object
       properties:
+        product:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/Product"
         id:
           type: integer
           format: int64
