@@ -142,6 +142,8 @@ public class ProductControllerTest {
         products.put(999L, 1); // Invalid product ID
         products.put(1000L, 1); // Invalid product ID
         Map<String, Map<Long, Integer>> response = client.checkProductsValidity(products);
+        System.out.println("Response: " + response);
+        assertNotNull(response, "Expected a non-null response from /validate");
 
         Map<Long, Integer> validProducts = response.get("Valid Products");
         Map<Long, Integer> invalidProducts = response.get("Invalid Products");

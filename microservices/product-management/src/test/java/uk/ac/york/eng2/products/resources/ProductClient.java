@@ -24,10 +24,10 @@ public interface ProductClient {
     @Post
     HttpResponse<Void> createProduct(@Body ProductDTO dto);
 
-    @Post("/products/validate")
+    @Post("/validate")
     Map<String, Map<Long, Integer>> checkProductsValidity(@Body Map<Long, Integer> products);
 
-    @Post("/products/total_price")
+    @Post("/total_price")
     float getProductsPrice(@Body Map<Long, Integer> products);
 
     @Put("/{id}")

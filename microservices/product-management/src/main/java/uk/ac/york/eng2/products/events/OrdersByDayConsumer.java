@@ -19,6 +19,8 @@ import uk.ac.york.eng2.products.repository.ProductRepository;
         offsetReset = OffsetReset.EARLIEST
 )
 public class OrdersByDayConsumer {
+    public static final String ORDERS_BY_DAY_TOPIC = "orders-by-day";
+
     @Inject
     OrdersByDayRepository OBDRepo;
 
@@ -26,7 +28,7 @@ public class OrdersByDayConsumer {
     ProductRepository prodRepo;
 
     @Transactional
-    @Topic(OrdersByDayTopics.ORDERS_BY_DAY_TOPIC)
+    @Topic(ORDERS_BY_DAY_TOPIC)
     public void productAddedToOrder(@KafkaKey long orderId, ProductDayQuantity productDayQuantity) {
         System.out.println("Record received: " + orderId + ": " + productDayQuantity);
         OrdersByDay ordersByDay = OBDRepo.findByProductIdAndDay(productDayQuantity.productId(), productDayQuantity.day())
