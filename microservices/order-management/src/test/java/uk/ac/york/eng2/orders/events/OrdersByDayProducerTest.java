@@ -52,7 +52,7 @@ public class OrdersByDayProducerTest {
     }
 
     @MockBean(ProductManagementClientApi.class)
-    protected ProductManagementClientApi getProductManagementValidProductsMock() {
+    protected ProductManagementClientApi getProductManagementClientMock() {
         ProductManagementClientApi mock = mock(ProductManagementClientApi.class);
         when(mock.checkProductsValidity(anyMap()))
                 .thenReturn(Map.of("Valid Products", Map.of(1L, 5)));

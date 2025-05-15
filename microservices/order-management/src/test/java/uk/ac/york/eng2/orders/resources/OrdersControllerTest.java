@@ -2,6 +2,7 @@ package uk.ac.york.eng2.orders.resources;
 
 import io.micronaut.http.HttpHeaders;
 import io.micronaut.http.HttpResponse;
+import io.micronaut.test.annotation.MockBean;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,6 +11,7 @@ import uk.ac.york.eng2.orders.domain.Orders;
 import uk.ac.york.eng2.orders.dto.CustomerDTO;
 import uk.ac.york.eng2.orders.dto.OrdersCreateDTO;
 import uk.ac.york.eng2.orders.dto.OrdersDTO;
+import uk.ac.york.eng2.orders.gateways.ProductManagementClientApi;
 import uk.ac.york.eng2.orders.repository.CustomerRepository;
 import uk.ac.york.eng2.orders.repository.OrdersRepository;
 
@@ -18,6 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.anyMap;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @MicronautTest(transactional = false)
 public class OrdersControllerTest {
@@ -40,6 +45,16 @@ public class OrdersControllerTest {
         customerRepo.deleteAll();
     }
 
+    @MockBean(ProductManagementClientApi.class)
+    protected ProductManagementClientApi getProductManagementClientMock() {
+        ProductManagementClientApi mock = mock(ProductManagementClientApi.class);
+        when(mock.checkProductsValidity(anyMap()))
+                .thenReturn(Map.of("Valid Products", Map.of(1L, 5)));
+        when(mock.getProductsPrice(anyMap()))
+                .thenReturn(10F);
+        return mock;
+    }
+
     @Test
     public void noOrdersTest() {
         assertEquals(0, ordersClient.getOrders().size());
@@ -49,9 +64,6 @@ public class OrdersControllerTest {
     public void createOrderTest() {
         Map<Long, Integer> products = new HashMap<>();
         products.put(1L, 5);
-        products.put(2L, 10);
-        products.put(3L, 3);
-        products.put(4L, 7);
         long id = createOrders("Example Address", products, createCustomer("example@email.com"));
         assertEquals(1, ordersClient.getOrders().size());
     }
@@ -62,9 +74,6 @@ public class OrdersControllerTest {
         long customerId = createCustomer("example@email.com");
         Map<Long, Integer> products = new HashMap<>();
         products.put(1L, 5);
-        products.put(2L, 10);
-        products.put(3L, 3);
-        products.put(4L, 7);
 
         long id = createOrders(address, products, customerId);
         Orders createdOrders = ordersClient.getOrder(id);
@@ -84,9 +93,6 @@ public class OrdersControllerTest {
         long customerId = createCustomer("example@email.com");
         Map<Long, Integer> products = new HashMap<>();
         products.put(1L, 5);
-        products.put(2L, 10);
-        products.put(3L, 3);
-        products.put(4L, 7);
 
         long id1 = createOrders(address, products, customerId);
         long id2 = createOrders(address, products, customerId);
@@ -101,9 +107,6 @@ public class OrdersControllerTest {
         long updatedCustomerId = createCustomer("example2@email.com");
         Map<Long, Integer> products = new HashMap<>();
         products.put(1L, 5);
-        products.put(2L, 10);
-        products.put(3L, 3);
-        products.put(4L, 7);
 
         long id = createOrders(address, products, customerId);
         Orders createdOrders = ordersClient.getOrder(id);
@@ -129,9 +132,6 @@ public class OrdersControllerTest {
         long customerId = createCustomer("example@email.com");
         Map<Long, Integer> products = new HashMap<>();
         products.put(1L, 5);
-        products.put(2L, 10);
-        products.put(3L, 3);
-        products.put(4L, 7);
 
         long id = createOrders(address, products, customerId);
         assertEquals(1, ordersClient.getOrders().size());
