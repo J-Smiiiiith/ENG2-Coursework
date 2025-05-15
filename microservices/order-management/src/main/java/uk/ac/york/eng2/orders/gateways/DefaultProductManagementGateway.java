@@ -23,4 +23,9 @@ public class DefaultProductManagementGateway implements ProductManagementGateway
     public float getProductsPrice(Map<Long, Integer> products) {
         return clientApi.getProductsPrice(products);
     }
+
+    @Override
+    public float getProductUnitPrice(long productId) {
+        return clientApi.getProductUnitPrice(productId);
+    }
 }
