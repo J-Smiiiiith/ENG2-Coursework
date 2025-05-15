@@ -18,6 +18,9 @@ public interface ProductClient {
     @Get("/{id}")
     Product getProduct(@PathVariable long id);
 
+    @Get("/{productId}/unit_price")
+    float getProductUnitPrice(@PathVariable long productId);
+
     @Post
     HttpResponse<Void> createProduct(@Body ProductDTO dto);
 

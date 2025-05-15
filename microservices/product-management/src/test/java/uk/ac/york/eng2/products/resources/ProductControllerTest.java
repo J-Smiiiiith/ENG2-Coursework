@@ -69,6 +69,17 @@ public class ProductControllerTest {
     }
 
     @Test
+    public void getProductUnitPriceTest() {
+        String name = "Test";
+        float unitPrice = 10.50f;
+
+        long id = createProduct(name, unitPrice);
+        float price = client.getProductUnitPrice(id);
+
+        assertEquals(unitPrice, price);
+    }
+
+    @Test
     public void updateProductNameTest() {
         String name = "Test";
         String updatedName = "Updated";
