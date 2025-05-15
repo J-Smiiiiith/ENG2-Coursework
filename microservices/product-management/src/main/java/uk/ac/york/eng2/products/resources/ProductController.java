@@ -27,9 +27,18 @@ public class ProductController {
         return prodRepo.findAll();
     }
 
-    @Get("/{id}")
-    public Product getProduct(@PathVariable long id) {
-        return prodRepo.findById(id).orElse(null);
+    @Get("/{productId}")
+    public Product getProduct(@PathVariable long productId) {
+        return prodRepo.findById(productId).orElse(null);
+    }
+
+    @Get("/{productId}/unit_price")
+    public float getProductUnitPrice(@PathVariable long productId) {
+        Product product = prodRepo.findById(productId).orElse(null);
+        if (product == null) {
+            throw new HttpStatusException(HttpStatus.NOT_FOUND, "Product not found");
+        }
+        return product.getUnitPrice();
     }
 
     @Post
