@@ -54,6 +54,7 @@ public class ProductController {
     @Transactional
     public Map<String, Map<Long, Integer>> checkProductsValidity(@Body Map<Long, Integer> products) {
         List<Long> productIds = List.copyOf(products.keySet());
+        Map<Long, Integer> validProducts = new HashMap<>();
         Map<Long, Integer> invalidProductIds = new HashMap<>();
         Map<String, Map<Long, Integer>> response = new HashMap<>();
 
@@ -61,10 +62,12 @@ public class ProductController {
             Product product = prodRepo.findById(productId).orElse(null);
             if (product == null) {
                 invalidProductIds.put(productId, products.get(productId));
-                products.remove(productId);
+            }
+            else {
+                validProducts.put(productId, products.get(productId));
             }
         }
-        response.put("Valid Products", products);
+        response.put("Valid Products", validProducts);
         response.put("Invalid Products", invalidProductIds);
         return response;
     }
