@@ -90,6 +90,7 @@ public class OrdersController {
             int quantity = products.get(productId);
             item.setQuantity(quantity);
             item.setOrder(order);
+            item.setUnitPrice(productManagementGateway.getProductUnitPrice(productId));
             orderItemRepo.save(item);
             productDayQuantities.add(new ProductDayQuantity(item.getProductId(), order.getDateCreated(), quantity));
         }
