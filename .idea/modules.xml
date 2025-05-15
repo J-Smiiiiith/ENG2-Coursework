@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ENG2-Coursework.iml" filepath="$PROJECT_DIR$/.idea/ENG2-Coursework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/end2end-tests.main.iml" filepath="$PROJECT_DIR$/.idea/modules/end2end-tests.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/end2end-tests.test.iml" filepath="$PROJECT_DIR$/.idea/modules/end2end-tests.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/order-management.main.iml" filepath="$PROJECT_DIR$/.idea/modules/order-management.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/order-management.test.iml" filepath="$PROJECT_DIR$/.idea/modules/order-management.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/product-management.main.iml" filepath="$PROJECT_DIR$/.idea/modules/product-management.main.iml" />
