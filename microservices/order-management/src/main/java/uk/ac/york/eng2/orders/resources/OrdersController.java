@@ -102,39 +102,6 @@ public class OrdersController {
         return HttpResponse.created(URI.create(PREFIX + "/" + order.getId()));
     }
 
-    @Put("/{orderId}/add/products")
-    @Transactional
-    @ExecuteOn(TaskExecutors.BLOCKING)
-    public void addItemToOrder(@PathVariable long orderId, @Body Map<Long, Integer> products) {
-        Orders order = ordersRepo.findById(orderId).orElse(null);
-        if (order == null) {
-            throw new HttpStatusException(HttpStatus.NOT_FOUND, "Orders not found");
-        }
-        else {
-            Map<String, Map<Long, Integer>> validInvalidProducts = productManagementGateway.checkProductsValidity(products);
-            Map<Long, Integer> validProducts = validInvalidProducts.get("Valid Products");
-            for (Long productId : validProducts.keySet()) {
-                OrderItem item = orderItemRepo.findByProductIdAndOrderId(productId, orderId);
-                if (item != null) {
-                    OrderItem updatedItem = new OrderItem();
-                    updatedItem.setProductId(productId);
-                    updatedItem.setQuantity(item.getQuantity() + products.get(productId));
-                    updatedItem.setOrder(order);
-                    orderItemRepo.save(updatedItem);
-                }
-                else {
-                    OrderItem updatedItem = new OrderItem();
-                    updatedItem.setProductId(productId);
-                    updatedItem.setQuantity(products.get(productId));
-                    updatedItem.setOrder(order);
-                    orderItemRepo.save(updatedItem);
-                }
-            }
-            order.setTotalAmount(productManagementGateway.getProductsPrice(validProducts));
-            ordersRepo.save(order);
-        }
-    }
-
     @Put("/{id}")
     @Transactional
     public void updateOrders(@PathVariable long id, @Body OrdersDTO dto) {
@@ -166,28 +133,5 @@ public class OrdersController {
         } else {
             ordersRepo.delete(order);
         }
-    }
-
-    @Delete("/{orderId}/products/{productId}")
-    @Transactional
-    @ExecuteOn(TaskExecutors.BLOCKING)
-    public void deleteProductFromOrder(@PathVariable long orderId, @PathVariable long productId) {
-        Orders order = ordersRepo.findById(orderId).orElse(null);
-        if (order == null) {
-            throw new HttpStatusException(HttpStatus.NOT_FOUND, "Order not found");
-        } else {
-            OrderItem item = orderItemRepo.findByProductIdAndOrderId(productId, orderId);
-            if (item == null) {
-                throw new HttpStatusException(HttpStatus.NOT_FOUND, "Product not found in order");
-            } else {
-                orderItemRepo.delete(item);
-            }
-        }
-        Map<Long, Integer> products = new HashMap<>();
-        for (OrderItem orderItem : orderItemRepo.findAllByOrderId(orderId)) {
-            products.put(orderItem.getProductId(), orderItem.getQuantity());
-        }
-        order.setTotalAmount(productManagementGateway.getProductsPrice(products));
-        ordersRepo.save(order);
     }
 }
