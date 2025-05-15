@@ -40,7 +40,18 @@ micronaut {
         annotations("uk.ac.york.eng2.integration.*")
     }
     openapi {
-        // add OpenAPI configuration here
+        client("product-management", file("src/main/openapi/product_management_1.0.yml")) {
+            apiPackageName = "uk.ac.york.cs.eng2.orders.product_management.api"
+            modelPackageName = "uk.ac.york.cs.eng2.orders.product_management.model"
+            clientId = "product-management"
+            useReactive = false
+        }
+        client("order-management", file("src/main/openapi/order_management_1.0.yml")) {
+            apiPackageName = "uk.ac.york.cs.eng2.orders.order_management.api"
+            modelPackageName = "uk.ac.york.cs.eng2.orders.order_management.model"
+            clientId = "order-management"
+            useReactive = false
+        }
     }
 }
 
