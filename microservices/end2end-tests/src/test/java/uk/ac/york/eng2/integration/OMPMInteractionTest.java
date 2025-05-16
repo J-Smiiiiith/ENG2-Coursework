@@ -5,7 +5,6 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.inject.Inject;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import uk.ac.york.cs.eng2.orders.order_management.model.CustomerDTO;
 import uk.ac.york.cs.eng2.orders.order_management.model.OrderItem;
@@ -100,16 +99,17 @@ public class OMPMInteractionTest {
     }
 
     private Callable<Boolean> checkOrdersByTableCorrect(long prodId1, long prodId2) {
-        List<OrdersByDay> ordersByDay = ordersByDayApi.getOrdersByDay().body();
-        if ((ordersByDay.size() == 2) &&
-                (ordersByDay.get(0).getProduct().getId() == prodId1) &&
-                (ordersByDay.get(1).getProduct().getId() == prodId2) &&
-                (ordersByDay.get(0).getCount() == 2) &&
-                (ordersByDay.get(1).getCount() == 3)) {
-            return () -> true;
-        } else {
-            return () -> false;
-        }
+        return () -> {
+            List<OrdersByDay> ordersByDay = ordersByDayApi.getOrdersByDay().body();
+            if (ordersByDay == null) {
+                return false;
+            }
+            return (ordersByDay.size() == 2) &&
+                    (ordersByDay.get(0).getProduct().getId() == prodId1) &&
+                    (ordersByDay.get(1).getProduct().getId() == prodId2) &&
+                    (ordersByDay.get(0).getCount() == 2) &&
+                    (ordersByDay.get(1).getCount() == 3);
+        };
     }
 
     private long createProduct(String name, float unitPrice) {
@@ -144,5 +144,4 @@ public class OMPMInteractionTest {
         }
         return convertedMap;
     }
-
 }
