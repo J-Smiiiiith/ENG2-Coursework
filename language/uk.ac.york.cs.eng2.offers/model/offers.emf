@@ -7,6 +7,105 @@ package offers;
 //
 // You may want to delete the old generated code in src/ before generating code from the .genmodel.
 
-class Model {
-	
+// Products
+class Category {
+	attr String name;
 }
+
+class SubCategory extends Category {
+	val Category category;
+}
+
+class Product {
+	attr String name;
+	val Tag[*] tags;
+	val SubCategory subCategory;
+	val Category category;
+}
+
+class Tag {
+	attr String tag;
+}
+
+// Offers
+abstract class Offer {
+	attr String name;
+	val Product[*] applicableProducts;
+	val Category[*] applicableCategories;
+	val SubCategory[*] applicableSubCategories;
+	val Condition[*] conditions;
+}
+
+class OfferPriceReduction extends Offer {
+	attr float percentageReduction; // between 0 and 100.
+}
+
+class OfferFixedPrice extends Offer {
+	attr float newPrice;
+}
+
+class OfferBuyXGetYFree extends Offer {
+	attr int x;
+	attr int y;
+}
+
+class OfferXPoundsOff extends Offer {
+	attr int x;
+}
+
+class OfferXPoundsOffOnDate extends OfferXPoundsOff {
+	attr String date;
+}
+
+class OfferPriceReductionOnDate extends OfferPriceReduction {
+	attr String date;
+}
+
+// Conditions
+abstract class Condition {
+	attr String name;
+}
+
+class CheckTagsCondition extends Condition {
+	val Tag[*] tags;
+}
+
+class MinPriceCondition extends Condition {
+	attr float minPrice;
+}
+
+abstract class CheckQuantityCondition extends Condition {
+	attr int quantity;
+}
+
+class CheckQuantityCategoryCondition extends CheckQuantityCondition {
+	val Category[*] categories;
+}
+
+class CheckQuantitySubCategoryCondition extends CheckQuantityCondition {
+	val SubCategory[*] subCategories;
+}
+
+class CheckQuantityProductCondition extends CheckQuantityCondition {
+	val Product[*] products;
+}
+
+// Triggers
+enum TriggerType {
+  ALWAYS;
+  IF_MATCH;
+  IF_NOT_MATCH;
+}
+
+class Trigger {
+  ref OfferRule target;
+  attr TriggerType type;
+}
+
+class OfferRule {
+  attr String name;
+  val Condition[*] conditions;
+  val Offer[*] offers;
+  val Trigger[*] triggers;
+}
+
