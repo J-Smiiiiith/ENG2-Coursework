@@ -10,7 +10,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: uk.ac.york.cs.eng2.offers,
  uk.ac.york.cs.eng2.offers.impl,
- uk.ac.york.cs.eng2.offers.util
+ uk.ac.york.cs.eng2.offers.util,
+ offers,
+ offers.impl,
+ offers.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

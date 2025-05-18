@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="uk.ac.york.cs.eng2.offers.presentation.OffersModelWizardID"
+            id="offers.presentation.OffersModelWizardID"
             name="%_UI_OffersModelWizard_label"
-            class="uk.ac.york.cs.eng2.offers.presentation.OffersModelWizard"
+            class="offers.presentation.OffersModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/OffersModelFile.gif">
          <description>%_UI_OffersModelWizard_description</description>
@@ -25,12 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated offers -->
       <editor
-            id="uk.ac.york.cs.eng2.offers.presentation.OffersEditorID"
+            id="offers.presentation.OffersEditorID"
             name="%_UI_OffersEditor_label"
             icon="icons/full/obj16/OffersModelFile.gif"
             extensions="offers"
-            class="uk.ac.york.cs.eng2.offers.presentation.OffersEditor"
-            contributorClass="uk.ac.york.cs.eng2.offers.presentation.OffersActionBarContributor">
+            class="offers.presentation.OffersEditor"
+            contributorClass="offers.presentation.OffersActionBarContributor">
       </editor>
    </extension>
 </plugin>

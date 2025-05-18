@@ -5,11 +5,12 @@ Bundle-SymbolicName: uk.ac.york.cs.eng2.offers.editor;singleton:=true
 Automatic-Module-Name: uk.ac.york.cs.eng2.offers.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: uk.ac.york.cs.eng2.offers.presentation.OffersEditorPlugin$Implementation
+Bundle-Activator: offers.presentation.OffersEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: uk.ac.york.cs.eng2.offers.presentation
+Export-Package: uk.ac.york.cs.eng2.offers.presentation,
+ offers.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  uk.ac.york.cs.eng2.offers.edit;visibility:=reexport,
