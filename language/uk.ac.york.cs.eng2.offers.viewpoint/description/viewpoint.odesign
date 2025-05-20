@@ -109,7 +109,15 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="offers.element.edge.offerRule_condition" label="Offer Rule -> Condition" semanticCandidatesExpression="aql:self.offers.offers&#xA;" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetFinderExpression="aql:self.conditions" sourceFinderExpression="aql:self" domainClass="offers::OfferRule" useDomainElement="true">
+        <edgeMappings name="offers.element.edge.offerRule_condition" label="Offer Rule -> Condition" semanticCandidatesExpression="aql:self.offers.offers" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetFinderExpression="aql:self.conditions" sourceFinderExpression="aql:self" domainClass="offers::OfferRule" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="offers.element.edge.offerRule_offer" label="Offer Rule -> Offer" semanticCandidatesExpression="aql:self.offers.offers" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer']" targetFinderExpression="aql:self.offers" sourceFinderExpression="aql:self" domainClass="offers::OfferRule" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
