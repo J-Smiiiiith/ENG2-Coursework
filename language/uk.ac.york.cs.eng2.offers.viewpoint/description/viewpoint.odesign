@@ -25,6 +25,13 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
+        <nodeMappings name="offers.node.tag" label="Tag" semanticCandidatesExpression="aql:self.tags.tags" domainClass="offers::Tag">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:tag" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </nodeMappings>
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
