@@ -11,8 +11,7 @@
       <!-- @generated offers -->
       <package
             uri="http://cs.york.ac.uk/eng2/202425/offers"
-            class="uk.ac.york.cs.eng2.offers.OffersPackage"
-            genModel="model/offers.genmodel"/>
+            class="uk.ac.york.cs.eng2.offers.OffersPackage"/>
    </extension>
 
 </plugin>
