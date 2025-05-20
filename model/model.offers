@@ -22,7 +22,7 @@
     </offers>
     <offers name="x2 Dariy Milk for £4">
       <conditions xsi:type="dis:CheckQuantityCondition" name="Dairy Milk = 2" applicableProducts="//@products/@products.0" quantity="2"/>
-      <offers xsi:type="dis:OfferFixedPrice" name="£4" newPrice="4.0"/>
+      <offers xsi:type="dis:OfferFixedPrice" name="Price is £4" newPrice="4.0"/>
     </offers>
   </offers>
 </dis:OfferComponents>
