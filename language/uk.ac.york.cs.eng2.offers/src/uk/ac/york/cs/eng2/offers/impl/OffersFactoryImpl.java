@@ -57,11 +57,16 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case OffersPackage.OFFER_COMPONENTS: return createOfferComponents();
+			case OffersPackage.PRODUCTS: return createProducts();
+			case OffersPackage.CATEGORIES: return createCategories();
+			case OffersPackage.SUB_CATEGORIES: return createSubCategories();
+			case OffersPackage.TAGS: return createTags();
 			case OffersPackage.ALL_OFFERS: return createAllOffers();
 			case OffersPackage.OFFER_RULE: return createOfferRule();
+			case OffersPackage.PRODUCT: return createProduct();
 			case OffersPackage.CATEGORY: return createCategory();
 			case OffersPackage.SUB_CATEGORY: return createSubCategory();
-			case OffersPackage.PRODUCT: return createProduct();
 			case OffersPackage.TAG: return createTag();
 			case OffersPackage.OFFER_PRICE_REDUCTION: return createOfferPriceReduction();
 			case OffersPackage.OFFER_FIXED_PRICE: return createOfferFixedPrice();
@@ -69,14 +74,8 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 			case OffersPackage.OFFER_XPOUNDS_OFF: return createOfferXPoundsOff();
 			case OffersPackage.OFFER_XPOUNDS_OFF_ON_DATE: return createOfferXPoundsOffOnDate();
 			case OffersPackage.OFFER_PRICE_REDUCTION_ON_DATE: return createOfferPriceReductionOnDate();
-			case OffersPackage.CHECK_CATEGORY_CONDITION: return createCheckCategoryCondition();
-			case OffersPackage.CHECK_SUB_CATEGORY_CONDITION: return createCheckSubCategoryCondition();
-			case OffersPackage.CHECK_PRODUCT_CONDITION: return createCheckProductCondition();
-			case OffersPackage.CHECK_TAGS_CONDITION: return createCheckTagsCondition();
 			case OffersPackage.MIN_PRICE_CONDITION: return createMinPriceCondition();
-			case OffersPackage.CHECK_QUANTITY_CATEGORY_CONDITION: return createCheckQuantityCategoryCondition();
-			case OffersPackage.CHECK_QUANTITY_SUB_CATEGORY_CONDITION: return createCheckQuantitySubCategoryCondition();
-			case OffersPackage.CHECK_QUANTITY_PRODUCT_CONDITION: return createCheckQuantityProductCondition();
+			case OffersPackage.CHECK_QUANTITY_CONDITION: return createCheckQuantityCondition();
 			case OffersPackage.TRIGGER: return createTrigger();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -119,6 +118,61 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	 * @generated
 	 */
 	@Override
+	public OfferComponents createOfferComponents() {
+		OfferComponentsImpl offerComponents = new OfferComponentsImpl();
+		return offerComponents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Products createProducts() {
+		ProductsImpl products = new ProductsImpl();
+		return products;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Categories createCategories() {
+		CategoriesImpl categories = new CategoriesImpl();
+		return categories;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SubCategories createSubCategories() {
+		SubCategoriesImpl subCategories = new SubCategoriesImpl();
+		return subCategories;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Tags createTags() {
+		TagsImpl tags = new TagsImpl();
+		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public AllOffers createAllOffers() {
 		AllOffersImpl allOffers = new AllOffersImpl();
 		return allOffers;
@@ -141,6 +195,17 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	 * @generated
 	 */
 	@Override
+	public Product createProduct() {
+		ProductImpl product = new ProductImpl();
+		return product;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Category createCategory() {
 		CategoryImpl category = new CategoryImpl();
 		return category;
@@ -155,17 +220,6 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	public SubCategory createSubCategory() {
 		SubCategoryImpl subCategory = new SubCategoryImpl();
 		return subCategory;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Product createProduct() {
-		ProductImpl product = new ProductImpl();
-		return product;
 	}
 
 	/**
@@ -251,50 +305,6 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	 * @generated
 	 */
 	@Override
-	public CheckCategoryCondition createCheckCategoryCondition() {
-		CheckCategoryConditionImpl checkCategoryCondition = new CheckCategoryConditionImpl();
-		return checkCategoryCondition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CheckSubCategoryCondition createCheckSubCategoryCondition() {
-		CheckSubCategoryConditionImpl checkSubCategoryCondition = new CheckSubCategoryConditionImpl();
-		return checkSubCategoryCondition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CheckProductCondition createCheckProductCondition() {
-		CheckProductConditionImpl checkProductCondition = new CheckProductConditionImpl();
-		return checkProductCondition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CheckTagsCondition createCheckTagsCondition() {
-		CheckTagsConditionImpl checkTagsCondition = new CheckTagsConditionImpl();
-		return checkTagsCondition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public MinPriceCondition createMinPriceCondition() {
 		MinPriceConditionImpl minPriceCondition = new MinPriceConditionImpl();
 		return minPriceCondition;
@@ -306,31 +316,9 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	 * @generated
 	 */
 	@Override
-	public CheckQuantityCategoryCondition createCheckQuantityCategoryCondition() {
-		CheckQuantityCategoryConditionImpl checkQuantityCategoryCondition = new CheckQuantityCategoryConditionImpl();
-		return checkQuantityCategoryCondition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CheckQuantitySubCategoryCondition createCheckQuantitySubCategoryCondition() {
-		CheckQuantitySubCategoryConditionImpl checkQuantitySubCategoryCondition = new CheckQuantitySubCategoryConditionImpl();
-		return checkQuantitySubCategoryCondition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public CheckQuantityProductCondition createCheckQuantityProductCondition() {
-		CheckQuantityProductConditionImpl checkQuantityProductCondition = new CheckQuantityProductConditionImpl();
-		return checkQuantityProductCondition;
+	public CheckQuantityCondition createCheckQuantityCondition() {
+		CheckQuantityConditionImpl checkQuantityCondition = new CheckQuantityConditionImpl();
+		return checkQuantityCondition;
 	}
 
 	/**

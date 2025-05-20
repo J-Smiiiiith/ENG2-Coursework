@@ -3,6 +3,32 @@
 @namespace(uri="http://cs.york.ac.uk/eng2/202425/offers", prefix="dis")
 package offers;
 
+// Components of the offers
+
+class OfferComponents {
+	val Products products;
+	val Categories categories;
+	val SubCategories subCategories;
+	val Tags tags;
+	val AllOffers offers;
+}
+
+class Products {
+	val Product[*] products;
+}
+
+class Categories {
+	val Category[*] categories;
+}
+
+class SubCategories {
+	val SubCategory[*] subCategories;
+}
+
+class Tags {
+	val Tag[*] tags;
+}
+
 class AllOffers {
 	val OfferRule[*] offers;
 }
@@ -15,18 +41,19 @@ class OfferRule {
 }
 
 // Products
+
+class Product {
+	attr String name;
+	ref Tag[*] tags;
+	ref SubCategory subCategory;
+	ref Category category;
+}
+
 class Category {
 	attr String name;
 }
 
 class SubCategory extends Category {
-	ref Category category;
-}
-
-class Product {
-	attr String name;
-	val Tag[*] tags;
-	ref SubCategory subCategory;
 	ref Category category;
 }
 
@@ -37,9 +64,6 @@ class Tag {
 // Offers
 abstract class Offer {
 	attr String name;
-	val Product[*] applicableProducts;
-	val Category[*] applicableCategories;
-	val SubCategory[*] applicableSubCategories;
 }
 
 class OfferPriceReduction extends Offer {
@@ -56,7 +80,7 @@ class OfferBuyXGetYFree extends Offer {
 }
 
 class OfferXPoundsOff extends Offer {
-	attr int x;
+	attr float x;
 }
 
 class OfferXPoundsOffOnDate extends OfferXPoundsOff {
@@ -70,42 +94,17 @@ class OfferPriceReductionOnDate extends OfferPriceReduction {
 // Conditions
 abstract class Condition {
 	attr String name;
-}
-
-class CheckCategoryCondition extends Condition {
-	ref Category[*] categories;
-}
-
-class CheckSubCategoryCondition extends Condition {
-	ref SubCategory[*] subCategories;
-}
-
-class CheckProductCondition extends Condition {
-	ref Product[*] products;
-}
-
-class CheckTagsCondition extends Condition {
-	ref Tag[*] tags;
+	ref Product[*] applicableProducts;
+	ref Category[*] applicableCategories;
+	ref SubCategory[*] applicableSubCategories;
 }
 
 class MinPriceCondition extends Condition {
 	attr float minPrice;
 }
 
-abstract class CheckQuantityCondition extends Condition {
+class CheckQuantityCondition extends Condition {
 	attr int quantity;
-}
-
-class CheckQuantityCategoryCondition extends CheckQuantityCondition {
-	ref Category[*] categories;
-}
-
-class CheckQuantitySubCategoryCondition extends CheckQuantityCondition {
-	ref SubCategory[*] subCategories;
-}
-
-class CheckQuantityProductCondition extends CheckQuantityCondition {
-	ref Product[*] products;
 }
 
 // Triggers
@@ -119,4 +118,3 @@ class Trigger {
   ref OfferRule target;
   attr TriggerType type;
 }
-

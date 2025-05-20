@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dis:AllOffers xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dis="http://cs.york.ac.uk/eng2/202425/offers">
-  <offers name="BOGOF Lynx">
-    <conditions xsi:type="dis:CheckQuantityProductCondition" name="Check Linx Quantity = 2" quantity="2" products="//@offers.0/@offers.0/@applicableProducts.0"/>
-    <offers xsi:type="dis:OfferBuyXGetYFree" name="BOGOF Linx" x="1" y="1">
-      <applicableProducts name="Lynx"/>
+<dis:OfferComponents xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dis="http://cs.york.ac.uk/eng2/202425/offers">
+  <products>
+    <products name="Dairy Milk" tags="//@tags/@tags.0" subCategory="//@subCategories/@subCategories.0"/>
+    <products name="Chocolate Cake" tags="//@tags/@tags.1 //@tags/@tags.0" category="//@categories/@categories.1"/>
+  </products>
+  <categories>
+    <categories name="Sweets"/>
+    <categories name="Cakes"/>
+  </categories>
+  <subCategories>
+    <subCategories name="Chocolate" category="//@categories/@categories.0"/>
+  </subCategories>
+  <tags>
+    <tags tag="Chocolate"/>
+    <tags tag="Cake"/>
+  </tags>
+  <offers>
+    <offers name="20% off when you spend £20">
+      <conditions xsi:type="dis:MinPriceCondition" name="Min Price £20" minPrice="20.0"/>
+      <offers xsi:type="dis:OfferPriceReduction" name="20% off" percentageReduction="20.0"/>
     </offers>
-    <triggers type="IF_MATCH"/>
+    <offers name="x2 Dariy Milk for £4">
+      <conditions xsi:type="dis:CheckQuantityCondition" name="Dairy Milk = 2" applicableProducts="//@products/@products.0" quantity="2"/>
+      <offers xsi:type="dis:OfferFixedPrice" name="£4" newPrice="4.0"/>
+    </offers>
   </offers>
-  <offers name="Poo"/>
-</dis:AllOffers>
+</dis:OfferComponents>

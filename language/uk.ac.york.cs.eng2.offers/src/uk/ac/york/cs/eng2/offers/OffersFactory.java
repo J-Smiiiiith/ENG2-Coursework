@@ -22,6 +22,51 @@ public interface OffersFactory extends EFactory {
 	OffersFactory eINSTANCE = uk.ac.york.cs.eng2.offers.impl.OffersFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Offer Components</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Offer Components</em>'.
+	 * @generated
+	 */
+	OfferComponents createOfferComponents();
+
+	/**
+	 * Returns a new object of class '<em>Products</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Products</em>'.
+	 * @generated
+	 */
+	Products createProducts();
+
+	/**
+	 * Returns a new object of class '<em>Categories</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Categories</em>'.
+	 * @generated
+	 */
+	Categories createCategories();
+
+	/**
+	 * Returns a new object of class '<em>Sub Categories</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sub Categories</em>'.
+	 * @generated
+	 */
+	SubCategories createSubCategories();
+
+	/**
+	 * Returns a new object of class '<em>Tags</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tags</em>'.
+	 * @generated
+	 */
+	Tags createTags();
+
+	/**
 	 * Returns a new object of class '<em>All Offers</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -40,6 +85,15 @@ public interface OffersFactory extends EFactory {
 	OfferRule createOfferRule();
 
 	/**
+	 * Returns a new object of class '<em>Product</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Product</em>'.
+	 * @generated
+	 */
+	Product createProduct();
+
+	/**
 	 * Returns a new object of class '<em>Category</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,15 +110,6 @@ public interface OffersFactory extends EFactory {
 	 * @generated
 	 */
 	SubCategory createSubCategory();
-
-	/**
-	 * Returns a new object of class '<em>Product</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Product</em>'.
-	 * @generated
-	 */
-	Product createProduct();
 
 	/**
 	 * Returns a new object of class '<em>Tag</em>'.
@@ -130,42 +175,6 @@ public interface OffersFactory extends EFactory {
 	OfferPriceReductionOnDate createOfferPriceReductionOnDate();
 
 	/**
-	 * Returns a new object of class '<em>Check Category Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Check Category Condition</em>'.
-	 * @generated
-	 */
-	CheckCategoryCondition createCheckCategoryCondition();
-
-	/**
-	 * Returns a new object of class '<em>Check Sub Category Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Check Sub Category Condition</em>'.
-	 * @generated
-	 */
-	CheckSubCategoryCondition createCheckSubCategoryCondition();
-
-	/**
-	 * Returns a new object of class '<em>Check Product Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Check Product Condition</em>'.
-	 * @generated
-	 */
-	CheckProductCondition createCheckProductCondition();
-
-	/**
-	 * Returns a new object of class '<em>Check Tags Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Check Tags Condition</em>'.
-	 * @generated
-	 */
-	CheckTagsCondition createCheckTagsCondition();
-
-	/**
 	 * Returns a new object of class '<em>Min Price Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,31 +184,13 @@ public interface OffersFactory extends EFactory {
 	MinPriceCondition createMinPriceCondition();
 
 	/**
-	 * Returns a new object of class '<em>Check Quantity Category Condition</em>'.
+	 * Returns a new object of class '<em>Check Quantity Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Check Quantity Category Condition</em>'.
+	 * @return a new object of class '<em>Check Quantity Condition</em>'.
 	 * @generated
 	 */
-	CheckQuantityCategoryCondition createCheckQuantityCategoryCondition();
-
-	/**
-	 * Returns a new object of class '<em>Check Quantity Sub Category Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Check Quantity Sub Category Condition</em>'.
-	 * @generated
-	 */
-	CheckQuantitySubCategoryCondition createCheckQuantitySubCategoryCondition();
-
-	/**
-	 * Returns a new object of class '<em>Check Quantity Product Condition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Check Quantity Product Condition</em>'.
-	 * @generated
-	 */
-	CheckQuantityProductCondition createCheckQuantityProductCondition();
+	CheckQuantityCondition createCheckQuantityCondition();
 
 	/**
 	 * Returns a new object of class '<em>Trigger</em>'.

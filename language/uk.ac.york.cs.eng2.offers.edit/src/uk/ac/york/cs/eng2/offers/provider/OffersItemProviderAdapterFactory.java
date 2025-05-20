@@ -72,6 +72,121 @@ public class OffersItemProviderAdapterFactory extends OffersAdapterFactory imple
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.OfferComponents} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OfferComponentsItemProvider offerComponentsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.OfferComponents}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOfferComponentsAdapter() {
+		if (offerComponentsItemProvider == null) {
+			offerComponentsItemProvider = new OfferComponentsItemProvider(this);
+		}
+
+		return offerComponentsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.Products} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProductsItemProvider productsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.Products}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProductsAdapter() {
+		if (productsItemProvider == null) {
+			productsItemProvider = new ProductsItemProvider(this);
+		}
+
+		return productsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.Categories} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CategoriesItemProvider categoriesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.Categories}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCategoriesAdapter() {
+		if (categoriesItemProvider == null) {
+			categoriesItemProvider = new CategoriesItemProvider(this);
+		}
+
+		return categoriesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.SubCategories} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubCategoriesItemProvider subCategoriesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.SubCategories}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubCategoriesAdapter() {
+		if (subCategoriesItemProvider == null) {
+			subCategoriesItemProvider = new SubCategoriesItemProvider(this);
+		}
+
+		return subCategoriesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.Tags} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TagsItemProvider tagsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.Tags}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTagsAdapter() {
+		if (tagsItemProvider == null) {
+			tagsItemProvider = new TagsItemProvider(this);
+		}
+
+		return tagsItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.AllOffers} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,6 +233,29 @@ public class OffersItemProviderAdapterFactory extends OffersAdapterFactory imple
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.Product} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProductItemProvider productItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.Product}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProductAdapter() {
+		if (productItemProvider == null) {
+			productItemProvider = new ProductItemProvider(this);
+		}
+
+		return productItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.Category} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -161,29 +299,6 @@ public class OffersItemProviderAdapterFactory extends OffersAdapterFactory imple
 		}
 
 		return subCategoryItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.Product} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ProductItemProvider productItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.Product}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createProductAdapter() {
-		if (productItemProvider == null) {
-			productItemProvider = new ProductItemProvider(this);
-		}
-
-		return productItemProvider;
 	}
 
 	/**
@@ -348,98 +463,6 @@ public class OffersItemProviderAdapterFactory extends OffersAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.CheckCategoryCondition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CheckCategoryConditionItemProvider checkCategoryConditionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.CheckCategoryCondition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCheckCategoryConditionAdapter() {
-		if (checkCategoryConditionItemProvider == null) {
-			checkCategoryConditionItemProvider = new CheckCategoryConditionItemProvider(this);
-		}
-
-		return checkCategoryConditionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.CheckSubCategoryCondition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CheckSubCategoryConditionItemProvider checkSubCategoryConditionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.CheckSubCategoryCondition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCheckSubCategoryConditionAdapter() {
-		if (checkSubCategoryConditionItemProvider == null) {
-			checkSubCategoryConditionItemProvider = new CheckSubCategoryConditionItemProvider(this);
-		}
-
-		return checkSubCategoryConditionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.CheckProductCondition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CheckProductConditionItemProvider checkProductConditionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.CheckProductCondition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCheckProductConditionAdapter() {
-		if (checkProductConditionItemProvider == null) {
-			checkProductConditionItemProvider = new CheckProductConditionItemProvider(this);
-		}
-
-		return checkProductConditionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.CheckTagsCondition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CheckTagsConditionItemProvider checkTagsConditionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.CheckTagsCondition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCheckTagsConditionAdapter() {
-		if (checkTagsConditionItemProvider == null) {
-			checkTagsConditionItemProvider = new CheckTagsConditionItemProvider(this);
-		}
-
-		return checkTagsConditionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.MinPriceCondition} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -463,72 +486,26 @@ public class OffersItemProviderAdapterFactory extends OffersAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.CheckQuantityCategoryCondition} instances.
+	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.CheckQuantityCondition} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CheckQuantityCategoryConditionItemProvider checkQuantityCategoryConditionItemProvider;
+	protected CheckQuantityConditionItemProvider checkQuantityConditionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.CheckQuantityCategoryCondition}.
+	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.CheckQuantityCondition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCheckQuantityCategoryConditionAdapter() {
-		if (checkQuantityCategoryConditionItemProvider == null) {
-			checkQuantityCategoryConditionItemProvider = new CheckQuantityCategoryConditionItemProvider(this);
+	public Adapter createCheckQuantityConditionAdapter() {
+		if (checkQuantityConditionItemProvider == null) {
+			checkQuantityConditionItemProvider = new CheckQuantityConditionItemProvider(this);
 		}
 
-		return checkQuantityCategoryConditionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.CheckQuantitySubCategoryCondition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CheckQuantitySubCategoryConditionItemProvider checkQuantitySubCategoryConditionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.CheckQuantitySubCategoryCondition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCheckQuantitySubCategoryConditionAdapter() {
-		if (checkQuantitySubCategoryConditionItemProvider == null) {
-			checkQuantitySubCategoryConditionItemProvider = new CheckQuantitySubCategoryConditionItemProvider(this);
-		}
-
-		return checkQuantitySubCategoryConditionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.CheckQuantityProductCondition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CheckQuantityProductConditionItemProvider checkQuantityProductConditionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.CheckQuantityProductCondition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCheckQuantityProductConditionAdapter() {
-		if (checkQuantityProductConditionItemProvider == null) {
-			checkQuantityProductConditionItemProvider = new CheckQuantityProductConditionItemProvider(this);
-		}
-
-		return checkQuantityProductConditionItemProvider;
+		return checkQuantityConditionItemProvider;
 	}
 
 	/**
@@ -659,11 +636,16 @@ public class OffersItemProviderAdapterFactory extends OffersAdapterFactory imple
 	 */
 	@Override
 	public void dispose() {
+		if (offerComponentsItemProvider != null) offerComponentsItemProvider.dispose();
+		if (productsItemProvider != null) productsItemProvider.dispose();
+		if (categoriesItemProvider != null) categoriesItemProvider.dispose();
+		if (subCategoriesItemProvider != null) subCategoriesItemProvider.dispose();
+		if (tagsItemProvider != null) tagsItemProvider.dispose();
 		if (allOffersItemProvider != null) allOffersItemProvider.dispose();
 		if (offerRuleItemProvider != null) offerRuleItemProvider.dispose();
+		if (productItemProvider != null) productItemProvider.dispose();
 		if (categoryItemProvider != null) categoryItemProvider.dispose();
 		if (subCategoryItemProvider != null) subCategoryItemProvider.dispose();
-		if (productItemProvider != null) productItemProvider.dispose();
 		if (tagItemProvider != null) tagItemProvider.dispose();
 		if (offerPriceReductionItemProvider != null) offerPriceReductionItemProvider.dispose();
 		if (offerFixedPriceItemProvider != null) offerFixedPriceItemProvider.dispose();
@@ -671,14 +653,8 @@ public class OffersItemProviderAdapterFactory extends OffersAdapterFactory imple
 		if (offerXPoundsOffItemProvider != null) offerXPoundsOffItemProvider.dispose();
 		if (offerXPoundsOffOnDateItemProvider != null) offerXPoundsOffOnDateItemProvider.dispose();
 		if (offerPriceReductionOnDateItemProvider != null) offerPriceReductionOnDateItemProvider.dispose();
-		if (checkCategoryConditionItemProvider != null) checkCategoryConditionItemProvider.dispose();
-		if (checkSubCategoryConditionItemProvider != null) checkSubCategoryConditionItemProvider.dispose();
-		if (checkProductConditionItemProvider != null) checkProductConditionItemProvider.dispose();
-		if (checkTagsConditionItemProvider != null) checkTagsConditionItemProvider.dispose();
 		if (minPriceConditionItemProvider != null) minPriceConditionItemProvider.dispose();
-		if (checkQuantityCategoryConditionItemProvider != null) checkQuantityCategoryConditionItemProvider.dispose();
-		if (checkQuantitySubCategoryConditionItemProvider != null) checkQuantitySubCategoryConditionItemProvider.dispose();
-		if (checkQuantityProductConditionItemProvider != null) checkQuantityProductConditionItemProvider.dispose();
+		if (checkQuantityConditionItemProvider != null) checkQuantityConditionItemProvider.dispose();
 		if (triggerItemProvider != null) triggerItemProvider.dispose();
 	}
 

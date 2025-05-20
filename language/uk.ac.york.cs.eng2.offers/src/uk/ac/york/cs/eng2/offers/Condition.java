@@ -2,6 +2,8 @@
  */
 package uk.ac.york.cs.eng2.offers;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,6 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link uk.ac.york.cs.eng2.offers.Condition#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.Condition#getApplicableProducts <em>Applicable Products</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.Condition#getApplicableCategories <em>Applicable Categories</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.Condition#getApplicableSubCategories <em>Applicable Sub Categories</em>}</li>
  * </ul>
  *
  * @see uk.ac.york.cs.eng2.offers.OffersPackage#getCondition()
@@ -42,5 +47,41 @@ public interface Condition extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Applicable Products</b></em>' reference list.
+	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Product}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Applicable Products</em>' reference list.
+	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getCondition_ApplicableProducts()
+	 * @model
+	 * @generated
+	 */
+	EList<Product> getApplicableProducts();
+
+	/**
+	 * Returns the value of the '<em><b>Applicable Categories</b></em>' reference list.
+	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Category}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Applicable Categories</em>' reference list.
+	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getCondition_ApplicableCategories()
+	 * @model
+	 * @generated
+	 */
+	EList<Category> getApplicableCategories();
+
+	/**
+	 * Returns the value of the '<em><b>Applicable Sub Categories</b></em>' reference list.
+	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.SubCategory}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Applicable Sub Categories</em>' reference list.
+	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getCondition_ApplicableSubCategories()
+	 * @model
+	 * @generated
+	 */
+	EList<SubCategory> getApplicableSubCategories();
 
 } // Condition

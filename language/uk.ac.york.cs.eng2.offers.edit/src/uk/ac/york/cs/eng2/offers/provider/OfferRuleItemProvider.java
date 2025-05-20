@@ -186,42 +186,12 @@ public class OfferRuleItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
-				 OffersFactory.eINSTANCE.createCheckCategoryCondition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
-				 OffersFactory.eINSTANCE.createCheckSubCategoryCondition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
-				 OffersFactory.eINSTANCE.createCheckProductCondition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
-				 OffersFactory.eINSTANCE.createCheckTagsCondition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
 				 OffersFactory.eINSTANCE.createMinPriceCondition()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
-				 OffersFactory.eINSTANCE.createCheckQuantityCategoryCondition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
-				 OffersFactory.eINSTANCE.createCheckQuantitySubCategoryCondition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
-				 OffersFactory.eINSTANCE.createCheckQuantityProductCondition()));
+				 OffersFactory.eINSTANCE.createCheckQuantityCondition()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -5,7 +5,6 @@ package uk.ac.york.cs.eng2.offers.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -15,8 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import uk.ac.york.cs.eng2.offers.Category;
 import uk.ac.york.cs.eng2.offers.OffersPackage;
@@ -62,7 +60,7 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTags() <em>Tags</em>}' containment reference list.
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTags()
@@ -141,7 +139,7 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	@Override
 	public EList<Tag> getTags() {
 		if (tags == null) {
-			tags = new EObjectContainmentEList<Tag>(Tag.class, this, OffersPackage.PRODUCT__TAGS);
+			tags = new EObjectResolvingEList<Tag>(Tag.class, this, OffersPackage.PRODUCT__TAGS);
 		}
 		return tags;
 	}
@@ -224,20 +222,6 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 		category = newCategory;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.PRODUCT__CATEGORY, oldCategory, category));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OffersPackage.PRODUCT__TAGS:
-				return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

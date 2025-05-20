@@ -33,7 +33,7 @@ public class OfferXPoundsOffImpl extends OfferImpl implements OfferXPoundsOff {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int X_EDEFAULT = 0;
+	protected static final float X_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
@@ -43,7 +43,7 @@ public class OfferXPoundsOffImpl extends OfferImpl implements OfferXPoundsOff {
 	 * @generated
 	 * @ordered
 	 */
-	protected int x = X_EDEFAULT;
+	protected float x = X_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public class OfferXPoundsOffImpl extends OfferImpl implements OfferXPoundsOff {
 	 * @generated
 	 */
 	@Override
-	public int getX() {
+	public float getX() {
 		return x;
 	}
 
@@ -80,8 +80,8 @@ public class OfferXPoundsOffImpl extends OfferImpl implements OfferXPoundsOff {
 	 * @generated
 	 */
 	@Override
-	public void setX(int newX) {
-		int oldX = x;
+	public void setX(float newX) {
+		float oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_XPOUNDS_OFF__X, oldX, x));
@@ -110,7 +110,7 @@ public class OfferXPoundsOffImpl extends OfferImpl implements OfferXPoundsOff {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OffersPackage.OFFER_XPOUNDS_OFF__X:
-				setX((Integer)newValue);
+				setX((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

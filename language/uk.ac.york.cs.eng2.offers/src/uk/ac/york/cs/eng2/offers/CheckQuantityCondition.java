@@ -16,7 +16,7 @@ package uk.ac.york.cs.eng2.offers;
  * </ul>
  *
  * @see uk.ac.york.cs.eng2.offers.OffersPackage#getCheckQuantityCondition()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface CheckQuantityCondition extends Condition {

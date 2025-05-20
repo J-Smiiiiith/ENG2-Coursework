@@ -24,7 +24,7 @@ import uk.ac.york.cs.eng2.offers.OffersPackage;
  *
  * @generated
  */
-public abstract class CheckQuantityConditionImpl extends ConditionImpl implements CheckQuantityCondition {
+public class CheckQuantityConditionImpl extends ConditionImpl implements CheckQuantityCondition {
 	/**
 	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->

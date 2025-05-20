@@ -2,8 +2,6 @@
  */
 package uk.ac.york.cs.eng2.offers;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,9 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link uk.ac.york.cs.eng2.offers.Offer#getName <em>Name</em>}</li>
- *   <li>{@link uk.ac.york.cs.eng2.offers.Offer#getApplicableProducts <em>Applicable Products</em>}</li>
- *   <li>{@link uk.ac.york.cs.eng2.offers.Offer#getApplicableCategories <em>Applicable Categories</em>}</li>
- *   <li>{@link uk.ac.york.cs.eng2.offers.Offer#getApplicableSubCategories <em>Applicable Sub Categories</em>}</li>
  * </ul>
  *
  * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOffer()
@@ -47,41 +42,5 @@ public interface Offer extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Applicable Products</b></em>' containment reference list.
-	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Product}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Applicable Products</em>' containment reference list.
-	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOffer_ApplicableProducts()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Product> getApplicableProducts();
-
-	/**
-	 * Returns the value of the '<em><b>Applicable Categories</b></em>' containment reference list.
-	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Category}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Applicable Categories</em>' containment reference list.
-	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOffer_ApplicableCategories()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Category> getApplicableCategories();
-
-	/**
-	 * Returns the value of the '<em><b>Applicable Sub Categories</b></em>' containment reference list.
-	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.SubCategory}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Applicable Sub Categories</em>' containment reference list.
-	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOffer_ApplicableSubCategories()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<SubCategory> getApplicableSubCategories();
 
 } // Offer

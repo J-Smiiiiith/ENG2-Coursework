@@ -25,12 +25,12 @@ public interface OfferXPoundsOff extends Offer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
-	 * @see #setX(int)
+	 * @see #setX(float)
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferXPoundsOff_X()
 	 * @model
 	 * @generated
 	 */
-	int getX();
+	float getX();
 
 	/**
 	 * Sets the value of the '{@link uk.ac.york.cs.eng2.offers.OfferXPoundsOff#getX <em>X</em>}' attribute.
@@ -40,6 +40,6 @@ public interface OfferXPoundsOff extends Offer {
 	 * @see #getX()
 	 * @generated
 	 */
-	void setX(int value);
+	void setX(float value);
 
 } // OfferXPoundsOff

@@ -61,6 +61,9 @@ public class ConditionItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addApplicableProductsPropertyDescriptor(object);
+			addApplicableCategoriesPropertyDescriptor(object);
+			addApplicableSubCategoriesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -83,6 +86,72 @@ public class ConditionItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Applicable Products feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addApplicableProductsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Condition_applicableProducts_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_applicableProducts_feature", "_UI_Condition_type"),
+				 OffersPackage.Literals.CONDITION__APPLICABLE_PRODUCTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Applicable Categories feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addApplicableCategoriesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Condition_applicableCategories_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_applicableCategories_feature", "_UI_Condition_type"),
+				 OffersPackage.Literals.CONDITION__APPLICABLE_CATEGORIES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Applicable Sub Categories feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addApplicableSubCategoriesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Condition_applicableSubCategories_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_applicableSubCategories_feature", "_UI_Condition_type"),
+				 OffersPackage.Literals.CONDITION__APPLICABLE_SUB_CATEGORIES,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

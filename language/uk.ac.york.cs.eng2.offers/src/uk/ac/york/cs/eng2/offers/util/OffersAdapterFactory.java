@@ -68,6 +68,26 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 	protected OffersSwitch<Adapter> modelSwitch =
 		new OffersSwitch<Adapter>() {
 			@Override
+			public Adapter caseOfferComponents(OfferComponents object) {
+				return createOfferComponentsAdapter();
+			}
+			@Override
+			public Adapter caseProducts(Products object) {
+				return createProductsAdapter();
+			}
+			@Override
+			public Adapter caseCategories(Categories object) {
+				return createCategoriesAdapter();
+			}
+			@Override
+			public Adapter caseSubCategories(SubCategories object) {
+				return createSubCategoriesAdapter();
+			}
+			@Override
+			public Adapter caseTags(Tags object) {
+				return createTagsAdapter();
+			}
+			@Override
 			public Adapter caseAllOffers(AllOffers object) {
 				return createAllOffersAdapter();
 			}
@@ -76,16 +96,16 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 				return createOfferRuleAdapter();
 			}
 			@Override
+			public Adapter caseProduct(Product object) {
+				return createProductAdapter();
+			}
+			@Override
 			public Adapter caseCategory(Category object) {
 				return createCategoryAdapter();
 			}
 			@Override
 			public Adapter caseSubCategory(SubCategory object) {
 				return createSubCategoryAdapter();
-			}
-			@Override
-			public Adapter caseProduct(Product object) {
-				return createProductAdapter();
 			}
 			@Override
 			public Adapter caseTag(Tag object) {
@@ -124,40 +144,12 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 				return createConditionAdapter();
 			}
 			@Override
-			public Adapter caseCheckCategoryCondition(CheckCategoryCondition object) {
-				return createCheckCategoryConditionAdapter();
-			}
-			@Override
-			public Adapter caseCheckSubCategoryCondition(CheckSubCategoryCondition object) {
-				return createCheckSubCategoryConditionAdapter();
-			}
-			@Override
-			public Adapter caseCheckProductCondition(CheckProductCondition object) {
-				return createCheckProductConditionAdapter();
-			}
-			@Override
-			public Adapter caseCheckTagsCondition(CheckTagsCondition object) {
-				return createCheckTagsConditionAdapter();
-			}
-			@Override
 			public Adapter caseMinPriceCondition(MinPriceCondition object) {
 				return createMinPriceConditionAdapter();
 			}
 			@Override
 			public Adapter caseCheckQuantityCondition(CheckQuantityCondition object) {
 				return createCheckQuantityConditionAdapter();
-			}
-			@Override
-			public Adapter caseCheckQuantityCategoryCondition(CheckQuantityCategoryCondition object) {
-				return createCheckQuantityCategoryConditionAdapter();
-			}
-			@Override
-			public Adapter caseCheckQuantitySubCategoryCondition(CheckQuantitySubCategoryCondition object) {
-				return createCheckQuantitySubCategoryConditionAdapter();
-			}
-			@Override
-			public Adapter caseCheckQuantityProductCondition(CheckQuantityProductCondition object) {
-				return createCheckQuantityProductConditionAdapter();
 			}
 			@Override
 			public Adapter caseTrigger(Trigger object) {
@@ -182,6 +174,76 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.OfferComponents <em>Offer Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uk.ac.york.cs.eng2.offers.OfferComponents
+	 * @generated
+	 */
+	public Adapter createOfferComponentsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Products <em>Products</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uk.ac.york.cs.eng2.offers.Products
+	 * @generated
+	 */
+	public Adapter createProductsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Categories <em>Categories</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uk.ac.york.cs.eng2.offers.Categories
+	 * @generated
+	 */
+	public Adapter createCategoriesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.SubCategories <em>Sub Categories</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uk.ac.york.cs.eng2.offers.SubCategories
+	 * @generated
+	 */
+	public Adapter createSubCategoriesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Tags <em>Tags</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uk.ac.york.cs.eng2.offers.Tags
+	 * @generated
+	 */
+	public Adapter createTagsAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.AllOffers <em>All Offers</em>}'.
@@ -212,6 +274,20 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Product <em>Product</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uk.ac.york.cs.eng2.offers.Product
+	 * @generated
+	 */
+	public Adapter createProductAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Category <em>Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -236,20 +312,6 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSubCategoryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Product <em>Product</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.Product
-	 * @generated
-	 */
-	public Adapter createProductAdapter() {
 		return null;
 	}
 
@@ -380,62 +442,6 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.CheckCategoryCondition <em>Check Category Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.CheckCategoryCondition
-	 * @generated
-	 */
-	public Adapter createCheckCategoryConditionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.CheckSubCategoryCondition <em>Check Sub Category Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.CheckSubCategoryCondition
-	 * @generated
-	 */
-	public Adapter createCheckSubCategoryConditionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.CheckProductCondition <em>Check Product Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.CheckProductCondition
-	 * @generated
-	 */
-	public Adapter createCheckProductConditionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.CheckTagsCondition <em>Check Tags Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.CheckTagsCondition
-	 * @generated
-	 */
-	public Adapter createCheckTagsConditionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.MinPriceCondition <em>Min Price Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -460,48 +466,6 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCheckQuantityConditionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.CheckQuantityCategoryCondition <em>Check Quantity Category Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.CheckQuantityCategoryCondition
-	 * @generated
-	 */
-	public Adapter createCheckQuantityCategoryConditionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.CheckQuantitySubCategoryCondition <em>Check Quantity Sub Category Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.CheckQuantitySubCategoryCondition
-	 * @generated
-	 */
-	public Adapter createCheckQuantitySubCategoryConditionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.CheckQuantityProductCondition <em>Check Quantity Product Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.CheckQuantityProductCondition
-	 * @generated
-	 */
-	public Adapter createCheckQuantityProductConditionAdapter() {
 		return null;
 	}
 
