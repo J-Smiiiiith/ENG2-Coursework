@@ -4,7 +4,7 @@
     <semanticResources>model.offers</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Do5xkDWZEfCm1tBvZSaH9A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Q5xCUDWnEfC6v6zF-jxgZg" name="All Offers" repPath="#_Q5qUoDWnEfC6v6zF-jxgZg" changeId="1747776350629">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Q5xCUDWnEfC6v6zF-jxgZg" name="All Offers" repPath="#_Q5qUoDWnEfC6v6zF-jxgZg" changeId="1747776727659">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
@@ -441,7 +441,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_8ZoL0DW2EfC6v6zF-jxgZg" sourceNode="_NfWfADWpEfC6v6zF-jxgZg" targetNode="_OWNNijW0EfC6v6zF-jxgZg">
       <target xmi:type="dis:Product" href="model.offers#//@products/@products.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_8ZqBADW2EfC6v6zF-jxgZg" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_8ZqBADW2EfC6v6zF-jxgZg" lineStyle="dash" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relation.edge.product_tag']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_8ZqBATW2EfC6v6zF-jxgZg" labelSize="12"/>
       </ownedStyle>
@@ -449,7 +449,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_8ZqoEjW2EfC6v6zF-jxgZg" sourceNode="_NfXGETWpEfC6v6zF-jxgZg" targetNode="_OWN0kjW0EfC6v6zF-jxgZg">
       <target xmi:type="dis:Product" href="model.offers#//@products/@products.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_8ZqoEzW2EfC6v6zF-jxgZg" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_8ZqoEzW2EfC6v6zF-jxgZg" lineStyle="dash" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relation.edge.product_tag']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_8ZqoFDW2EfC6v6zF-jxgZg" labelSize="12"/>
       </ownedStyle>
@@ -457,7 +457,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_8ZqoFzW2EfC6v6zF-jxgZg" sourceNode="_NfXGETWpEfC6v6zF-jxgZg" targetNode="_OWNNijW0EfC6v6zF-jxgZg">
       <target xmi:type="dis:Product" href="model.offers#//@products/@products.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_8ZqoGDW2EfC6v6zF-jxgZg" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_8ZqoGDW2EfC6v6zF-jxgZg" lineStyle="dash" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relation.edge.product_tag']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_8ZqoGTW2EfC6v6zF-jxgZg" labelSize="12"/>
       </ownedStyle>
@@ -487,7 +487,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Z1xgyDW3EfC6v6zF-jxgZg" sourceNode="_NfXGETWpEfC6v6zF-jxgZg" targetNode="_J4XltDWzEfC6v6zF-jxgZg">
       <target xmi:type="dis:Product" href="model.offers#//@products/@products.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Z1xgyTW3EfC6v6zF-jxgZg" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Z1xgyTW3EfC6v6zF-jxgZg" lineStyle="dash" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relational.edge.product_category']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Z1xgyjW3EfC6v6zF-jxgZg" labelSize="12"/>
       </ownedStyle>
@@ -495,7 +495,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5pfxEDW3EfC6v6zF-jxgZg" sourceNode="_NfWfADWpEfC6v6zF-jxgZg" targetNode="_5tOXUjWzEfC6v6zF-jxgZg">
       <target xmi:type="dis:Product" href="model.offers#//@products/@products.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5pfxETW3EfC6v6zF-jxgZg" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5pfxETW3EfC6v6zF-jxgZg" lineStyle="dash" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relational.edge.product_subCategory']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_5pfxEjW3EfC6v6zF-jxgZg" labelSize="12"/>
       </ownedStyle>
@@ -503,7 +503,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_R4Xv5DW4EfC6v6zF-jxgZg" sourceNode="_5tOXUjWzEfC6v6zF-jxgZg" targetNode="_J4XlsTWzEfC6v6zF-jxgZg">
       <target xmi:type="dis:SubCategory" href="model.offers#//@subCategories/@subCategories.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_R4Xv5TW4EfC6v6zF-jxgZg" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_R4Xv5TW4EfC6v6zF-jxgZg" lineStyle="dash" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relational.edge.subCategory_category']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_R4Xv5jW4EfC6v6zF-jxgZg" labelSize="12"/>
       </ownedStyle>
@@ -511,7 +511,7 @@
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_m4LxsDW4EfC6v6zF-jxgZg" sourceNode="__pFm4DW1EfC6v6zF-jxgZg" targetNode="_NfWfADWpEfC6v6zF-jxgZg">
       <target xmi:type="dis:CheckQuantityCondition" href="model.offers#//@offers/@offers.1/@conditions.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_m4LxsTW4EfC6v6zF-jxgZg" size="2">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_m4LxsTW4EfC6v6zF-jxgZg" lineStyle="dash" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relational.edge.condition_product']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_m4LxsjW4EfC6v6zF-jxgZg" labelSize="12"/>
       </ownedStyle>
