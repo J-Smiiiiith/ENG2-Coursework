@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dis:AllOffers xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dis="http://cs.york.ac.uk/eng2/202425/offers">
+  <offers name="BOGOF Lynx">
+    <conditions xsi:type="dis:CheckQuantityProductCondition" name="Check Linx Quantity = 2" quantity="2" products="//@offers.0/@offers.0/@applicableProducts.0"/>
+    <offers xsi:type="dis:OfferBuyXGetYFree" name="BOGOF Linx" x="1" y="1">
+      <applicableProducts name="Linx"/>
+    </offers>
+    <triggers type="IF_MATCH"/>
+  </offers>
+</dis:AllOffers>
