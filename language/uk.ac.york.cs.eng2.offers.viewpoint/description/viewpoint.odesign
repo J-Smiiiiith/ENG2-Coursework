@@ -54,7 +54,7 @@
           </style>
         </nodeMappings>
         <edgeMappings name="offers.relation.edge.product_tag" label="Product -> Tag" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.product.node']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.tag']" targetFinderExpression="aql:self.tags">
-          <style sizeComputationExpression="2">
+          <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -62,7 +62,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="offers.relational.edge.product_category" label="Product -> Category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.product.node']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='Offers.category.node']" targetFinderExpression="aql:self.category">
-          <style sizeComputationExpression="2">
+          <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -70,7 +70,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="offers.relational.edge.product_subCategory" label="Product -> Sub-Category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.product.node']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.subcategory']" targetFinderExpression="aql:self.subCategory">
-          <style sizeComputationExpression="2">
+          <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -78,7 +78,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="offers.relational.edge.subCategory_category" label="Sub-Category -> Category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.subcategory']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='Offers.category.node']" targetFinderExpression="aql:self.category">
-          <style sizeComputationExpression="2">
+          <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -86,7 +86,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="offers.relational.edge.condition_product" label="Condition -> Product" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.product.node']" targetFinderExpression="aql:self.applicableProducts">
-          <style sizeComputationExpression="2">
+          <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -94,7 +94,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="offers.relational.edge.condition_category" label="Condition -> Category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='Offers.category.node']" targetFinderExpression="aql:self.applicableCategories">
-          <style sizeComputationExpression="2">
+          <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -102,7 +102,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="offers.relational.edge.condition_subCategory" label="Condition -> Sub-category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.subcategory']" targetFinderExpression="aql:self.applicableSubCategories">
-          <style sizeComputationExpression="2">
+          <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
