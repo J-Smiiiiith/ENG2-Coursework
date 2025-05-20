@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:dis="http://cs.york.ac.uk/eng2/202425/offers" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:dis="http://cs.york.ac.uk/eng2/202425/offers" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_E5V0ABrlEfCd2JsKYvPIZQ" selectedViews="_Do5xkDWZEfCm1tBvZSaH9A" version="15.2.0.202303281325">
     <semanticResources>model.offers</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Do5xkDWZEfCm1tBvZSaH9A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_JBNTADWZEfCm1tBvZSaH9A" name="All Offers" repPath="#_JBF-QDWZEfCm1tBvZSaH9A" changeId="1747762830034">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_JBNTADWZEfCm1tBvZSaH9A" name="All Offers" repPath="#_JBF-QDWZEfCm1tBvZSaH9A" changeId="1747763714249">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']"/>
         <target xmi:type="dis:AllOffers" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
@@ -13,12 +13,56 @@
   <diagram:DSemanticDiagram uid="_JBF-QDWZEfCm1tBvZSaH9A">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_JBauYDWZEfCm1tBvZSaH9A" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_JBauYTWZEfCm1tBvZSaH9A" type="Sirius" element="_JBF-QDWZEfCm1tBvZSaH9A" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_B-UNIDWbEfCm1tBvZSaH9A" type="2001" element="_B-PUoDWbEfCm1tBvZSaH9A">
+          <children xmi:type="notation:Node" xmi:id="_B-UNIzWbEfCm1tBvZSaH9A" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_B-UNJDWbEfCm1tBvZSaH9A" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_B-UNJTWbEfCm1tBvZSaH9A" type="3003" element="_B-PUoTWbEfCm1tBvZSaH9A">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_B-UNJjWbEfCm1tBvZSaH9A" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B-UNJzWbEfCm1tBvZSaH9A"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_B-UNITWbEfCm1tBvZSaH9A" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B-UNIjWbEfCm1tBvZSaH9A" x="20" y="48" width="229" height="53"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EL-XgDWbEfCm1tBvZSaH9A" type="2001" element="_EL0mgjWbEfCm1tBvZSaH9A">
+          <children xmi:type="notation:Node" xmi:id="_EL-XgzWbEfCm1tBvZSaH9A" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EL-XhDWbEfCm1tBvZSaH9A" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EL-XhTWbEfCm1tBvZSaH9A" type="3003" element="_EL0mgzWbEfCm1tBvZSaH9A">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_EL-XhjWbEfCm1tBvZSaH9A" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EL-XhzWbEfCm1tBvZSaH9A"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EL-XgTWbEfCm1tBvZSaH9A" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EL-XgjWbEfCm1tBvZSaH9A" x="20" y="196" width="237" height="61"/>
+        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_JBauYjWZEfCm1tBvZSaH9A"/>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_JBdKoDWZEfCm1tBvZSaH9A" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_JBdKoTWZEfCm1tBvZSaH9A"/>
     </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_B-PUoDWbEfCm1tBvZSaH9A" name="BOGOF Lynx" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
+      <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_B-PUoTWbEfCm1tBvZSaH9A" labelSize="12" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.nodes.offer_rule']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.nodes.offer_rule']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_EL0mgjWbEfCm1tBvZSaH9A" name="Poo" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="dis:OfferRule" href="model.offers#//@offers.1"/>
+      <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_EL0mgzWbEfCm1tBvZSaH9A" labelSize="12" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.nodes.offer_rule']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.nodes.offer_rule']"/>
+    </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_JBJooDWZEfCm1tBvZSaH9A"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer"/>

@@ -3,8 +3,9 @@
   <offers name="BOGOF Lynx">
     <conditions xsi:type="dis:CheckQuantityProductCondition" name="Check Linx Quantity = 2" quantity="2" products="//@offers.0/@offers.0/@applicableProducts.0"/>
     <offers xsi:type="dis:OfferBuyXGetYFree" name="BOGOF Linx" x="1" y="1">
-      <applicableProducts name="Linx"/>
+      <applicableProducts name="Lynx"/>
     </offers>
     <triggers type="IF_MATCH"/>
   </offers>
+  <offers name="Poo"/>
 </dis:AllOffers>
