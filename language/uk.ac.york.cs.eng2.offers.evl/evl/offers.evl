@@ -21,3 +21,12 @@ context Product {
     }
   }
 }
+
+context OfferPriceReduction {
+	
+	constraint percentageBetween0And100 {
+		check: self.percentageReduction > 0 and self.percentageReduction <= 100
+		message: "Price reduction offer: '" + self.name + "' has percentage reduction: " 
+		+ self.percentageReduction + ". This value must b between 0 and 100."
+	}
+}
