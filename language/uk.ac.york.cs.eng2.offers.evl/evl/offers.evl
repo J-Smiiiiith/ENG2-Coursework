@@ -41,9 +41,9 @@ context OfferPriceReduction {
 	}
 }
 
-//Check one rule triggered by no other rules
 context OfferRule {
 
+  //Check one rule triggered by no other rules
   constraint onlyOneStartRuleExists {
   
   	guard: Trigger.all.select(t | t.target == self).isEmpty()
@@ -54,6 +54,7 @@ context OfferRule {
     "that is not targeted by any Trigger."
   }
   
+  //Check rules with always triggers only have always triggers
   constraint onlyAlwaysTrigger {
   
   	guard: self.triggers.exists(t | t.type == TriggerType#ALWAYS)
@@ -64,5 +65,24 @@ context OfferRule {
   	message: "'" + self.name + "' has triggers: " + self.triggers + ". Rules with an ALWAYS triggers cannot " + 
   	"have IF_NOT_MATCH or IF_MATCH triggers"
   	
+  }
+  
+  //Check only one of each type of trigger per rule
+  constraint noDuplicateTriggerTypes {
+  
+  	guard: self.triggers.size() > 1
+  	
+  	check {
+  		var matchCount = self.triggers.select(t | t.type == TriggerType#IF_MATCH).size();
+		var notMatchCount = self.triggers.select(t | t.type == TriggerType#IF_NOT_MATCH).size();
+		var alwaysCount = self.triggers.select(t | t.type == TriggerType#ALWAYS).size();
+		
+		alwaysCount.println();
+		
+		return matchCount < 2 and notMatchCount < 2 and alwaysCount < 2;
+  	}
+  	
+  	message:  "'" + self.name + "' has triggers: " + self.triggers + ". There must be at most 1 of each " +
+  	"trigger type per rule."
   }
 }
