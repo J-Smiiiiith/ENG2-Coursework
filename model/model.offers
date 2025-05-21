@@ -10,4 +10,9 @@
   <tags tag="Chocolate"/>
   <tags tag="Baked"/>
   <tags tag="Frozen"/>
+  <offers name="10% off from the first 10 orders of Bakewell Tarts in the day"/>
+  <offers name="2 large pizzas for 10 pounds, with one free large ice cream"/>
+  <offers name="2 pizzas for the price of 1"/>
+  <offers name="10% discount on Christmas Day (60 GBP minimum order)"/>
+  <offers name="5 pounds off on orders with chocolate cake (50 GBP minimum order)"/>
 </dis:OfferComponents>

@@ -32,14 +32,14 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="offers.node.offer_rule" label="Offer Rule" semanticCandidatesExpression="aql:self.offers.offers" domainClass="offers::OfferRule">
+        <nodeMappings name="offers.node.offer_rule" label="Offer Rule" semanticCandidatesExpression="aql:self.offers" domainClass="offers::OfferRule">
           <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="offers.node.offer" label="Offer" semanticCandidatesExpression="aql:self.offers.offers.offers" domainClass="offers::Offer">
+        <nodeMappings name="offers.node.offer" label="Offer" semanticCandidatesExpression="aql:self.offers.offers" domainClass="offers::Offer">
           <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -160,6 +160,13 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="offers::SubCategory" referenceName="subCategories"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="offers.nodes.tools.createOfferRule" label="Create OfferRule" nodeMappings="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="offers::OfferRule" referenceName="offers"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
