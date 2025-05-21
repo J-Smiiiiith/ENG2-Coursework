@@ -11,21 +11,27 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import uk.ac.york.cs.eng2.offers.OffersPackage;
+import uk.ac.york.cs.eng2.offers.Tag;
 
 /**
- * This is the item provider adapter for a {@link uk.ac.york.cs.eng2.offers.Model} object.
+ * This is the item provider adapter for a {@link uk.ac.york.cs.eng2.offers.Tag} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelItemProvider 
+public class TagItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -39,7 +45,7 @@ public class ModelItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModelItemProvider(AdapterFactory adapterFactory) {
+	public TagItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -54,19 +60,42 @@ public class ModelItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTagPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This returns Model.gif.
+	 * This adds a property descriptor for the Tag feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTagPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Tag_tag_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tag_tag_feature", "_UI_Tag_type"),
+				 OffersPackage.Literals.TAG__TAG,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns Tag.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Model"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Tag"));
 	}
 
 	/**
@@ -77,7 +106,10 @@ public class ModelItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Model_type");
+		String label = ((Tag)object).getTag();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tag_type") :
+			getString("_UI_Tag_type") + " " + label;
 	}
 
 
@@ -91,6 +123,12 @@ public class ModelItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Tag.class)) {
+			case OffersPackage.TAG__TAG:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
