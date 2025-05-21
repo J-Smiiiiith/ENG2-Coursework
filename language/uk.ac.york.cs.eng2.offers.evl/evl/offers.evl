@@ -6,16 +6,22 @@
 context Product {
 
   constraint nameIsUnique {
+  
     check: Product.all.select(p | p.name == self.name).size() == 1
+    
     message: "Product name '" + self.name + "' is not unique."
   }
   
   critique nameStartsWithCapitalLetter {
+  
     check: self.name == self.name.ftuc()
+    
     message: "Product names should start with an upper case letter."
     
     fix {
+    
       title: "Rename '" + self.name + "' to: " + self.name.ftuc()
+      
       do {
         self.name = self.name.ftuc();
       }
@@ -27,7 +33,9 @@ context Product {
 context OfferPriceReduction {
 	
 	constraint percentageBetween0And100 {
+	
 		check: self.percentageReduction > 0 and self.percentageReduction <= 100
+		
 		message: "Price reduction offer: '" + self.name + "' has percentage reduction: " 
 		+ self.percentageReduction + ". This value must b between 0 and 100."
 	}
@@ -44,5 +52,17 @@ context OfferRule {
 
     message: "'" + self.name + "'" + "is not targetted by any trigger. There only be 1 OfferRule " +
     "that is not targeted by any Trigger."
+  }
+  
+  constraint onlyAlwaysTrigger {
+  
+  	guard: self.triggers.exists(t | t.type == TriggerType#ALWAYS)
+  	
+  	check: self.triggers.select(t | t.type == TriggerType#IF_NOT_MATCH).size() == 0 and 
+  		   self.triggers.select(t | t.type == TriggerType#IF_MATCH).size() == 0
+  	 
+  	message: "'" + self.name + "' has triggers: " + self.triggers + ". Rules with an ALWAYS triggers cannot " + 
+  	"have IF_NOT_MATCH or IF_MATCH triggers"
+  	
   }
 }
