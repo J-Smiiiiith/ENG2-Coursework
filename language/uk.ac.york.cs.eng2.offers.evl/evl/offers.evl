@@ -1,3 +1,23 @@
 // Write your EVL validation rules here.
 //
 // To run them, right-click on the Sirius diagram background and select "Validate diagram".
+
+context Product {
+
+  constraint nameIsUnique {
+    check: Product.all.select(p | p.name == self.name).size() == 1
+    message: "Product name '" + self.name + "' is not unique."
+  }
+  
+  critique nameStartsWithCapitalLetter {
+    check: self.name == self.name.ftuc()
+    message: "Product names should start with an upper case letter."
+    
+    fix {
+      title: "Rename '" + self.name + "' to: " + self.name.ftuc()
+      do {
+        self.name = self.name.ftuc();
+      }
+    }
+  }
+}
