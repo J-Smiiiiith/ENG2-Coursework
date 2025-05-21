@@ -25,7 +25,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="offers.node.tag" label="Tag" semanticCandidatesExpression="aql:self.tags.tags" domainClass="offers::Tag">
+        <nodeMappings name="offers.node.tag" label="Tag" semanticCandidatesExpression="aql:self.tags" domainClass="offers::Tag">
           <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:tag" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -134,11 +134,18 @@
           </style>
         </edgeMappings>
         <toolSections name="offers.node.tools" label="Node Tools">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="offers.node.tools.createProduct" label="CreateProduct" nodeMappings="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.product.node']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="offers.node.tools.createProduct" label="Create Product" nodeMappings="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.product.node']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="offers::Product" referenceName="products"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="offers.nodes.tools.createTag" label="Create Tag" nodeMappings="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.tag']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="offers::Tag" referenceName="tags"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
