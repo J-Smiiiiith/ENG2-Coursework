@@ -68,14 +68,15 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 			case OffersPackage.CATEGORY: return createCategory();
 			case OffersPackage.SUB_CATEGORY: return createSubCategory();
 			case OffersPackage.TAG: return createTag();
+			case OffersPackage.FREE_PRODUCT_OFFER: return createFreeProductOffer();
 			case OffersPackage.OFFER_PRICE_REDUCTION: return createOfferPriceReduction();
 			case OffersPackage.OFFER_FIXED_PRICE: return createOfferFixedPrice();
 			case OffersPackage.OFFER_BUY_XGET_YFREE: return createOfferBuyXGetYFree();
 			case OffersPackage.OFFER_XPOUNDS_OFF: return createOfferXPoundsOff();
-			case OffersPackage.OFFER_XPOUNDS_OFF_ON_DATE: return createOfferXPoundsOffOnDate();
-			case OffersPackage.OFFER_PRICE_REDUCTION_ON_DATE: return createOfferPriceReductionOnDate();
 			case OffersPackage.MIN_PRICE_CONDITION: return createMinPriceCondition();
 			case OffersPackage.CHECK_QUANTITY_CONDITION: return createCheckQuantityCondition();
+			case OffersPackage.CHECK_NUM_ORDERS_CONDITION: return createCheckNumOrdersCondition();
+			case OffersPackage.CHECK_DATE_CONDITION: return createCheckDateCondition();
 			case OffersPackage.TRIGGER: return createTrigger();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -239,6 +240,17 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	 * @generated
 	 */
 	@Override
+	public FreeProductOffer createFreeProductOffer() {
+		FreeProductOfferImpl freeProductOffer = new FreeProductOfferImpl();
+		return freeProductOffer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public OfferPriceReduction createOfferPriceReduction() {
 		OfferPriceReductionImpl offerPriceReduction = new OfferPriceReductionImpl();
 		return offerPriceReduction;
@@ -283,28 +295,6 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	 * @generated
 	 */
 	@Override
-	public OfferXPoundsOffOnDate createOfferXPoundsOffOnDate() {
-		OfferXPoundsOffOnDateImpl offerXPoundsOffOnDate = new OfferXPoundsOffOnDateImpl();
-		return offerXPoundsOffOnDate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public OfferPriceReductionOnDate createOfferPriceReductionOnDate() {
-		OfferPriceReductionOnDateImpl offerPriceReductionOnDate = new OfferPriceReductionOnDateImpl();
-		return offerPriceReductionOnDate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public MinPriceCondition createMinPriceCondition() {
 		MinPriceConditionImpl minPriceCondition = new MinPriceConditionImpl();
 		return minPriceCondition;
@@ -319,6 +309,28 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	public CheckQuantityCondition createCheckQuantityCondition() {
 		CheckQuantityConditionImpl checkQuantityCondition = new CheckQuantityConditionImpl();
 		return checkQuantityCondition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CheckNumOrdersCondition createCheckNumOrdersCondition() {
+		CheckNumOrdersConditionImpl checkNumOrdersCondition = new CheckNumOrdersConditionImpl();
+		return checkNumOrdersCondition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CheckDateCondition createCheckDateCondition() {
+		CheckDateConditionImpl checkDateCondition = new CheckDateConditionImpl();
+		return checkDateCondition;
 	}
 
 	/**

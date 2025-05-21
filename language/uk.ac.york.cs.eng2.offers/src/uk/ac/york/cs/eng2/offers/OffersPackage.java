@@ -601,6 +601,52 @@ public interface OffersPackage extends EPackage {
 	int OFFER_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.FreeProductOfferImpl <em>Free Product Offer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see uk.ac.york.cs.eng2.offers.impl.FreeProductOfferImpl
+	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getFreeProductOffer()
+	 * @generated
+	 */
+	int FREE_PRODUCT_OFFER = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FREE_PRODUCT_OFFER__NAME = OFFER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Free Product</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FREE_PRODUCT_OFFER__FREE_PRODUCT = OFFER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Free Product Offer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FREE_PRODUCT_OFFER_FEATURE_COUNT = OFFER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Free Product Offer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FREE_PRODUCT_OFFER_OPERATION_COUNT = OFFER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.OfferPriceReductionImpl <em>Offer Price Reduction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -608,7 +654,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferPriceReduction()
 	 * @generated
 	 */
-	int OFFER_PRICE_REDUCTION = 12;
+	int OFFER_PRICE_REDUCTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -654,7 +700,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferFixedPrice()
 	 * @generated
 	 */
-	int OFFER_FIXED_PRICE = 13;
+	int OFFER_FIXED_PRICE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -700,7 +746,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferBuyXGetYFree()
 	 * @generated
 	 */
-	int OFFER_BUY_XGET_YFREE = 14;
+	int OFFER_BUY_XGET_YFREE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -755,7 +801,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferXPoundsOff()
 	 * @generated
 	 */
-	int OFFER_XPOUNDS_OFF = 15;
+	int OFFER_XPOUNDS_OFF = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -794,116 +840,6 @@ public interface OffersPackage extends EPackage {
 	int OFFER_XPOUNDS_OFF_OPERATION_COUNT = OFFER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.OfferXPoundsOffOnDateImpl <em>Offer XPounds Off On Date</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uk.ac.york.cs.eng2.offers.impl.OfferXPoundsOffOnDateImpl
-	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferXPoundsOffOnDate()
-	 * @generated
-	 */
-	int OFFER_XPOUNDS_OFF_ON_DATE = 16;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_XPOUNDS_OFF_ON_DATE__NAME = OFFER_XPOUNDS_OFF__NAME;
-
-	/**
-	 * The feature id for the '<em><b>X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_XPOUNDS_OFF_ON_DATE__X = OFFER_XPOUNDS_OFF__X;
-
-	/**
-	 * The feature id for the '<em><b>Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_XPOUNDS_OFF_ON_DATE__DATE = OFFER_XPOUNDS_OFF_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Offer XPounds Off On Date</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_XPOUNDS_OFF_ON_DATE_FEATURE_COUNT = OFFER_XPOUNDS_OFF_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Offer XPounds Off On Date</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_XPOUNDS_OFF_ON_DATE_OPERATION_COUNT = OFFER_XPOUNDS_OFF_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.OfferPriceReductionOnDateImpl <em>Offer Price Reduction On Date</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uk.ac.york.cs.eng2.offers.impl.OfferPriceReductionOnDateImpl
-	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferPriceReductionOnDate()
-	 * @generated
-	 */
-	int OFFER_PRICE_REDUCTION_ON_DATE = 17;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_PRICE_REDUCTION_ON_DATE__NAME = OFFER_PRICE_REDUCTION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Percentage Reduction</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_PRICE_REDUCTION_ON_DATE__PERCENTAGE_REDUCTION = OFFER_PRICE_REDUCTION__PERCENTAGE_REDUCTION;
-
-	/**
-	 * The feature id for the '<em><b>Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_PRICE_REDUCTION_ON_DATE__DATE = OFFER_PRICE_REDUCTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Offer Price Reduction On Date</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_PRICE_REDUCTION_ON_DATE_FEATURE_COUNT = OFFER_PRICE_REDUCTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Offer Price Reduction On Date</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_PRICE_REDUCTION_ON_DATE_OPERATION_COUNT = OFFER_PRICE_REDUCTION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.ConditionImpl <em>Condition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -911,7 +847,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCondition()
 	 * @generated
 	 */
-	int CONDITION = 18;
+	int CONDITION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -975,7 +911,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getMinPriceCondition()
 	 * @generated
 	 */
-	int MIN_PRICE_CONDITION = 19;
+	int MIN_PRICE_CONDITION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1048,7 +984,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCheckQuantityCondition()
 	 * @generated
 	 */
-	int CHECK_QUANTITY_CONDITION = 20;
+	int CHECK_QUANTITY_CONDITION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1114,6 +1050,152 @@ public interface OffersPackage extends EPackage {
 	int CHECK_QUANTITY_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.CheckNumOrdersConditionImpl <em>Check Num Orders Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see uk.ac.york.cs.eng2.offers.impl.CheckNumOrdersConditionImpl
+	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCheckNumOrdersCondition()
+	 * @generated
+	 */
+	int CHECK_NUM_ORDERS_CONDITION = 20;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_NUM_ORDERS_CONDITION__NAME = CONDITION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Applicable Products</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_NUM_ORDERS_CONDITION__APPLICABLE_PRODUCTS = CONDITION__APPLICABLE_PRODUCTS;
+
+	/**
+	 * The feature id for the '<em><b>Applicable Categories</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_NUM_ORDERS_CONDITION__APPLICABLE_CATEGORIES = CONDITION__APPLICABLE_CATEGORIES;
+
+	/**
+	 * The feature id for the '<em><b>Applicable Sub Categories</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_NUM_ORDERS_CONDITION__APPLICABLE_SUB_CATEGORIES = CONDITION__APPLICABLE_SUB_CATEGORIES;
+
+	/**
+	 * The feature id for the '<em><b>Num Orders</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_NUM_ORDERS_CONDITION__NUM_ORDERS = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Check Num Orders Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_NUM_ORDERS_CONDITION_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Check Num Orders Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_NUM_ORDERS_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.CheckDateConditionImpl <em>Check Date Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see uk.ac.york.cs.eng2.offers.impl.CheckDateConditionImpl
+	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCheckDateCondition()
+	 * @generated
+	 */
+	int CHECK_DATE_CONDITION = 21;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_DATE_CONDITION__NAME = CONDITION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Applicable Products</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_DATE_CONDITION__APPLICABLE_PRODUCTS = CONDITION__APPLICABLE_PRODUCTS;
+
+	/**
+	 * The feature id for the '<em><b>Applicable Categories</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_DATE_CONDITION__APPLICABLE_CATEGORIES = CONDITION__APPLICABLE_CATEGORIES;
+
+	/**
+	 * The feature id for the '<em><b>Applicable Sub Categories</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_DATE_CONDITION__APPLICABLE_SUB_CATEGORIES = CONDITION__APPLICABLE_SUB_CATEGORIES;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_DATE_CONDITION__DATE = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Check Date Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_DATE_CONDITION_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Check Date Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_DATE_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.TriggerImpl <em>Trigger</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1121,7 +1203,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getTrigger()
 	 * @generated
 	 */
-	int TRIGGER = 21;
+	int TRIGGER = 22;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -1167,7 +1249,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getTriggerType()
 	 * @generated
 	 */
-	int TRIGGER_TYPE = 22;
+	int TRIGGER_TYPE = 23;
 
 
 	/**
@@ -1533,6 +1615,27 @@ public interface OffersPackage extends EPackage {
 	EAttribute getOffer_Name();
 
 	/**
+	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.FreeProductOffer <em>Free Product Offer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Free Product Offer</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.FreeProductOffer
+	 * @generated
+	 */
+	EClass getFreeProductOffer();
+
+	/**
+	 * Returns the meta object for the reference '{@link uk.ac.york.cs.eng2.offers.FreeProductOffer#getFreeProduct <em>Free Product</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Free Product</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.FreeProductOffer#getFreeProduct()
+	 * @see #getFreeProductOffer()
+	 * @generated
+	 */
+	EReference getFreeProductOffer_FreeProduct();
+
+	/**
 	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.OfferPriceReduction <em>Offer Price Reduction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1626,48 +1729,6 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOfferXPoundsOff_X();
-
-	/**
-	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate <em>Offer XPounds Off On Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Offer XPounds Off On Date</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate
-	 * @generated
-	 */
-	EClass getOfferXPoundsOffOnDate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate#getDate <em>Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Date</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate#getDate()
-	 * @see #getOfferXPoundsOffOnDate()
-	 * @generated
-	 */
-	EAttribute getOfferXPoundsOffOnDate_Date();
-
-	/**
-	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate <em>Offer Price Reduction On Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Offer Price Reduction On Date</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate
-	 * @generated
-	 */
-	EClass getOfferPriceReductionOnDate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate#getDate <em>Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Date</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate#getDate()
-	 * @see #getOfferPriceReductionOnDate()
-	 * @generated
-	 */
-	EAttribute getOfferPriceReductionOnDate_Date();
 
 	/**
 	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.Condition <em>Condition</em>}'.
@@ -1764,6 +1825,48 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCheckQuantityCondition_Quantity();
+
+	/**
+	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition <em>Check Num Orders Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Check Num Orders Condition</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition
+	 * @generated
+	 */
+	EClass getCheckNumOrdersCondition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition#getNumOrders <em>Num Orders</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Num Orders</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition#getNumOrders()
+	 * @see #getCheckNumOrdersCondition()
+	 * @generated
+	 */
+	EAttribute getCheckNumOrdersCondition_NumOrders();
+
+	/**
+	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.CheckDateCondition <em>Check Date Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Check Date Condition</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.CheckDateCondition
+	 * @generated
+	 */
+	EClass getCheckDateCondition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link uk.ac.york.cs.eng2.offers.CheckDateCondition#getDate <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.CheckDateCondition#getDate()
+	 * @see #getCheckDateCondition()
+	 * @generated
+	 */
+	EAttribute getCheckDateCondition_Date();
 
 	/**
 	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.Trigger <em>Trigger</em>}'.
@@ -2127,6 +2230,24 @@ public interface OffersPackage extends EPackage {
 		EAttribute OFFER__NAME = eINSTANCE.getOffer_Name();
 
 		/**
+		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.FreeProductOfferImpl <em>Free Product Offer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see uk.ac.york.cs.eng2.offers.impl.FreeProductOfferImpl
+		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getFreeProductOffer()
+		 * @generated
+		 */
+		EClass FREE_PRODUCT_OFFER = eINSTANCE.getFreeProductOffer();
+
+		/**
+		 * The meta object literal for the '<em><b>Free Product</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FREE_PRODUCT_OFFER__FREE_PRODUCT = eINSTANCE.getFreeProductOffer_FreeProduct();
+
+		/**
 		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.OfferPriceReductionImpl <em>Offer Price Reduction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2207,42 +2328,6 @@ public interface OffersPackage extends EPackage {
 		EAttribute OFFER_XPOUNDS_OFF__X = eINSTANCE.getOfferXPoundsOff_X();
 
 		/**
-		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.OfferXPoundsOffOnDateImpl <em>Offer XPounds Off On Date</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uk.ac.york.cs.eng2.offers.impl.OfferXPoundsOffOnDateImpl
-		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferXPoundsOffOnDate()
-		 * @generated
-		 */
-		EClass OFFER_XPOUNDS_OFF_ON_DATE = eINSTANCE.getOfferXPoundsOffOnDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OFFER_XPOUNDS_OFF_ON_DATE__DATE = eINSTANCE.getOfferXPoundsOffOnDate_Date();
-
-		/**
-		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.OfferPriceReductionOnDateImpl <em>Offer Price Reduction On Date</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uk.ac.york.cs.eng2.offers.impl.OfferPriceReductionOnDateImpl
-		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferPriceReductionOnDate()
-		 * @generated
-		 */
-		EClass OFFER_PRICE_REDUCTION_ON_DATE = eINSTANCE.getOfferPriceReductionOnDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute OFFER_PRICE_REDUCTION_ON_DATE__DATE = eINSTANCE.getOfferPriceReductionOnDate_Date();
-
-		/**
 		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.ConditionImpl <em>Condition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2319,6 +2404,42 @@ public interface OffersPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CHECK_QUANTITY_CONDITION__QUANTITY = eINSTANCE.getCheckQuantityCondition_Quantity();
+
+		/**
+		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.CheckNumOrdersConditionImpl <em>Check Num Orders Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see uk.ac.york.cs.eng2.offers.impl.CheckNumOrdersConditionImpl
+		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCheckNumOrdersCondition()
+		 * @generated
+		 */
+		EClass CHECK_NUM_ORDERS_CONDITION = eINSTANCE.getCheckNumOrdersCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Num Orders</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHECK_NUM_ORDERS_CONDITION__NUM_ORDERS = eINSTANCE.getCheckNumOrdersCondition_NumOrders();
+
+		/**
+		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.CheckDateConditionImpl <em>Check Date Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see uk.ac.york.cs.eng2.offers.impl.CheckDateConditionImpl
+		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCheckDateCondition()
+		 * @generated
+		 */
+		EClass CHECK_DATE_CONDITION = eINSTANCE.getCheckDateCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHECK_DATE_CONDITION__DATE = eINSTANCE.getCheckDateCondition_Date();
 
 		/**
 		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.TriggerImpl <em>Trigger</em>}' class.

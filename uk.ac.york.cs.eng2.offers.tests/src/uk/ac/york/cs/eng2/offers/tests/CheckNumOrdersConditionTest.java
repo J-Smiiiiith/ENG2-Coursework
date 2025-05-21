@@ -4,16 +4,16 @@ package uk.ac.york.cs.eng2.offers.tests;
 
 import junit.textui.TestRunner;
 
-import uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate;
+import uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition;
 import uk.ac.york.cs.eng2.offers.OffersFactory;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Offer Price Reduction On Date</b></em>'.
+ * A test case for the model object '<em><b>Check Num Orders Condition</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class OfferPriceReductionOnDateTest extends OfferPriceReductionTest {
+public class CheckNumOrdersConditionTest extends ConditionTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -21,28 +21,28 @@ public class OfferPriceReductionOnDateTest extends OfferPriceReductionTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(OfferPriceReductionOnDateTest.class);
+		TestRunner.run(CheckNumOrdersConditionTest.class);
 	}
 
 	/**
-	 * Constructs a new Offer Price Reduction On Date test case with the given name.
+	 * Constructs a new Check Num Orders Condition test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OfferPriceReductionOnDateTest(String name) {
+	public CheckNumOrdersConditionTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Offer Price Reduction On Date test case.
+	 * Returns the fixture for this Check Num Orders Condition test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected OfferPriceReductionOnDate getFixture() {
-		return (OfferPriceReductionOnDate)fixture;
+	protected CheckNumOrdersCondition getFixture() {
+		return (CheckNumOrdersCondition)fixture;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class OfferPriceReductionOnDateTest extends OfferPriceReductionTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(OffersFactory.eINSTANCE.createOfferPriceReductionOnDate());
+		setFixture(OffersFactory.eINSTANCE.createCheckNumOrdersCondition());
 	}
 
 	/**
@@ -67,4 +67,4 @@ public class OfferPriceReductionOnDateTest extends OfferPriceReductionTest {
 		setFixture(null);
 	}
 
-} //OfferPriceReductionOnDateTest
+} //CheckNumOrdersConditionTest

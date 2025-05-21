@@ -121,6 +121,15 @@ public interface OffersFactory extends EFactory {
 	Tag createTag();
 
 	/**
+	 * Returns a new object of class '<em>Free Product Offer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Free Product Offer</em>'.
+	 * @generated
+	 */
+	FreeProductOffer createFreeProductOffer();
+
+	/**
 	 * Returns a new object of class '<em>Offer Price Reduction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,24 +166,6 @@ public interface OffersFactory extends EFactory {
 	OfferXPoundsOff createOfferXPoundsOff();
 
 	/**
-	 * Returns a new object of class '<em>Offer XPounds Off On Date</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Offer XPounds Off On Date</em>'.
-	 * @generated
-	 */
-	OfferXPoundsOffOnDate createOfferXPoundsOffOnDate();
-
-	/**
-	 * Returns a new object of class '<em>Offer Price Reduction On Date</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Offer Price Reduction On Date</em>'.
-	 * @generated
-	 */
-	OfferPriceReductionOnDate createOfferPriceReductionOnDate();
-
-	/**
 	 * Returns a new object of class '<em>Min Price Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -191,6 +182,24 @@ public interface OffersFactory extends EFactory {
 	 * @generated
 	 */
 	CheckQuantityCondition createCheckQuantityCondition();
+
+	/**
+	 * Returns a new object of class '<em>Check Num Orders Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Check Num Orders Condition</em>'.
+	 * @generated
+	 */
+	CheckNumOrdersCondition createCheckNumOrdersCondition();
+
+	/**
+	 * Returns a new object of class '<em>Check Date Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Check Date Condition</em>'.
+	 * @generated
+	 */
+	CheckDateCondition createCheckDateCondition();
 
 	/**
 	 * Returns a new object of class '<em>Trigger</em>'.

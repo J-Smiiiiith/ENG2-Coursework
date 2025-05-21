@@ -139,6 +139,13 @@ public class OffersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OffersPackage.FREE_PRODUCT_OFFER: {
+				FreeProductOffer freeProductOffer = (FreeProductOffer)theEObject;
+				T result = caseFreeProductOffer(freeProductOffer);
+				if (result == null) result = caseOffer(freeProductOffer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OffersPackage.OFFER_PRICE_REDUCTION: {
 				OfferPriceReduction offerPriceReduction = (OfferPriceReduction)theEObject;
 				T result = caseOfferPriceReduction(offerPriceReduction);
@@ -167,22 +174,6 @@ public class OffersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case OffersPackage.OFFER_XPOUNDS_OFF_ON_DATE: {
-				OfferXPoundsOffOnDate offerXPoundsOffOnDate = (OfferXPoundsOffOnDate)theEObject;
-				T result = caseOfferXPoundsOffOnDate(offerXPoundsOffOnDate);
-				if (result == null) result = caseOfferXPoundsOff(offerXPoundsOffOnDate);
-				if (result == null) result = caseOffer(offerXPoundsOffOnDate);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OffersPackage.OFFER_PRICE_REDUCTION_ON_DATE: {
-				OfferPriceReductionOnDate offerPriceReductionOnDate = (OfferPriceReductionOnDate)theEObject;
-				T result = caseOfferPriceReductionOnDate(offerPriceReductionOnDate);
-				if (result == null) result = caseOfferPriceReduction(offerPriceReductionOnDate);
-				if (result == null) result = caseOffer(offerPriceReductionOnDate);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case OffersPackage.CONDITION: {
 				Condition condition = (Condition)theEObject;
 				T result = caseCondition(condition);
@@ -200,6 +191,20 @@ public class OffersSwitch<T> extends Switch<T> {
 				CheckQuantityCondition checkQuantityCondition = (CheckQuantityCondition)theEObject;
 				T result = caseCheckQuantityCondition(checkQuantityCondition);
 				if (result == null) result = caseCondition(checkQuantityCondition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OffersPackage.CHECK_NUM_ORDERS_CONDITION: {
+				CheckNumOrdersCondition checkNumOrdersCondition = (CheckNumOrdersCondition)theEObject;
+				T result = caseCheckNumOrdersCondition(checkNumOrdersCondition);
+				if (result == null) result = caseCondition(checkNumOrdersCondition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OffersPackage.CHECK_DATE_CONDITION: {
+				CheckDateCondition checkDateCondition = (CheckDateCondition)theEObject;
+				T result = caseCheckDateCondition(checkDateCondition);
+				if (result == null) result = caseCondition(checkDateCondition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -394,6 +399,21 @@ public class OffersSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Free Product Offer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Free Product Offer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFreeProductOffer(FreeProductOffer object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Offer Price Reduction</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -454,36 +474,6 @@ public class OffersSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Offer XPounds Off On Date</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Offer XPounds Off On Date</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOfferXPoundsOffOnDate(OfferXPoundsOffOnDate object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Offer Price Reduction On Date</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Offer Price Reduction On Date</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOfferPriceReductionOnDate(OfferPriceReductionOnDate object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Condition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -525,6 +515,36 @@ public class OffersSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCheckQuantityCondition(CheckQuantityCondition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Check Num Orders Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Check Num Orders Condition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCheckNumOrdersCondition(CheckNumOrdersCondition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Check Date Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Check Date Condition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCheckDateCondition(CheckDateCondition object) {
 		return null;
 	}
 

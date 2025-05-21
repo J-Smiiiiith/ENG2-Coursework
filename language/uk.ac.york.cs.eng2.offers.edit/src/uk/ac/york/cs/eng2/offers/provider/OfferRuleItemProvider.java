@@ -195,6 +195,21 @@ public class OfferRuleItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
+				 OffersFactory.eINSTANCE.createCheckNumOrdersCondition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_RULE__CONDITIONS,
+				 OffersFactory.eINSTANCE.createCheckDateCondition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_RULE__OFFERS,
+				 OffersFactory.eINSTANCE.createFreeProductOffer()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(OffersPackage.Literals.OFFER_RULE__OFFERS,
 				 OffersFactory.eINSTANCE.createOfferPriceReduction()));
 
@@ -212,16 +227,6 @@ public class OfferRuleItemProvider
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_RULE__OFFERS,
 				 OffersFactory.eINSTANCE.createOfferXPoundsOff()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OffersPackage.Literals.OFFER_RULE__OFFERS,
-				 OffersFactory.eINSTANCE.createOfferXPoundsOffOnDate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OffersPackage.Literals.OFFER_RULE__OFFERS,
-				 OffersFactory.eINSTANCE.createOfferPriceReductionOnDate()));
 
 		newChildDescriptors.add
 			(createChildParameter

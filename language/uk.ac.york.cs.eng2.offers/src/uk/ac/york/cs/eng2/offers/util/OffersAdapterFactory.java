@@ -116,6 +116,10 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 				return createOfferAdapter();
 			}
 			@Override
+			public Adapter caseFreeProductOffer(FreeProductOffer object) {
+				return createFreeProductOfferAdapter();
+			}
+			@Override
 			public Adapter caseOfferPriceReduction(OfferPriceReduction object) {
 				return createOfferPriceReductionAdapter();
 			}
@@ -132,14 +136,6 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 				return createOfferXPoundsOffAdapter();
 			}
 			@Override
-			public Adapter caseOfferXPoundsOffOnDate(OfferXPoundsOffOnDate object) {
-				return createOfferXPoundsOffOnDateAdapter();
-			}
-			@Override
-			public Adapter caseOfferPriceReductionOnDate(OfferPriceReductionOnDate object) {
-				return createOfferPriceReductionOnDateAdapter();
-			}
-			@Override
 			public Adapter caseCondition(Condition object) {
 				return createConditionAdapter();
 			}
@@ -150,6 +146,14 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCheckQuantityCondition(CheckQuantityCondition object) {
 				return createCheckQuantityConditionAdapter();
+			}
+			@Override
+			public Adapter caseCheckNumOrdersCondition(CheckNumOrdersCondition object) {
+				return createCheckNumOrdersConditionAdapter();
+			}
+			@Override
+			public Adapter caseCheckDateCondition(CheckDateCondition object) {
+				return createCheckDateConditionAdapter();
 			}
 			@Override
 			public Adapter caseTrigger(Trigger object) {
@@ -344,6 +348,20 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.FreeProductOffer <em>Free Product Offer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uk.ac.york.cs.eng2.offers.FreeProductOffer
+	 * @generated
+	 */
+	public Adapter createFreeProductOfferAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.OfferPriceReduction <em>Offer Price Reduction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -400,34 +418,6 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate <em>Offer XPounds Off On Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate
-	 * @generated
-	 */
-	public Adapter createOfferXPoundsOffOnDateAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate <em>Offer Price Reduction On Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate
-	 * @generated
-	 */
-	public Adapter createOfferPriceReductionOnDateAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Condition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -466,6 +456,34 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCheckQuantityConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition <em>Check Num Orders Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition
+	 * @generated
+	 */
+	public Adapter createCheckNumOrdersConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.CheckDateCondition <em>Check Date Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uk.ac.york.cs.eng2.offers.CheckDateCondition
+	 * @generated
+	 */
+	public Adapter createCheckDateConditionAdapter() {
 		return null;
 	}
 

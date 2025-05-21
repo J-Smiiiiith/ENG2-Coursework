@@ -66,6 +66,10 @@ abstract class Offer {
 	attr String name;
 }
 
+class FreeProductOffer extends Offer {
+	ref Product freeProduct;
+}
+
 class OfferPriceReduction extends Offer {
 	attr float percentageReduction; // between 0 and 100.
 }
@@ -83,14 +87,6 @@ class OfferXPoundsOff extends Offer {
 	attr float x;
 }
 
-class OfferXPoundsOffOnDate extends OfferXPoundsOff {
-	attr String date;
-}
-
-class OfferPriceReductionOnDate extends OfferPriceReduction {
-	attr String date;
-}
-
 // Conditions
 abstract class Condition {
 	attr String name;
@@ -105,6 +101,14 @@ class MinPriceCondition extends Condition {
 
 class CheckQuantityCondition extends Condition {
 	attr int quantity;
+}
+
+class CheckNumOrdersCondition extends Condition {
+	attr int numOrders;
+}
+
+class CheckDateCondition extends Condition {
+	attr String date;
 }
 
 // Triggers
