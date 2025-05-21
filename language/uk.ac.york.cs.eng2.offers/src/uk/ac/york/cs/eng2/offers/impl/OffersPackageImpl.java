@@ -868,7 +868,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getTrigger_Target() {
+	public EReference getTrigger_Source() {
 		return (EReference)triggerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -878,8 +878,18 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getTrigger_Target() {
+		return (EReference)triggerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getTrigger_Type() {
-		return (EAttribute)triggerEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)triggerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1002,6 +1012,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		createEAttribute(checkDateConditionEClass, CHECK_DATE_CONDITION__DATE);
 
 		triggerEClass = createEClass(TRIGGER);
+		createEReference(triggerEClass, TRIGGER__SOURCE);
 		createEReference(triggerEClass, TRIGGER__TARGET);
 		createEAttribute(triggerEClass, TRIGGER__TYPE);
 
@@ -1130,6 +1141,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		initEAttribute(getCheckDateCondition_Date(), ecorePackage.getEString(), "date", null, 0, 1, CheckDateCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(triggerEClass, Trigger.class, "Trigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTrigger_Source(), this.getOfferRule(), null, "source", null, 0, 1, Trigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrigger_Target(), this.getOfferRule(), null, "target", null, 0, 1, Trigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrigger_Type(), this.getTriggerType(), "type", null, 0, 1, Trigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

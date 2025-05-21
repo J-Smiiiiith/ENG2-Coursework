@@ -93,6 +93,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//CheckDateCondition/date"/>
     </genClasses>
     <genClasses ecoreClass="offers.ecore#//Trigger">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference offers.ecore#//Trigger/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference offers.ecore#//Trigger/target"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//Trigger/type"/>
     </genClasses>

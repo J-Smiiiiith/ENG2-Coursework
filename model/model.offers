@@ -26,22 +26,24 @@
       <conditions xsi:type="dis:CheckNumOrdersCondition" name="Check 10 num orders" numOrders="10"/>
       <conditions xsi:type="dis:CheckDateCondition" name="Check date (today)" date="01/05/25"/>
       <offers xsi:type="dis:OfferPriceReduction" name="10% off" percentageReduction="10.0"/>
+      <triggers source="//@offers/@offers.0" target="//@offers/@offers.1"/>
     </offers>
     <offers name="2 Pizzas for £10 with 1 free ice cream">
       <conditions xsi:type="dis:CheckQuantityCondition" name="Check 2 Large Pizzas" applicableProducts="//@products/@products.0" quantity="2"/>
       <offers xsi:type="dis:OfferFixedPrice" name="£10" newPrice="10.0"/>
       <offers xsi:type="dis:FreeProductOffer" name="Free icecream" freeProduct="//@products/@products.3"/>
-      <triggers target="//@offers/@offers.2" type="IF_NOT_MATCH"/>
+      <triggers source="//@offers/@offers.1" target="//@offers/@offers.2" type="IF_NOT_MATCH"/>
     </offers>
     <offers name="2 for 1 Pizzas">
       <conditions xsi:type="dis:CheckQuantityCondition" name="Check 2 Pizzas" applicableCategories="//@categories/@categories.0" quantity="2"/>
       <offers xsi:type="dis:OfferBuyXGetYFree" name="BOGOF" x="1" y="1"/>
+      <triggers source="//@offers/@offers.2" target="//@offers/@offers.3"/>
     </offers>
     <offers name="10% off on Christmas Day (£60 min order)">
       <conditions xsi:type="dis:MinPriceCondition" name="£60 min" minPrice="60.0"/>
       <conditions xsi:type="dis:CheckDateCondition" name="Check date 25/12/2026" date="25/12/2026"/>
       <offers xsi:type="dis:OfferPriceReduction" name="10% off" percentageReduction="10.0"/>
-      <triggers target="//@offers/@offers.4" type="IF_NOT_MATCH"/>
+      <triggers source="//@offers/@offers.3" target="//@offers/@offers.4" type="IF_NOT_MATCH"/>
     </offers>
     <offers name="£5 off on orders with Chocolate Cake">
       <conditions xsi:type="dis:CheckQuantityCondition" name="Check 1 Chocolate Cake" applicableProducts="//@products/@products.2" quantity="1"/>

@@ -23,6 +23,7 @@ import uk.ac.york.cs.eng2.offers.TriggerType;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.impl.TriggerImpl#getSource <em>Source</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.TriggerImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.TriggerImpl#getType <em>Type</em>}</li>
  * </ul>
@@ -30,6 +31,16 @@ import uk.ac.york.cs.eng2.offers.TriggerType;
  * @generated
  */
 public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger {
+	/**
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSource()
+	 * @generated
+	 * @ordered
+	 */
+	protected OfferRule source;
+
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -77,6 +88,46 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
 	@Override
 	protected EClass eStaticClass() {
 		return OffersPackage.Literals.TRIGGER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public OfferRule getSource() {
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject)source;
+			source = (OfferRule)eResolveProxy(oldSource);
+			if (source != oldSource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OffersPackage.TRIGGER__SOURCE, oldSource, source));
+			}
+		}
+		return source;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OfferRule basicGetSource() {
+		return source;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSource(OfferRule newSource) {
+		OfferRule oldSource = source;
+		source = newSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.TRIGGER__SOURCE, oldSource, source));
 	}
 
 	/**
@@ -150,6 +201,9 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case OffersPackage.TRIGGER__SOURCE:
+				if (resolve) return getSource();
+				return basicGetSource();
 			case OffersPackage.TRIGGER__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
@@ -167,6 +221,9 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case OffersPackage.TRIGGER__SOURCE:
+				setSource((OfferRule)newValue);
+				return;
 			case OffersPackage.TRIGGER__TARGET:
 				setTarget((OfferRule)newValue);
 				return;
@@ -185,6 +242,9 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case OffersPackage.TRIGGER__SOURCE:
+				setSource((OfferRule)null);
+				return;
 			case OffersPackage.TRIGGER__TARGET:
 				setTarget((OfferRule)null);
 				return;
@@ -203,6 +263,8 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case OffersPackage.TRIGGER__SOURCE:
+				return source != null;
 			case OffersPackage.TRIGGER__TARGET:
 				return target != null;
 			case OffersPackage.TRIGGER__TYPE:

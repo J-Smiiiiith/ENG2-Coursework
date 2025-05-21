@@ -2,6 +2,7 @@
 //
 // To run them, right-click on the Sirius diagram background and select "Validate diagram".
 
+//Check product names are unique
 context Product {
 
   constraint nameIsUnique {
@@ -22,6 +23,7 @@ context Product {
   }
 }
 
+//Check percentages are between 0 and 100
 context OfferPriceReduction {
 	
 	constraint percentageBetween0And100 {
@@ -29,4 +31,18 @@ context OfferPriceReduction {
 		message: "Price reduction offer: '" + self.name + "' has percentage reduction: " 
 		+ self.percentageReduction + ". This value must b between 0 and 100."
 	}
+}
+
+//Check one rule triggered by no other rules
+context OfferRule {
+
+  constraint onlyOneStartRuleExists {
+  
+  	guard: Trigger.all.select(t | t.target == self).isEmpty()
+
+    check: OfferRule.all.select(r | Trigger.all.select(t | t.target == r).isEmpty()).size() == 1
+
+    message: "'" + self.name + "'" + "is not targetted by any trigger. There only be 1 OfferRule " +
+    "that is not targeted by any Trigger."
+  }
 }

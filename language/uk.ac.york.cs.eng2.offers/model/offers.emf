@@ -119,6 +119,7 @@ enum TriggerType {
 }
 
 class Trigger {
+  ref OfferRule source;
   ref OfferRule target;
   attr TriggerType type;
 }
