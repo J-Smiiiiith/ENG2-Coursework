@@ -58,6 +58,9 @@
     <genClasses ecoreClass="offers.ecore#//Offer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//Offer/name"/>
     </genClasses>
+    <genClasses ecoreClass="offers.ecore#//FreeProductOffer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference offers.ecore#//FreeProductOffer/freeProduct"/>
+    </genClasses>
     <genClasses ecoreClass="offers.ecore#//OfferPriceReduction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//OfferPriceReduction/percentageReduction"/>
     </genClasses>
@@ -71,12 +74,6 @@
     <genClasses ecoreClass="offers.ecore#//OfferXPoundsOff">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//OfferXPoundsOff/x"/>
     </genClasses>
-    <genClasses ecoreClass="offers.ecore#//OfferXPoundsOffOnDate">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//OfferXPoundsOffOnDate/date"/>
-    </genClasses>
-    <genClasses ecoreClass="offers.ecore#//OfferPriceReductionOnDate">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//OfferPriceReductionOnDate/date"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="offers.ecore#//Condition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//Condition/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference offers.ecore#//Condition/applicableProducts"/>
@@ -88,6 +85,12 @@
     </genClasses>
     <genClasses image="false" ecoreClass="offers.ecore#//CheckQuantityCondition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//CheckQuantityCondition/quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="offers.ecore#//CheckNumOrdersCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//CheckNumOrdersCondition/numOrders"/>
+    </genClasses>
+    <genClasses ecoreClass="offers.ecore#//CheckDateCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//CheckDateCondition/date"/>
     </genClasses>
     <genClasses ecoreClass="offers.ecore#//Trigger">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference offers.ecore#//Trigger/target"/>

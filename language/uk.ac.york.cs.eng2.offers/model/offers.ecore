@@ -59,6 +59,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Offer" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FreeProductOffer" eSuperTypes="#//Offer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="freeProduct" eType="#//Product"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OfferPriceReduction" eSuperTypes="#//Offer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageReduction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
@@ -71,12 +74,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OfferXPoundsOff" eSuperTypes="#//Offer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OfferXPoundsOffOnDate" eSuperTypes="#//OfferXPoundsOff">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OfferPriceReductionOnDate" eSuperTypes="#//OfferPriceReduction">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -92,6 +89,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CheckQuantityCondition" eSuperTypes="#//Condition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CheckNumOrdersCondition" eSuperTypes="#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOrders" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CheckDateCondition" eSuperTypes="#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TriggerType">
     <eLiterals name="ALWAYS"/>

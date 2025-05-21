@@ -14,23 +14,23 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate;
+import uk.ac.york.cs.eng2.offers.CheckDateCondition;
 import uk.ac.york.cs.eng2.offers.OffersPackage;
 
 /**
- * This is the item provider adapter for a {@link uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate} object.
+ * This is the item provider adapter for a {@link uk.ac.york.cs.eng2.offers.CheckDateCondition} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class OfferPriceReductionOnDateItemProvider extends OfferPriceReductionItemProvider {
+public class CheckDateConditionItemProvider extends ConditionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OfferPriceReductionOnDateItemProvider(AdapterFactory adapterFactory) {
+	public CheckDateConditionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,9 +61,9 @@ public class OfferPriceReductionOnDateItemProvider extends OfferPriceReductionIt
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OfferPriceReductionOnDate_date_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OfferPriceReductionOnDate_date_feature", "_UI_OfferPriceReductionOnDate_type"),
-				 OffersPackage.Literals.OFFER_PRICE_REDUCTION_ON_DATE__DATE,
+				 getString("_UI_CheckDateCondition_date_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CheckDateCondition_date_feature", "_UI_CheckDateCondition_type"),
+				 OffersPackage.Literals.CHECK_DATE_CONDITION__DATE,
 				 true,
 				 false,
 				 false,
@@ -73,14 +73,14 @@ public class OfferPriceReductionOnDateItemProvider extends OfferPriceReductionIt
 	}
 
 	/**
-	 * This returns OfferPriceReductionOnDate.gif.
+	 * This returns CheckDateCondition.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/OfferPriceReductionOnDate"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CheckDateCondition"));
 	}
 
 	/**
@@ -91,10 +91,10 @@ public class OfferPriceReductionOnDateItemProvider extends OfferPriceReductionIt
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OfferPriceReductionOnDate)object).getName();
+		String label = ((CheckDateCondition)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_OfferPriceReductionOnDate_type") :
-			getString("_UI_OfferPriceReductionOnDate_type") + " " + label;
+			getString("_UI_CheckDateCondition_type") :
+			getString("_UI_CheckDateCondition_type") + " " + label;
 	}
 
 
@@ -109,8 +109,8 @@ public class OfferPriceReductionOnDateItemProvider extends OfferPriceReductionIt
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(OfferPriceReductionOnDate.class)) {
-			case OffersPackage.OFFER_PRICE_REDUCTION_ON_DATE__DATE:
+		switch (notification.getFeatureID(CheckDateCondition.class)) {
+			case OffersPackage.CHECK_DATE_CONDITION__DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

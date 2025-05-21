@@ -8,49 +8,49 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate;
+import uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition;
 import uk.ac.york.cs.eng2.offers.OffersPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Offer Price Reduction On Date</b></em>'.
+ * An implementation of the model object '<em><b>Check Num Orders Condition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferPriceReductionOnDateImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.impl.CheckNumOrdersConditionImpl#getNumOrders <em>Num Orders</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class OfferPriceReductionOnDateImpl extends OfferPriceReductionImpl implements OfferPriceReductionOnDate {
+public class CheckNumOrdersConditionImpl extends ConditionImpl implements CheckNumOrdersCondition {
 	/**
-	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * The default value of the '{@link #getNumOrders() <em>Num Orders</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDate()
+	 * @see #getNumOrders()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DATE_EDEFAULT = null;
+	protected static final int NUM_ORDERS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * The cached value of the '{@link #getNumOrders() <em>Num Orders</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDate()
+	 * @see #getNumOrders()
 	 * @generated
 	 * @ordered
 	 */
-	protected String date = DATE_EDEFAULT;
+	protected int numOrders = NUM_ORDERS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OfferPriceReductionOnDateImpl() {
+	protected CheckNumOrdersConditionImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class OfferPriceReductionOnDateImpl extends OfferPriceReductionImpl imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return OffersPackage.Literals.OFFER_PRICE_REDUCTION_ON_DATE;
+		return OffersPackage.Literals.CHECK_NUM_ORDERS_CONDITION;
 	}
 
 	/**
@@ -70,8 +70,8 @@ public class OfferPriceReductionOnDateImpl extends OfferPriceReductionImpl imple
 	 * @generated
 	 */
 	@Override
-	public String getDate() {
-		return date;
+	public int getNumOrders() {
+		return numOrders;
 	}
 
 	/**
@@ -80,11 +80,11 @@ public class OfferPriceReductionOnDateImpl extends OfferPriceReductionImpl imple
 	 * @generated
 	 */
 	@Override
-	public void setDate(String newDate) {
-		String oldDate = date;
-		date = newDate;
+	public void setNumOrders(int newNumOrders) {
+		int oldNumOrders = numOrders;
+		numOrders = newNumOrders;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_PRICE_REDUCTION_ON_DATE__DATE, oldDate, date));
+			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.CHECK_NUM_ORDERS_CONDITION__NUM_ORDERS, oldNumOrders, numOrders));
 	}
 
 	/**
@@ -95,8 +95,8 @@ public class OfferPriceReductionOnDateImpl extends OfferPriceReductionImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case OffersPackage.OFFER_PRICE_REDUCTION_ON_DATE__DATE:
-				return getDate();
+			case OffersPackage.CHECK_NUM_ORDERS_CONDITION__NUM_ORDERS:
+				return getNumOrders();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,8 +109,8 @@ public class OfferPriceReductionOnDateImpl extends OfferPriceReductionImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case OffersPackage.OFFER_PRICE_REDUCTION_ON_DATE__DATE:
-				setDate((String)newValue);
+			case OffersPackage.CHECK_NUM_ORDERS_CONDITION__NUM_ORDERS:
+				setNumOrders((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,8 +124,8 @@ public class OfferPriceReductionOnDateImpl extends OfferPriceReductionImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case OffersPackage.OFFER_PRICE_REDUCTION_ON_DATE__DATE:
-				setDate(DATE_EDEFAULT);
+			case OffersPackage.CHECK_NUM_ORDERS_CONDITION__NUM_ORDERS:
+				setNumOrders(NUM_ORDERS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -139,8 +139,8 @@ public class OfferPriceReductionOnDateImpl extends OfferPriceReductionImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case OffersPackage.OFFER_PRICE_REDUCTION_ON_DATE__DATE:
-				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
+			case OffersPackage.CHECK_NUM_ORDERS_CONDITION__NUM_ORDERS:
+				return numOrders != NUM_ORDERS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -155,10 +155,10 @@ public class OfferPriceReductionOnDateImpl extends OfferPriceReductionImpl imple
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (date: ");
-		result.append(date);
+		result.append(" (numOrders: ");
+		result.append(numOrders);
 		result.append(')');
 		return result.toString();
 	}
 
-} //OfferPriceReductionOnDateImpl
+} //CheckNumOrdersConditionImpl

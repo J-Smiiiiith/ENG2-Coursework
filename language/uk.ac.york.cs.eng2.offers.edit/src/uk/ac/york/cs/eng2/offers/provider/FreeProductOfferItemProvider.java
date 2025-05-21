@@ -11,26 +11,24 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate;
+import uk.ac.york.cs.eng2.offers.FreeProductOffer;
 import uk.ac.york.cs.eng2.offers.OffersPackage;
 
 /**
- * This is the item provider adapter for a {@link uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate} object.
+ * This is the item provider adapter for a {@link uk.ac.york.cs.eng2.offers.FreeProductOffer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class OfferXPoundsOffOnDateItemProvider extends OfferXPoundsOffItemProvider {
+public class FreeProductOfferItemProvider extends OfferItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OfferXPoundsOffOnDateItemProvider(AdapterFactory adapterFactory) {
+	public FreeProductOfferItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,42 +43,42 @@ public class OfferXPoundsOffOnDateItemProvider extends OfferXPoundsOffItemProvid
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDatePropertyDescriptor(object);
+			addFreeProductPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Date feature.
+	 * This adds a property descriptor for the Free Product feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDatePropertyDescriptor(Object object) {
+	protected void addFreeProductPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OfferXPoundsOffOnDate_date_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OfferXPoundsOffOnDate_date_feature", "_UI_OfferXPoundsOffOnDate_type"),
-				 OffersPackage.Literals.OFFER_XPOUNDS_OFF_ON_DATE__DATE,
+				 getString("_UI_FreeProductOffer_freeProduct_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FreeProductOffer_freeProduct_feature", "_UI_FreeProductOffer_type"),
+				 OffersPackage.Literals.FREE_PRODUCT_OFFER__FREE_PRODUCT,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This returns OfferXPoundsOffOnDate.gif.
+	 * This returns FreeProductOffer.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/OfferXPoundsOffOnDate"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/FreeProductOffer"));
 	}
 
 	/**
@@ -91,10 +89,10 @@ public class OfferXPoundsOffOnDateItemProvider extends OfferXPoundsOffItemProvid
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OfferXPoundsOffOnDate)object).getName();
+		String label = ((FreeProductOffer)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_OfferXPoundsOffOnDate_type") :
-			getString("_UI_OfferXPoundsOffOnDate_type") + " " + label;
+			getString("_UI_FreeProductOffer_type") :
+			getString("_UI_FreeProductOffer_type") + " " + label;
 	}
 
 
@@ -108,12 +106,6 @@ public class OfferXPoundsOffOnDateItemProvider extends OfferXPoundsOffItemProvid
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(OfferXPoundsOffOnDate.class)) {
-			case OffersPackage.OFFER_XPOUNDS_OFF_ON_DATE__DATE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

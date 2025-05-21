@@ -8,23 +8,23 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate;
+import uk.ac.york.cs.eng2.offers.CheckDateCondition;
 import uk.ac.york.cs.eng2.offers.OffersPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Offer XPounds Off On Date</b></em>'.
+ * An implementation of the model object '<em><b>Check Date Condition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferXPoundsOffOnDateImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.impl.CheckDateConditionImpl#getDate <em>Date</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class OfferXPoundsOffOnDateImpl extends OfferXPoundsOffImpl implements OfferXPoundsOffOnDate {
+public class CheckDateConditionImpl extends ConditionImpl implements CheckDateCondition {
 	/**
 	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class OfferXPoundsOffOnDateImpl extends OfferXPoundsOffImpl implements Of
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OfferXPoundsOffOnDateImpl() {
+	protected CheckDateConditionImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class OfferXPoundsOffOnDateImpl extends OfferXPoundsOffImpl implements Of
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return OffersPackage.Literals.OFFER_XPOUNDS_OFF_ON_DATE;
+		return OffersPackage.Literals.CHECK_DATE_CONDITION;
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class OfferXPoundsOffOnDateImpl extends OfferXPoundsOffImpl implements Of
 		String oldDate = date;
 		date = newDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_XPOUNDS_OFF_ON_DATE__DATE, oldDate, date));
+			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.CHECK_DATE_CONDITION__DATE, oldDate, date));
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class OfferXPoundsOffOnDateImpl extends OfferXPoundsOffImpl implements Of
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case OffersPackage.OFFER_XPOUNDS_OFF_ON_DATE__DATE:
+			case OffersPackage.CHECK_DATE_CONDITION__DATE:
 				return getDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -109,7 +109,7 @@ public class OfferXPoundsOffOnDateImpl extends OfferXPoundsOffImpl implements Of
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case OffersPackage.OFFER_XPOUNDS_OFF_ON_DATE__DATE:
+			case OffersPackage.CHECK_DATE_CONDITION__DATE:
 				setDate((String)newValue);
 				return;
 		}
@@ -124,7 +124,7 @@ public class OfferXPoundsOffOnDateImpl extends OfferXPoundsOffImpl implements Of
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case OffersPackage.OFFER_XPOUNDS_OFF_ON_DATE__DATE:
+			case OffersPackage.CHECK_DATE_CONDITION__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
 		}
@@ -139,7 +139,7 @@ public class OfferXPoundsOffOnDateImpl extends OfferXPoundsOffImpl implements Of
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case OffersPackage.OFFER_XPOUNDS_OFF_ON_DATE__DATE:
+			case OffersPackage.CHECK_DATE_CONDITION__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
 		}
 		return super.eIsSet(featureID);
@@ -161,4 +161,4 @@ public class OfferXPoundsOffOnDateImpl extends OfferXPoundsOffImpl implements Of
 		return result.toString();
 	}
 
-} //OfferXPoundsOffOnDateImpl
+} //CheckDateConditionImpl

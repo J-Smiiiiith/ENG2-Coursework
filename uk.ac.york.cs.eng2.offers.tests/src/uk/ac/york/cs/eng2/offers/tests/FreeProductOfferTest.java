@@ -4,16 +4,16 @@ package uk.ac.york.cs.eng2.offers.tests;
 
 import junit.textui.TestRunner;
 
-import uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate;
+import uk.ac.york.cs.eng2.offers.FreeProductOffer;
 import uk.ac.york.cs.eng2.offers.OffersFactory;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Offer XPounds Off On Date</b></em>'.
+ * A test case for the model object '<em><b>Free Product Offer</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class OfferXPoundsOffOnDateTest extends OfferXPoundsOffTest {
+public class FreeProductOfferTest extends OfferTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -21,28 +21,28 @@ public class OfferXPoundsOffOnDateTest extends OfferXPoundsOffTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(OfferXPoundsOffOnDateTest.class);
+		TestRunner.run(FreeProductOfferTest.class);
 	}
 
 	/**
-	 * Constructs a new Offer XPounds Off On Date test case with the given name.
+	 * Constructs a new Free Product Offer test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OfferXPoundsOffOnDateTest(String name) {
+	public FreeProductOfferTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Offer XPounds Off On Date test case.
+	 * Returns the fixture for this Free Product Offer test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected OfferXPoundsOffOnDate getFixture() {
-		return (OfferXPoundsOffOnDate)fixture;
+	protected FreeProductOffer getFixture() {
+		return (FreeProductOffer)fixture;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class OfferXPoundsOffOnDateTest extends OfferXPoundsOffTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(OffersFactory.eINSTANCE.createOfferXPoundsOffOnDate());
+		setFixture(OffersFactory.eINSTANCE.createFreeProductOffer());
 	}
 
 	/**
@@ -67,4 +67,4 @@ public class OfferXPoundsOffOnDateTest extends OfferXPoundsOffTest {
 		setFixture(null);
 	}
 
-} //OfferXPoundsOffOnDateTest
+} //FreeProductOfferTest

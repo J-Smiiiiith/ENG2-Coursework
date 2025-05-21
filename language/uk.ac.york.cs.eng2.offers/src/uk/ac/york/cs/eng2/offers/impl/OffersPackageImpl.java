@@ -13,18 +13,19 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import uk.ac.york.cs.eng2.offers.AllOffers;
 import uk.ac.york.cs.eng2.offers.Categories;
 import uk.ac.york.cs.eng2.offers.Category;
+import uk.ac.york.cs.eng2.offers.CheckDateCondition;
+import uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition;
 import uk.ac.york.cs.eng2.offers.CheckQuantityCondition;
 import uk.ac.york.cs.eng2.offers.Condition;
+import uk.ac.york.cs.eng2.offers.FreeProductOffer;
 import uk.ac.york.cs.eng2.offers.MinPriceCondition;
 import uk.ac.york.cs.eng2.offers.Offer;
 import uk.ac.york.cs.eng2.offers.OfferBuyXGetYFree;
 import uk.ac.york.cs.eng2.offers.OfferComponents;
 import uk.ac.york.cs.eng2.offers.OfferFixedPrice;
 import uk.ac.york.cs.eng2.offers.OfferPriceReduction;
-import uk.ac.york.cs.eng2.offers.OfferPriceReductionOnDate;
 import uk.ac.york.cs.eng2.offers.OfferRule;
 import uk.ac.york.cs.eng2.offers.OfferXPoundsOff;
-import uk.ac.york.cs.eng2.offers.OfferXPoundsOffOnDate;
 import uk.ac.york.cs.eng2.offers.OffersFactory;
 import uk.ac.york.cs.eng2.offers.OffersPackage;
 import uk.ac.york.cs.eng2.offers.Product;
@@ -132,6 +133,13 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass freeProductOfferEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass offerPriceReductionEClass = null;
 
 	/**
@@ -160,20 +168,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass offerXPoundsOffOnDateEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass offerPriceReductionOnDateEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass conditionEClass = null;
 
 	/**
@@ -189,6 +183,20 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	private EClass checkQuantityConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass checkNumOrdersConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass checkDateConditionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -610,6 +618,26 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFreeProductOffer() {
+		return freeProductOfferEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFreeProductOffer_FreeProduct() {
+		return (EReference)freeProductOfferEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getOfferPriceReduction() {
 		return offerPriceReductionEClass;
 	}
@@ -700,46 +728,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getOfferXPoundsOffOnDate() {
-		return offerXPoundsOffOnDateEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getOfferXPoundsOffOnDate_Date() {
-		return (EAttribute)offerXPoundsOffOnDateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getOfferPriceReductionOnDate() {
-		return offerPriceReductionOnDateEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getOfferPriceReductionOnDate_Date() {
-		return (EAttribute)offerPriceReductionOnDateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getCondition() {
 		return conditionEClass;
 	}
@@ -822,6 +810,46 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	@Override
 	public EAttribute getCheckQuantityCondition_Quantity() {
 		return (EAttribute)checkQuantityConditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCheckNumOrdersCondition() {
+		return checkNumOrdersConditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCheckNumOrdersCondition_NumOrders() {
+		return (EAttribute)checkNumOrdersConditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCheckDateCondition() {
+		return checkDateConditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCheckDateCondition_Date() {
+		return (EAttribute)checkDateConditionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -939,6 +967,9 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		offerEClass = createEClass(OFFER);
 		createEAttribute(offerEClass, OFFER__NAME);
 
+		freeProductOfferEClass = createEClass(FREE_PRODUCT_OFFER);
+		createEReference(freeProductOfferEClass, FREE_PRODUCT_OFFER__FREE_PRODUCT);
+
 		offerPriceReductionEClass = createEClass(OFFER_PRICE_REDUCTION);
 		createEAttribute(offerPriceReductionEClass, OFFER_PRICE_REDUCTION__PERCENTAGE_REDUCTION);
 
@@ -952,12 +983,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		offerXPoundsOffEClass = createEClass(OFFER_XPOUNDS_OFF);
 		createEAttribute(offerXPoundsOffEClass, OFFER_XPOUNDS_OFF__X);
 
-		offerXPoundsOffOnDateEClass = createEClass(OFFER_XPOUNDS_OFF_ON_DATE);
-		createEAttribute(offerXPoundsOffOnDateEClass, OFFER_XPOUNDS_OFF_ON_DATE__DATE);
-
-		offerPriceReductionOnDateEClass = createEClass(OFFER_PRICE_REDUCTION_ON_DATE);
-		createEAttribute(offerPriceReductionOnDateEClass, OFFER_PRICE_REDUCTION_ON_DATE__DATE);
-
 		conditionEClass = createEClass(CONDITION);
 		createEAttribute(conditionEClass, CONDITION__NAME);
 		createEReference(conditionEClass, CONDITION__APPLICABLE_PRODUCTS);
@@ -969,6 +994,12 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 
 		checkQuantityConditionEClass = createEClass(CHECK_QUANTITY_CONDITION);
 		createEAttribute(checkQuantityConditionEClass, CHECK_QUANTITY_CONDITION__QUANTITY);
+
+		checkNumOrdersConditionEClass = createEClass(CHECK_NUM_ORDERS_CONDITION);
+		createEAttribute(checkNumOrdersConditionEClass, CHECK_NUM_ORDERS_CONDITION__NUM_ORDERS);
+
+		checkDateConditionEClass = createEClass(CHECK_DATE_CONDITION);
+		createEAttribute(checkDateConditionEClass, CHECK_DATE_CONDITION__DATE);
 
 		triggerEClass = createEClass(TRIGGER);
 		createEReference(triggerEClass, TRIGGER__TARGET);
@@ -1007,14 +1038,15 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 
 		// Add supertypes to classes
 		subCategoryEClass.getESuperTypes().add(this.getCategory());
+		freeProductOfferEClass.getESuperTypes().add(this.getOffer());
 		offerPriceReductionEClass.getESuperTypes().add(this.getOffer());
 		offerFixedPriceEClass.getESuperTypes().add(this.getOffer());
 		offerBuyXGetYFreeEClass.getESuperTypes().add(this.getOffer());
 		offerXPoundsOffEClass.getESuperTypes().add(this.getOffer());
-		offerXPoundsOffOnDateEClass.getESuperTypes().add(this.getOfferXPoundsOff());
-		offerPriceReductionOnDateEClass.getESuperTypes().add(this.getOfferPriceReduction());
 		minPriceConditionEClass.getESuperTypes().add(this.getCondition());
 		checkQuantityConditionEClass.getESuperTypes().add(this.getCondition());
+		checkNumOrdersConditionEClass.getESuperTypes().add(this.getCondition());
+		checkDateConditionEClass.getESuperTypes().add(this.getCondition());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(offerComponentsEClass, OfferComponents.class, "OfferComponents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1063,6 +1095,9 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		initEClass(offerEClass, Offer.class, "Offer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOffer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Offer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(freeProductOfferEClass, FreeProductOffer.class, "FreeProductOffer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFreeProductOffer_FreeProduct(), this.getProduct(), null, "freeProduct", null, 0, 1, FreeProductOffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(offerPriceReductionEClass, OfferPriceReduction.class, "OfferPriceReduction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOfferPriceReduction_PercentageReduction(), ecorePackage.getEFloat(), "percentageReduction", null, 0, 1, OfferPriceReduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1076,12 +1111,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		initEClass(offerXPoundsOffEClass, OfferXPoundsOff.class, "OfferXPoundsOff", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOfferXPoundsOff_X(), ecorePackage.getEFloat(), "x", null, 0, 1, OfferXPoundsOff.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(offerXPoundsOffOnDateEClass, OfferXPoundsOffOnDate.class, "OfferXPoundsOffOnDate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOfferXPoundsOffOnDate_Date(), ecorePackage.getEString(), "date", null, 0, 1, OfferXPoundsOffOnDate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(offerPriceReductionOnDateEClass, OfferPriceReductionOnDate.class, "OfferPriceReductionOnDate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOfferPriceReductionOnDate_Date(), ecorePackage.getEString(), "date", null, 0, 1, OfferPriceReductionOnDate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(conditionEClass, Condition.class, "Condition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCondition_ApplicableProducts(), this.getProduct(), null, "applicableProducts", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1093,6 +1122,12 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 
 		initEClass(checkQuantityConditionEClass, CheckQuantityCondition.class, "CheckQuantityCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCheckQuantityCondition_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, CheckQuantityCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(checkNumOrdersConditionEClass, CheckNumOrdersCondition.class, "CheckNumOrdersCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCheckNumOrdersCondition_NumOrders(), ecorePackage.getEInt(), "numOrders", null, 0, 1, CheckNumOrdersCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(checkDateConditionEClass, CheckDateCondition.class, "CheckDateCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCheckDateCondition_Date(), ecorePackage.getEString(), "date", null, 0, 1, CheckDateCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(triggerEClass, Trigger.class, "Trigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTrigger_Target(), this.getOfferRule(), null, "target", null, 0, 1, Trigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
