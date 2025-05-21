@@ -1206,13 +1206,22 @@ public interface OffersPackage extends EPackage {
 	int TRIGGER = 22;
 
 	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRIGGER__SOURCE = 0;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRIGGER__TARGET = 0;
+	int TRIGGER__TARGET = 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1221,7 +1230,7 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIGGER__TYPE = 1;
+	int TRIGGER__TYPE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Trigger</em>' class.
@@ -1230,7 +1239,7 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIGGER_FEATURE_COUNT = 2;
+	int TRIGGER_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Trigger</em>' class.
@@ -1879,6 +1888,17 @@ public interface OffersPackage extends EPackage {
 	EClass getTrigger();
 
 	/**
+	 * Returns the meta object for the reference '{@link uk.ac.york.cs.eng2.offers.Trigger#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.Trigger#getSource()
+	 * @see #getTrigger()
+	 * @generated
+	 */
+	EReference getTrigger_Source();
+
+	/**
 	 * Returns the meta object for the reference '{@link uk.ac.york.cs.eng2.offers.Trigger#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2450,6 +2470,14 @@ public interface OffersPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRIGGER = eINSTANCE.getTrigger();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRIGGER__SOURCE = eINSTANCE.getTrigger_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.

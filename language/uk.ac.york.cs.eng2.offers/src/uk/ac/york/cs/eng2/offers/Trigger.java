@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.Trigger#getSource <em>Source</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.Trigger#getTarget <em>Target</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.Trigger#getType <em>Type</em>}</li>
  * </ul>
@@ -22,6 +23,28 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Trigger extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Source</em>' reference.
+	 * @see #setSource(OfferRule)
+	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getTrigger_Source()
+	 * @model
+	 * @generated
+	 */
+	OfferRule getSource();
+
+	/**
+	 * Sets the value of the '{@link uk.ac.york.cs.eng2.offers.Trigger#getSource <em>Source</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Source</em>' reference.
+	 * @see #getSource()
+	 * @generated
+	 */
+	void setSource(OfferRule value);
+
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
