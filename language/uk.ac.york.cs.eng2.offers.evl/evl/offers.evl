@@ -85,4 +85,28 @@ context OfferRule {
   	message:  "'" + self.name + "' has triggers: " + self.triggers + ". There must be at most 1 of each " +
   	"trigger type per rule."
   }
+  
+  //Check there are no cycles
+  constraint noTriggerCycles {
+  
+    check: not self.allReachable().includes(self)
+  
+    message: "OfferRule '" + self.name + "' is part of a trigger cycle."
+  }
+}
+
+operation OfferRule allReachable() : Set {
+  var visited = Set{};
+  self.collectReachable(visited);
+  return visited;
+}
+
+//Recursively follow all possible "routes" for each rule. 
+operation OfferRule collectReachable(visited : Set) {
+  for (t in self.triggers) {
+    if (not visited.includes(t.target)) {
+      visited.add(t.target);
+      t.target.collectReachable(visited);
+    }
+  }
 }
