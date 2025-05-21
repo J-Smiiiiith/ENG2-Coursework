@@ -58,11 +58,6 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case OffersPackage.OFFER_COMPONENTS: return createOfferComponents();
-			case OffersPackage.PRODUCTS: return createProducts();
-			case OffersPackage.CATEGORIES: return createCategories();
-			case OffersPackage.SUB_CATEGORIES: return createSubCategories();
-			case OffersPackage.TAGS: return createTags();
-			case OffersPackage.ALL_OFFERS: return createAllOffers();
 			case OffersPackage.OFFER_RULE: return createOfferRule();
 			case OffersPackage.PRODUCT: return createProduct();
 			case OffersPackage.CATEGORY: return createCategory();
@@ -122,61 +117,6 @@ public class OffersFactoryImpl extends EFactoryImpl implements OffersFactory {
 	public OfferComponents createOfferComponents() {
 		OfferComponentsImpl offerComponents = new OfferComponentsImpl();
 		return offerComponents;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Products createProducts() {
-		ProductsImpl products = new ProductsImpl();
-		return products;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Categories createCategories() {
-		CategoriesImpl categories = new CategoriesImpl();
-		return categories;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SubCategories createSubCategories() {
-		SubCategoriesImpl subCategories = new SubCategoriesImpl();
-		return subCategories;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Tags createTags() {
-		TagsImpl tags = new TagsImpl();
-		return tags;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public AllOffers createAllOffers() {
-		AllOffersImpl allOffers = new AllOffersImpl();
-		return allOffers;
 	}
 
 	/**

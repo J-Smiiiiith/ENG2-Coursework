@@ -159,27 +159,55 @@ public class OfferComponentsItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__PRODUCTS,
-				 OffersFactory.eINSTANCE.createProducts()));
+				 OffersFactory.eINSTANCE.createProduct()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__CATEGORIES,
-				 OffersFactory.eINSTANCE.createCategories()));
+				 OffersFactory.eINSTANCE.createCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_COMPONENTS__CATEGORIES,
+				 OffersFactory.eINSTANCE.createSubCategory()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__SUB_CATEGORIES,
-				 OffersFactory.eINSTANCE.createSubCategories()));
+				 OffersFactory.eINSTANCE.createSubCategory()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__TAGS,
-				 OffersFactory.eINSTANCE.createTags()));
+				 OffersFactory.eINSTANCE.createTag()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__OFFERS,
-				 OffersFactory.eINSTANCE.createAllOffers()));
+				 OffersFactory.eINSTANCE.createOfferRule()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == OffersPackage.Literals.OFFER_COMPONENTS__CATEGORIES ||
+			childFeature == OffersPackage.Literals.OFFER_COMPONENTS__SUB_CATEGORIES;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

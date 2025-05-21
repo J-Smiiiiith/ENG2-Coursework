@@ -6,30 +6,10 @@ package offers;
 // Components of the offers
 
 class OfferComponents {
-	val Products products;
-	val Categories categories;
-	val SubCategories subCategories;
-	val Tags tags;
-	val AllOffers offers;
-}
-
-class Products {
 	val Product[*] products;
-}
-
-class Categories {
 	val Category[*] categories;
-}
-
-class SubCategories {
 	val SubCategory[*] subCategories;
-}
-
-class Tags {
 	val Tag[*] tags;
-}
-
-class AllOffers {
 	val OfferRule[*] offers;
 }
 

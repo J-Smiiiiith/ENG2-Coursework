@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="viewpoint" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="viewpoint" version="12.0.0.2017041100">
   <ownedViewpoints name="offers_viewpoint" modelFileExtension="offers">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="offers_diagram_all_offers" label="All Offers Diagram" domainClass="offers::OfferComponents" enablePopupBars="true">
       <metamodel href="../../language/uk.ac.york.cs.eng2.offers/model/offers.ecore#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="offers.product.node" label="Product" semanticCandidatesExpression="aql:self.products.products" domainClass="offers::Product">
+        <nodeMappings name="offers.product.node" label="Product" semanticCandidatesExpression="aql:self.products" domainClass="offers::Product">
           <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -133,6 +133,15 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <toolSections name="offers.node.tools" label="Node Tools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="offers.node.tools.createProduct" label="CreateProduct" nodeMappings="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.product.node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="offers::Product" referenceName="products"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>

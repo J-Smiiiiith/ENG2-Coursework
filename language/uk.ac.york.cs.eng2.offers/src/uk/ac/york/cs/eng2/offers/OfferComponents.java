@@ -2,6 +2,8 @@
  */
 package uk.ac.york.cs.eng2.offers;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -26,113 +28,63 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface OfferComponents extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Products</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Products</b></em>' containment reference list.
+	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Product}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Products</em>' containment reference.
-	 * @see #setProducts(Products)
+	 * @return the value of the '<em>Products</em>' containment reference list.
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferComponents_Products()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Products getProducts();
+	EList<Product> getProducts();
 
 	/**
-	 * Sets the value of the '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getProducts <em>Products</em>}' containment reference.
+	 * Returns the value of the '<em><b>Categories</b></em>' containment reference list.
+	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Category}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Products</em>' containment reference.
-	 * @see #getProducts()
-	 * @generated
-	 */
-	void setProducts(Products value);
-
-	/**
-	 * Returns the value of the '<em><b>Categories</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Categories</em>' containment reference.
-	 * @see #setCategories(Categories)
+	 * @return the value of the '<em>Categories</em>' containment reference list.
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferComponents_Categories()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Categories getCategories();
+	EList<Category> getCategories();
 
 	/**
-	 * Sets the value of the '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getCategories <em>Categories</em>}' containment reference.
+	 * Returns the value of the '<em><b>Sub Categories</b></em>' containment reference list.
+	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.SubCategory}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Categories</em>' containment reference.
-	 * @see #getCategories()
-	 * @generated
-	 */
-	void setCategories(Categories value);
-
-	/**
-	 * Returns the value of the '<em><b>Sub Categories</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sub Categories</em>' containment reference.
-	 * @see #setSubCategories(SubCategories)
+	 * @return the value of the '<em>Sub Categories</em>' containment reference list.
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferComponents_SubCategories()
 	 * @model containment="true"
 	 * @generated
 	 */
-	SubCategories getSubCategories();
+	EList<SubCategory> getSubCategories();
 
 	/**
-	 * Sets the value of the '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getSubCategories <em>Sub Categories</em>}' containment reference.
+	 * Returns the value of the '<em><b>Tags</b></em>' containment reference list.
+	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Tag}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sub Categories</em>' containment reference.
-	 * @see #getSubCategories()
-	 * @generated
-	 */
-	void setSubCategories(SubCategories value);
-
-	/**
-	 * Returns the value of the '<em><b>Tags</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tags</em>' containment reference.
-	 * @see #setTags(Tags)
+	 * @return the value of the '<em>Tags</em>' containment reference list.
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferComponents_Tags()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Tags getTags();
+	EList<Tag> getTags();
 
 	/**
-	 * Sets the value of the '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getTags <em>Tags</em>}' containment reference.
+	 * Returns the value of the '<em><b>Offers</b></em>' containment reference list.
+	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.OfferRule}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tags</em>' containment reference.
-	 * @see #getTags()
-	 * @generated
-	 */
-	void setTags(Tags value);
-
-	/**
-	 * Returns the value of the '<em><b>Offers</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Offers</em>' containment reference.
-	 * @see #setOffers(AllOffers)
+	 * @return the value of the '<em>Offers</em>' containment reference list.
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferComponents_Offers()
 	 * @model containment="true"
 	 * @generated
 	 */
-	AllOffers getOffers();
-
-	/**
-	 * Sets the value of the '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getOffers <em>Offers</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Offers</em>' containment reference.
-	 * @see #getOffers()
-	 * @generated
-	 */
-	void setOffers(AllOffers value);
+	EList<OfferRule> getOffers();
 
 } // OfferComponents
