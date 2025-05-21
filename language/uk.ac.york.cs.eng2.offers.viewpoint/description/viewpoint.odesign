@@ -11,7 +11,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Offers.category.node" label="Category" semanticCandidatesExpression="aql:self.categories.categories" domainClass="offers::Category">
+        <nodeMappings name="Offers.category.node" label="Category" semanticCandidatesExpression="aql:self.categories" domainClass="offers::Category">
           <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -146,6 +146,13 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="offers::Tag" referenceName="tags"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="offers.nodes.tools.createCategory" label="Create Category" nodeMappings="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='Offers.category.node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="offers::Category" referenceName="categories"/>
             </initialOperation>
           </ownedTools>
         </toolSections>

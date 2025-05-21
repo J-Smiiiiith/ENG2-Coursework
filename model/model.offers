@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dis:OfferComponents xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dis="http://cs.york.ac.uk/eng2/202425/offers">
-  <products name="Large Pizza" tags="//@tags.2"/>
+  <products name="Large Pizza" tags="//@tags.2" category="//@categories.0"/>
   <products name="Ice Cream" tags="//@tags.2"/>
   <products name="Bakewell Tarts" tags="//@tags.1"/>
   <products name="Chocolate Cake" tags="//@tags.0 //@tags.1"/>
+  <categories name="Pizza"/>
+  <categories name="Sweet Treats"/>
   <tags tag="Chocolate"/>
   <tags tag="Baked"/>
   <tags tag="Frozen"/>
