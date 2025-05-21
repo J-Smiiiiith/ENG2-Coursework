@@ -81,7 +81,9 @@ public class OfferComponentsItemProvider
 			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__CATEGORIES);
 			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__SUB_CATEGORIES);
 			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__TAGS);
+			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__OFFER_RULES);
 			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__OFFERS);
+			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__TRIGGERS);
 		}
 		return childrenFeatures;
 	}
@@ -138,7 +140,9 @@ public class OfferComponentsItemProvider
 			case OffersPackage.OFFER_COMPONENTS__CATEGORIES:
 			case OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES:
 			case OffersPackage.OFFER_COMPONENTS__TAGS:
+			case OffersPackage.OFFER_COMPONENTS__OFFER_RULES:
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -159,27 +163,85 @@ public class OfferComponentsItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__PRODUCTS,
-				 OffersFactory.eINSTANCE.createProducts()));
+				 OffersFactory.eINSTANCE.createProduct()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__CATEGORIES,
-				 OffersFactory.eINSTANCE.createCategories()));
+				 OffersFactory.eINSTANCE.createCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_COMPONENTS__CATEGORIES,
+				 OffersFactory.eINSTANCE.createSubCategory()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__SUB_CATEGORIES,
-				 OffersFactory.eINSTANCE.createSubCategories()));
+				 OffersFactory.eINSTANCE.createSubCategory()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__TAGS,
-				 OffersFactory.eINSTANCE.createTags()));
+				 OffersFactory.eINSTANCE.createTag()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_COMPONENTS__OFFER_RULES,
+				 OffersFactory.eINSTANCE.createOfferRule()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__OFFERS,
-				 OffersFactory.eINSTANCE.createAllOffers()));
+				 OffersFactory.eINSTANCE.createFreeProductOffer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_COMPONENTS__OFFERS,
+				 OffersFactory.eINSTANCE.createOfferPriceReduction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_COMPONENTS__OFFERS,
+				 OffersFactory.eINSTANCE.createOfferFixedPrice()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_COMPONENTS__OFFERS,
+				 OffersFactory.eINSTANCE.createOfferBuyXGetYFree()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_COMPONENTS__OFFERS,
+				 OffersFactory.eINSTANCE.createOfferXPoundsOff()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_COMPONENTS__TRIGGERS,
+				 OffersFactory.eINSTANCE.createTrigger()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == OffersPackage.Literals.OFFER_COMPONENTS__CATEGORIES ||
+			childFeature == OffersPackage.Literals.OFFER_COMPONENTS__SUB_CATEGORIES;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

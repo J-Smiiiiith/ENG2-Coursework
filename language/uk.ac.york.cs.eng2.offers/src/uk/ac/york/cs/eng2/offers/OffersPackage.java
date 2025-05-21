@@ -68,7 +68,7 @@ public interface OffersPackage extends EPackage {
 	int OFFER_COMPONENTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Products</b></em>' containment reference.
+	 * The feature id for the '<em><b>Products</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -77,7 +77,7 @@ public interface OffersPackage extends EPackage {
 	int OFFER_COMPONENTS__PRODUCTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Categories</b></em>' containment reference.
+	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -86,7 +86,7 @@ public interface OffersPackage extends EPackage {
 	int OFFER_COMPONENTS__CATEGORIES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Sub Categories</b></em>' containment reference.
+	 * The feature id for the '<em><b>Sub Categories</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -95,7 +95,7 @@ public interface OffersPackage extends EPackage {
 	int OFFER_COMPONENTS__SUB_CATEGORIES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Tags</b></em>' containment reference.
+	 * The feature id for the '<em><b>Tags</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -104,13 +104,31 @@ public interface OffersPackage extends EPackage {
 	int OFFER_COMPONENTS__TAGS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Offers</b></em>' containment reference.
+	 * The feature id for the '<em><b>Offer Rules</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_COMPONENTS__OFFERS = 4;
+	int OFFER_COMPONENTS__OFFER_RULES = 4;
+
+	/**
+	 * The feature id for the '<em><b>Offers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFER_COMPONENTS__OFFERS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Triggers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFER_COMPONENTS__TRIGGERS = 6;
 
 	/**
 	 * The number of structural features of the '<em>Offer Components</em>' class.
@@ -119,7 +137,7 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_COMPONENTS_FEATURE_COUNT = 5;
+	int OFFER_COMPONENTS_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Offer Components</em>' class.
@@ -131,191 +149,6 @@ public interface OffersPackage extends EPackage {
 	int OFFER_COMPONENTS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.ProductsImpl <em>Products</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uk.ac.york.cs.eng2.offers.impl.ProductsImpl
-	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getProducts()
-	 * @generated
-	 */
-	int PRODUCTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Products</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCTS__PRODUCTS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Products</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCTS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Products</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCTS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.CategoriesImpl <em>Categories</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uk.ac.york.cs.eng2.offers.impl.CategoriesImpl
-	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCategories()
-	 * @generated
-	 */
-	int CATEGORIES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIES__CATEGORIES = 0;
-
-	/**
-	 * The number of structural features of the '<em>Categories</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIES_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Categories</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORIES_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.SubCategoriesImpl <em>Sub Categories</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uk.ac.york.cs.eng2.offers.impl.SubCategoriesImpl
-	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getSubCategories()
-	 * @generated
-	 */
-	int SUB_CATEGORIES = 3;
-
-	/**
-	 * The feature id for the '<em><b>Sub Categories</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_CATEGORIES__SUB_CATEGORIES = 0;
-
-	/**
-	 * The number of structural features of the '<em>Sub Categories</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_CATEGORIES_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Sub Categories</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_CATEGORIES_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.TagsImpl <em>Tags</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uk.ac.york.cs.eng2.offers.impl.TagsImpl
-	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getTags()
-	 * @generated
-	 */
-	int TAGS = 4;
-
-	/**
-	 * The feature id for the '<em><b>Tags</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAGS__TAGS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Tags</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAGS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Tags</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAGS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.AllOffersImpl <em>All Offers</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uk.ac.york.cs.eng2.offers.impl.AllOffersImpl
-	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getAllOffers()
-	 * @generated
-	 */
-	int ALL_OFFERS = 5;
-
-	/**
-	 * The feature id for the '<em><b>Offers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALL_OFFERS__OFFERS = 0;
-
-	/**
-	 * The number of structural features of the '<em>All Offers</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALL_OFFERS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>All Offers</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALL_OFFERS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link uk.ac.york.cs.eng2.offers.impl.OfferRuleImpl <em>Offer Rule</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -323,7 +156,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferRule()
 	 * @generated
 	 */
-	int OFFER_RULE = 6;
+	int OFFER_RULE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -335,7 +168,7 @@ public interface OffersPackage extends EPackage {
 	int OFFER_RULE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -344,7 +177,7 @@ public interface OffersPackage extends EPackage {
 	int OFFER_RULE__CONDITIONS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Offers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Offers</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -353,7 +186,7 @@ public interface OffersPackage extends EPackage {
 	int OFFER_RULE__OFFERS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Triggers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Triggers</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -387,7 +220,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getProduct()
 	 * @generated
 	 */
-	int PRODUCT = 7;
+	int PRODUCT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -451,7 +284,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCategory()
 	 * @generated
 	 */
-	int CATEGORY = 8;
+	int CATEGORY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -488,7 +321,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getSubCategory()
 	 * @generated
 	 */
-	int SUB_CATEGORY = 9;
+	int SUB_CATEGORY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -534,7 +367,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getTag()
 	 * @generated
 	 */
-	int TAG = 10;
+	int TAG = 5;
 
 	/**
 	 * The feature id for the '<em><b>Tag</b></em>' attribute.
@@ -571,7 +404,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOffer()
 	 * @generated
 	 */
-	int OFFER = 11;
+	int OFFER = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -608,7 +441,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getFreeProductOffer()
 	 * @generated
 	 */
-	int FREE_PRODUCT_OFFER = 12;
+	int FREE_PRODUCT_OFFER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -654,7 +487,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferPriceReduction()
 	 * @generated
 	 */
-	int OFFER_PRICE_REDUCTION = 13;
+	int OFFER_PRICE_REDUCTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -700,7 +533,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferFixedPrice()
 	 * @generated
 	 */
-	int OFFER_FIXED_PRICE = 14;
+	int OFFER_FIXED_PRICE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -746,7 +579,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferBuyXGetYFree()
 	 * @generated
 	 */
-	int OFFER_BUY_XGET_YFREE = 15;
+	int OFFER_BUY_XGET_YFREE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -801,7 +634,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getOfferXPoundsOff()
 	 * @generated
 	 */
-	int OFFER_XPOUNDS_OFF = 16;
+	int OFFER_XPOUNDS_OFF = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -847,7 +680,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCondition()
 	 * @generated
 	 */
-	int CONDITION = 17;
+	int CONDITION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -911,7 +744,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getMinPriceCondition()
 	 * @generated
 	 */
-	int MIN_PRICE_CONDITION = 18;
+	int MIN_PRICE_CONDITION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -984,7 +817,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCheckQuantityCondition()
 	 * @generated
 	 */
-	int CHECK_QUANTITY_CONDITION = 19;
+	int CHECK_QUANTITY_CONDITION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1057,7 +890,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCheckNumOrdersCondition()
 	 * @generated
 	 */
-	int CHECK_NUM_ORDERS_CONDITION = 20;
+	int CHECK_NUM_ORDERS_CONDITION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1130,7 +963,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCheckDateCondition()
 	 * @generated
 	 */
-	int CHECK_DATE_CONDITION = 21;
+	int CHECK_DATE_CONDITION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1203,7 +1036,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getTrigger()
 	 * @generated
 	 */
-	int TRIGGER = 22;
+	int TRIGGER = 17;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1258,7 +1091,7 @@ public interface OffersPackage extends EPackage {
 	 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getTriggerType()
 	 * @generated
 	 */
-	int TRIGGER_TYPE = 23;
+	int TRIGGER_TYPE = 18;
 
 
 	/**
@@ -1272,10 +1105,10 @@ public interface OffersPackage extends EPackage {
 	EClass getOfferComponents();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getProducts <em>Products</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getProducts <em>Products</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Products</em>'.
+	 * @return the meta object for the containment reference list '<em>Products</em>'.
 	 * @see uk.ac.york.cs.eng2.offers.OfferComponents#getProducts()
 	 * @see #getOfferComponents()
 	 * @generated
@@ -1283,10 +1116,10 @@ public interface OffersPackage extends EPackage {
 	EReference getOfferComponents_Products();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getCategories <em>Categories</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getCategories <em>Categories</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Categories</em>'.
+	 * @return the meta object for the containment reference list '<em>Categories</em>'.
 	 * @see uk.ac.york.cs.eng2.offers.OfferComponents#getCategories()
 	 * @see #getOfferComponents()
 	 * @generated
@@ -1294,10 +1127,10 @@ public interface OffersPackage extends EPackage {
 	EReference getOfferComponents_Categories();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getSubCategories <em>Sub Categories</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getSubCategories <em>Sub Categories</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Sub Categories</em>'.
+	 * @return the meta object for the containment reference list '<em>Sub Categories</em>'.
 	 * @see uk.ac.york.cs.eng2.offers.OfferComponents#getSubCategories()
 	 * @see #getOfferComponents()
 	 * @generated
@@ -1305,10 +1138,10 @@ public interface OffersPackage extends EPackage {
 	EReference getOfferComponents_SubCategories();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getTags <em>Tags</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getTags <em>Tags</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Tags</em>'.
+	 * @return the meta object for the containment reference list '<em>Tags</em>'.
 	 * @see uk.ac.york.cs.eng2.offers.OfferComponents#getTags()
 	 * @see #getOfferComponents()
 	 * @generated
@@ -1316,10 +1149,21 @@ public interface OffersPackage extends EPackage {
 	EReference getOfferComponents_Tags();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getOffers <em>Offers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getOfferRules <em>Offer Rules</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Offers</em>'.
+	 * @return the meta object for the containment reference list '<em>Offer Rules</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.OfferComponents#getOfferRules()
+	 * @see #getOfferComponents()
+	 * @generated
+	 */
+	EReference getOfferComponents_OfferRules();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getOffers <em>Offers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Offers</em>'.
 	 * @see uk.ac.york.cs.eng2.offers.OfferComponents#getOffers()
 	 * @see #getOfferComponents()
 	 * @generated
@@ -1327,109 +1171,15 @@ public interface OffersPackage extends EPackage {
 	EReference getOfferComponents_Offers();
 
 	/**
-	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.Products <em>Products</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getTriggers <em>Triggers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Products</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.Products
+	 * @return the meta object for the containment reference list '<em>Triggers</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.OfferComponents#getTriggers()
+	 * @see #getOfferComponents()
 	 * @generated
 	 */
-	EClass getProducts();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.Products#getProducts <em>Products</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Products</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.Products#getProducts()
-	 * @see #getProducts()
-	 * @generated
-	 */
-	EReference getProducts_Products();
-
-	/**
-	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.Categories <em>Categories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Categories</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.Categories
-	 * @generated
-	 */
-	EClass getCategories();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.Categories#getCategories <em>Categories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Categories</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.Categories#getCategories()
-	 * @see #getCategories()
-	 * @generated
-	 */
-	EReference getCategories_Categories();
-
-	/**
-	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.SubCategories <em>Sub Categories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sub Categories</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.SubCategories
-	 * @generated
-	 */
-	EClass getSubCategories();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.SubCategories#getSubCategories <em>Sub Categories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Categories</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.SubCategories#getSubCategories()
-	 * @see #getSubCategories()
-	 * @generated
-	 */
-	EReference getSubCategories_SubCategories();
-
-	/**
-	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.Tags <em>Tags</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tags</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.Tags
-	 * @generated
-	 */
-	EClass getTags();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.Tags#getTags <em>Tags</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tags</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.Tags#getTags()
-	 * @see #getTags()
-	 * @generated
-	 */
-	EReference getTags_Tags();
-
-	/**
-	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.AllOffers <em>All Offers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>All Offers</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.AllOffers
-	 * @generated
-	 */
-	EClass getAllOffers();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.AllOffers#getOffers <em>Offers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Offers</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.AllOffers#getOffers()
-	 * @see #getAllOffers()
-	 * @generated
-	 */
-	EReference getAllOffers_Offers();
+	EReference getOfferComponents_Triggers();
 
 	/**
 	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.OfferRule <em>Offer Rule</em>}'.
@@ -1453,10 +1203,10 @@ public interface OffersPackage extends EPackage {
 	EAttribute getOfferRule_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferRule#getConditions <em>Conditions</em>}'.
+	 * Returns the meta object for the reference list '{@link uk.ac.york.cs.eng2.offers.OfferRule#getConditions <em>Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Conditions</em>'.
+	 * @return the meta object for the reference list '<em>Conditions</em>'.
 	 * @see uk.ac.york.cs.eng2.offers.OfferRule#getConditions()
 	 * @see #getOfferRule()
 	 * @generated
@@ -1464,10 +1214,10 @@ public interface OffersPackage extends EPackage {
 	EReference getOfferRule_Conditions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferRule#getOffers <em>Offers</em>}'.
+	 * Returns the meta object for the reference list '{@link uk.ac.york.cs.eng2.offers.OfferRule#getOffers <em>Offers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Offers</em>'.
+	 * @return the meta object for the reference list '<em>Offers</em>'.
 	 * @see uk.ac.york.cs.eng2.offers.OfferRule#getOffers()
 	 * @see #getOfferRule()
 	 * @generated
@@ -1475,10 +1225,10 @@ public interface OffersPackage extends EPackage {
 	EReference getOfferRule_Offers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferRule#getTriggers <em>Triggers</em>}'.
+	 * Returns the meta object for the reference list '{@link uk.ac.york.cs.eng2.offers.OfferRule#getTriggers <em>Triggers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Triggers</em>'.
+	 * @return the meta object for the reference list '<em>Triggers</em>'.
 	 * @see uk.ac.york.cs.eng2.offers.OfferRule#getTriggers()
 	 * @see #getOfferRule()
 	 * @generated
@@ -1964,7 +1714,7 @@ public interface OffersPackage extends EPackage {
 		EClass OFFER_COMPONENTS = eINSTANCE.getOfferComponents();
 
 		/**
-		 * The meta object literal for the '<em><b>Products</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Products</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1972,7 +1722,7 @@ public interface OffersPackage extends EPackage {
 		EReference OFFER_COMPONENTS__PRODUCTS = eINSTANCE.getOfferComponents_Products();
 
 		/**
-		 * The meta object literal for the '<em><b>Categories</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Categories</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1980,7 +1730,7 @@ public interface OffersPackage extends EPackage {
 		EReference OFFER_COMPONENTS__CATEGORIES = eINSTANCE.getOfferComponents_Categories();
 
 		/**
-		 * The meta object literal for the '<em><b>Sub Categories</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Sub Categories</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1988,7 +1738,7 @@ public interface OffersPackage extends EPackage {
 		EReference OFFER_COMPONENTS__SUB_CATEGORIES = eINSTANCE.getOfferComponents_SubCategories();
 
 		/**
-		 * The meta object literal for the '<em><b>Tags</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Tags</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1996,94 +1746,12 @@ public interface OffersPackage extends EPackage {
 		EReference OFFER_COMPONENTS__TAGS = eINSTANCE.getOfferComponents_Tags();
 
 		/**
-		 * The meta object literal for the '<em><b>Offers</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Offer Rules</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OFFER_COMPONENTS__OFFERS = eINSTANCE.getOfferComponents_Offers();
-
-		/**
-		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.ProductsImpl <em>Products</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uk.ac.york.cs.eng2.offers.impl.ProductsImpl
-		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getProducts()
-		 * @generated
-		 */
-		EClass PRODUCTS = eINSTANCE.getProducts();
-
-		/**
-		 * The meta object literal for the '<em><b>Products</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRODUCTS__PRODUCTS = eINSTANCE.getProducts_Products();
-
-		/**
-		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.CategoriesImpl <em>Categories</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uk.ac.york.cs.eng2.offers.impl.CategoriesImpl
-		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getCategories()
-		 * @generated
-		 */
-		EClass CATEGORIES = eINSTANCE.getCategories();
-
-		/**
-		 * The meta object literal for the '<em><b>Categories</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CATEGORIES__CATEGORIES = eINSTANCE.getCategories_Categories();
-
-		/**
-		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.SubCategoriesImpl <em>Sub Categories</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uk.ac.york.cs.eng2.offers.impl.SubCategoriesImpl
-		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getSubCategories()
-		 * @generated
-		 */
-		EClass SUB_CATEGORIES = eINSTANCE.getSubCategories();
-
-		/**
-		 * The meta object literal for the '<em><b>Sub Categories</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SUB_CATEGORIES__SUB_CATEGORIES = eINSTANCE.getSubCategories_SubCategories();
-
-		/**
-		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.TagsImpl <em>Tags</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uk.ac.york.cs.eng2.offers.impl.TagsImpl
-		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getTags()
-		 * @generated
-		 */
-		EClass TAGS = eINSTANCE.getTags();
-
-		/**
-		 * The meta object literal for the '<em><b>Tags</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TAGS__TAGS = eINSTANCE.getTags_Tags();
-
-		/**
-		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.AllOffersImpl <em>All Offers</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uk.ac.york.cs.eng2.offers.impl.AllOffersImpl
-		 * @see uk.ac.york.cs.eng2.offers.impl.OffersPackageImpl#getAllOffers()
-		 * @generated
-		 */
-		EClass ALL_OFFERS = eINSTANCE.getAllOffers();
+		EReference OFFER_COMPONENTS__OFFER_RULES = eINSTANCE.getOfferComponents_OfferRules();
 
 		/**
 		 * The meta object literal for the '<em><b>Offers</b></em>' containment reference list feature.
@@ -2091,7 +1759,15 @@ public interface OffersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ALL_OFFERS__OFFERS = eINSTANCE.getAllOffers_Offers();
+		EReference OFFER_COMPONENTS__OFFERS = eINSTANCE.getOfferComponents_Offers();
+
+		/**
+		 * The meta object literal for the '<em><b>Triggers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OFFER_COMPONENTS__TRIGGERS = eINSTANCE.getOfferComponents_Triggers();
 
 		/**
 		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.OfferRuleImpl <em>Offer Rule</em>}' class.
@@ -2112,7 +1788,7 @@ public interface OffersPackage extends EPackage {
 		EAttribute OFFER_RULE__NAME = eINSTANCE.getOfferRule_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2120,7 +1796,7 @@ public interface OffersPackage extends EPackage {
 		EReference OFFER_RULE__CONDITIONS = eINSTANCE.getOfferRule_Conditions();
 
 		/**
-		 * The meta object literal for the '<em><b>Offers</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Offers</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2128,7 +1804,7 @@ public interface OffersPackage extends EPackage {
 		EReference OFFER_RULE__OFFERS = eINSTANCE.getOfferRule_Offers();
 
 		/**
-		 * The meta object literal for the '<em><b>Triggers</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Triggers</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

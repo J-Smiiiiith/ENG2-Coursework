@@ -2,22 +2,29 @@
  */
 package uk.ac.york.cs.eng2.offers.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import uk.ac.york.cs.eng2.offers.AllOffers;
-import uk.ac.york.cs.eng2.offers.Categories;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import uk.ac.york.cs.eng2.offers.Category;
+import uk.ac.york.cs.eng2.offers.Offer;
 import uk.ac.york.cs.eng2.offers.OfferComponents;
+import uk.ac.york.cs.eng2.offers.OfferRule;
 import uk.ac.york.cs.eng2.offers.OffersPackage;
-import uk.ac.york.cs.eng2.offers.Products;
-import uk.ac.york.cs.eng2.offers.SubCategories;
-import uk.ac.york.cs.eng2.offers.Tags;
+import uk.ac.york.cs.eng2.offers.Product;
+import uk.ac.york.cs.eng2.offers.SubCategory;
+import uk.ac.york.cs.eng2.offers.Tag;
+import uk.ac.york.cs.eng2.offers.Trigger;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,61 +38,83 @@ import uk.ac.york.cs.eng2.offers.Tags;
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getCategories <em>Categories</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getSubCategories <em>Sub Categories</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getOfferRules <em>Offer Rules</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getOffers <em>Offers</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getTriggers <em>Triggers</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements OfferComponents {
 	/**
-	 * The cached value of the '{@link #getProducts() <em>Products</em>}' containment reference.
+	 * The cached value of the '{@link #getProducts() <em>Products</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProducts()
 	 * @generated
 	 * @ordered
 	 */
-	protected Products products;
+	protected EList<Product> products;
 
 	/**
-	 * The cached value of the '{@link #getCategories() <em>Categories</em>}' containment reference.
+	 * The cached value of the '{@link #getCategories() <em>Categories</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCategories()
 	 * @generated
 	 * @ordered
 	 */
-	protected Categories categories;
+	protected EList<Category> categories;
 
 	/**
-	 * The cached value of the '{@link #getSubCategories() <em>Sub Categories</em>}' containment reference.
+	 * The cached value of the '{@link #getSubCategories() <em>Sub Categories</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSubCategories()
 	 * @generated
 	 * @ordered
 	 */
-	protected SubCategories subCategories;
+	protected EList<SubCategory> subCategories;
 
 	/**
-	 * The cached value of the '{@link #getTags() <em>Tags</em>}' containment reference.
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTags()
 	 * @generated
 	 * @ordered
 	 */
-	protected Tags tags;
+	protected EList<Tag> tags;
 
 	/**
-	 * The cached value of the '{@link #getOffers() <em>Offers</em>}' containment reference.
+	 * The cached value of the '{@link #getOfferRules() <em>Offer Rules</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOfferRules()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OfferRule> offerRules;
+
+	/**
+	 * The cached value of the '{@link #getOffers() <em>Offers</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOffers()
 	 * @generated
 	 * @ordered
 	 */
-	protected AllOffers offers;
+	protected EList<Offer> offers;
+
+	/**
+	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTriggers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Trigger> triggers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,7 +141,10 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public Products getProducts() {
+	public EList<Product> getProducts() {
+		if (products == null) {
+			products = new EObjectContainmentEList<Product>(Product.class, this, OffersPackage.OFFER_COMPONENTS__PRODUCTS);
+		}
 		return products;
 	}
 
@@ -121,43 +153,11 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetProducts(Products newProducts, NotificationChain msgs) {
-		Products oldProducts = products;
-		products = newProducts;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__PRODUCTS, oldProducts, newProducts);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setProducts(Products newProducts) {
-		if (newProducts != products) {
-			NotificationChain msgs = null;
-			if (products != null)
-				msgs = ((InternalEObject)products).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__PRODUCTS, null, msgs);
-			if (newProducts != null)
-				msgs = ((InternalEObject)newProducts).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__PRODUCTS, null, msgs);
-			msgs = basicSetProducts(newProducts, msgs);
-			if (msgs != null) msgs.dispatch();
+	public EList<Category> getCategories() {
+		if (categories == null) {
+			categories = new EObjectContainmentEList<Category>(Category.class, this, OffersPackage.OFFER_COMPONENTS__CATEGORIES);
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__PRODUCTS, newProducts, newProducts));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Categories getCategories() {
 		return categories;
 	}
 
@@ -166,43 +166,11 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCategories(Categories newCategories, NotificationChain msgs) {
-		Categories oldCategories = categories;
-		categories = newCategories;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__CATEGORIES, oldCategories, newCategories);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setCategories(Categories newCategories) {
-		if (newCategories != categories) {
-			NotificationChain msgs = null;
-			if (categories != null)
-				msgs = ((InternalEObject)categories).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__CATEGORIES, null, msgs);
-			if (newCategories != null)
-				msgs = ((InternalEObject)newCategories).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__CATEGORIES, null, msgs);
-			msgs = basicSetCategories(newCategories, msgs);
-			if (msgs != null) msgs.dispatch();
+	public EList<SubCategory> getSubCategories() {
+		if (subCategories == null) {
+			subCategories = new EObjectContainmentEList<SubCategory>(SubCategory.class, this, OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES);
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__CATEGORIES, newCategories, newCategories));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SubCategories getSubCategories() {
 		return subCategories;
 	}
 
@@ -211,43 +179,11 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSubCategories(SubCategories newSubCategories, NotificationChain msgs) {
-		SubCategories oldSubCategories = subCategories;
-		subCategories = newSubCategories;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES, oldSubCategories, newSubCategories);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setSubCategories(SubCategories newSubCategories) {
-		if (newSubCategories != subCategories) {
-			NotificationChain msgs = null;
-			if (subCategories != null)
-				msgs = ((InternalEObject)subCategories).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES, null, msgs);
-			if (newSubCategories != null)
-				msgs = ((InternalEObject)newSubCategories).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES, null, msgs);
-			msgs = basicSetSubCategories(newSubCategories, msgs);
-			if (msgs != null) msgs.dispatch();
+	public EList<Tag> getTags() {
+		if (tags == null) {
+			tags = new EObjectContainmentEList<Tag>(Tag.class, this, OffersPackage.OFFER_COMPONENTS__TAGS);
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES, newSubCategories, newSubCategories));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Tags getTags() {
 		return tags;
 	}
 
@@ -256,14 +192,12 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTags(Tags newTags, NotificationChain msgs) {
-		Tags oldTags = tags;
-		tags = newTags;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__TAGS, oldTags, newTags);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	@Override
+	public EList<OfferRule> getOfferRules() {
+		if (offerRules == null) {
+			offerRules = new EObjectContainmentEList<OfferRule>(OfferRule.class, this, OffersPackage.OFFER_COMPONENTS__OFFER_RULES);
 		}
-		return msgs;
+		return offerRules;
 	}
 
 	/**
@@ -272,27 +206,10 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public void setTags(Tags newTags) {
-		if (newTags != tags) {
-			NotificationChain msgs = null;
-			if (tags != null)
-				msgs = ((InternalEObject)tags).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__TAGS, null, msgs);
-			if (newTags != null)
-				msgs = ((InternalEObject)newTags).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__TAGS, null, msgs);
-			msgs = basicSetTags(newTags, msgs);
-			if (msgs != null) msgs.dispatch();
+	public EList<Offer> getOffers() {
+		if (offers == null) {
+			offers = new EObjectContainmentEList<Offer>(Offer.class, this, OffersPackage.OFFER_COMPONENTS__OFFERS);
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__TAGS, newTags, newTags));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public AllOffers getOffers() {
 		return offers;
 	}
 
@@ -301,34 +218,12 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOffers(AllOffers newOffers, NotificationChain msgs) {
-		AllOffers oldOffers = offers;
-		offers = newOffers;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__OFFERS, oldOffers, newOffers);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setOffers(AllOffers newOffers) {
-		if (newOffers != offers) {
-			NotificationChain msgs = null;
-			if (offers != null)
-				msgs = ((InternalEObject)offers).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__OFFERS, null, msgs);
-			if (newOffers != null)
-				msgs = ((InternalEObject)newOffers).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OffersPackage.OFFER_COMPONENTS__OFFERS, null, msgs);
-			msgs = basicSetOffers(newOffers, msgs);
-			if (msgs != null) msgs.dispatch();
+	public EList<Trigger> getTriggers() {
+		if (triggers == null) {
+			triggers = new EObjectContainmentEList<Trigger>(Trigger.class, this, OffersPackage.OFFER_COMPONENTS__TRIGGERS);
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.OFFER_COMPONENTS__OFFERS, newOffers, newOffers));
+		return triggers;
 	}
 
 	/**
@@ -340,15 +235,19 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case OffersPackage.OFFER_COMPONENTS__PRODUCTS:
-				return basicSetProducts(null, msgs);
+				return ((InternalEList<?>)getProducts()).basicRemove(otherEnd, msgs);
 			case OffersPackage.OFFER_COMPONENTS__CATEGORIES:
-				return basicSetCategories(null, msgs);
+				return ((InternalEList<?>)getCategories()).basicRemove(otherEnd, msgs);
 			case OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES:
-				return basicSetSubCategories(null, msgs);
+				return ((InternalEList<?>)getSubCategories()).basicRemove(otherEnd, msgs);
 			case OffersPackage.OFFER_COMPONENTS__TAGS:
-				return basicSetTags(null, msgs);
+				return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
+			case OffersPackage.OFFER_COMPONENTS__OFFER_RULES:
+				return ((InternalEList<?>)getOfferRules()).basicRemove(otherEnd, msgs);
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
-				return basicSetOffers(null, msgs);
+				return ((InternalEList<?>)getOffers()).basicRemove(otherEnd, msgs);
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				return ((InternalEList<?>)getTriggers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -369,8 +268,12 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 				return getSubCategories();
 			case OffersPackage.OFFER_COMPONENTS__TAGS:
 				return getTags();
+			case OffersPackage.OFFER_COMPONENTS__OFFER_RULES:
+				return getOfferRules();
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
 				return getOffers();
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				return getTriggers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -380,23 +283,37 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OffersPackage.OFFER_COMPONENTS__PRODUCTS:
-				setProducts((Products)newValue);
+				getProducts().clear();
+				getProducts().addAll((Collection<? extends Product>)newValue);
 				return;
 			case OffersPackage.OFFER_COMPONENTS__CATEGORIES:
-				setCategories((Categories)newValue);
+				getCategories().clear();
+				getCategories().addAll((Collection<? extends Category>)newValue);
 				return;
 			case OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES:
-				setSubCategories((SubCategories)newValue);
+				getSubCategories().clear();
+				getSubCategories().addAll((Collection<? extends SubCategory>)newValue);
 				return;
 			case OffersPackage.OFFER_COMPONENTS__TAGS:
-				setTags((Tags)newValue);
+				getTags().clear();
+				getTags().addAll((Collection<? extends Tag>)newValue);
+				return;
+			case OffersPackage.OFFER_COMPONENTS__OFFER_RULES:
+				getOfferRules().clear();
+				getOfferRules().addAll((Collection<? extends OfferRule>)newValue);
 				return;
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
-				setOffers((AllOffers)newValue);
+				getOffers().clear();
+				getOffers().addAll((Collection<? extends Offer>)newValue);
+				return;
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				getTriggers().clear();
+				getTriggers().addAll((Collection<? extends Trigger>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -411,19 +328,25 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OffersPackage.OFFER_COMPONENTS__PRODUCTS:
-				setProducts((Products)null);
+				getProducts().clear();
 				return;
 			case OffersPackage.OFFER_COMPONENTS__CATEGORIES:
-				setCategories((Categories)null);
+				getCategories().clear();
 				return;
 			case OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES:
-				setSubCategories((SubCategories)null);
+				getSubCategories().clear();
 				return;
 			case OffersPackage.OFFER_COMPONENTS__TAGS:
-				setTags((Tags)null);
+				getTags().clear();
+				return;
+			case OffersPackage.OFFER_COMPONENTS__OFFER_RULES:
+				getOfferRules().clear();
 				return;
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
-				setOffers((AllOffers)null);
+				getOffers().clear();
+				return;
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				getTriggers().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -438,15 +361,19 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OffersPackage.OFFER_COMPONENTS__PRODUCTS:
-				return products != null;
+				return products != null && !products.isEmpty();
 			case OffersPackage.OFFER_COMPONENTS__CATEGORIES:
-				return categories != null;
+				return categories != null && !categories.isEmpty();
 			case OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES:
-				return subCategories != null;
+				return subCategories != null && !subCategories.isEmpty();
 			case OffersPackage.OFFER_COMPONENTS__TAGS:
-				return tags != null;
+				return tags != null && !tags.isEmpty();
+			case OffersPackage.OFFER_COMPONENTS__OFFER_RULES:
+				return offerRules != null && !offerRules.isEmpty();
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
-				return offers != null;
+				return offers != null && !offers.isEmpty();
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				return triggers != null && !triggers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

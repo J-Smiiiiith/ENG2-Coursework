@@ -49,37 +49,37 @@ public interface OfferRule extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Conditions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Conditions</b></em>' reference list.
 	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Condition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conditions</em>' containment reference list.
+	 * @return the value of the '<em>Conditions</em>' reference list.
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferRule_Conditions()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Condition> getConditions();
 
 	/**
-	 * Returns the value of the '<em><b>Offers</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Offers</b></em>' reference list.
 	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Offer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Offers</em>' containment reference list.
+	 * @return the value of the '<em>Offers</em>' reference list.
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferRule_Offers()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Offer> getOffers();
 
 	/**
-	 * Returns the value of the '<em><b>Triggers</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Triggers</b></em>' reference list.
 	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Trigger}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Triggers</em>' containment reference list.
+	 * @return the value of the '<em>Triggers</em>' reference list.
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferRule_Triggers()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Trigger> getTriggers();

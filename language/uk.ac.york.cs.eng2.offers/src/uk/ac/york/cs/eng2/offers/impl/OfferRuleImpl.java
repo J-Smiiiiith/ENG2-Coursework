@@ -5,18 +5,15 @@ package uk.ac.york.cs.eng2.offers.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import uk.ac.york.cs.eng2.offers.Condition;
 import uk.ac.york.cs.eng2.offers.Offer;
@@ -62,7 +59,7 @@ public class OfferRuleImpl extends MinimalEObjectImpl.Container implements Offer
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' containment reference list.
+	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConditions()
@@ -72,7 +69,7 @@ public class OfferRuleImpl extends MinimalEObjectImpl.Container implements Offer
 	protected EList<Condition> conditions;
 
 	/**
-	 * The cached value of the '{@link #getOffers() <em>Offers</em>}' containment reference list.
+	 * The cached value of the '{@link #getOffers() <em>Offers</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOffers()
@@ -82,7 +79,7 @@ public class OfferRuleImpl extends MinimalEObjectImpl.Container implements Offer
 	protected EList<Offer> offers;
 
 	/**
-	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' containment reference list.
+	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTriggers()
@@ -141,7 +138,7 @@ public class OfferRuleImpl extends MinimalEObjectImpl.Container implements Offer
 	@Override
 	public EList<Condition> getConditions() {
 		if (conditions == null) {
-			conditions = new EObjectContainmentEList<Condition>(Condition.class, this, OffersPackage.OFFER_RULE__CONDITIONS);
+			conditions = new EObjectResolvingEList<Condition>(Condition.class, this, OffersPackage.OFFER_RULE__CONDITIONS);
 		}
 		return conditions;
 	}
@@ -154,7 +151,7 @@ public class OfferRuleImpl extends MinimalEObjectImpl.Container implements Offer
 	@Override
 	public EList<Offer> getOffers() {
 		if (offers == null) {
-			offers = new EObjectContainmentEList<Offer>(Offer.class, this, OffersPackage.OFFER_RULE__OFFERS);
+			offers = new EObjectResolvingEList<Offer>(Offer.class, this, OffersPackage.OFFER_RULE__OFFERS);
 		}
 		return offers;
 	}
@@ -167,27 +164,9 @@ public class OfferRuleImpl extends MinimalEObjectImpl.Container implements Offer
 	@Override
 	public EList<Trigger> getTriggers() {
 		if (triggers == null) {
-			triggers = new EObjectContainmentEList<Trigger>(Trigger.class, this, OffersPackage.OFFER_RULE__TRIGGERS);
+			triggers = new EObjectResolvingEList<Trigger>(Trigger.class, this, OffersPackage.OFFER_RULE__TRIGGERS);
 		}
 		return triggers;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OffersPackage.OFFER_RULE__CONDITIONS:
-				return ((InternalEList<?>)getConditions()).basicRemove(otherEnd, msgs);
-			case OffersPackage.OFFER_RULE__OFFERS:
-				return ((InternalEList<?>)getOffers()).basicRemove(otherEnd, msgs);
-			case OffersPackage.OFFER_RULE__TRIGGERS:
-				return ((InternalEList<?>)getTriggers()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

@@ -2,44 +2,29 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="offers" nsURI="http://cs.york.ac.uk/eng2/202425/offers" nsPrefix="dis">
   <eClassifiers xsi:type="ecore:EClass" name="OfferComponents">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="products" eType="#//Products"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="categories" eType="#//Categories"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subCategories" eType="#//SubCategories"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tags" eType="#//Tags" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="offers" eType="#//AllOffers"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Products">
     <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
         eType="#//Product" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Categories">
     <eStructuralFeatures xsi:type="ecore:EReference" name="categories" upperBound="-1"
         eType="#//Category" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SubCategories">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subCategories" upperBound="-1"
         eType="#//SubCategory" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tags">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tags" upperBound="-1" eType="#//Tag"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AllOffers">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offerRules" upperBound="-1"
         eType="#//OfferRule" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OfferRule">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
-        eType="#//Condition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
         eType="#//Offer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="triggers" upperBound="-1"
         eType="#//Trigger" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OfferRule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
+        eType="#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
+        eType="#//Offer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="triggers" upperBound="-1"
+        eType="#//Trigger"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Product">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
