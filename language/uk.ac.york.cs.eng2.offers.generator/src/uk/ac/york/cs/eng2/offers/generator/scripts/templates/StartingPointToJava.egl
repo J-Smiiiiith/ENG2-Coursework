@@ -1,0 +1,26 @@
+[%
+// Find the OfferRule with no incoming triggers
+var startingRule = OfferRule.all.select(r | Trigger.all.select(t | t.target == r).isEmpty()).first();
+var startingRuleName = startingRule.name.replaceAll("[^a-zA-Z0-9]", "");
+%]
+package uk.ac.york.eng2.products.resources.offers.generated;
+
+import uk.ac.york.eng2.products.resources.offers.generated.rules.[%=startingRuleName%];
+
+import java.util.Map;
+
+
+
+public class StartingRule {
+
+	private Map<Long, Integer> order;
+
+	public StartingRule(Map<Long, Integer> order) {
+		this.order = order;
+	}
+	
+	public float start() {
+		return new [%=startingRuleName%]().useOfferRule(order);
+	}
+	
+}

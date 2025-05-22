@@ -125,3 +125,15 @@
   		
   		parameters: Map { "o" = offer }
   	}
+  	
+ rule StartingPointToJava
+	transform co : OfferComponents {
+	    
+	    guard: OfferRule.all.size() > 0
+	    
+	    template: "templates/StartingPointToJava.egl"
+	    
+	    target: "StartingRule.java"
+	    
+	    parameters: Map { "co" = co }
+	  }

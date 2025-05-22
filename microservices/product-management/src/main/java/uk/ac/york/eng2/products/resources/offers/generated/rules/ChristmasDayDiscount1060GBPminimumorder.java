@@ -1,7 +1,6 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
-import uk.ac.york.eng2.products.resources.offers.src.OfferHandler;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.CheckChristmasDay;
@@ -12,9 +11,8 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.ChristmasReduc
 /**
 * Auto-generated offer handler for rule: Christmas Day Discount 10% (60 GBP minimum order)
 */
-public class ChristmasDayDiscount1060GBPminimumorder implements OfferHandler {
+public class ChristmasDayDiscount1060GBPminimumorder {
 
-	@Override
 	public boolean isOfferValid(Map<Long, Integer> order) {
 		boolean allValid = true;
 
@@ -40,7 +38,6 @@ public class ChristmasDayDiscount1060GBPminimumorder implements OfferHandler {
 		return true;
 	}
 
-	@Override
 	public float applyOffer() {
 		float totalReduction = 0;
 		// protected region ChristmasReduction10 on begin //
@@ -50,8 +47,22 @@ public class ChristmasDayDiscount1060GBPminimumorder implements OfferHandler {
 		return totalReduction;
 	}
 
-	@Override
+	/**
+	* Main logic to calculate the new price of the offer
+	*/
+	public float useOfferRule(Map<Long, Integer> order) {
+		boolean offerValid = this.isOfferValid(order);
+		float totalReduction = 0;
+
+		if (offerValid) {
+			totalReduction = this.applyOffer();
+		}
+
+		if (!offerValid) return totalReduction + new Orderswithchocolatecake5off5§0GBPminimumorder().useOfferRule(order);
+		return totalReduction;
+	}
+
 	public String getRuleName() {
-		return "Christmas Day Discount 10% (60 GBP minimum order)"
+		return "Christmas Day Discount 10% (60 GBP minimum order)";
 	}
 }

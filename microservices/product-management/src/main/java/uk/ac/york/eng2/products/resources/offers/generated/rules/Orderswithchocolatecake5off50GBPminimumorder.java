@@ -1,7 +1,6 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
-import uk.ac.york.eng2.products.resources.offers.src.OfferHandler;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Check50minprice;
@@ -12,9 +11,8 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.Reduction5GBP;
 /**
 * Auto-generated offer handler for rule: Orders with chocolate cake £5 off (50 GBP minimum order)
 */
-public class Orderswithchocolatecake5off50GBPminimumorder implements OfferHandler {
+public class Orderswithchocolatecake5off50GBPminimumorder {
 
-	@Override
 	public boolean isOfferValid(Map<Long, Integer> order) {
 		boolean allValid = true;
 
@@ -40,7 +38,6 @@ public class Orderswithchocolatecake5off50GBPminimumorder implements OfferHandle
 		return true;
 	}
 
-	@Override
 	public float applyOffer() {
 		float totalReduction = 0;
 		// protected region Reduction5GBP on begin //
@@ -50,8 +47,21 @@ public class Orderswithchocolatecake5off50GBPminimumorder implements OfferHandle
 		return totalReduction;
 	}
 
-	@Override
+	/**
+	* Main logic to calculate the new price of the offer
+	*/
+	public float useOfferRule(Map<Long, Integer> order) {
+		boolean offerValid = this.isOfferValid(order);
+		float totalReduction = 0;
+
+		if (offerValid) {
+			totalReduction = this.applyOffer();
+		}
+
+		return totalReduction;
+	}
+
 	public String getRuleName() {
-		return "Orders with chocolate cake £5 off (50 GBP minimum order)"
+		return "Orders with chocolate cake £5 off (50 GBP minimum order)";
 	}
 }

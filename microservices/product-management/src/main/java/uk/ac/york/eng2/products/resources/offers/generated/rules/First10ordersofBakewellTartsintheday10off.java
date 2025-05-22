@@ -1,7 +1,6 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
-import uk.ac.york.eng2.products.resources.offers.src.OfferHandler;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Checknumorders10;
@@ -13,9 +12,8 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.Reduction10;
 /**
 * Auto-generated offer handler for rule: First 10 orders of Bakewell Tarts in the day 10% off
 */
-public class First10ordersofBakewellTartsintheday10off implements OfferHandler {
+public class First10ordersofBakewellTartsintheday10off {
 
-	@Override
 	public boolean isOfferValid(Map<Long, Integer> order) {
 		boolean allValid = true;
 
@@ -51,7 +49,6 @@ public class First10ordersofBakewellTartsintheday10off implements OfferHandler {
 		return true;
 	}
 
-	@Override
 	public float applyOffer() {
 		float totalReduction = 0;
 		// protected region Reduction10 on begin //
@@ -61,8 +58,22 @@ public class First10ordersofBakewellTartsintheday10off implements OfferHandler {
 		return totalReduction;
 	}
 
-	@Override
+	/**
+	* Main logic to calculate the new price of the offer
+	*/
+	public float useOfferRule(Map<Long, Integer> order) {
+		boolean offerValid = this.isOfferValid(order);
+		float totalReduction = 0;
+
+		if (offerValid) {
+			totalReduction = this.applyOffer();
+		}
+
+		return totalReduction + new LargePizzas2for10withonefreelargeicecream.useOfferRule(order);
+		return totalReduction;
+	}
+
 	public String getRuleName() {
-		return "First 10 orders of Bakewell Tarts in the day 10% off "
+		return "First 10 orders of Bakewell Tarts in the day 10% off ";
 	}
 }

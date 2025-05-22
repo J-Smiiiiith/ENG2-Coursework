@@ -22,10 +22,7 @@ public interface OfferHandler {
 
     /**
      * Apply the offer to the given products.
-     *
-     * @param order the products to apply the offer to
-     *
      * @return the new total price after applying the offer
      */
-    float applyOffer(Map<Long, Integer> order);
+    float applyOffer();
 }

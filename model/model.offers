@@ -17,12 +17,12 @@
     <offers xsi:type="dis:OfferPriceReduction" name="Reduction 10%" percentageReduction="10.0"/>
     <triggers source="//@offers.0" target="//@offers.1"/>
   </offers>
-  <offers name="Largee Pizzas 2 for £10, with one free large ice cream">
+  <offers name="Large Pizzas 2 for £10, with one free large ice cream">
     <conditions xsi:type="dis:CheckQuantityCondition" name="Check 2 Large Pizzas" applicableProducts="//@products.0" quantity="2"/>
     <offers xsi:type="dis:OfferFixedPrice" name="Fixed £10" newPrice="10.0"/>
     <offers xsi:type="dis:FreeProductOffer" name="Free Ice Cream" freeProduct="//@products.1"/>
-    <triggers source="//@offers.1" target="//@offers.2" type="IF_MATCH"/>
-    <triggers source="//@offers.1" target="//@offers.3" type="IF_NOT_MATCH"/>
+    <triggers source="//@offers.1" target="//@offers.2" type="IF_NOT_MATCH"/>
+    <triggers source="//@offers.1" target="//@offers.3" type="IF_MATCH"/>
   </offers>
   <offers name="Pizzas 2 for 1">
     <conditions xsi:type="dis:CheckQuantityCondition" name="Check 2 Pizzas" applicableProducts="//@products.0" quantity="2"/>

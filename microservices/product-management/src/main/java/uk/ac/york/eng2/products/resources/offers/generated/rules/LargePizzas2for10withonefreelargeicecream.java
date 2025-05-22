@@ -1,7 +1,6 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
-import uk.ac.york.eng2.products.resources.offers.src.OfferHandler;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Check2LargePizzas;
@@ -10,11 +9,10 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.Fixed10;
 import uk.ac.york.eng2.products.resources.offers.generated.offers.FreeIceCream;
 
 /**
-* Auto-generated offer handler for rule: Largee Pizzas 2 for £10, with one free large ice cream
+* Auto-generated offer handler for rule: Large Pizzas 2 for £10, with one free large ice cream
 */
-public class LargeePizzas2for10withonefreelargeicecream implements OfferHandler {
+public class LargePizzas2for10withonefreelargeicecream {
 
-	@Override
 	public boolean isOfferValid(Map<Long, Integer> order) {
 		boolean allValid = true;
 
@@ -30,7 +28,6 @@ public class LargeePizzas2for10withonefreelargeicecream implements OfferHandler 
 		return true;
 	}
 
-	@Override
 	public float applyOffer() {
 		float totalReduction = 0;
 		// protected region Fixed10 on begin //
@@ -44,8 +41,23 @@ public class LargeePizzas2for10withonefreelargeicecream implements OfferHandler 
 		return totalReduction;
 	}
 
-	@Override
+	/**
+	* Main logic to calculate the new price of the offer
+	*/
+	public float useOfferRule(Map<Long, Integer> order) {
+		boolean offerValid = this.isOfferValid(order);
+		float totalReduction = 0;
+
+		if (offerValid) {
+			totalReduction = this.applyOffer();
+		}
+
+		if (!offerValid) return totalReduction + new Pizzas2for1().useOfferRule(order);
+		if (offerValid) return totalReduction + new ChristmasDayDiscount1060GBPminimumorder.useOfferRule(order);
+		return totalReduction;
+	}
+
 	public String getRuleName() {
-		return "Largee Pizzas 2 for £10, with one free large ice cream"
+		return "Large Pizzas 2 for £10, with one free large ice cream";
 	}
 }

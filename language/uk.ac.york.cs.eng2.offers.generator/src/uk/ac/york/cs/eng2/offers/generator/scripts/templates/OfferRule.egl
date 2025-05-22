@@ -1,8 +1,8 @@
 [% var className = rule.name.replaceAll("[^a-zA-Z0-9]", ""); %]
+[% var triggers = rule.triggers; %]
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
-import uk.ac.york.eng2.products.resources.offers.src.OfferHandler;
 import java.util.Map;
 
 [%for (c in rule.conditions) { 
@@ -20,9 +20,8 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.[%=OfferClassN
 /**
  * Auto-generated offer handler for rule: [%=rule.name%]
  */
-public class [%=className%] implements OfferHandler {
+public class [%=className%] {
 
-    @Override
 	public boolean isOfferValid(Map<Long, Integer> order) {
 	    boolean allValid = true;
 	
@@ -47,7 +46,6 @@ public class [%=className%] implements OfferHandler {
 	    [% } %]
 	}
 
-    @Override
     public float applyOffer() {
         float totalReduction = 0;
         [%for (o in rule.offers) { 
@@ -61,8 +59,32 @@ public class [%=className%] implements OfferHandler {
         return totalReduction;
     }
     
-    @Override
+    /**
+     * Main logic to calculate the new price of the offer
+     */
+    public float useOfferRule(Map<Long, Integer> order) {
+    	boolean offerValid = this.isOfferValid(order);
+    	float totalReduction = 0;
+
+    	if (offerValid) {
+    		totalReduction = this.applyOffer();
+    	}
+    	
+    	[%for (t in rule.triggers) {
+	    	var targetName = t.target.name.replaceAll("[^a-zA-Z0-9]", "");
+		%]
+		    [%if (t.type.name == "ALWAYS") { %]
+		    return totalReduction + new [%=targetName%].useOfferRule(order);
+		    [%} else if (t.type.name == "IF_MATCH") { %]
+		    if (offerValid) return totalReduction + new [%=targetName%].useOfferRule(order);
+		    [%} else if (t.type.name == "IF_NOT_MATCH") { %]
+		    if (!offerValid) return totalReduction + new [%=targetName%]().useOfferRule(order);
+		    [%} %]
+		[% } %]
+		return totalReduction;
+    }
+    
     public String getRuleName() {
-    	return "[%=rule.name%]"
+    	return "[%=rule.name%]";
     }
 }
