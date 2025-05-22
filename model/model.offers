@@ -24,7 +24,7 @@
     <triggers source="//@offers.1" target="//@offers.3" type="IF_NOT_MATCH"/>
   </offers>
   <offers name="Pizzas 2 for 1">
-    <conditions xsi:type="dis:CheckQuantityCondition" name="Check 2 Pizzas" applicableCategories="//@categories.0" quantity="2"/>
+    <conditions xsi:type="dis:CheckQuantityCondition" name="Check 2 Pizzas" applicableProducts="//@products.0" quantity="2"/>
     <offers xsi:type="dis:OfferBuyXGetYFree" name="BOGOF" x="1" y="1"/>
     <triggers source="//@offers.2" target="//@offers.3"/>
   </offers>

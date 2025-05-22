@@ -28,3 +28,16 @@
  		parameters: Map { "cond" = cond }
  	
  	}
+ 	
+ rule CheckQuantityConditionToJava
+ 	transform cond : CheckQuantityCondition {
+ 	
+ 		guard: cond.name.isDefined()
+ 		
+ 		template: "templates/CheckQuantityCondition.egl"
+ 		
+ 		target: "conditions/quantity/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		
+ 		parameters: Map { "cond" = cond }
+ 	
+ 	}

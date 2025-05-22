@@ -683,31 +683,13 @@ public interface OffersPackage extends EPackage {
 	int CONDITION__APPLICABLE_PRODUCTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Applicable Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__APPLICABLE_CATEGORIES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Applicable Sub Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__APPLICABLE_SUB_CATEGORIES = 3;
-
-	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION_FEATURE_COUNT = 4;
+	int CONDITION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Condition</em>' class.
@@ -745,24 +727,6 @@ public interface OffersPackage extends EPackage {
 	 * @ordered
 	 */
 	int MIN_PRICE_CONDITION__APPLICABLE_PRODUCTS = CONDITION__APPLICABLE_PRODUCTS;
-
-	/**
-	 * The feature id for the '<em><b>Applicable Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MIN_PRICE_CONDITION__APPLICABLE_CATEGORIES = CONDITION__APPLICABLE_CATEGORIES;
-
-	/**
-	 * The feature id for the '<em><b>Applicable Sub Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MIN_PRICE_CONDITION__APPLICABLE_SUB_CATEGORIES = CONDITION__APPLICABLE_SUB_CATEGORIES;
 
 	/**
 	 * The feature id for the '<em><b>Min Price</b></em>' attribute.
@@ -820,24 +784,6 @@ public interface OffersPackage extends EPackage {
 	int CHECK_QUANTITY_CONDITION__APPLICABLE_PRODUCTS = CONDITION__APPLICABLE_PRODUCTS;
 
 	/**
-	 * The feature id for the '<em><b>Applicable Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHECK_QUANTITY_CONDITION__APPLICABLE_CATEGORIES = CONDITION__APPLICABLE_CATEGORIES;
-
-	/**
-	 * The feature id for the '<em><b>Applicable Sub Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHECK_QUANTITY_CONDITION__APPLICABLE_SUB_CATEGORIES = CONDITION__APPLICABLE_SUB_CATEGORIES;
-
-	/**
 	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -893,24 +839,6 @@ public interface OffersPackage extends EPackage {
 	int CHECK_NUM_ORDERS_CONDITION__APPLICABLE_PRODUCTS = CONDITION__APPLICABLE_PRODUCTS;
 
 	/**
-	 * The feature id for the '<em><b>Applicable Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHECK_NUM_ORDERS_CONDITION__APPLICABLE_CATEGORIES = CONDITION__APPLICABLE_CATEGORIES;
-
-	/**
-	 * The feature id for the '<em><b>Applicable Sub Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHECK_NUM_ORDERS_CONDITION__APPLICABLE_SUB_CATEGORIES = CONDITION__APPLICABLE_SUB_CATEGORIES;
-
-	/**
 	 * The feature id for the '<em><b>Num Orders</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -964,24 +892,6 @@ public interface OffersPackage extends EPackage {
 	 * @ordered
 	 */
 	int CHECK_DATE_CONDITION__APPLICABLE_PRODUCTS = CONDITION__APPLICABLE_PRODUCTS;
-
-	/**
-	 * The feature id for the '<em><b>Applicable Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHECK_DATE_CONDITION__APPLICABLE_CATEGORIES = CONDITION__APPLICABLE_CATEGORIES;
-
-	/**
-	 * The feature id for the '<em><b>Applicable Sub Categories</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHECK_DATE_CONDITION__APPLICABLE_SUB_CATEGORIES = CONDITION__APPLICABLE_SUB_CATEGORIES;
 
 	/**
 	 * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -1482,28 +1392,6 @@ public interface OffersPackage extends EPackage {
 	EReference getCondition_ApplicableProducts();
 
 	/**
-	 * Returns the meta object for the reference list '{@link uk.ac.york.cs.eng2.offers.Condition#getApplicableCategories <em>Applicable Categories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Applicable Categories</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.Condition#getApplicableCategories()
-	 * @see #getCondition()
-	 * @generated
-	 */
-	EReference getCondition_ApplicableCategories();
-
-	/**
-	 * Returns the meta object for the reference list '{@link uk.ac.york.cs.eng2.offers.Condition#getApplicableSubCategories <em>Applicable Sub Categories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Applicable Sub Categories</em>'.
-	 * @see uk.ac.york.cs.eng2.offers.Condition#getApplicableSubCategories()
-	 * @see #getCondition()
-	 * @generated
-	 */
-	EReference getCondition_ApplicableSubCategories();
-
-	/**
 	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.MinPriceCondition <em>Min Price Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1992,22 +1880,6 @@ public interface OffersPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONDITION__APPLICABLE_PRODUCTS = eINSTANCE.getCondition_ApplicableProducts();
-
-		/**
-		 * The meta object literal for the '<em><b>Applicable Categories</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONDITION__APPLICABLE_CATEGORIES = eINSTANCE.getCondition_ApplicableCategories();
-
-		/**
-		 * The meta object literal for the '<em><b>Applicable Sub Categories</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONDITION__APPLICABLE_SUB_CATEGORIES = eINSTANCE.getCondition_ApplicableSubCategories();
 
 		/**
 		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.MinPriceConditionImpl <em>Min Price Condition</em>}' class.

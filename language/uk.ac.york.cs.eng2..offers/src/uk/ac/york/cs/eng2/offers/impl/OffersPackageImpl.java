@@ -618,26 +618,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCondition_ApplicableCategories() {
-		return (EReference)conditionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getCondition_ApplicableSubCategories() {
-		return (EReference)conditionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getMinPriceCondition() {
 		return minPriceConditionEClass;
 	}
@@ -841,8 +821,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		conditionEClass = createEClass(CONDITION);
 		createEAttribute(conditionEClass, CONDITION__NAME);
 		createEReference(conditionEClass, CONDITION__APPLICABLE_PRODUCTS);
-		createEReference(conditionEClass, CONDITION__APPLICABLE_CATEGORIES);
-		createEReference(conditionEClass, CONDITION__APPLICABLE_SUB_CATEGORIES);
 
 		minPriceConditionEClass = createEClass(MIN_PRICE_CONDITION);
 		createEAttribute(minPriceConditionEClass, MIN_PRICE_CONDITION__MIN_PRICE);
@@ -955,8 +933,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		initEClass(conditionEClass, Condition.class, "Condition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCondition_ApplicableProducts(), this.getProduct(), null, "applicableProducts", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_ApplicableCategories(), this.getCategory(), null, "applicableCategories", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_ApplicableSubCategories(), this.getSubCategory(), null, "applicableSubCategories", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(minPriceConditionEClass, MinPriceCondition.class, "MinPriceCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMinPriceCondition_MinPrice(), ecorePackage.getEFloat(), "minPrice", null, 0, 1, MinPriceCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -75,8 +75,6 @@ class OfferXPoundsOff extends Offer {
 abstract class Condition {
 	attr String name;
 	ref Product[*] applicableProducts;
-	ref Category[*] applicableCategories;
-	ref SubCategory[*] applicableSubCategories;
 }
 
 class MinPriceCondition extends Condition {

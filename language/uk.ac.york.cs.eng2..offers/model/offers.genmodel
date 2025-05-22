@@ -62,8 +62,6 @@
     <genClasses image="false" ecoreClass="offers.ecore#//Condition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//Condition/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference offers.ecore#//Condition/applicableProducts"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference offers.ecore#//Condition/applicableCategories"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference offers.ecore#//Condition/applicableSubCategories"/>
     </genClasses>
     <genClasses ecoreClass="offers.ecore#//MinPriceCondition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//MinPriceCondition/minPrice"/>
