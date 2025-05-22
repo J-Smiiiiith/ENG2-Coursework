@@ -41,6 +41,16 @@ context OfferPriceReduction {
 	}
 }
 
+context Offer {
+
+  constraint nameIsUnique {
+  
+    check: Offer.all.select(o | o.name == self.name).size() == 1
+    
+    message: "Offer name '" + self.name + "' is not unique."
+  }
+}
+
 context OfferRule {
 
   constraint nameIsUnique {

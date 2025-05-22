@@ -61,6 +61,7 @@ public class ProductItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addPricePropertyDescriptor(object);
 			addTagsPropertyDescriptor(object);
 			addSubCategoryPropertyDescriptor(object);
 			addCategoryPropertyDescriptor(object);
@@ -86,6 +87,28 @@ public class ProductItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Price feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPricePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Product_price_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Product_price_feature", "_UI_Product_type"),
+				 OffersPackage.Literals.PRODUCT__PRICE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -195,6 +218,7 @@ public class ProductItemProvider
 
 		switch (notification.getFeatureID(Product.class)) {
 			case OffersPackage.PRODUCT__NAME:
+			case OffersPackage.PRODUCT__PRICE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

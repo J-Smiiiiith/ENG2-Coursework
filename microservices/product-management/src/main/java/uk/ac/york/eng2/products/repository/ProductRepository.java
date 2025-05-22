@@ -6,5 +6,5 @@ import uk.ac.york.eng2.products.domain.Product;
 
 @Repository
 public interface ProductRepository extends PageableRepository<Product, Long> {
-
+    public String findNameById(long id);
 }

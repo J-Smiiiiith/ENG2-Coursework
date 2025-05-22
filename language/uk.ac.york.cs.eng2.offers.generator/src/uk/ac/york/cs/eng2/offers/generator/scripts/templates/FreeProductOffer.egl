@@ -1,0 +1,24 @@
+[% var className = o.name.replaceAll("[^a-zA-Z0-9]", ""); %]
+package uk.ac.york.eng2.products.resources.offers.generated.offers;
+
+import uk.ac.york.eng2.products.resources.offers.src.AbstractOfferHandlerOperations;
+
+/**
+ * Auto-generated offer handler for offer: [%=o.name%]
+ */
+public class [%=className%] extends AbstractOfferHandlerOperations {
+
+	private float price;
+	
+	public [%=className%]() {
+		this.price = [%=o.freeProduct.price%]f;
+	}
+
+    public String getOfferName() {
+        return "[%=o.name%]";
+    }
+    
+    public float getFreeProductPrice() {
+    	return price;
+    }
+}

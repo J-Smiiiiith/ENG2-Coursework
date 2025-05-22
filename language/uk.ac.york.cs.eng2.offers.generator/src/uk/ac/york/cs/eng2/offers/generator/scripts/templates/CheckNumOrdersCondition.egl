@@ -1,0 +1,26 @@
+[% var className = cond.name.replaceAll("[^a-zA-Z0-9]", ""); %]
+package uk.ac.york.eng2.products.resources.offers.generated.conditions;
+
+/**
+ * Auto-generated condition handler for condition: [%=cond.name%]
+ */
+public class [%=className%] {
+
+	private int numOrders;
+	
+	public [%=className%]() {
+		this.numOrders = [%=cond.numOrders%];
+	}
+	
+	public boolean checkCondition(int totalOrders) {
+		return numOrders <= totalOrders;
+	}
+
+    public String getConditionName() {
+        return "[%=cond.name%]";
+    }
+    
+    public int getNumOrders() {
+    	return this.numOrders;
+    }
+}

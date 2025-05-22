@@ -1,0 +1,26 @@
+[% var className = cond.name.replaceAll("[^a-zA-Z0-9]", ""); %]
+package uk.ac.york.eng2.products.resources.offers.generated.conditions;
+
+/**
+ * Auto-generated condition handler for condition: [%=cond.name%]
+ */
+public class [%=className%] {
+
+	private String date;
+	
+	public [%=className%]() {
+		this.date = "[%=cond.date%]";
+	}
+	
+	public boolean checkCondition(String dateToCheck) {
+		return this.date.equals(dateToCheck);
+	}
+
+    public String getConditionName() {
+        return "[%=cond.name%]";
+    }
+    
+    public String getDate() {
+    	return this.date;
+    }
+}
