@@ -18,7 +18,7 @@ public class [%=className%] implements OfferHandler {
     @Override
     public boolean isOfferValid(Map<Long, Integer> order) {
         [%for (c in rule.conditions) { %]
-        if (!check[%=c.name.replaceAll("\\s", "").replaceAll("[^a-zA-Z0-9]", "")%](order)) return false;
+        if (!check[%=c.name.replaceAll("[^a-zA-Z0-9]", "")%](order)) return false;
         [% } %]
         return true;
     }
@@ -27,14 +27,14 @@ public class [%=className%] implements OfferHandler {
     public float applyOffer(Map<Long, Integer> order) {
         float total = 0;
         [%for (o in rule.offers) { %]
-        total += apply[%=o.name.replaceAll("\\s", "").replaceAll("[^a-zA-Z0-9]", "")%](order);
+        total += apply[%=o.name.replaceAll("[^a-zA-Z0-9]", "")%](order);
         [% } %]
         return total;
     }
 
     // --- Condition Check Methods ---
     [%for (c in rule.conditions) { 
-       var methodName = c.name.replaceAll("\\s", "").replaceAll("[^a-zA-Z0-9]", "");
+       var methodName = c.name.replaceAll("[^a-zA-Z0-9]", "");
     %]
     private boolean check[%=methodName%](Map<Long, Integer> order) {
         [%=out.startPreserve("//", "//", "check_" + methodName, true)%]
@@ -46,7 +46,7 @@ public class [%=className%] implements OfferHandler {
 
     // --- Offer Apply Methods ---
     [%for (o in rule.offers) { 
-       var methodName = o.name.replaceAll("\\s", "").replaceAll("[^a-zA-Z0-9]", "");
+       var methodName = o.name.replaceAll("[^a-zA-Z0-9]", "");
     %]
     private float apply[%=methodName%](Map<Long, Integer> order) {
         [%=out.startPreserve("//", "//", "apply_" + methodName, true)%]

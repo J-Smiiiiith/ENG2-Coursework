@@ -12,6 +12,19 @@
  		target: "offer_rule/" + 
  				o.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
  		
- 		parameters : Map { "rule" = o }
+ 		parameters: Map { "rule" = o }
+ 	
+ 	}
+ 	
+ rule MinPriceConditionToJava
+ 	transform cond : MinPriceCondition {
+ 	
+ 		guard: cond.name.isDefined()
+ 		
+ 		template: "templates/MinPriceCondition.egl"
+ 		
+ 		target: "conditions/min_price/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		
+ 		parameters: Map { "cond" = cond }
  	
  	}

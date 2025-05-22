@@ -1,0 +1,26 @@
+[% var className = cond.name.replaceAll("[^a-zA-Z0-9]", ""); %]
+package uk.ac.york.eng2.products.resources.offers.generated.conditions.min_price;
+
+/**
+ * Auto-generated condition handler for condition: [%=cond.name%]
+ */
+public class [%=className%] {
+
+	private float minPrice;
+	
+	public [%=className%]() {
+		this.minPrice = [%=cond.minPrice%]f;
+	}
+	
+	public boolean checkConditions(float totalPrice) {
+		return totalPrice >= this.minPrice;
+	}
+
+    public String getConditionName() {
+        return "[%=cond.name%]";
+    }
+    
+    public float getMinPrice() {
+    	return this.minPrice;
+    }
+}
