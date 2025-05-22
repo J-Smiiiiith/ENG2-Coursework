@@ -4,10 +4,6 @@
     <semanticResources>model.offers</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Do5xkDWZEfCm1tBvZSaH9A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9ovbUDZbEfC6poJRCCeYeA" name="offers.diagram" repPath="#_9ou0QDZbEfC6poJRCCeYeA" changeId="1747875099255">
-        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']"/>
-        <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
-      </ownedRepresentationDescriptors>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_TBCagTacEfCVc4wZIMbVlw" name="products.diagram" repPath="#_TBBzcDacEfCVc4wZIMbVlw" changeId="1747875101882">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
@@ -16,26 +12,12 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_trigger']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_RvCakDaxEfCkUIXqvjz6kA" name="offer_rule_condition_offers.diagram" repPath="#_RvBzgDaxEfCkUIXqvjz6kA" changeId="1747913369101">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_RvCakDaxEfCkUIXqvjz6kA" name="offer_rule_condition_offers.diagram" repPath="#_RvBzgDaxEfCkUIXqvjz6kA" changeId="1747913438694">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram uid="_9ou0QDZbEfC6poJRCCeYeA">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_9ozFsDZbEfC6poJRCCeYeA" source="GMF_DIAGRAMS">
-      <data xmi:type="notation:Diagram" xmi:id="_9ozFsTZbEfC6poJRCCeYeA" type="Sirius" element="_9ou0QDZbEfC6poJRCCeYeA" measurementUnit="Pixel">
-        <styles xmi:type="notation:DiagramStyle" xmi:id="_9ozFsjZbEfC6poJRCCeYeA"/>
-      </data>
-    </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_9ozswDZbEfC6poJRCCeYeA" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_9ozswTZbEfC6poJRCCeYeA"/>
-    </ownedAnnotationEntries>
-    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_9ou0QTZbEfC6poJRCCeYeA"/>
-    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer"/>
-    <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
-  </diagram:DSemanticDiagram>
   <diagram:DSemanticDiagram uid="_TBBzcDacEfCVc4wZIMbVlw">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_TBFd0DacEfCVc4wZIMbVlw" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_TBFd0TacEfCVc4wZIMbVlw" type="Sirius" element="_TBBzcDacEfCVc4wZIMbVlw" measurementUnit="Pixel">
@@ -1242,7 +1224,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_pHzf4Db1EfCkUIXqvjz6kA" type="4001" element="_pHpIEjb1EfCkUIXqvjz6kA" source="_Ty_vADa0EfCkUIXqvjz6kA" target="_SeQVoTb0EfCkUIXqvjz6kA">
           <children xmi:type="notation:Node" xmi:id="_pHzf5Db1EfCkUIXqvjz6kA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pHzf5Tb1EfCkUIXqvjz6kA" x="2" y="49"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pHzf5Tb1EfCkUIXqvjz6kA" x="-2" y="55"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_pHzf5jb1EfCkUIXqvjz6kA" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pHzf5zb1EfCkUIXqvjz6kA" x="-2" y="-2"/>
