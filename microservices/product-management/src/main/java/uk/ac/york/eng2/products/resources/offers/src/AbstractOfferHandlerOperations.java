@@ -1,12 +1,13 @@
 package uk.ac.york.eng2.products.resources.offers.src;
 
+import java.util.List;
 import java.util.Map;
 
 /**
  * Abstract class for offer handler operations.
  * This class provides common methods for applying different types of offers.
  */
-public class AbstractOfferHandlerOperations {
+public abstract class AbstractOfferHandlerOperations {
 
     /**
      * Applies a price reduction to the order.
@@ -22,22 +23,22 @@ public class AbstractOfferHandlerOperations {
      * Applies a percentage reduction to the order.
      *
      * @param percentageReduction the percentage reduction to apply
+     * @param totalPrice the total price of the order
      * @return the new total price reduction after applying the percentage reduction
      */
-    protected float applyPricePercentageReduction(float percentageReduction) {
-        return percentageReduction / 100;
+    protected float applyPricePercentageReduction(float percentageReduction, float totalPrice) {
+        return totalPrice * (percentageReduction / 100);
     }
     /**
      * Applies a free product offer to the order.
      *
-     * @param freeProducts the product prices, and quantity of those products, to be made free
+     * @param freeProductPrices the product prices, and quantity of those products, to be made free
      * @return the new total price reduction after applying the free product offer
      */
-    protected float applyFreeProduct(Map<Float, Integer> freeProducts) {
+    protected float applyFreeProduct(List<Integer> freeProductPrices) {
         float reduction = 0;
-        for (float prodPrice : freeProducts.keySet()) {
-            int quantity = freeProducts.get(prodPrice);
-            reduction += prodPrice * quantity;
+        for (float prodPrice : freeProductPrices) {
+            reduction += prodPrice;
         }
         return reduction;
     }
@@ -58,6 +59,4 @@ public class AbstractOfferHandlerOperations {
         }
         return total - newPrice;
     }
-
-
 }

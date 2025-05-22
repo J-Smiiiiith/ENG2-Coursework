@@ -1,10 +1,12 @@
 
-package uk.ac.york.eng2.products.resources.offers.generated;
+package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
 import uk.ac.york.eng2.products.resources.offers.src.OfferHandler;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Check2Pizzas;
+
+import uk.ac.york.eng2.products.resources.offers.generated.offers.BOGOF;
 
 /**
 * Auto-generated offer handler for rule: Pizzas 2 for 1
@@ -17,9 +19,10 @@ public class Pizzas2for1 implements OfferHandler {
 
 		// protected region check_Check2Pizzas on begin //
 		Boolean Check2PizzasIsValid = new Check2Pizzas().checkCondition(); //some parameter tbd//
+		// TODO: use correct parameter per condition
 		// protected region check_Check2Pizzas end //
 
-		if (Check2PizzasIsValid == false) {
+		if (!Check2PizzasIsValid) {
 			return false;
 		}
 
@@ -27,10 +30,13 @@ public class Pizzas2for1 implements OfferHandler {
 	}
 
 	@Override
-	public float applyOffer(Map<Long, Integer> order) {
-		float total = 0;
-		// total += applyBOGOF(order);
-		return total;
+	public float applyOffer() {
+		float totalReduction = 0;
+		// protected region BOGOF on begin //
+		totalReduction += BOGOF.[appropriate_method_for_offer];
+		// TODO: use correct method per offer and apply specific logic
+		// protected region BOGOF end //
+		return totalReduction;
 	}
 
 	@Override

@@ -214,13 +214,22 @@ public interface OffersPackage extends EPackage {
 	int PRODUCT__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__PRICE = 1;
+
+	/**
 	 * The feature id for the '<em><b>Tags</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__TAGS = 1;
+	int PRODUCT__TAGS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Sub Category</b></em>' reference.
@@ -229,7 +238,7 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__SUB_CATEGORY = 2;
+	int PRODUCT__SUB_CATEGORY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference.
@@ -238,7 +247,7 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT__CATEGORY = 3;
+	int PRODUCT__CATEGORY = 4;
 
 	/**
 	 * The number of structural features of the '<em>Product</em>' class.
@@ -247,7 +256,7 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_FEATURE_COUNT = 4;
+	int PRODUCT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Product</em>' class.
@@ -1127,6 +1136,17 @@ public interface OffersPackage extends EPackage {
 	EAttribute getProduct_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link uk.ac.york.cs.eng2.offers.Product#getPrice <em>Price</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Price</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.Product#getPrice()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EAttribute getProduct_Price();
+
+	/**
 	 * Returns the meta object for the reference list '{@link uk.ac.york.cs.eng2.offers.Product#getTags <em>Tags</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1660,6 +1680,14 @@ public interface OffersPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PRODUCT__NAME = eINSTANCE.getProduct_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Price</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUCT__PRICE = eINSTANCE.getProduct_Price();
 
 		/**
 		 * The meta object literal for the '<em><b>Tags</b></em>' reference list feature.

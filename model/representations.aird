@@ -12,7 +12,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_trigger']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_RvCakDaxEfCkUIXqvjz6kA" name="offer_rule_condition_offers.diagram" repPath="#_RvBzgDaxEfCkUIXqvjz6kA" changeId="1747938738132">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_RvCakDaxEfCkUIXqvjz6kA" name="offer_rule_condition_offers.diagram" repPath="#_RvBzgDaxEfCkUIXqvjz6kA" changeId="1747943360945">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
@@ -1375,7 +1375,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_uxgrSjaxEfCkUIXqvjz6kA" name="10% off" incomingEdges="_UwyphzazEfCkUIXqvjz6kA _UwzQhDazEfCkUIXqvjz6kA _lZEQvDcyEfC7U6VvJLtrqw" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_uxgrSjaxEfCkUIXqvjz6kA" name="Reduction 10%" incomingEdges="_UwyphzazEfCkUIXqvjz6kA _UwzQhDazEfCkUIXqvjz6kA _lZEQvDcyEfC7U6VvJLtrqw" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferPriceReduction" href="model.offers#//@offers.0/@offers.0"/>
       <semanticElements xmi:type="dis:OfferPriceReduction" href="model.offers#//@offers.0/@offers.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1419,7 +1419,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_oeLksja0EfCkUIXqvjz6kA" name="10% off" incomingEdges="_oeLk6Ta0EfCkUIXqvjz6kA _oeLk7ja0EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_oeLksja0EfCkUIXqvjz6kA" name="Christmas Reduction 10%" incomingEdges="_oeLk6Ta0EfCkUIXqvjz6kA _oeLk7ja0EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferPriceReduction" href="model.offers#//@offers.3/@offers.0"/>
       <semanticElements xmi:type="dis:OfferPriceReduction" href="model.offers#//@offers.3/@offers.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1430,7 +1430,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_4P_3pja0EfCkUIXqvjz6kA" name="£5 off" incomingEdges="_4QAexDa0EfCkUIXqvjz6kA _4QAeyTa0EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_4P_3pja0EfCkUIXqvjz6kA" name="Reduction 5GBP" incomingEdges="_4QAexDa0EfCkUIXqvjz6kA _4QAeyTa0EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferXPoundsOff" href="model.offers#//@offers.4/@offers.0"/>
       <semanticElements xmi:type="dis:OfferXPoundsOff" href="model.offers#//@offers.4/@offers.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>

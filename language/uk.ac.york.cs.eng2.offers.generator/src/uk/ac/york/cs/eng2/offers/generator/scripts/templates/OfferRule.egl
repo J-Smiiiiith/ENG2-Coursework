@@ -1,6 +1,6 @@
 [% var className = rule.name.replaceAll("[^a-zA-Z0-9]", ""); %]
 
-package uk.ac.york.eng2.products.resources.offers.generated;
+package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
 import uk.ac.york.eng2.products.resources.offers.src.OfferHandler;
 import java.util.Map;
@@ -9,6 +9,12 @@ import java.util.Map;
    var CondClassName = c.name.replaceAll("[^a-zA-Z0-9]", "");
 %]
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.[%=CondClassName%];
+[% } %]
+
+[%for (o in rule.offers) { 
+   var OfferClassName = o.name.replaceAll("[^a-zA-Z0-9]", "");
+%]
+import uk.ac.york.eng2.products.resources.offers.generated.offers.[%=OfferClassName%];
 [% } %]
 
 /**
@@ -25,6 +31,7 @@ public class [%=className%] implements OfferHandler {
 	    %]
 	    [%=out.startPreserve("//", "//", "check_" + CondClassName, true)%]
 	    Boolean [%=CondClassName%]IsValid = new [%=CondClassName%]().checkCondition(); //some parameter tbd//
+	    // TODO: use correct parameter per condition
 	    [%=out.stopPreserve()%]
 	    
 	    [% } %]
@@ -41,12 +48,17 @@ public class [%=className%] implements OfferHandler {
 	}
 
     @Override
-    public float applyOffer(Map<Long, Integer> order) {
-        float total = 0;
-        [%for (o in rule.offers) { %]
-        // total += apply[%=o.name.replaceAll("[^a-zA-Z0-9]", "")%](order);
+    public float applyOffer() {
+        float totalReduction = 0;
+        [%for (o in rule.offers) { 
+        	var OfferClassName = o.name.replaceAll("[^a-zA-Z0-9]", "");
+        %]
+        [%=out.startPreserve("//", "//", "" + OfferClassName, true)%]
+        totalReduction += [%=OfferClassName%].[appropriate_method_for_offer];
+        // TODO: use correct method per offer and apply specific logic
+        [%=out.stopPreserve()%]
         [% } %]
-        return total;
+        return totalReduction;
     }
     
     @Override

@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link uk.ac.york.cs.eng2.offers.Product#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.Product#getPrice <em>Price</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.Product#getTags <em>Tags</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.Product#getSubCategory <em>Sub Category</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.Product#getCategory <em>Category</em>}</li>
@@ -47,6 +48,28 @@ public interface Product extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Price</em>' attribute.
+	 * @see #setPrice(float)
+	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getProduct_Price()
+	 * @model
+	 * @generated
+	 */
+	float getPrice();
+
+	/**
+	 * Sets the value of the '{@link uk.ac.york.cs.eng2.offers.Product#getPrice <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Price</em>' attribute.
+	 * @see #getPrice()
+	 * @generated
+	 */
+	void setPrice(float value);
 
 	/**
 	 * Returns the value of the '<em><b>Tags</b></em>' reference list.

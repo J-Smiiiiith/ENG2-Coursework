@@ -368,8 +368,8 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProduct_Tags() {
-		return (EReference)productEClass.getEStructuralFeatures().get(1);
+	public EAttribute getProduct_Price() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -378,7 +378,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProduct_SubCategory() {
+	public EReference getProduct_Tags() {
 		return (EReference)productEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -388,8 +388,18 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProduct_Category() {
+	public EReference getProduct_SubCategory() {
 		return (EReference)productEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getProduct_Category() {
+		return (EReference)productEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -786,6 +796,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 
 		productEClass = createEClass(PRODUCT);
 		createEAttribute(productEClass, PRODUCT__NAME);
+		createEAttribute(productEClass, PRODUCT__PRICE);
 		createEReference(productEClass, PRODUCT__TAGS);
 		createEReference(productEClass, PRODUCT__SUB_CATEGORY);
 		createEReference(productEClass, PRODUCT__CATEGORY);
@@ -898,6 +909,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 
 		initEClass(productEClass, Product.class, "Product", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProduct_Name(), ecorePackage.getEString(), "name", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduct_Price(), ecorePackage.getEFloat(), "price", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_Tags(), this.getTag(), null, "tags", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_SubCategory(), this.getSubCategory(), null, "subCategory", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_Category(), this.getCategory(), null, "category", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

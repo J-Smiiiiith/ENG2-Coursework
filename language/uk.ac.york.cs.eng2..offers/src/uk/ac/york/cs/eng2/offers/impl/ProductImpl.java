@@ -31,6 +31,7 @@ import uk.ac.york.cs.eng2.offers.Tag;
  * </p>
  * <ul>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.ProductImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.impl.ProductImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.ProductImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.ProductImpl#getSubCategory <em>Sub Category</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.ProductImpl#getCategory <em>Category</em>}</li>
@@ -58,6 +59,26 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float PRICE_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected float price = PRICE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTags() <em>Tags</em>}' reference list.
@@ -129,6 +150,29 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.PRODUCT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public float getPrice() {
+		return price;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPrice(float newPrice) {
+		float oldPrice = price;
+		price = newPrice;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OffersPackage.PRODUCT__PRICE, oldPrice, price));
 	}
 
 	/**
@@ -234,6 +278,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 		switch (featureID) {
 			case OffersPackage.PRODUCT__NAME:
 				return getName();
+			case OffersPackage.PRODUCT__PRICE:
+				return getPrice();
 			case OffersPackage.PRODUCT__TAGS:
 				return getTags();
 			case OffersPackage.PRODUCT__SUB_CATEGORY:
@@ -257,6 +303,9 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 		switch (featureID) {
 			case OffersPackage.PRODUCT__NAME:
 				setName((String)newValue);
+				return;
+			case OffersPackage.PRODUCT__PRICE:
+				setPrice((Float)newValue);
 				return;
 			case OffersPackage.PRODUCT__TAGS:
 				getTags().clear();
@@ -283,6 +332,9 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 			case OffersPackage.PRODUCT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case OffersPackage.PRODUCT__PRICE:
+				setPrice(PRICE_EDEFAULT);
+				return;
 			case OffersPackage.PRODUCT__TAGS:
 				getTags().clear();
 				return;
@@ -306,6 +358,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 		switch (featureID) {
 			case OffersPackage.PRODUCT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case OffersPackage.PRODUCT__PRICE:
+				return price != PRICE_EDEFAULT;
 			case OffersPackage.PRODUCT__TAGS:
 				return tags != null && !tags.isEmpty();
 			case OffersPackage.PRODUCT__SUB_CATEGORY:
@@ -328,6 +382,8 @@ public class ProductImpl extends MinimalEObjectImpl.Container implements Product
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", price: ");
+		result.append(price);
 		result.append(')');
 		return result.toString();
 	}

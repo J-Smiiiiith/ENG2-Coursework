@@ -9,7 +9,7 @@
  		
  		template: "templates/OfferRule.egl"
  		
- 		target: o.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		target: "rules/" + o.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
  		
  		parameters: Map { "rule" = o }
  	
@@ -64,3 +64,64 @@
  		
  		parameters: Map { "cond" = cond }
  	}
+ 	
+  rule FreeProductOfferToJava
+  	transform offer : FreeProductOffer {
+  		
+  		guard: offer.name.isDefined()
+  		
+  		template: "templates/FreeProductOffer.egl"
+  		
+  		target: "offers/" + offer.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+  		
+  		parameters: Map { "o" = offer }
+  	}
+  	
+  rule OfferPriceReductionToJava
+  	transform offer : OfferPriceReduction {
+  		
+  		guard: offer.name.isDefined()
+  		
+  		template: "templates/OfferPricePercentageReduction.egl"
+  		
+  		target: "offers/" + offer.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+  		
+  		parameters: Map { "o" = offer }
+  	}
+  	
+  rule OfferFixedPriceToJava
+  	transform offer : OfferFixedPrice {
+  		
+  		guard: offer.name.isDefined()
+  		
+  		template: "templates/OfferFixedPrice.egl"
+  		
+  		target: "offers/" + offer.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+  		
+  		parameters: Map { "o" = offer }
+  	}
+  
+  	
+   rule OfferBuyXGetYFreeToJava
+  	transform offer : OfferXPoundsOff {
+  		
+  		guard: offer.name.isDefined()
+  		
+  		template: "templates/OfferXPoundsOff.egl"
+  		
+  		target: "offers/" + offer.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+  		
+  		parameters: Map { "o" = offer }
+  	}
+  	
+  rule OfferBuyXGetYFreeToJava
+  	transform offer : OfferBuyXGetYFree {
+  		
+  		guard: offer.name.isDefined()
+  		
+  		template: "templates/OfferBuyXGetYFree.egl"
+  		
+  		target: "offers/" + offer.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+  		
+  		parameters: Map { "o" = offer }
+  	}
