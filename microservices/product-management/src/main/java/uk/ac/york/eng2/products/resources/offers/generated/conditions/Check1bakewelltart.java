@@ -1,4 +1,4 @@
-package uk.ac.york.eng2.products.resources.offers.generated.conditions.quantity;
+package uk.ac.york.eng2.products.resources.offers.generated.conditions;
 
 import java.util.Arrays;
 import java.util.List;

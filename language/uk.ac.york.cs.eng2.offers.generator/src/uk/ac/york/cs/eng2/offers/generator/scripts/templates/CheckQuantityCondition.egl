@@ -1,6 +1,6 @@
 [% var className = cond.name.replaceAll("[^a-zA-Z0-9]", ""); %]
 [% var productNames = cond.applicableProducts.collect(p | '"' + p.name + '"'); %]
-package uk.ac.york.eng2.products.resources.offers.generated.conditions.quantity;
+package uk.ac.york.eng2.products.resources.offers.generated.conditions;
 
 import java.util.Arrays;
 import java.util.List;

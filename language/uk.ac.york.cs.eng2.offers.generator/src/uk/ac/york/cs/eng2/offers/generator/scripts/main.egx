@@ -9,8 +9,7 @@
  		
  		template: "templates/OfferRule.egl"
  		
- 		target: "offer_rule/" + 
- 				o.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		target: o.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
  		
  		parameters: Map { "rule" = o }
  	
@@ -23,7 +22,7 @@
  		
  		template: "templates/MinPriceCondition.egl"
  		
- 		target: "conditions/min_price/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		target: "conditions/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
  		
  		parameters: Map { "cond" = cond }
  	
@@ -36,7 +35,7 @@
  		
  		template: "templates/CheckQuantityCondition.egl"
  		
- 		target: "conditions/quantity/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		target: "conditions/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
  		
  		parameters: Map { "cond" = cond }
  	
@@ -49,7 +48,7 @@
  		
  		template: "templates/CheckNumOrdersCondition.egl"
  		
- 		target: "conditions/num_orders/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		target: "conditions/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
  		
  		parameters: Map { "cond" = cond }
  	}
@@ -61,7 +60,7 @@
  		
  		template: "templates/CheckDateCondition.egl"
  		
- 		target: "conditions/date/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		target: "conditions/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
  		
  		parameters: Map { "cond" = cond }
  	}

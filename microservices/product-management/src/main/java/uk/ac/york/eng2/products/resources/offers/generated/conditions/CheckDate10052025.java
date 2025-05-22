@@ -1,4 +1,4 @@
-package uk.ac.york.eng2.products.resources.offers.generated.conditions.date;
+package uk.ac.york.eng2.products.resources.offers.generated.conditions;
 
 /**
 * Auto-generated condition handler for condition: Check Date 10/05/2025

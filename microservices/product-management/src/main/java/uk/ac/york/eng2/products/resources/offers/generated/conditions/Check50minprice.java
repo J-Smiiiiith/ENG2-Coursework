@@ -1,4 +1,4 @@
-package uk.ac.york.eng2.products.resources.offers.generated.conditions.min_price;
+package uk.ac.york.eng2.products.resources.offers.generated.conditions;
 
 /**
 * Auto-generated condition handler for condition: Check £50 min price

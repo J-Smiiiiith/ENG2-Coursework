@@ -1,5 +1,5 @@
 [% var className = cond.name.replaceAll("[^a-zA-Z0-9]", ""); %]
-package uk.ac.york.eng2.products.resources.offers.generated.conditions.num_orders;
+package uk.ac.york.eng2.products.resources.offers.generated.conditions;
 
 /**
  * Auto-generated condition handler for condition: [%=cond.name%]

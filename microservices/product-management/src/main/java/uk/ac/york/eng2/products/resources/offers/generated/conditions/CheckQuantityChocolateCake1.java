@@ -1,20 +1,20 @@
-package uk.ac.york.eng2.products.resources.offers.generated.conditions.quantity;
+package uk.ac.york.eng2.products.resources.offers.generated.conditions;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 /**
-* Auto-generated condition handler for condition: Check 2 Pizzas
+* Auto-generated condition handler for condition: Check Quantity Chocolate Cake = 1
 */
-public class Check2Pizzas {
+public class CheckQuantityChocolateCake1 {
 
 	private List<String> applicableProducts;
 	private int minQuantity;
 
-	public Check2Pizzas() {
-		this.applicableProducts = Arrays.asList("Large Pizza");
-		this.minQuantity = 2;
+	public CheckQuantityChocolateCake1() {
+		this.applicableProducts = Arrays.asList("Chocolate Cake");
+		this.minQuantity = 1;
 	}
 
 	public boolean checkCondition(Map<String, Integer> order) {
@@ -30,6 +30,6 @@ public class Check2Pizzas {
 	}
 
 	public String getConditionName() {
-		return "Check 2 Pizzas";
+		return "Check Quantity Chocolate Cake = 1";
 	}
 }
