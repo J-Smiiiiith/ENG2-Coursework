@@ -41,3 +41,27 @@
  		parameters: Map { "cond" = cond }
  	
  	}
+ 	
+  rule CheckNumOrdersConditionToJava
+ 	transform cond : CheckNumOrdersCondition {
+ 	
+ 		guard: cond.name.isDefined()
+ 		
+ 		template: "templates/CheckNumOrdersCondition.egl"
+ 		
+ 		target: "conditions/num_orders/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		
+ 		parameters: Map { "cond" = cond }
+ 	}
+ 	
+  rule CheckDateConditionToJava
+ 	transform cond : CheckDateCondition {
+ 	
+ 		guard: cond.name.isDefined()
+ 		
+ 		template: "templates/CheckDateCondition.egl"
+ 		
+ 		target: "conditions/date/" + cond.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		
+ 		parameters: Map { "cond" = cond }
+ 	}

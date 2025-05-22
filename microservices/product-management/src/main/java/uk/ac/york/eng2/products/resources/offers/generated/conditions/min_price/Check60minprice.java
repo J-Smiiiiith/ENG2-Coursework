@@ -11,7 +11,7 @@ public class Check60minprice {
 		this.minPrice = 60.0f;
 	}
 
-	public boolean checkConditions(float totalPrice) {
+	public boolean checkCondition(float totalPrice) {
 		return totalPrice >= this.minPrice;
 	}
 

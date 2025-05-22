@@ -17,7 +17,7 @@ public class CheckQuantityChocolateCake1 {
 		this.minQuantity = 1;
 	}
 
-	public boolean checkConditions(Map<String, Integer> order) {
+	public boolean checkCondition(Map<String, Integer> order) {
 		int count = 0;
 
 		for (String product : applicableProducts) {

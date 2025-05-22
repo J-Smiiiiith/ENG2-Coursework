@@ -13,6 +13,7 @@
   <offers name="First 10 orders of Bakewell Tarts in the day 10% off ">
     <conditions xsi:type="dis:CheckNumOrdersCondition" name="Check num orders = 10" numOrders="10"/>
     <conditions xsi:type="dis:CheckQuantityCondition" name="Check 1 bakewell tart" applicableProducts="//@products.2" quantity="1"/>
+    <conditions xsi:type="dis:CheckDateCondition" name="Check Date 10/05/2025" date="10/05/2025"/>
     <offers xsi:type="dis:OfferPriceReduction" name="10% off" percentageReduction="10.0"/>
     <triggers source="//@offers.0" target="//@offers.1"/>
   </offers>
@@ -29,7 +30,7 @@
     <triggers source="//@offers.2" target="//@offers.3"/>
   </offers>
   <offers name="Christmas Day Discount 10% (60 GBP minimum order)">
-    <conditions xsi:type="dis:CheckDateCondition" name="Check Christmas Day" date="Check Date = 25/12/2026"/>
+    <conditions xsi:type="dis:CheckDateCondition" name="Check Christmas Day" date="25/12/2026"/>
     <conditions xsi:type="dis:MinPriceCondition" name="Check £60 min price" minPrice="60.0"/>
     <offers xsi:type="dis:OfferPriceReduction" name="10% off" percentageReduction="10.0"/>
     <triggers source="//@offers.3" target="//@offers.4" type="IF_NOT_MATCH"/>

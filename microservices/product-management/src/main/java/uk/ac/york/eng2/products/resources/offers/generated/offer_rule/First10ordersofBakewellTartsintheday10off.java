@@ -18,6 +18,7 @@ public class First10ordersofBakewellTartsintheday10off implements OfferHandler {
 	public boolean isOfferValid(Map<Long, Integer> order) {
 		if (!checkChecknumorders10(order)) return false;
 		if (!checkCheck1bakewelltart(order)) return false;
+		if (!checkCheckDate10052025(order)) return false;
 		return true;
 	}
 
@@ -40,6 +41,12 @@ public class First10ordersofBakewellTartsintheday10off implements OfferHandler {
 		// TODO: Implement condition logic for Check 1 bakewell tart
 		return true;
 		// protected region check_Check1bakewelltart end //
+	}
+	private boolean checkCheckDate10052025(Map<Long, Integer> order) {
+		// protected region check_CheckDate10052025 on begin //
+		// TODO: Implement condition logic for Check Date 10/05/2025
+		return true;
+		// protected region check_CheckDate10052025 end //
 	}
 
 	// --- Offer Apply Methods ---
