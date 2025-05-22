@@ -43,24 +43,24 @@
         <edgeMappings name="offers.relational.edge.product_category" label="Product -> Category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']/@defaultLayer/@nodeMappings[name='offers.product.node']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']/@defaultLayer/@nodeMappings[name='Offers.category.node']" targetFinderExpression="aql:self.category">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="Belongs to">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="offers.relational.edge.product_subCategory" label="Product -> Sub-Category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']/@defaultLayer/@nodeMappings[name='offers.product.node']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']/@defaultLayer/@nodeMappings[name='offers.node.subcategory']" targetFinderExpression="aql:self.subCategory">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="Belongs to">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="offers.relational.edge.subCategory_category" label="Sub-Category -> Category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']/@defaultLayer/@nodeMappings[name='offers.node.subcategory']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']/@defaultLayer/@nodeMappings[name='Offers.category.node']" targetFinderExpression="aql:self.category">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="Sub-Category of">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
