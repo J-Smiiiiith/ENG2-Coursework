@@ -1,0 +1,46 @@
+package uk.ac.york.eng2.orders.resources;
+
+import io.micronaut.http.HttpResponse;
+import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.inject.Inject;
+import uk.ac.york.eng2.orders.domain.OrderItem;
+import uk.ac.york.eng2.orders.dto.OrderItemDTO;
+import uk.ac.york.eng2.orders.gateways.ProductManagementGateway;
+import uk.ac.york.eng2.orders.repository.OrderItemRepository;
+
+import java.net.URI;
+import java.util.List;
+
+@Tag(name = "Order Items")
+@Controller(OrderItemController.PREFIX)
+public class OrderItemController {
+    public static final String PREFIX = "/order-items";
+
+    @Inject
+    OrderItemRepository orderItemRepo;
+
+    @Inject
+    ProductManagementGateway productManagementGateway;
+
+    @Get
+    public List<OrderItem> getOrderItems() {
+        return orderItemRepo.findAll();
+    }
+
+    @Get("/{id}")
+    public OrderItem getOrderItem(@PathVariable Long id) {
+        return orderItemRepo.findById(id).orElse(null);
+    }
+
+    @Post
+    public HttpResponse<Void> createOrderItem(@Body OrderItemDTO dto) {
+        OrderItem orderItem = new OrderItem();
+        orderItem.setProductId(dto.getProductId());
+        orderItem.setQuantity(dto.getQuantity());
+        orderItem.setOrder(dto.getOrderId());
+        orderItem.setUnitPrice(productManagementGateway.getProductUnitPrice(dto.getProductId()));
+        orderItemRepo.save(orderItem);
+        return HttpResponse.created(URI.create(PREFIX + "/" + orderItem.getId()));
+    }
+}

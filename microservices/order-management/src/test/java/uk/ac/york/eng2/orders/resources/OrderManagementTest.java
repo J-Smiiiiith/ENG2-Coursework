@@ -1,4 +1,4 @@
-package uk.ac.york.eng2.products;
+package uk.ac.york.eng2.orders.resources;
 
 import io.micronaut.runtime.EmbeddedApplication;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import jakarta.inject.Inject;
 
 @MicronautTest
-class ProductManagementTest {
+class OrderManagementTest {
 
     @Inject
     EmbeddedApplication<?> application;
