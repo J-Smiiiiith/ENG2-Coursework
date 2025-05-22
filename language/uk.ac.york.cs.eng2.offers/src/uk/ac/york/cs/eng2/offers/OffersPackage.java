@@ -113,13 +113,22 @@ public interface OffersPackage extends EPackage {
 	int OFFER_COMPONENTS__OFFERS = 4;
 
 	/**
+	 * The feature id for the '<em><b>Triggers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFER_COMPONENTS__TRIGGERS = 5;
+
+	/**
 	 * The number of structural features of the '<em>Offer Components</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_COMPONENTS_FEATURE_COUNT = 5;
+	int OFFER_COMPONENTS_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Offer Components</em>' class.
@@ -1142,6 +1151,17 @@ public interface OffersPackage extends EPackage {
 	EReference getOfferComponents_Offers();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link uk.ac.york.cs.eng2.offers.OfferComponents#getTriggers <em>Triggers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Triggers</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.OfferComponents#getTriggers()
+	 * @see #getOfferComponents()
+	 * @generated
+	 */
+	EReference getOfferComponents_Triggers();
+
+	/**
 	 * Returns the meta object for class '{@link uk.ac.york.cs.eng2.offers.OfferRule <em>Offer Rule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1712,6 +1732,14 @@ public interface OffersPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OFFER_COMPONENTS__OFFERS = eINSTANCE.getOfferComponents_Offers();
+
+		/**
+		 * The meta object literal for the '<em><b>Triggers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OFFER_COMPONENTS__TRIGGERS = eINSTANCE.getOfferComponents_Triggers();
 
 		/**
 		 * The meta object literal for the '{@link uk.ac.york.cs.eng2.offers.impl.OfferRuleImpl <em>Offer Rule</em>}' class.

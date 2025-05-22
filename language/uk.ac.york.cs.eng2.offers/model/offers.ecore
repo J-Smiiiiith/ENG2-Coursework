@@ -12,6 +12,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
         eType="#//OfferRule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="triggers" upperBound="-1"
+        eType="#//Trigger" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OfferRule">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

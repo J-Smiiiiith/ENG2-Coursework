@@ -11,6 +11,7 @@ class OfferComponents {
 	val SubCategory[*] subCategories;
 	val Tag[*] tags;
 	val OfferRule[*] offers;
+	val Trigger[*] triggers;
 }
 
 class OfferRule {

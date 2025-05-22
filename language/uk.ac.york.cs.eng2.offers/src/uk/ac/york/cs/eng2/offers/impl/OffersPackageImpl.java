@@ -298,6 +298,16 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getOfferComponents_Triggers() {
+		return (EReference)offerComponentsEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getOfferRule() {
 		return offerRuleEClass;
 	}
@@ -797,6 +807,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		createEReference(offerComponentsEClass, OFFER_COMPONENTS__SUB_CATEGORIES);
 		createEReference(offerComponentsEClass, OFFER_COMPONENTS__TAGS);
 		createEReference(offerComponentsEClass, OFFER_COMPONENTS__OFFERS);
+		createEReference(offerComponentsEClass, OFFER_COMPONENTS__TRIGGERS);
 
 		offerRuleEClass = createEClass(OFFER_RULE);
 		createEAttribute(offerRuleEClass, OFFER_RULE__NAME);
@@ -911,6 +922,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		initEReference(getOfferComponents_SubCategories(), this.getSubCategory(), null, "subCategories", null, 0, -1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOfferComponents_Tags(), this.getTag(), null, "tags", null, 0, -1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOfferComponents_Offers(), this.getOfferRule(), null, "offers", null, 0, -1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOfferComponents_Triggers(), this.getTrigger(), null, "triggers", null, 0, -1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(offerRuleEClass, OfferRule.class, "OfferRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOfferRule_Name(), ecorePackage.getEString(), "name", null, 0, 1, OfferRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

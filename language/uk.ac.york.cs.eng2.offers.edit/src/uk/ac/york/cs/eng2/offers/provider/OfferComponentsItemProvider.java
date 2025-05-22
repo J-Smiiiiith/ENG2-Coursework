@@ -82,6 +82,7 @@ public class OfferComponentsItemProvider
 			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__SUB_CATEGORIES);
 			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__TAGS);
 			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__OFFERS);
+			childrenFeatures.add(OffersPackage.Literals.OFFER_COMPONENTS__TRIGGERS);
 		}
 		return childrenFeatures;
 	}
@@ -139,6 +140,7 @@ public class OfferComponentsItemProvider
 			case OffersPackage.OFFER_COMPONENTS__SUB_CATEGORIES:
 			case OffersPackage.OFFER_COMPONENTS__TAGS:
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -185,6 +187,11 @@ public class OfferComponentsItemProvider
 			(createChildParameter
 				(OffersPackage.Literals.OFFER_COMPONENTS__OFFERS,
 				 OffersFactory.eINSTANCE.createOfferRule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OffersPackage.Literals.OFFER_COMPONENTS__TRIGGERS,
+				 OffersFactory.eINSTANCE.createTrigger()));
 	}
 
 	/**

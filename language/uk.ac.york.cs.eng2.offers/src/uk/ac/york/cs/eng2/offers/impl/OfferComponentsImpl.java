@@ -23,6 +23,7 @@ import uk.ac.york.cs.eng2.offers.OffersPackage;
 import uk.ac.york.cs.eng2.offers.Product;
 import uk.ac.york.cs.eng2.offers.SubCategory;
 import uk.ac.york.cs.eng2.offers.Tag;
+import uk.ac.york.cs.eng2.offers.Trigger;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,6 +38,7 @@ import uk.ac.york.cs.eng2.offers.Tag;
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getSubCategories <em>Sub Categories</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getOffers <em>Offers</em>}</li>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferComponentsImpl#getTriggers <em>Triggers</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,6 +93,16 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<OfferRule> offers;
+
+	/**
+	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTriggers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Trigger> triggers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,6 +194,19 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public EList<Trigger> getTriggers() {
+		if (triggers == null) {
+			triggers = new EObjectContainmentEList<Trigger>(Trigger.class, this, OffersPackage.OFFER_COMPONENTS__TRIGGERS);
+		}
+		return triggers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case OffersPackage.OFFER_COMPONENTS__PRODUCTS:
@@ -194,6 +219,8 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 				return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
 				return ((InternalEList<?>)getOffers()).basicRemove(otherEnd, msgs);
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				return ((InternalEList<?>)getTriggers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -216,6 +243,8 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 				return getTags();
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
 				return getOffers();
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				return getTriggers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -249,6 +278,10 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 				getOffers().clear();
 				getOffers().addAll((Collection<? extends OfferRule>)newValue);
 				return;
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				getTriggers().clear();
+				getTriggers().addAll((Collection<? extends Trigger>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -276,6 +309,9 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
 				getOffers().clear();
 				return;
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				getTriggers().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -298,6 +334,8 @@ public class OfferComponentsImpl extends MinimalEObjectImpl.Container implements
 				return tags != null && !tags.isEmpty();
 			case OffersPackage.OFFER_COMPONENTS__OFFERS:
 				return offers != null && !offers.isEmpty();
+			case OffersPackage.OFFER_COMPONENTS__TRIGGERS:
+				return triggers != null && !triggers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
