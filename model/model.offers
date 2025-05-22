@@ -12,7 +12,7 @@
   <tags tag="Frozen"/>
   <offers name="10% off from the first 10 orders of Bakewell Tarts in the day">
     <conditions xsi:type="dis:CheckNumOrdersCondition" name="Check num orders = 10" numOrders="10"/>
-    <conditions xsi:type="dis:CheckQuantityCondition" name="Check 1 bakewell tart" applicableProducts="//@products.3" quantity="1"/>
+    <conditions xsi:type="dis:CheckQuantityCondition" name="Check 1 bakewell tart" applicableProducts="//@products.2" quantity="1"/>
     <offers xsi:type="dis:OfferPriceReduction" name="10% off" percentageReduction="10.0"/>
     <triggers source="//@offers.0" target="//@offers.1"/>
   </offers>

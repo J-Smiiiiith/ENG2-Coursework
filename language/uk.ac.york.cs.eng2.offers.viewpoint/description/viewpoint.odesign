@@ -3,32 +3,7 @@
   <ownedViewpoints name="offers_viewpoint" modelFileExtension="offers">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="offers_diagram_all_offers" label="All Offers Diagram" domainClass="offers::OfferComponents" enablePopupBars="true">
       <metamodel href="../../language/uk.ac.york.cs.eng2.offers/model/offers.ecore#/"/>
-      <defaultLayer name="Default">
-        <edgeMappings name="offers.relational.edge.condition_product" label="Condition -> Product" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']/@defaultLayer/@nodeMappings[name='offers.product.node']" targetFinderExpression="aql:self.applicableProducts">
-          <style lineStyle="dash" sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <edgeMappings name="offers.relational.edge.condition_category" label="Condition -> Category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']/@defaultLayer/@nodeMappings[name='Offers.category.node']" targetFinderExpression="aql:self.applicableCategories">
-          <style lineStyle="dash" sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <edgeMappings name="offers.relational.edge.condition_subCategory" label="Condition -> Sub-category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']/@defaultLayer/@nodeMappings[name='offers.node.subcategory']" targetFinderExpression="aql:self.applicableSubCategories">
-          <style lineStyle="dash" sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-      </defaultLayer>
+      <defaultLayer name="Default"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Offers_diagram_propducts" label="Products Diagram" domainClass="offers::OfferComponents" enablePopupBars="true">
       <metamodel href="../../language/uk.ac.york.cs.eng2.offers/model/offers.ecore#/"/>
@@ -196,27 +171,64 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="offers.element.edge.offerRule_offerRule" label="Offer Rule -> Offer Rule" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']" targetFinderExpression="aql:self.triggers.target" sourceFinderExpression="aql:self" domainClass="offers::OfferRule" useDomainElement="true">
+        <nodeMappings name="offers.product.node" label="Product" semanticCandidatesExpression="aql:self.offers.conditions.applicableProducts" domainClass="offers::Product">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Offers.category.node" label="Category" semanticCandidatesExpression="aql:self.offers.conditions.applicableCategories" domainClass="offers::Category">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="offers.node.subcategory" label="Sub-category" semanticCandidatesExpression="aql:self.offers.conditions.applicableSubCategories" domainClass="offers::SubCategory">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="offers.element.edge.condition_offer" label="Condition -> Offer" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer']" targetFinderExpression="aql:self.offers" sourceFinderExpression="aql:self.conditions" domainClass="offers::OfferRule" useDomainElement="true">
           <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
-            <centerLabelStyleDescription labelSize="12" labelExpression="aql:self.triggers.type">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="If condition met">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="offers.element.edge.offerRule_condition" label="Offer Rule -> Condition" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_trigger']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetFinderExpression="aql:self.conditions" sourceFinderExpression="aql:self" domainClass="offers::OfferRule" useDomainElement="true">
+        <edgeMappings name="condition_product" label="Condition -> Product" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.product.node']" targetFinderExpression="aql: self.applicableProducts">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="Check Product">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="condition_category" label="Condition -> Category" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='Offers.category.node']" targetFinderExpression="aql:self.applicableCategories">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="Check Category">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="condition_subCategory" label="Condition -> SubCategory" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.subcategory']" targetFinderExpression="aql:self.applicableSubCategories">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="Check Sub-Category">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="offer_rule_condition" label="Offer Rule -> Condition" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetFinderExpression="aql:self.conditions" sourceFinderExpression="aql:self" domainClass="offers::OfferRule" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <edgeMappings name="offers.element.edge.condition_offer" label="Condition -> Offer" sourceMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']" targetMapping="//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer']" targetFinderExpression="aql:self.offers" sourceFinderExpression="aql:self.conditions" domainClass="offers::OfferRule" useDomainElement="true">
-          <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
-            <centerLabelStyleDescription labelSize="12" labelExpression="Condition met">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
