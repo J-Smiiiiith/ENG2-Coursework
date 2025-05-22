@@ -72,26 +72,6 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 				return createOfferComponentsAdapter();
 			}
 			@Override
-			public Adapter caseProducts(Products object) {
-				return createProductsAdapter();
-			}
-			@Override
-			public Adapter caseCategories(Categories object) {
-				return createCategoriesAdapter();
-			}
-			@Override
-			public Adapter caseSubCategories(SubCategories object) {
-				return createSubCategoriesAdapter();
-			}
-			@Override
-			public Adapter caseTags(Tags object) {
-				return createTagsAdapter();
-			}
-			@Override
-			public Adapter caseAllOffers(AllOffers object) {
-				return createAllOffersAdapter();
-			}
-			@Override
 			public Adapter caseOfferRule(OfferRule object) {
 				return createOfferRuleAdapter();
 			}
@@ -190,76 +170,6 @@ public class OffersAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOfferComponentsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Products <em>Products</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.Products
-	 * @generated
-	 */
-	public Adapter createProductsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Categories <em>Categories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.Categories
-	 * @generated
-	 */
-	public Adapter createCategoriesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.SubCategories <em>Sub Categories</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.SubCategories
-	 * @generated
-	 */
-	public Adapter createSubCategoriesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.Tags <em>Tags</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.Tags
-	 * @generated
-	 */
-	public Adapter createTagsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uk.ac.york.cs.eng2.offers.AllOffers <em>All Offers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uk.ac.york.cs.eng2.offers.AllOffers
-	 * @generated
-	 */
-	public Adapter createAllOffersAdapter() {
 		return null;
 	}
 

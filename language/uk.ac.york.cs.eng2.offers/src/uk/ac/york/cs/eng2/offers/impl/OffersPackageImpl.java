@@ -10,8 +10,6 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import uk.ac.york.cs.eng2.offers.AllOffers;
-import uk.ac.york.cs.eng2.offers.Categories;
 import uk.ac.york.cs.eng2.offers.Category;
 import uk.ac.york.cs.eng2.offers.CheckDateCondition;
 import uk.ac.york.cs.eng2.offers.CheckNumOrdersCondition;
@@ -29,11 +27,8 @@ import uk.ac.york.cs.eng2.offers.OfferXPoundsOff;
 import uk.ac.york.cs.eng2.offers.OffersFactory;
 import uk.ac.york.cs.eng2.offers.OffersPackage;
 import uk.ac.york.cs.eng2.offers.Product;
-import uk.ac.york.cs.eng2.offers.Products;
-import uk.ac.york.cs.eng2.offers.SubCategories;
 import uk.ac.york.cs.eng2.offers.SubCategory;
 import uk.ac.york.cs.eng2.offers.Tag;
-import uk.ac.york.cs.eng2.offers.Tags;
 import uk.ac.york.cs.eng2.offers.Trigger;
 import uk.ac.york.cs.eng2.offers.TriggerType;
 
@@ -50,41 +45,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	private EClass offerComponentsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass productsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass categoriesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass subCategoriesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tagsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass allOffersEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -330,106 +290,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	@Override
 	public EReference getOfferComponents_Offers() {
 		return (EReference)offerComponentsEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getProducts() {
-		return productsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getProducts_Products() {
-		return (EReference)productsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getCategories() {
-		return categoriesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getCategories_Categories() {
-		return (EReference)categoriesEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSubCategories() {
-		return subCategoriesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSubCategories_SubCategories() {
-		return (EReference)subCategoriesEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getTags() {
-		return tagsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTags_Tags() {
-		return (EReference)tagsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getAllOffers() {
-		return allOffersEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAllOffers_Offers() {
-		return (EReference)allOffersEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -938,21 +798,6 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		createEReference(offerComponentsEClass, OFFER_COMPONENTS__TAGS);
 		createEReference(offerComponentsEClass, OFFER_COMPONENTS__OFFERS);
 
-		productsEClass = createEClass(PRODUCTS);
-		createEReference(productsEClass, PRODUCTS__PRODUCTS);
-
-		categoriesEClass = createEClass(CATEGORIES);
-		createEReference(categoriesEClass, CATEGORIES__CATEGORIES);
-
-		subCategoriesEClass = createEClass(SUB_CATEGORIES);
-		createEReference(subCategoriesEClass, SUB_CATEGORIES__SUB_CATEGORIES);
-
-		tagsEClass = createEClass(TAGS);
-		createEReference(tagsEClass, TAGS__TAGS);
-
-		allOffersEClass = createEClass(ALL_OFFERS);
-		createEReference(allOffersEClass, ALL_OFFERS__OFFERS);
-
 		offerRuleEClass = createEClass(OFFER_RULE);
 		createEAttribute(offerRuleEClass, OFFER_RULE__NAME);
 		createEReference(offerRuleEClass, OFFER_RULE__CONDITIONS);
@@ -1061,26 +906,11 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(offerComponentsEClass, OfferComponents.class, "OfferComponents", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOfferComponents_Products(), this.getProducts(), null, "products", null, 0, 1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOfferComponents_Categories(), this.getCategories(), null, "categories", null, 0, 1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOfferComponents_SubCategories(), this.getSubCategories(), null, "subCategories", null, 0, 1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOfferComponents_Tags(), this.getTags(), null, "tags", null, 0, 1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOfferComponents_Offers(), this.getAllOffers(), null, "offers", null, 0, 1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(productsEClass, Products.class, "Products", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProducts_Products(), this.getProduct(), null, "products", null, 0, -1, Products.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(categoriesEClass, Categories.class, "Categories", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCategories_Categories(), this.getCategory(), null, "categories", null, 0, -1, Categories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(subCategoriesEClass, SubCategories.class, "SubCategories", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubCategories_SubCategories(), this.getSubCategory(), null, "subCategories", null, 0, -1, SubCategories.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tagsEClass, Tags.class, "Tags", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTags_Tags(), this.getTag(), null, "tags", null, 0, -1, Tags.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(allOffersEClass, AllOffers.class, "AllOffers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAllOffers_Offers(), this.getOfferRule(), null, "offers", null, 0, -1, AllOffers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOfferComponents_Products(), this.getProduct(), null, "products", null, 0, -1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOfferComponents_Categories(), this.getCategory(), null, "categories", null, 0, -1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOfferComponents_SubCategories(), this.getSubCategory(), null, "subCategories", null, 0, -1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOfferComponents_Tags(), this.getTag(), null, "tags", null, 0, -1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOfferComponents_Offers(), this.getOfferRule(), null, "offers", null, 0, -1, OfferComponents.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(offerRuleEClass, OfferRule.class, "OfferRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOfferRule_Name(), ecorePackage.getEString(), "name", null, 0, 1, OfferRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

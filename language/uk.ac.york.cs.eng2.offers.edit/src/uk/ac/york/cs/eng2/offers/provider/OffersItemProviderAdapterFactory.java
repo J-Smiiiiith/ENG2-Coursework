@@ -95,121 +95,6 @@ public class OffersItemProviderAdapterFactory extends OffersAdapterFactory imple
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.Products} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ProductsItemProvider productsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.Products}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createProductsAdapter() {
-		if (productsItemProvider == null) {
-			productsItemProvider = new ProductsItemProvider(this);
-		}
-
-		return productsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.Categories} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CategoriesItemProvider categoriesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.Categories}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCategoriesAdapter() {
-		if (categoriesItemProvider == null) {
-			categoriesItemProvider = new CategoriesItemProvider(this);
-		}
-
-		return categoriesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.SubCategories} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SubCategoriesItemProvider subCategoriesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.SubCategories}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSubCategoriesAdapter() {
-		if (subCategoriesItemProvider == null) {
-			subCategoriesItemProvider = new SubCategoriesItemProvider(this);
-		}
-
-		return subCategoriesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.Tags} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TagsItemProvider tagsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.Tags}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTagsAdapter() {
-		if (tagsItemProvider == null) {
-			tagsItemProvider = new TagsItemProvider(this);
-		}
-
-		return tagsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.AllOffers} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AllOffersItemProvider allOffersItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.cs.eng2.offers.AllOffers}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAllOffersAdapter() {
-		if (allOffersItemProvider == null) {
-			allOffersItemProvider = new AllOffersItemProvider(this);
-		}
-
-		return allOffersItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uk.ac.york.cs.eng2.offers.OfferRule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -660,11 +545,6 @@ public class OffersItemProviderAdapterFactory extends OffersAdapterFactory imple
 	@Override
 	public void dispose() {
 		if (offerComponentsItemProvider != null) offerComponentsItemProvider.dispose();
-		if (productsItemProvider != null) productsItemProvider.dispose();
-		if (categoriesItemProvider != null) categoriesItemProvider.dispose();
-		if (subCategoriesItemProvider != null) subCategoriesItemProvider.dispose();
-		if (tagsItemProvider != null) tagsItemProvider.dispose();
-		if (allOffersItemProvider != null) allOffersItemProvider.dispose();
 		if (offerRuleItemProvider != null) offerRuleItemProvider.dispose();
 		if (productItemProvider != null) productItemProvider.dispose();
 		if (categoryItemProvider != null) categoryItemProvider.dispose();

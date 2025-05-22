@@ -31,51 +31,6 @@ public interface OffersFactory extends EFactory {
 	OfferComponents createOfferComponents();
 
 	/**
-	 * Returns a new object of class '<em>Products</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Products</em>'.
-	 * @generated
-	 */
-	Products createProducts();
-
-	/**
-	 * Returns a new object of class '<em>Categories</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Categories</em>'.
-	 * @generated
-	 */
-	Categories createCategories();
-
-	/**
-	 * Returns a new object of class '<em>Sub Categories</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sub Categories</em>'.
-	 * @generated
-	 */
-	SubCategories createSubCategories();
-
-	/**
-	 * Returns a new object of class '<em>Tags</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tags</em>'.
-	 * @generated
-	 */
-	Tags createTags();
-
-	/**
-	 * Returns a new object of class '<em>All Offers</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>All Offers</em>'.
-	 * @generated
-	 */
-	AllOffers createAllOffers();
-
-	/**
 	 * Returns a new object of class '<em>Offer Rule</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

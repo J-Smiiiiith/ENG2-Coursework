@@ -72,36 +72,6 @@ public class OffersSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case OffersPackage.PRODUCTS: {
-				Products products = (Products)theEObject;
-				T result = caseProducts(products);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OffersPackage.CATEGORIES: {
-				Categories categories = (Categories)theEObject;
-				T result = caseCategories(categories);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OffersPackage.SUB_CATEGORIES: {
-				SubCategories subCategories = (SubCategories)theEObject;
-				T result = caseSubCategories(subCategories);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OffersPackage.TAGS: {
-				Tags tags = (Tags)theEObject;
-				T result = caseTags(tags);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OffersPackage.ALL_OFFERS: {
-				AllOffers allOffers = (AllOffers)theEObject;
-				T result = caseAllOffers(allOffers);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case OffersPackage.OFFER_RULE: {
 				OfferRule offerRule = (OfferRule)theEObject;
 				T result = caseOfferRule(offerRule);
@@ -230,81 +200,6 @@ public class OffersSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOfferComponents(OfferComponents object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Products</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Products</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseProducts(Products object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Categories</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Categories</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCategories(Categories object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sub Categories</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sub Categories</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSubCategories(SubCategories object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tags</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tags</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTags(Tags object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>All Offers</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>All Offers</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAllOffers(AllOffers object) {
 		return null;
 	}
 

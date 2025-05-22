@@ -19,21 +19,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference offers.ecore#//OfferComponents/tags"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference offers.ecore#//OfferComponents/offers"/>
     </genClasses>
-    <genClasses ecoreClass="offers.ecore#//Products">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference offers.ecore#//Products/products"/>
-    </genClasses>
-    <genClasses ecoreClass="offers.ecore#//Categories">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference offers.ecore#//Categories/categories"/>
-    </genClasses>
-    <genClasses ecoreClass="offers.ecore#//SubCategories">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference offers.ecore#//SubCategories/subCategories"/>
-    </genClasses>
-    <genClasses ecoreClass="offers.ecore#//Tags">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference offers.ecore#//Tags/tags"/>
-    </genClasses>
-    <genClasses ecoreClass="offers.ecore#//AllOffers">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference offers.ecore#//AllOffers/offers"/>
-    </genClasses>
     <genClasses ecoreClass="offers.ecore#//OfferRule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//OfferRule/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference offers.ecore#//OfferRule/conditions"/>
