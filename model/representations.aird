@@ -4,7 +4,7 @@
     <semanticResources>model.offers</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Do5xkDWZEfCm1tBvZSaH9A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9ovbUDZbEfC6poJRCCeYeA" name="offers.diagram" repPath="#_9ou0QDZbEfC6poJRCCeYeA" changeId="1747849321116">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9ovbUDZbEfC6poJRCCeYeA" name="offers.diagram" repPath="#_9ou0QDZbEfC6poJRCCeYeA" changeId="1747872332074">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
@@ -123,60 +123,38 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_AuWvITZhEfC6poJRCCeYeA" fontName=".AppleSystemUIFont" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AuWvIjZhEfC6poJRCCeYeA" x="200" y="186" width="133" height="33"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_QzApEDZiEfC6poJRCCeYeA" type="2001" element="_Qy_a8DZiEfC6poJRCCeYeA">
-          <children xmi:type="notation:Node" xmi:id="_QzApEzZiEfC6poJRCCeYeA" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_QzApFDZiEfC6poJRCCeYeA" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_mpMUkDaWEfCXOdQEj5MJHQ" type="2001" element="_mpIDIDaWEfCXOdQEj5MJHQ">
+          <children xmi:type="notation:Node" xmi:id="_mpMUkzaWEfCXOdQEj5MJHQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_mpMUlDaWEfCXOdQEj5MJHQ" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_QzApFTZiEfC6poJRCCeYeA" type="3003" element="_Qy_a8TZiEfC6poJRCCeYeA">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_QzApFjZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QzApFzZiEfC6poJRCCeYeA"/>
+          <children xmi:type="notation:Node" xmi:id="_mpMUlTaWEfCXOdQEj5MJHQ" type="3003" element="_mpIqMDaWEfCXOdQEj5MJHQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_mpMUljaWEfCXOdQEj5MJHQ" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mpMUlzaWEfCXOdQEj5MJHQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_QzApETZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QzApEjZiEfC6poJRCCeYeA" x="72" y="320" width="215" height="41"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_mpMUkTaWEfCXOdQEj5MJHQ" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mpMUkjaWEfCXOdQEj5MJHQ" x="184" y="376" width="30" height="30"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_UVUSPDZiEfC6poJRCCeYeA" type="2001" element="_UVTEEDZiEfC6poJRCCeYeA">
-          <children xmi:type="notation:Node" xmi:id="_UVUSPzZiEfC6poJRCCeYeA" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_UVUSQDZiEfC6poJRCCeYeA" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_nWqekDaWEfCXOdQEj5MJHQ" type="2001" element="_nWm0MDaWEfCXOdQEj5MJHQ">
+          <children xmi:type="notation:Node" xmi:id="_nWqekzaWEfCXOdQEj5MJHQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_nWqelDaWEfCXOdQEj5MJHQ" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_UVUSQTZiEfC6poJRCCeYeA" type="3003" element="_UVTEETZiEfC6poJRCCeYeA">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_UVUSQjZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UVUSQzZiEfC6poJRCCeYeA"/>
+          <children xmi:type="notation:Node" xmi:id="_nWqelTaWEfCXOdQEj5MJHQ" type="3003" element="_nWm0MTaWEfCXOdQEj5MJHQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_nWqeljaWEfCXOdQEj5MJHQ" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nWqelzaWEfCXOdQEj5MJHQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_UVUSPTZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UVUSPjZiEfC6poJRCCeYeA" x="77" y="420" width="210" height="41"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_nWqekTaWEfCXOdQEj5MJHQ" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nWqekjaWEfCXOdQEj5MJHQ" x="476" y="424" width="30" height="30"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_XKehcDZiEfC6poJRCCeYeA" type="2001" element="_XKdTUDZiEfC6poJRCCeYeA">
-          <children xmi:type="notation:Node" xmi:id="_XKehczZiEfC6poJRCCeYeA" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_XKehdDZiEfC6poJRCCeYeA" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_qaUAUDaXEfCXOdQEj5MJHQ" type="2001" element="_qaOg2DaXEfCXOdQEj5MJHQ">
+          <children xmi:type="notation:Node" xmi:id="_qaUAUzaXEfCXOdQEj5MJHQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_qaUAVDaXEfCXOdQEj5MJHQ" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XKehdTZiEfC6poJRCCeYeA" type="3003" element="_XKdTUTZiEfC6poJRCCeYeA">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_XKehdjZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XKehdzZiEfC6poJRCCeYeA"/>
+          <children xmi:type="notation:Node" xmi:id="_qaUnYDaXEfCXOdQEj5MJHQ" type="3017" element="_qaSLIDaXEfCXOdQEj5MJHQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_qaUnYTaXEfCXOdQEj5MJHQ" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qaUnYjaXEfCXOdQEj5MJHQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_XKehcTZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XKehcjZiEfC6poJRCCeYeA" x="77" y="504" width="216" height="25"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_ZXPUDjZiEfC6poJRCCeYeA" type="2001" element="_ZXOF0DZiEfC6poJRCCeYeA">
-          <children xmi:type="notation:Node" xmi:id="_ZXPUETZiEfC6poJRCCeYeA" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_ZXPUEjZiEfC6poJRCCeYeA" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_ZXPUEzZiEfC6poJRCCeYeA" type="3003" element="_ZXOF0TZiEfC6poJRCCeYeA">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_ZXPUFDZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZXPUFTZiEfC6poJRCCeYeA"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_ZXPUDzZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZXPUEDZiEfC6poJRCCeYeA" x="78" y="560" width="214" height="41"/>
-        </children>
-        <children xmi:type="notation:Node" xmi:id="_fT6t3DZiEfC6poJRCCeYeA" type="2001" element="_fT5foDZiEfC6poJRCCeYeA">
-          <children xmi:type="notation:Node" xmi:id="_fT6t3zZiEfC6poJRCCeYeA" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_fT6t4DZiEfC6poJRCCeYeA" y="5"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_fT6t4TZiEfC6poJRCCeYeA" type="3003" element="_fT5foTZiEfC6poJRCCeYeA">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_fT6t4jZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fT6t4zZiEfC6poJRCCeYeA"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_fT6t3TZiEfC6poJRCCeYeA" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fT6t3jZiEfC6poJRCCeYeA" x="74" y="632" width="221" height="45"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_qaUAUTaXEfCXOdQEj5MJHQ" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qaUAUjaXEfCXOdQEj5MJHQ" x="128" y="508" width="161" height="61"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_9ozFsjZbEfC6poJRCCeYeA"/>
         <edges xmi:type="notation:Edge" xmi:id="_qiipsDZfEfC6poJRCCeYeA" type="4001" element="_qig0hTZfEfC6poJRCCeYeA" source="_1FReEjZeEfC6poJRCCeYeA" target="_gkazsDZfEfC6poJRCCeYeA">
@@ -307,6 +285,54 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_w4TnADZhEfC6poJRCCeYeA" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_w4TnATZhEfC6poJRCCeYeA" id="(0.5,0.5)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_rj7JMDaWEfCXOdQEj5MJHQ" type="4001" element="_rjr4xTaWEfCXOdQEj5MJHQ" source="_mpMUkDaWEfCXOdQEj5MJHQ" target="_nWqekDaWEfCXOdQEj5MJHQ">
+          <children xmi:type="notation:Node" xmi:id="_rj7JNDaWEfCXOdQEj5MJHQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rj7JNTaWEfCXOdQEj5MJHQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_rj7JNjaWEfCXOdQEj5MJHQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rj7JNzaWEfCXOdQEj5MJHQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_rj7JODaWEfCXOdQEj5MJHQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rj7JOTaWEfCXOdQEj5MJHQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_rj7JMTaWEfCXOdQEj5MJHQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_rj7JMjaWEfCXOdQEj5MJHQ" fontColor="16777215" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rj7JMzaWEfCXOdQEj5MJHQ" points="[15, 2, -277, -46]$[277, 45, -15, -3]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rj7JOjaWEfCXOdQEj5MJHQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rj7JOzaWEfCXOdQEj5MJHQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_49vNgDaXEfCXOdQEj5MJHQ" type="4001" element="_49umcDaXEfCXOdQEj5MJHQ" source="_qaUAUDaXEfCXOdQEj5MJHQ" target="_jd1tUDZeEfC6poJRCCeYeA">
+          <children xmi:type="notation:Node" xmi:id="_49vNhDaXEfCXOdQEj5MJHQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_49vNhTaXEfCXOdQEj5MJHQ" y="-13"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_49vNhjaXEfCXOdQEj5MJHQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_49vNhzaXEfCXOdQEj5MJHQ" x="3" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_49vNiDaXEfCXOdQEj5MJHQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_49vNiTaXEfCXOdQEj5MJHQ" x="-1" y="7"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_49vNgTaXEfCXOdQEj5MJHQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_49vNgjaXEfCXOdQEj5MJHQ" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_49vNgzaXEfCXOdQEj5MJHQ" points="[16, -30, -227, 418]$[234, -433, -9, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_49vNijaXEfCXOdQEj5MJHQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_49vNizaXEfCXOdQEj5MJHQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Ecw1kDaYEfCXOdQEj5MJHQ" type="4001" element="_EcvncDaYEfCXOdQEj5MJHQ" source="_mpMUkDaWEfCXOdQEj5MJHQ" target="_qaUAUDaXEfCXOdQEj5MJHQ">
+          <children xmi:type="notation:Node" xmi:id="_Ecw1lDaYEfCXOdQEj5MJHQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ecw1lTaYEfCXOdQEj5MJHQ" x="-4" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Ecw1ljaYEfCXOdQEj5MJHQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ecw1lzaYEfCXOdQEj5MJHQ" x="-3" y="12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Ecw1mDaYEfCXOdQEj5MJHQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ecw1mTaYEfCXOdQEj5MJHQ" x="-1" y="11"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Ecw1kTaYEfCXOdQEj5MJHQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Ecw1kjaYEfCXOdQEj5MJHQ" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Ecw1kzaYEfCXOdQEj5MJHQ" points="[0, 15, -9, -132]$[7, 117, -2, -30]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ecw1mjaYEfCXOdQEj5MJHQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ecw1mzaYEfCXOdQEj5MJHQ" id="(0.5,0.5)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_9ozswDZbEfC6poJRCCeYeA" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -323,7 +349,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.product.node']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_jdz4IDZeEfC6poJRCCeYeA" name="Ice Cream" outgoingEdges="_stfeWDZfEfC6poJRCCeYeA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_jdz4IDZeEfC6poJRCCeYeA" name="Ice Cream" outgoingEdges="_stfeWDZfEfC6poJRCCeYeA" incomingEdges="_49umcDaXEfCXOdQEj5MJHQ" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:Product" href="model.offers#//@products.1"/>
       <semanticElements xmi:type="dis:Product" href="model.offers#//@products.1"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -486,60 +512,58 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relational.edge.subCategory_category']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Qy_a8DZiEfC6poJRCCeYeA" name="10% off from the first 10 orders of Bakewell Tarts in the day" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_mpIDIDaWEfCXOdQEj5MJHQ" name="A" outgoingEdges="_rjr4xTaWEfCXOdQEj5MJHQ _EcvncDaYEfCXOdQEj5MJHQ" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" uid="_Qy_a8TZiEfC6poJRCCeYeA" labelSize="12" labelPosition="node" color="217,196,215">
+      <ownedStyle xmi:type="diagram:Square" uid="_mpIqMDaWEfCXOdQEj5MJHQ" labelSize="12" labelPosition="node" color="217,196,215">
         <description xmi:type="style:SquareDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_UVTEEDZiEfC6poJRCCeYeA" name="2 large pizzas for 10 pounds, with one free large ice cream" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_nWm0MDaWEfCXOdQEj5MJHQ" name="B" incomingEdges="_rjr4xTaWEfCXOdQEj5MJHQ" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.1"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.1"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" uid="_UVTEETZiEfC6poJRCCeYeA" labelSize="12" labelPosition="node" color="217,196,215">
+      <ownedStyle xmi:type="diagram:Square" uid="_nWm0MTaWEfCXOdQEj5MJHQ" labelSize="12" labelPosition="node" color="217,196,215">
         <description xmi:type="style:SquareDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_XKdTUDZiEfC6poJRCCeYeA" name="2 pizzas for the price of 1" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="dis:OfferRule" href="model.offers#//@offers.2"/>
-      <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.2"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" uid="_XKdTUTZiEfC6poJRCCeYeA" labelSize="12" labelPosition="node" color="217,196,215">
-        <description xmi:type="style:SquareDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']/@style"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rjr4xTaWEfCXOdQEj5MJHQ" name="[ALWAYS]" sourceNode="_mpIDIDaWEfCXOdQEj5MJHQ" targetNode="_nWm0MDaWEfCXOdQEj5MJHQ">
+      <target xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
+      <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_rjr4xjaWEfCXOdQEj5MJHQ" size="2" strokeColor="246,139,139">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.element.edge.offerRule_offerRule']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_rjr4xzaWEfCXOdQEj5MJHQ" labelSize="12" labelColor="255,255,255"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.element.edge.offerRule_offerRule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ZXOF0DZiEfC6poJRCCeYeA" name="10% discount on Christmas Day (60 GBP minimum order)" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="dis:OfferRule" href="model.offers#//@offers.3"/>
-      <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.3"/>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_qaOg2DaXEfCXOdQEj5MJHQ" name="test" outgoingEdges="_49umcDaXEfCXOdQEj5MJHQ" incomingEdges="_EcvncDaYEfCXOdQEj5MJHQ" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="dis:MinPriceCondition" href="model.offers#//@offers.0/@conditions.0"/>
+      <semanticElements xmi:type="dis:MinPriceCondition" href="model.offers#//@offers.0/@conditions.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" uid="_ZXOF0TZiEfC6poJRCCeYeA" labelSize="12" labelPosition="node" color="217,196,215">
-        <description xmi:type="style:SquareDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']/@style"/>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_qaSLIDaXEfCXOdQEj5MJHQ" labelSize="12" labelPosition="node" color="255,245,181">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.condition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_fT5foDZiEfC6poJRCCeYeA" name="5 pounds off on orders with chocolate cake (50 GBP minimum order)" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="dis:OfferRule" href="model.offers#//@offers.4"/>
-      <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.4"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" uid="_fT5foTZiEfC6poJRCCeYeA" labelSize="12" labelPosition="node" color="217,196,215">
-        <description xmi:type="style:SquareDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']/@style"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_49umcDaXEfCXOdQEj5MJHQ" sourceNode="_qaOg2DaXEfCXOdQEj5MJHQ" targetNode="_jdz4IDZeEfC6poJRCCeYeA">
+      <target xmi:type="dis:MinPriceCondition" href="model.offers#//@offers.0/@conditions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_49umcTaXEfCXOdQEj5MJHQ" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relational.edge.condition_product']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_49umcjaXEfCXOdQEj5MJHQ" labelSize="12"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.relational.edge.condition_product']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_EcvncDaYEfCXOdQEj5MJHQ" sourceNode="_mpIDIDaWEfCXOdQEj5MJHQ" targetNode="_qaOg2DaXEfCXOdQEj5MJHQ">
+      <target xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
+      <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_EcvncTaYEfCXOdQEj5MJHQ" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.element.edge.offerRule_condition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_EcvncjaYEfCXOdQEj5MJHQ" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']/@defaultLayer/@edgeMappings[name='offers.element.edge.offerRule_condition']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_all_offers']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_9ou0QTZbEfC6poJRCCeYeA"/>

@@ -17,7 +17,7 @@ class OfferRule {
   attr String name;
   val Condition[*] conditions;
   val Offer[*] offers;
-  val Trigger[*] triggers;
+  ref Trigger[*] triggers;
 }
 
 // Products

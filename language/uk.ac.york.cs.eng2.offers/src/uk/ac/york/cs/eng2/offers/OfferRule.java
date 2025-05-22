@@ -73,13 +73,13 @@ public interface OfferRule extends EObject {
 	EList<Offer> getOffers();
 
 	/**
-	 * Returns the value of the '<em><b>Triggers</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Triggers</b></em>' reference list.
 	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Trigger}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Triggers</em>' containment reference list.
+	 * @return the value of the '<em>Triggers</em>' reference list.
 	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferRule_Triggers()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Trigger> getTriggers();

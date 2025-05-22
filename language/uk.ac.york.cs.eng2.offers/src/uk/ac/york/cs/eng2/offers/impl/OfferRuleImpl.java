@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.york.cs.eng2.offers.Condition;
@@ -82,7 +83,7 @@ public class OfferRuleImpl extends MinimalEObjectImpl.Container implements Offer
 	protected EList<Offer> offers;
 
 	/**
-	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' containment reference list.
+	 * The cached value of the '{@link #getTriggers() <em>Triggers</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTriggers()
@@ -167,7 +168,7 @@ public class OfferRuleImpl extends MinimalEObjectImpl.Container implements Offer
 	@Override
 	public EList<Trigger> getTriggers() {
 		if (triggers == null) {
-			triggers = new EObjectContainmentEList<Trigger>(Trigger.class, this, OffersPackage.OFFER_RULE__TRIGGERS);
+			triggers = new EObjectResolvingEList<Trigger>(Trigger.class, this, OffersPackage.OFFER_RULE__TRIGGERS);
 		}
 		return triggers;
 	}
@@ -184,8 +185,6 @@ public class OfferRuleImpl extends MinimalEObjectImpl.Container implements Offer
 				return ((InternalEList<?>)getConditions()).basicRemove(otherEnd, msgs);
 			case OffersPackage.OFFER_RULE__OFFERS:
 				return ((InternalEList<?>)getOffers()).basicRemove(otherEnd, msgs);
-			case OffersPackage.OFFER_RULE__TRIGGERS:
-				return ((InternalEList<?>)getTriggers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
