@@ -1,8 +1,9 @@
-package [%=rule.name.toLowerCase()%]
+[% var className = rule.name.replaceAll("[^a-zA-Z0-9]", ""); %]
 
-import uk.ac.york.eng2.products.resources.offers.src.OfferHandler;
+package uk.ac.york.cs.eng2.products.resources.offers.generated;
+
+import uk.ac.york.cs.eng2.products.resources.offers.OfferHandler;
 import java.util.Map;
-
 
 /**
  * Auto-generated offer handler for rule: [%=rule.name%]
@@ -17,7 +18,7 @@ public class [%=className%] implements OfferHandler {
     @Override
     public boolean isOfferValid(Map<Long, Integer> order) {
         [%for (c in rule.conditions) { %]
-        if (!check[%=c.name.replaceAll("\\s", "")%](products)) return false;
+        if (!check[%=c.name.replaceAll("\\s", "").replaceAll("[^a-zA-Z0-9]", "")%](order)) return false;
         [% } %]
         return true;
     }
@@ -26,15 +27,17 @@ public class [%=className%] implements OfferHandler {
     public float applyOffer(Map<Long, Integer> order) {
         float total = 0;
         [%for (o in rule.offers) { %]
-        total += apply[%=o.name.replaceAll("\\s", "")%](order);
+        total += apply[%=o.name.replaceAll("\\s", "").replaceAll("[^a-zA-Z0-9]", "")%](order);
         [% } %]
         return total;
     }
 
     // --- Condition Check Methods ---
-    [%for (c in rule.conditions) { %]
-    private boolean [%=c.name%](Map<Long, Integer> order) {
-    	[%=out.startPreserve("//", "//", "check_" + c.name, true)%]
+    [%for (c in rule.conditions) { 
+       var methodName = c.name.replaceAll("\\s", "").replaceAll("[^a-zA-Z0-9]", "");
+    %]
+    private boolean check[%=methodName%](Map<Long, Integer> order) {
+        [%=out.startPreserve("//", "//", "check_" + methodName, true)%]
         // TODO: Implement condition logic for [%=c.name%]
         return true;
         [%=out.stopPreserve()%]
@@ -42,11 +45,14 @@ public class [%=className%] implements OfferHandler {
     [% } %]
 
     // --- Offer Apply Methods ---
-    [%for (o in rule.offers) { %]
-    private float apply[%=o.name%](Map<Long, Integer> order) {
-    	[%=out.startPreserve("//", "//", "check_" + o.name, true)%]
+    [%for (o in rule.offers) { 
+       var methodName = o.name.replaceAll("\\s", "").replaceAll("[^a-zA-Z0-9]", "");
+    %]
+    private float apply[%=methodName%](Map<Long, Integer> order) {
+        [%=out.startPreserve("//", "//", "apply_" + methodName, true)%]
         // TODO: Implement offer logic for [%=o.name%]
         return 0;
+        [%=out.stopPreserve()%]
     }
     [% } %]
 }
