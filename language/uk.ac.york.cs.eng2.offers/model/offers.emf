@@ -3,10 +3,6 @@
 @namespace(uri="http://cs.york.ac.uk/eng2/202425/offers", prefix="dis")
 package offers;
 
-class Model {
-	val OfferComponents offerComponent;
-}
-
 // Components of the offers
 
 class OfferComponents {
