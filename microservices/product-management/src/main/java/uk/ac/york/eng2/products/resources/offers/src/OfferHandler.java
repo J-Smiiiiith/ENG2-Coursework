@@ -1,4 +1,4 @@
-package uk.ac.york.eng2.products.resources.offers;
+package uk.ac.york.eng2.products.resources.offers.src;
 
 import java.util.Map;
 
