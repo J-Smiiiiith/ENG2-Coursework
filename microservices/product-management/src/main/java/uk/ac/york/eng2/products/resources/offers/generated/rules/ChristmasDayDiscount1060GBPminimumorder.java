@@ -1,6 +1,7 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.CheckChristmasDay;
@@ -13,7 +14,13 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.ChristmasReduc
 */
 public class ChristmasDayDiscount1060GBPminimumorder {
 
-	public boolean isOfferValid(Map<Long, Integer> order) {
+	public OfferPricingContext pricingContext;
+
+	public ChristmasDayDiscount1060GBPminimumorder(OfferPricingContext pricingContext) {
+		this.pricingContext = pricingContext;
+	}
+
+	public boolean isOfferValid() {
 		boolean allValid = true;
 
 		// protected region check_CheckChristmasDay on begin //
@@ -50,15 +57,15 @@ public class ChristmasDayDiscount1060GBPminimumorder {
 	/**
 	* Main logic to calculate the new price of the offer
 	*/
-	public float useOfferRule(Map<Long, Integer> order) {
-		boolean offerValid = this.isOfferValid(order);
+	public float useOfferRule() {
+		boolean offerValid = this.isOfferValid();
 		float totalReduction = 0;
 
 		if (offerValid) {
 			totalReduction = this.applyOffer();
 		}
 
-		if (!offerValid) return totalReduction + new Orderswithchocolatecake5off5§0GBPminimumorder().useOfferRule(order);
+		if (!offerValid) return totalReduction + new Orderswithchocolatecake5off50GBPminimumorder(pricingContext).useOfferRule();
 		return totalReduction;
 	}
 

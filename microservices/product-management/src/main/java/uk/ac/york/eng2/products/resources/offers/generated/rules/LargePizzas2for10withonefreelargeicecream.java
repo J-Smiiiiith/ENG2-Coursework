@@ -1,6 +1,7 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Check2LargePizzas;
@@ -13,7 +14,13 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.FreeIceCream;
 */
 public class LargePizzas2for10withonefreelargeicecream {
 
-	public boolean isOfferValid(Map<Long, Integer> order) {
+	public OfferPricingContext pricingContext;
+
+	public LargePizzas2for10withonefreelargeicecream(OfferPricingContext pricingContext) {
+		this.pricingContext = pricingContext;
+	}
+
+	public boolean isOfferValid() {
 		boolean allValid = true;
 
 		// protected region check_Check2LargePizzas on begin //
@@ -44,16 +51,16 @@ public class LargePizzas2for10withonefreelargeicecream {
 	/**
 	* Main logic to calculate the new price of the offer
 	*/
-	public float useOfferRule(Map<Long, Integer> order) {
-		boolean offerValid = this.isOfferValid(order);
+	public float useOfferRule() {
+		boolean offerValid = this.isOfferValid();
 		float totalReduction = 0;
 
 		if (offerValid) {
 			totalReduction = this.applyOffer();
 		}
 
-		if (!offerValid) return totalReduction + new Pizzas2for1().useOfferRule(order);
-		if (offerValid) return totalReduction + new ChristmasDayDiscount1060GBPminimumorder.useOfferRule(order);
+		if (!offerValid) return totalReduction + new Pizzas2for1(pricingContext).useOfferRule();
+		if (offerValid) return totalReduction + new ChristmasDayDiscount1060GBPminimumorder(pricingContext).useOfferRule();
 		return totalReduction;
 	}
 

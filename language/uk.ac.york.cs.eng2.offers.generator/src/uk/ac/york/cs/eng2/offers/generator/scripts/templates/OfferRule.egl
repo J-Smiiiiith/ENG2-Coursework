@@ -3,6 +3,7 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 import java.util.Map;
 
 [%for (c in rule.conditions) { 
@@ -22,7 +23,13 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.[%=OfferClassN
  */
 public class [%=className%] {
 
-	public boolean isOfferValid(Map<Long, Integer> order) {
+	public OfferPricingContext pricingContext;
+	
+	public [%=className%](OfferPricingContext pricingContext) {
+		this.pricingContext = pricingContext;
+	}
+
+	public boolean isOfferValid() {
 	    boolean allValid = true;
 	
 	    [%for (c in rule.conditions) { 
@@ -62,8 +69,8 @@ public class [%=className%] {
     /**
      * Main logic to calculate the new price of the offer
      */
-    public float useOfferRule(Map<Long, Integer> order) {
-    	boolean offerValid = this.isOfferValid(order);
+    public float useOfferRule() {
+    	boolean offerValid = this.isOfferValid();
     	float totalReduction = 0;
 
     	if (offerValid) {
@@ -74,11 +81,11 @@ public class [%=className%] {
 	    	var targetName = t.target.name.replaceAll("[^a-zA-Z0-9]", "");
 		%]
 		    [%if (t.type.name == "ALWAYS") { %]
-		    return totalReduction + new [%=targetName%].useOfferRule(order);
+		    return totalReduction + new [%=targetName%](pricingContext).useOfferRule();
 		    [%} else if (t.type.name == "IF_MATCH") { %]
-		    if (offerValid) return totalReduction + new [%=targetName%].useOfferRule(order);
+		    if (offerValid) return totalReduction + new [%=targetName%](pricingContext).useOfferRule();
 		    [%} else if (t.type.name == "IF_NOT_MATCH") { %]
-		    if (!offerValid) return totalReduction + new [%=targetName%]().useOfferRule(order);
+		    if (!offerValid) return totalReduction + new [%=targetName%](pricingContext).useOfferRule();
 		    [%} %]
 		[% } %]
 		return totalReduction;

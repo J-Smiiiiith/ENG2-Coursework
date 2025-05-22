@@ -1,6 +1,7 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Check50minprice;
@@ -13,7 +14,13 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.Reduction5GBP;
 */
 public class Orderswithchocolatecake5off50GBPminimumorder {
 
-	public boolean isOfferValid(Map<Long, Integer> order) {
+	public OfferPricingContext pricingContext;
+
+	public Orderswithchocolatecake5off50GBPminimumorder(OfferPricingContext pricingContext) {
+		this.pricingContext = pricingContext;
+	}
+
+	public boolean isOfferValid() {
 		boolean allValid = true;
 
 		// protected region check_Check50minprice on begin //
@@ -50,8 +57,8 @@ public class Orderswithchocolatecake5off50GBPminimumorder {
 	/**
 	* Main logic to calculate the new price of the offer
 	*/
-	public float useOfferRule(Map<Long, Integer> order) {
-		boolean offerValid = this.isOfferValid(order);
+	public float useOfferRule() {
+		boolean offerValid = this.isOfferValid();
 		float totalReduction = 0;
 
 		if (offerValid) {

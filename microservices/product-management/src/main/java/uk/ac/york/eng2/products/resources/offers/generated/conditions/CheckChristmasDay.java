@@ -6,6 +6,7 @@ package uk.ac.york.eng2.products.resources.offers.generated.conditions;
 public class CheckChristmasDay {
 
 	private String date;
+	private String productName;
 
 	public CheckChristmasDay() {
 		this.date = "25/12/2026";

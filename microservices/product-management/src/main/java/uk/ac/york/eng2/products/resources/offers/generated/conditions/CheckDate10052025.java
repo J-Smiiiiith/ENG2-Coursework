@@ -6,6 +6,7 @@ package uk.ac.york.eng2.products.resources.offers.generated.conditions;
 public class CheckDate10052025 {
 
 	private String date;
+	private String productName;
 
 	public CheckDate10052025() {
 		this.date = "10/05/2025";

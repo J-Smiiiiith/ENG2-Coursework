@@ -7,6 +7,7 @@ package uk.ac.york.eng2.products.resources.offers.generated.conditions;
 public class [%=className%] {
 
 	private String date;
+	private String productName;
 	
 	public [%=className%]() {
 		this.date = "[%=cond.date%]";

@@ -32,22 +32,19 @@ public abstract class AbstractOfferHandlerOperations {
     /**
      * Applies a free product offer to the order.
      *
-     * @param freeProductPrices the product prices, and quantity of those products, to be made free
+     * @param freeProductPrice the price of the free product
      * @return the new total price reduction after applying the free product offer
      */
-    protected float applyFreeProduct(List<Integer> freeProductPrices) {
-        float reduction = 0;
-        for (float prodPrice : freeProductPrices) {
-            reduction += prodPrice;
-        }
-        return reduction;
+    protected float applyFreeProduct(float freeProductPrice) {
+        return freeProductPrice;
     }
 
     /**
      * Applies a fixed price offer to the order.
      *
      * @param newPrice the new fixed price to apply
-     * @param fixedPriceProducts the IDs of the products, and quantity of those products, that the fixed price applies to
+     * @param fixedPriceProducts the price of the products, and quantity of those products, that the fixed price applies
+     * to
      * @return the new total price reduction after applying the fixed price offer
      */
     protected float applyFixedPrice(float newPrice, Map<Float, Integer> fixedPriceProducts) {

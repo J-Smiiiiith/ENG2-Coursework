@@ -1,6 +1,7 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Checknumorders10;
@@ -14,7 +15,13 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.Reduction10;
 */
 public class First10ordersofBakewellTartsintheday10off {
 
-	public boolean isOfferValid(Map<Long, Integer> order) {
+	public OfferPricingContext pricingContext;
+
+	public First10ordersofBakewellTartsintheday10off(OfferPricingContext pricingContext) {
+		this.pricingContext = pricingContext;
+	}
+
+	public boolean isOfferValid() {
 		boolean allValid = true;
 
 		// protected region check_Checknumorders10 on begin //
@@ -61,15 +68,15 @@ public class First10ordersofBakewellTartsintheday10off {
 	/**
 	* Main logic to calculate the new price of the offer
 	*/
-	public float useOfferRule(Map<Long, Integer> order) {
-		boolean offerValid = this.isOfferValid(order);
+	public float useOfferRule() {
+		boolean offerValid = this.isOfferValid();
 		float totalReduction = 0;
 
 		if (offerValid) {
 			totalReduction = this.applyOffer();
 		}
 
-		return totalReduction + new LargePizzas2for10withonefreelargeicecream.useOfferRule(order);
+		return totalReduction + new LargePizzas2for10withonefreelargeicecream(pricingContext).useOfferRule();
 		return totalReduction;
 	}
 
