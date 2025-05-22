@@ -1,0 +1,14 @@
+/*
+ * Write your EGX rules here: template paths should be relative to the .egx folder.
+ */
+
+ rule OfferRuleToJava
+ 	transform o : OfferRule {
+ 	
+ 		guard: o.name.isDefined()
+ 		
+ 		template: "templates/OfferRule.egl"
+ 		
+ 		target: o.name.toLowerCase() + "/" + o.name.ftuc() + ".java"
+ 	
+ 	}

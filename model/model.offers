@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dis:OfferComponents xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dis="http://cs.york.ac.uk/eng2/202425/offers">
+  <products name="Large Pizza" tags="//@tags.2" category="//@categories.0"/>
+  <products name="Ice Cream" tags="//@tags.2"/>
+  <products name="Bakewell Tarts" tags="//@tags.1"/>
+  <products name="Chocolate Cake" tags="//@tags.0 //@tags.1" subCategory="//@subCategories.0"/>
+  <categories name="Pizza"/>
+  <categories name="Baked"/>
+  <subCategories name="Sweet Treats" category="//@categories.1"/>
+  <tags tag="Chocolate"/>
+  <tags tag="Baked"/>
+  <tags tag="Frozen"/>
+  <offers name="10% off from the first 10 orders of Bakewell Tarts in the day">
+    <conditions xsi:type="dis:CheckNumOrdersCondition" name="Check num orders = 10" numOrders="10"/>
+    <conditions xsi:type="dis:CheckQuantityCondition" name="Check 1 bakewell tart" applicableProducts="//@products.2" quantity="1"/>
+    <offers xsi:type="dis:OfferPriceReduction" name="10% off" percentageReduction="10.0"/>
+    <triggers source="//@offers.0" target="//@offers.1"/>
+  </offers>
+  <offers name="2 large pizzas for 10 pounds, with one free large ice cream">
+    <conditions xsi:type="dis:CheckQuantityCondition" name="Check 2 Large Pizzas" applicableProducts="//@products.0" quantity="2"/>
+    <offers xsi:type="dis:OfferFixedPrice" name="Fixed £10" newPrice="10.0"/>
+    <offers xsi:type="dis:FreeProductOffer" name="Free Ice Cream" freeProduct="//@products.1"/>
+    <triggers source="//@offers.1" target="//@offers.2" type="IF_MATCH"/>
+    <triggers source="//@offers.1" target="//@offers.3" type="IF_NOT_MATCH"/>
+  </offers>
+  <offers name="2 pizzas for the price of 1">
+    <conditions xsi:type="dis:CheckQuantityCondition" name="Check 2 Pizzas" applicableCategories="//@categories.0" quantity="2"/>
+    <offers xsi:type="dis:OfferBuyXGetYFree" name="BOGOF" x="1" y="1"/>
+    <triggers source="//@offers.2" target="//@offers.3"/>
+  </offers>
+  <offers name="10% discount on Christmas Day (60 GBP minimum order)">
+    <conditions xsi:type="dis:CheckDateCondition" name="Check Christmas Day" date="Check Date = 25/12/2026"/>
+    <conditions xsi:type="dis:MinPriceCondition" name="Check £60 min price" minPrice="60.0"/>
+    <offers xsi:type="dis:OfferPriceReduction" name="10% off" percentageReduction="10.0"/>
+    <triggers source="//@offers.3" target="//@offers.4" type="IF_NOT_MATCH"/>
+  </offers>
+  <offers name="5 pounds off on orders with chocolate cake (50 GBP minimum order)">
+    <conditions xsi:type="dis:MinPriceCondition" name="Check £50 min price" minPrice="50.0"/>
+    <conditions xsi:type="dis:CheckQuantityCondition" name="Check Quantity Chocolate Cake = 1" applicableProducts="//@products.3" quantity="1"/>
+    <offers xsi:type="dis:OfferXPoundsOff" name="£5 off" x="5.0"/>
+  </offers>
+</dis:OfferComponents>
