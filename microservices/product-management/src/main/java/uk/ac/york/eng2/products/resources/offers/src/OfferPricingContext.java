@@ -6,19 +6,10 @@ import java.util.Map;
 public class OfferPricingContext {
     Map<Long, Integer> order;
     Map<String, Integer> orderWithNameAndQuantity;
-    Map<Float, Integer> orderWithPriceAndQuantity;
+    Map<String, Map<Float, Integer>> orderWithNamePriceAndQuantity;
     float totalPrice;
-    int numOrdersOfGivenProduct;
+    int numOrdersToday;
     String dateToday = LocalDate.now().toString();
-
-    public OfferPricingContext(Map<Long, Integer> order, Map<String, Integer> orderWithNameAndQuantity, Map<Float,
-            Integer> orderWithPriceAndQuantity, float totalPrice, int numOrdersOfGivenProduct) {
-        this.order = order;
-        this.orderWithNameAndQuantity = orderWithNameAndQuantity;
-        this.orderWithPriceAndQuantity = orderWithPriceAndQuantity;
-        this.totalPrice = totalPrice;
-        this.numOrdersOfGivenProduct = numOrdersOfGivenProduct;
-    }
 
     public Map<Long, Integer> getOrder() {
         return order;
@@ -36,12 +27,12 @@ public class OfferPricingContext {
         this.orderWithNameAndQuantity = orderWithNameAndQuantity;
     }
 
-    public Map<Float, Integer> getOrderWithPriceAndQuantity() {
-        return orderWithPriceAndQuantity;
+    public Map<String, Map<Float, Integer>> getOrderWithNamePriceAndQuantity() {
+        return orderWithNamePriceAndQuantity;
     }
 
-    public void setOrderWithPriceAndQuantity(Map<Float, Integer> orderWithPriceAndQuantity) {
-        this.orderWithPriceAndQuantity = orderWithPriceAndQuantity;
+    public void setOrderWithNamePriceAndQuantity(Map<String, Map<Float, Integer>> orderWithNamePriceAndQuantity) {
+        this.orderWithNamePriceAndQuantity = orderWithNamePriceAndQuantity;
     }
 
     public float getTotalPrice() {
@@ -52,12 +43,12 @@ public class OfferPricingContext {
         this.totalPrice = totalPrice;
     }
 
-    public int getNumOrdersOfGivenProduct() {
-        return numOrdersOfGivenProduct;
+    public int getNumOrdersToday() {
+        return numOrdersToday;
     }
 
-    public void setNumOrdersOfGivenProduct(int numOrdersOfGivenProduct) {
-        this.numOrdersOfGivenProduct = numOrdersOfGivenProduct;
+    public void setNumOrdersToday(int numOrdersToday) {
+        this.numOrdersToday = numOrdersToday;
     }
 
     public String getDateToday() {

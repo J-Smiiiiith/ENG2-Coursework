@@ -8,8 +8,9 @@ package uk.ac.york.eng2.products.resources.offers.generated;
 import uk.ac.york.eng2.products.resources.offers.generated.rules.[%=startingRuleName%];
 import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 
-import java.util.Map;
-
+/**
+ * Auto-generated code to determine starting rule
+ */
 public class StartingRule {
 
 	public OfferPricingContext pricingContext;

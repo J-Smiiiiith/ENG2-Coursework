@@ -8,8 +8,10 @@ import io.micronaut.transaction.annotation.Transactional;
 import jakarta.inject.Inject;
 import uk.ac.york.eng2.products.domain.Product;
 import uk.ac.york.eng2.products.dto.ProductDTO;
+import uk.ac.york.eng2.products.repository.OrdersByDayRepository;
 import uk.ac.york.eng2.products.repository.ProductRepository;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 
 import java.net.URI;
 import java.util.*;
@@ -21,6 +23,9 @@ public class ProductController {
 
     @Inject
     ProductRepository prodRepo;
+
+    @Inject
+    OrdersByDayRepository ordersByDayRepo;
 
     @Get
     public List<Product> getProducts() {
@@ -75,15 +80,9 @@ public class ProductController {
     @Post("/total_price")
     @Transactional
     public float getProductsPrice(@Body Map<Long, Integer> products) {
-        float totalPrice = 0;
-        List<Long> productIds = List.copyOf(products.keySet());
-        for (Long productId : productIds) {
-            Product product = prodRepo.findById(productId).orElse(null);
-            if (product != null) {
-                totalPrice += product.getUnitPrice() * products.get(productId);
-            }
-        }
-        return totalPrice;
+        OfferPricingContext pricingContext = createPricingContext(products);
+        System.out.println(pricingContext);
+        return findTotalOrderPrice(products);
     }
 
     @Put("/{id}")
@@ -113,5 +112,54 @@ public class ProductController {
         } else {
             prodRepo.delete(product);
         }
+    }
+
+    public OfferPricingContext createPricingContext(Map<Long, Integer> products) {
+        OfferPricingContext pricingContext = new OfferPricingContext();
+
+        pricingContext.setOrder(products);
+
+        Map<String, Integer> orderWithNameAndQuantity = new HashMap<>();
+        for (Long productId : products.keySet()) {
+            Product product = prodRepo.findById(productId).orElse(null);
+            if (product != null) {
+                orderWithNameAndQuantity.put(product.getName(), products.get(productId));
+            }
+        }
+        pricingContext.setOrderWithNameAndQuantity(orderWithNameAndQuantity);
+
+        Map<String, Map<Float, Integer>> orderWithNamePriceAndQuantity = new HashMap<>();
+        for (Long productId : products.keySet()) {
+            Product product = prodRepo.findById(productId).orElse(null);
+            if ((product != null)) {
+                Map<Float, Integer> priceAndQuantity = new HashMap<>();
+                priceAndQuantity.put(product.getUnitPrice(), products.get(productId));
+                orderWithNamePriceAndQuantity.put(product.getName(), priceAndQuantity);
+            }
+        }
+        pricingContext.setOrderWithNamePriceAndQuantity(orderWithNamePriceAndQuantity);
+
+        pricingContext.setTotalPrice(findTotalOrderPrice(products));
+
+        List<Integer> allOrdersToday = ordersByDayRepo.getCountByDay(pricingContext.getDateToday());
+        int totalOrdersToday = 0;
+        for (int orderCount : allOrdersToday) {
+            totalOrdersToday += orderCount;
+        }
+        pricingContext.setNumOrdersToday(totalOrdersToday);
+
+        return pricingContext;
+    }
+
+    private float findTotalOrderPrice(Map<Long, Integer> products) {
+        float totalPrice = 0;
+        List<Long> productIds = List.copyOf(products.keySet());
+        for (Long productId : productIds) {
+            Product product = prodRepo.findById(productId).orElse(null);
+            if (product != null) {
+                totalPrice += product.getUnitPrice() * products.get(productId);
+            }
+        }
+        return totalPrice;
     }
 }
