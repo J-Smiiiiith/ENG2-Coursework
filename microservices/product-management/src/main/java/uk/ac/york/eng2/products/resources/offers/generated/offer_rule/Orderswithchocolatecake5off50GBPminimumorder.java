@@ -1,7 +1,7 @@
 
-package uk.ac.york.cs.eng2.products.resources.offers.generated;
+package uk.ac.york.eng2.products.resources.offers.generated.offer_rule;
 
-import uk.ac.york.cs.eng2.products.resources.offers.OfferHandler;
+import uk.ac.york.eng2.products.resources.offers.src.OfferHandler;
 import java.util.Map;
 
 /**
