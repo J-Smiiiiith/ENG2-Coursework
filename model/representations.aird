@@ -4,15 +4,15 @@
     <semanticResources>model.offers</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Do5xkDWZEfCm1tBvZSaH9A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_TBCagTacEfCVc4wZIMbVlw" name="products.diagram" repPath="#_TBBzcDacEfCVc4wZIMbVlw" changeId="1747914206539">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_TBCagTacEfCVc4wZIMbVlw" name="products.diagram" repPath="#_TBBzcDacEfCVc4wZIMbVlw" changeId="1747930685711">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mdk2QjadEfCVc4wZIMbVlw" name="offerRule.triggers.diagram" repPath="#_mdk2QDadEfCVc4wZIMbVlw" changeId="1747882064454">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mdk2QjadEfCVc4wZIMbVlw" name="offerRule.triggers.diagram" repPath="#_mdk2QDadEfCVc4wZIMbVlw" changeId="1747931452840">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_trigger']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_RvCakDaxEfCkUIXqvjz6kA" name="offer_rule_condition_offers.diagram" repPath="#_RvBzgDaxEfCkUIXqvjz6kA" changeId="1747914206539">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_RvCakDaxEfCkUIXqvjz6kA" name="offer_rule_condition_offers.diagram" repPath="#_RvBzgDaxEfCkUIXqvjz6kA" changeId="1747931452840">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
@@ -566,7 +566,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_vXplqjauEfCzxoq4sG7sXA" type="4001" element="_vXemfzauEfCzxoq4sG7sXA" source="__VJXUDaeEfCwC8Wjh4pJig" target="_YnRi4DafEfCwC8Wjh4pJig">
           <children xmi:type="notation:Node" xmi:id="_vXplrjauEfCzxoq4sG7sXA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vXplrzauEfCzxoq4sG7sXA" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vXplrzauEfCzxoq4sG7sXA" x="2" y="-64"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_vXplsDauEfCzxoq4sG7sXA" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vXplsTauEfCzxoq4sG7sXA" y="10"/>
@@ -585,7 +585,7 @@
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_mdldWzadEfCVc4wZIMbVlw" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_mdldXDadEfCVc4wZIMbVlw"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_4K9eADadEfCKu8OQ305v2Q" name="10% off from the first 10 orders of Bakewell Tarts in the day" outgoingEdges="_vXcxQDauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_4K9eADadEfCKu8OQ305v2Q" name="First 10 orders of Bakewell Tarts in the day 10% off " outgoingEdges="_vXcxQDauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -596,7 +596,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_trigger']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_-rnHkDadEfCKu8OQ305v2Q" name="2 large pizzas for 10 pounds, with one free large ice cream" outgoingEdges="_vXemcDauEfCzxoq4sG7sXA _vXemdTauEfCzxoq4sG7sXA" incomingEdges="_vXcxQDauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_-rnHkDadEfCKu8OQ305v2Q" name="Largee Pizzas 2 for £10, with one free large ice cream" outgoingEdges="_vXemcDauEfCzxoq4sG7sXA _vXemdTauEfCzxoq4sG7sXA" incomingEdges="_vXcxQDauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.1"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.1"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -607,7 +607,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_trigger']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_pEk4QDaeEfCwC8Wjh4pJig" name="2 pizzas for the price of 1" outgoingEdges="_vXemejauEfCzxoq4sG7sXA" incomingEdges="_vXemcDauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_pEk4QDaeEfCwC8Wjh4pJig" name="Pizzas 2 for 1" outgoingEdges="_vXemejauEfCzxoq4sG7sXA" incomingEdges="_vXemcDauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.2"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.2"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -618,7 +618,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_trigger']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="__VCCkDaeEfCwC8Wjh4pJig" name="10% discount on Christmas Day (60 GBP minimum order)" outgoingEdges="_vXemfzauEfCzxoq4sG7sXA" incomingEdges="_vXemdTauEfCzxoq4sG7sXA _vXemejauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="__VCCkDaeEfCwC8Wjh4pJig" name="Christmas Day Discount 10% (60 GBP minimum order)" outgoingEdges="_vXemfzauEfCzxoq4sG7sXA" incomingEdges="_vXemdTauEfCzxoq4sG7sXA _vXemejauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.3"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.3"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -629,7 +629,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_trigger']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_YnLcQDafEfCwC8Wjh4pJig" name="5 pounds off on orders with chocolate cake (50 GBP minimum order)" incomingEdges="_vXemfzauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_YnLcQDafEfCwC8Wjh4pJig" name="Orders with chocolate cake £5 off (50 GBP minimum order)" incomingEdges="_vXemfzauEfCzxoq4sG7sXA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.4"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.4"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1288,7 +1288,7 @@
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_RvH6KjaxEfCkUIXqvjz6kA" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_RvH6KzaxEfCkUIXqvjz6kA"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvFd4DaxEfCkUIXqvjz6kA" name="10% off from the first 10 orders of Bakewell Tarts in the day" outgoingEdges="_REDWgDb2EfCkUIXqvjz6kA _REDWhTb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvFd4DaxEfCkUIXqvjz6kA" name="First 10 orders of Bakewell Tarts in the day 10% off " outgoingEdges="_REDWgDb2EfCkUIXqvjz6kA _REDWhTb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1299,7 +1299,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvGE8TaxEfCkUIXqvjz6kA" name="2 large pizzas for 10 pounds, with one free large ice cream" outgoingEdges="_REDWijb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvGE8TaxEfCkUIXqvjz6kA" name="Largee Pizzas 2 for £10, with one free large ice cream" outgoingEdges="_REDWijb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.1"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.1"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1310,7 +1310,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvGE9DaxEfCkUIXqvjz6kA" name="2 pizzas for the price of 1" outgoingEdges="_REDWjzb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvGE9DaxEfCkUIXqvjz6kA" name="Pizzas 2 for 1" outgoingEdges="_REDWjzb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.2"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.2"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1321,7 +1321,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvGE9zaxEfCkUIXqvjz6kA" name="10% discount on Christmas Day (60 GBP minimum order)" outgoingEdges="_REDWlDb2EfCkUIXqvjz6kA _REDWmTb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvGE9zaxEfCkUIXqvjz6kA" name="Christmas Day Discount 10% (60 GBP minimum order)" outgoingEdges="_REDWlDb2EfCkUIXqvjz6kA _REDWmTb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.3"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.3"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1332,7 +1332,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_Conditions_Offers']/@defaultLayer/@nodeMappings[name='offers.node.offer_rule']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvGsAjaxEfCkUIXqvjz6kA" name="5 pounds off on orders with chocolate cake (50 GBP minimum order)" outgoingEdges="_REDWnjb2EfCkUIXqvjz6kA _REDWozb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_RvGsAjaxEfCkUIXqvjz6kA" name="Orders with chocolate cake £5 off (50 GBP minimum order)" outgoingEdges="_REDWnjb2EfCkUIXqvjz6kA _REDWozb2EfCkUIXqvjz6kA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="dis:OfferRule" href="model.offers#//@offers.4"/>
       <semanticElements xmi:type="dis:OfferRule" href="model.offers#//@offers.4"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>

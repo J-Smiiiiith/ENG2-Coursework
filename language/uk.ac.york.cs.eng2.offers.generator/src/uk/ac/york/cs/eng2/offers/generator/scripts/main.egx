@@ -9,6 +9,9 @@
  		
  		template: "templates/OfferRule.egl"
  		
- 		target: o.name.toLowerCase() + "/" + o.name.ftuc() + ".java"
+ 		target: "offer_rule/" + 
+ 				o.name.replaceAll("[^a-zA-Z0-9]", "") + ".java"
+ 		
+ 		parameters : Map { "rule" = o }
  	
  	}

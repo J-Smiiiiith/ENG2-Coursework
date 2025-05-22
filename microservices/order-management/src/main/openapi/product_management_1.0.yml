@@ -1,0 +1,464 @@
+openapi: 3.0.1
+info:
+  title: product-management
+  version: "0.0"
+paths:
+  /orders-by-day:
+    get:
+      tags:
+        - Orders By Day
+      operationId: getOrdersByDay
+      responses:
+        "200":
+          description: getOrdersByDay 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/OrdersByDay"
+    post:
+      tags:
+        - Orders By Day
+      operationId: createOrdersByDay
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OrdersByDayDTO"
+        required: true
+      responses:
+        "200":
+          description: createOrdersByDay 200 response
+  /orders-by-day/{id}:
+    get:
+      tags:
+        - Orders By Day
+      operationId: getOrdersByDay_1
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: getOrdersByDay_1 200 response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrdersByDay"
+    put:
+      tags:
+        - Orders By Day
+      operationId: updateOrdersByDay
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OrdersByDayDTO"
+        required: true
+      responses:
+        "200":
+          description: updateOrdersByDay 200 response
+    delete:
+      tags:
+        - Orders By Day
+      operationId: deleteOrdersByDay
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: deleteOrdersByDay 200 response
+  /product-tags:
+    get:
+      tags:
+        - Product Tags
+      operationId: getProductTags
+      responses:
+        "200":
+          description: getProductTags 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ProductTag"
+  /product-tags/product/{product_id}/tag/{tag_id}:
+    put:
+      tags:
+        - Product Tags
+      operationId: addTagToProduct
+      parameters:
+        - name: product_id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: tag_id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: addTagToProduct 200 response
+  /product-tags/product_id/{productId}:
+    get:
+      tags:
+        - Product Tags
+      operationId: getTagsByProductId
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: getTagsByProductId 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Tag"
+  /product-tags/tag_id/{tagId}:
+    get:
+      tags:
+        - Product Tags
+      operationId: getProductsByTagId
+      parameters:
+        - name: tagId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: getProductsByTagId 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+  /products:
+    get:
+      tags:
+        - Products
+      operationId: getProducts
+      responses:
+        "200":
+          description: getProducts 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+    post:
+      tags:
+        - Products
+      operationId: createProduct
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProductDTO"
+        required: true
+      responses:
+        "200":
+          description: createProduct 200 response
+  /products/total_price:
+    post:
+      tags:
+        - Products
+      operationId: getProductsPrice
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties:
+                type: integer
+                format: int32
+        required: true
+      responses:
+        "200":
+          description: getProductsPrice 200 response
+          content:
+            application/json:
+              schema:
+                type: number
+                format: float
+  /products/validate:
+    post:
+      tags:
+        - Products
+      operationId: checkProductsValidity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties:
+                type: integer
+                format: int32
+        required: true
+      responses:
+        "200":
+          description: checkProductsValidity 200 response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+                  additionalProperties:
+                    type: integer
+                    format: int32
+  /products/{id}:
+    put:
+      tags:
+        - Products
+      operationId: updateProduct
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProductDTO"
+        required: true
+      responses:
+        "200":
+          description: updateProduct 200 response
+    delete:
+      tags:
+        - Products
+      operationId: deleteProduct
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: deleteProduct 200 response
+  /products/{productId}:
+    get:
+      tags:
+        - Products
+      operationId: getProduct
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: getProduct 200 response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+  /products/{productId}/unit_price:
+    get:
+      tags:
+        - Products
+      operationId: getProductUnitPrice
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: getProductUnitPrice 200 response
+          content:
+            application/json:
+              schema:
+                type: number
+                format: float
+  /tags:
+    get:
+      tags:
+        - Tags
+      operationId: getTags
+      responses:
+        "200":
+          description: getTags 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Tag"
+    post:
+      tags:
+        - Tags
+      operationId: createTag
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TagDTO"
+        required: true
+      responses:
+        "200":
+          description: createTag 200 response
+  /tags/{id}:
+    get:
+      tags:
+        - Tags
+      operationId: getTag
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: getTag 200 response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tag"
+    put:
+      tags:
+        - Tags
+      operationId: updateTag
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TagDTO"
+        required: true
+      responses:
+        "200":
+          description: updateTag 200 response
+    delete:
+      tags:
+        - Tags
+      operationId: deleteTag
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: deleteTag 200 response
+components:
+  schemas:
+    OrdersByDay:
+      type: object
+      properties:
+        product:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/Product"
+        id:
+          type: integer
+          format: int64
+          nullable: true
+        day:
+          type: string
+        count:
+          type: integer
+          format: int32
+    OrdersByDayDTO:
+      type: object
+      properties:
+        product:
+          $ref: "#/components/schemas/Product"
+        day:
+          type: string
+        count:
+          type: integer
+          format: int32
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          nullable: true
+        name:
+          type: string
+        unitPrice:
+          type: number
+          format: float
+    ProductDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        unitPrice:
+          type: number
+          format: float
+    ProductTag:
+      type: object
+      properties:
+        product:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/Product"
+        tag:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/Tag"
+    Tag:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          nullable: true
+        name:
+          type: string
+    TagDTO:
+      type: object
+      properties:
+        name:
+          type: string
