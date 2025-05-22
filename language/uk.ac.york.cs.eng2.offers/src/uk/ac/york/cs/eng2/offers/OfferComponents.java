@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.york.cs.eng2.offers.OfferComponents#getSubCategories <em>Sub Categories</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.OfferComponents#getTags <em>Tags</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.OfferComponents#getOffers <em>Offers</em>}</li>
- *   <li>{@link uk.ac.york.cs.eng2.offers.OfferComponents#getTriggers <em>Triggers</em>}</li>
  * </ul>
  *
  * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferComponents()
@@ -87,17 +86,5 @@ public interface OfferComponents extends EObject {
 	 * @generated
 	 */
 	EList<OfferRule> getOffers();
-
-	/**
-	 * Returns the value of the '<em><b>Triggers</b></em>' containment reference list.
-	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Trigger}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Triggers</em>' containment reference list.
-	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferComponents_Triggers()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Trigger> getTriggers();
 
 } // OfferComponents
