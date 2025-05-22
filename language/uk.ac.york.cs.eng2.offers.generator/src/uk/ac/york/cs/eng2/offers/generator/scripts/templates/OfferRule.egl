@@ -32,7 +32,7 @@ public class [%=className%] implements OfferHandler {
 	    [%for (c in rule.conditions) { 
 	       var CondClassName = c.name.replaceAll("[^a-zA-Z0-9]", "");
 	    %]
-	    if ([%=CondClassName%]IsValid == false) {
+	    if (![%=CondClassName%]IsValid) {
 	    	return false;
 	    }
 	
