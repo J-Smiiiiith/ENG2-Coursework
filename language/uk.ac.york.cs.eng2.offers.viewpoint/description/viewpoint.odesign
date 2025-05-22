@@ -178,7 +178,9 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="offers::OfferRule" referenceName="offers"/>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="offers::OfferRule" referenceName="offers">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="triggers"/>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>

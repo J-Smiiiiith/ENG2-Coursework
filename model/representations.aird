@@ -12,7 +12,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='Offers_diagram_propducts']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mdk2QjadEfCVc4wZIMbVlw" name="offerRule.triggers.diagram" repPath="#_mdk2QDadEfCVc4wZIMbVlw" changeId="1747875941388">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mdk2QjadEfCVc4wZIMbVlw" name="offerRule.triggers.diagram" repPath="#_mdk2QDadEfCVc4wZIMbVlw" changeId="1747876049311">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/uk.ac.york.cs.eng2.offers.viewpoint/description/viewpoint.odesign#//@ownedViewpoints[name='offers_viewpoint']/@ownedRepresentations[name='offers_diagram_offerRules_trigger']"/>
         <target xmi:type="dis:OfferComponents" href="model.offers#/"/>
       </ownedRepresentationDescriptors>
@@ -535,7 +535,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_BzUNcjagEfCwC8Wjh4pJig" type="4001" element="_Bw9dADagEfCwC8Wjh4pJig" source="_-rrZADadEfCKu8OQ305v2Q" target="_pErl8DaeEfCwC8Wjh4pJig">
           <children xmi:type="notation:Node" xmi:id="_BzUNdjagEfCwC8Wjh4pJig" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BzUNdzagEfCwC8Wjh4pJig" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BzUNdzagEfCwC8Wjh4pJig" x="-1" y="-95"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_BzUNeDagEfCwC8Wjh4pJig" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BzUNeTagEfCwC8Wjh4pJig" y="10"/>
@@ -551,7 +551,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_BzUNfjagEfCwC8Wjh4pJig" type="4001" element="_Bw9dBTagEfCwC8Wjh4pJig" source="_-rrZADadEfCKu8OQ305v2Q" target="__VJXUDaeEfCwC8Wjh4pJig">
           <children xmi:type="notation:Node" xmi:id="_BzUNgjagEfCwC8Wjh4pJig" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BzUNgzagEfCwC8Wjh4pJig" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BzUNgzagEfCwC8Wjh4pJig" x="93" y="57"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_BzU0gDagEfCwC8Wjh4pJig" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BzU0gTagEfCwC8Wjh4pJig" y="10"/>
@@ -583,7 +583,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_BzU0kjagEfCwC8Wjh4pJig" type="4001" element="_Bw-EGTagEfCwC8Wjh4pJig" source="__VJXUDaeEfCwC8Wjh4pJig" target="_YnRi4DafEfCwC8Wjh4pJig">
           <children xmi:type="notation:Node" xmi:id="_BzU0ljagEfCwC8Wjh4pJig" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BzU0lzagEfCwC8Wjh4pJig" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BzU0lzagEfCwC8Wjh4pJig" x="2" y="-35"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_BzU0mDagEfCwC8Wjh4pJig" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BzU0mTagEfCwC8Wjh4pJig" y="10"/>
