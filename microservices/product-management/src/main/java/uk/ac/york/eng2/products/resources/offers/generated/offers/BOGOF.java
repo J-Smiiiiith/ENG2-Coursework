@@ -7,10 +7,12 @@ import uk.ac.york.eng2.products.resources.offers.src.AbstractOfferHandlerOperati
 */
 public class BOGOF extends AbstractOfferHandlerOperations {
 
+	private float freeProductPrice;
 	private int numFree;
 
 	public BOGOF() {
 		this.numFree = 1;
+		this.freeProductPrice = 4.25f;
 	}
 
 	public String getOfferName() {
@@ -19,5 +21,13 @@ public class BOGOF extends AbstractOfferHandlerOperations {
 
 	public float getNumFree() {
 		return numFree;
+	}
+
+	public float apply() {
+		float totalReduction = 0;
+		for (int i = 0; i < numFree; i++) {
+			totalReduction += applyFreeProduct(freeProductPrice);
+		}
+		return totalReduction;
 	}
 }

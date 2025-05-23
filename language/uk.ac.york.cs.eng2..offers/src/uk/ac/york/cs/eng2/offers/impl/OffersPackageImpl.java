@@ -558,8 +558,18 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getOfferBuyXGetYFree_Product() {
+		return (EReference)offerBuyXGetYFreeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getOfferBuyXGetYFree_X() {
-		return (EAttribute)offerBuyXGetYFreeEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)offerBuyXGetYFreeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -569,7 +579,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 	 */
 	@Override
 	public EAttribute getOfferBuyXGetYFree_Y() {
-		return (EAttribute)offerBuyXGetYFreeEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)offerBuyXGetYFreeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -823,6 +833,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		createEAttribute(offerFixedPriceEClass, OFFER_FIXED_PRICE__NEW_PRICE);
 
 		offerBuyXGetYFreeEClass = createEClass(OFFER_BUY_XGET_YFREE);
+		createEReference(offerBuyXGetYFreeEClass, OFFER_BUY_XGET_YFREE__PRODUCT);
 		createEAttribute(offerBuyXGetYFreeEClass, OFFER_BUY_XGET_YFREE__X);
 		createEAttribute(offerBuyXGetYFreeEClass, OFFER_BUY_XGET_YFREE__Y);
 
@@ -936,6 +947,7 @@ public class OffersPackageImpl extends EPackageImpl implements OffersPackage {
 		initEAttribute(getOfferFixedPrice_NewPrice(), ecorePackage.getEFloat(), "newPrice", null, 0, 1, OfferFixedPrice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(offerBuyXGetYFreeEClass, OfferBuyXGetYFree.class, "OfferBuyXGetYFree", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOfferBuyXGetYFree_Product(), this.getProduct(), null, "product", null, 0, -1, OfferBuyXGetYFree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOfferBuyXGetYFree_X(), ecorePackage.getEInt(), "x", null, 0, 1, OfferBuyXGetYFree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOfferBuyXGetYFree_Y(), ecorePackage.getEInt(), "y", null, 0, 1, OfferBuyXGetYFree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

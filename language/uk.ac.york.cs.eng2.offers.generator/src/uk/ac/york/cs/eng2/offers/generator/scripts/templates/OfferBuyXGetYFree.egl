@@ -8,10 +8,12 @@ import uk.ac.york.eng2.products.resources.offers.src.AbstractOfferHandlerOperati
  */
 public class [%=className%] extends AbstractOfferHandlerOperations {
 
+	private float freeProductPrice;
 	private int numFree;
 	
 	public [%=className%]() {
 		this.numFree = [%=o.y%];
+		this.freeProductPrice = [%=o.product.price.first()%]f;
 	}
 
     public String getOfferName() {
@@ -20,5 +22,13 @@ public class [%=className%] extends AbstractOfferHandlerOperations {
     
     public float getNumFree() {
     	return numFree;
+    }
+    
+    public float apply() {
+    	float totalReduction = 0;
+    	for (int i = 0; i < numFree; i++) {
+    		totalReduction += applyFreeProduct(freeProductPrice);
+    	}
+    	return totalReduction;
     }
 }

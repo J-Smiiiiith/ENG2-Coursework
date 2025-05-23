@@ -8,9 +8,15 @@ import uk.ac.york.eng2.products.resources.offers.src.AbstractOfferHandlerOperati
 public class ChristmasReduction10 extends AbstractOfferHandlerOperations {
 
 	private float percentageReduction;
+	private float totalPrice;
 
-	public ChristmasReduction10() {
+	public ChristmasReduction10(float totalPrice) {
 		this.percentageReduction = 10.0f;
+		this.totalPrice = totalPrice;
+	}
+
+	public float apply() {
+		return applyPricePercentageReduction(percentageReduction, totalPrice);
 	}
 
 	public String getOfferName() {

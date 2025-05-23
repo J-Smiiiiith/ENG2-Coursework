@@ -9,10 +9,16 @@ import uk.ac.york.eng2.products.resources.offers.src.AbstractOfferHandlerOperati
 public class [%=className%] extends AbstractOfferHandlerOperations {
 
 	private float percentageReduction;
+	private float totalPrice;
 	
-	public [%=className%]() {
+	public [%=className%](float totalPrice) {
 		this.percentageReduction = [%=o.percentageReduction%]f;
+		this.totalPrice = totalPrice;
 	}
+	
+	public float apply() {
+        return applyPricePercentageReduction(percentageReduction, totalPrice);
+    }
 
     public String getOfferName() {
         return "[%=o.name%]";

@@ -582,13 +582,22 @@ public interface OffersPackage extends EPackage {
 	int OFFER_BUY_XGET_YFREE__NAME = OFFER__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Product</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFER_BUY_XGET_YFREE__PRODUCT = OFFER_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_BUY_XGET_YFREE__X = OFFER_FEATURE_COUNT + 0;
+	int OFFER_BUY_XGET_YFREE__X = OFFER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -597,7 +606,7 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_BUY_XGET_YFREE__Y = OFFER_FEATURE_COUNT + 1;
+	int OFFER_BUY_XGET_YFREE__Y = OFFER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Offer Buy XGet YFree</em>' class.
@@ -606,7 +615,7 @@ public interface OffersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_BUY_XGET_YFREE_FEATURE_COUNT = OFFER_FEATURE_COUNT + 2;
+	int OFFER_BUY_XGET_YFREE_FEATURE_COUNT = OFFER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Offer Buy XGet YFree</em>' class.
@@ -1337,6 +1346,17 @@ public interface OffersPackage extends EPackage {
 	EClass getOfferBuyXGetYFree();
 
 	/**
+	 * Returns the meta object for the reference list '{@link uk.ac.york.cs.eng2.offers.OfferBuyXGetYFree#getProduct <em>Product</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Product</em>'.
+	 * @see uk.ac.york.cs.eng2.offers.OfferBuyXGetYFree#getProduct()
+	 * @see #getOfferBuyXGetYFree()
+	 * @generated
+	 */
+	EReference getOfferBuyXGetYFree_Product();
+
+	/**
 	 * Returns the meta object for the attribute '{@link uk.ac.york.cs.eng2.offers.OfferBuyXGetYFree#getX <em>X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1848,6 +1868,14 @@ public interface OffersPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OFFER_BUY_XGET_YFREE = eINSTANCE.getOfferBuyXGetYFree();
+
+		/**
+		 * The meta object literal for the '<em><b>Product</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OFFER_BUY_XGET_YFREE__PRODUCT = eINSTANCE.getOfferBuyXGetYFree_Product();
 
 		/**
 		 * The meta object literal for the '<em><b>X</b></em>' attribute feature.

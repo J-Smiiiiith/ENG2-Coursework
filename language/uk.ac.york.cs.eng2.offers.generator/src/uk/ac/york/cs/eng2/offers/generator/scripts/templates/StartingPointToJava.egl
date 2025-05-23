@@ -6,21 +6,21 @@ var startingRuleName = startingRule.name.replaceAll("[^a-zA-Z0-9]", "");
 package uk.ac.york.eng2.products.resources.offers.generated;
 
 import uk.ac.york.eng2.products.resources.offers.generated.rules.[%=startingRuleName%];
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 
-import java.util.Map;
-
-
-
+/**
+ * Auto-generated code to determine the starting rule
+ */
 public class StartingRule {
 
-	private Map<Long, Integer> order;
+	public OfferPricingContext pricingContext;
 
-	public StartingRule(Map<Long, Integer> order) {
-		this.order = order;
+	public StartingRule(OfferPricingContext pricingContext) {
+		this.pricingContext = pricingContext;
 	}
 	
 	public float start() {
-		return new [%=startingRuleName%]().useOfferRule(order);
+		return new [%=startingRuleName%](pricingContext).useOfferRule();
 	}
 	
 }

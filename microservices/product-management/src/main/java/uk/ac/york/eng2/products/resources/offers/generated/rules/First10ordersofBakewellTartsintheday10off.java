@@ -1,6 +1,7 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Checknumorders10;
@@ -10,67 +11,59 @@ import uk.ac.york.eng2.products.resources.offers.generated.conditions.CheckDate1
 import uk.ac.york.eng2.products.resources.offers.generated.offers.Reduction10;
 
 /**
-* Auto-generated offer handler for rule: First 10 orders of Bakewell Tarts in the day 10% off
+* Auto-generated offer  handler for rule: First 10 orders of Bakewell Tarts in the day 10% off
 */
 public class First10ordersofBakewellTartsintheday10off {
 
-	public boolean isOfferValid(Map<Long, Integer> order) {
-		boolean allValid = true;
+	public OfferPricingContext pricingContext;
 
+	public First10ordersofBakewellTartsintheday10off(OfferPricingContext pricingContext) {
+		this.pricingContext = pricingContext;
+	}
+
+	public boolean isOfferValid() {
 		// protected region check_Checknumorders10 on begin //
-		Boolean Checknumorders10IsValid = new Checknumorders10().checkCondition(); //some parameter tbd//
-		// TODO: use correct parameter per condition
+		Boolean Checknumorders10IsValid = new Checknumorders10().checkCondition(pricingContext.getNumOrdersToday());
 		// protected region check_Checknumorders10 end //
 
 		// protected region check_Check1bakewelltart on begin //
-		Boolean Check1bakewelltartIsValid = new Check1bakewelltart().checkCondition(); //some parameter tbd//
-		// TODO: use correct parameter per condition
+		Boolean Check1bakewelltartIsValid = new Check1bakewelltart().checkCondition(pricingContext.getOrderWithNameAndQuantity());
 		// protected region check_Check1bakewelltart end //
 
 		// protected region check_CheckDate10052025 on begin //
-		Boolean CheckDate10052025IsValid = new CheckDate10052025().checkCondition(); //some parameter tbd//
-		// TODO: use correct parameter per condition
+		Boolean CheckDate10052025IsValid = new CheckDate10052025().checkCondition(pricingContext.getDateToday());
 		// protected region check_CheckDate10052025 end //
 
 		if (!Checknumorders10IsValid) {
 			return false;
 		}
-
-		return true;
 		if (!Check1bakewelltartIsValid) {
 			return false;
 		}
-
-		return true;
 		if (!CheckDate10052025IsValid) {
 			return false;
 		}
-
 		return true;
 	}
 
 	public float applyOffer() {
-		float totalReduction = 0;
 		// protected region Reduction10 on begin //
-		totalReduction += Reduction10.[appropriate_method_for_offer];
-		// TODO: use correct method per offer and apply specific logic
+		return new Reduction10(pricingContext.getTotalPrice()).apply();
 		// protected region Reduction10 end //
-		return totalReduction;
 	}
 
 	/**
 	* Main logic to calculate the new price of the offer
 	*/
-	public float useOfferRule(Map<Long, Integer> order) {
-		boolean offerValid = this.isOfferValid(order);
+	public float useOfferRule() {
+		boolean offerValid = this.isOfferValid();
 		float totalReduction = 0;
 
 		if (offerValid) {
 			totalReduction = this.applyOffer();
 		}
 
-		return totalReduction + new LargePizzas2for10withonefreelargeicecream.useOfferRule(order);
-		return totalReduction;
+		return totalReduction + new LargePizzas2for10withonefreelargeicecream(pricingContext).useOfferRule();
 	}
 
 	public String getRuleName() {

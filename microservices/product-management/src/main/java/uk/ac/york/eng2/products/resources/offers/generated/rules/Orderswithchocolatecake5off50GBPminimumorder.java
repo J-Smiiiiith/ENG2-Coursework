@@ -1,6 +1,7 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Check50minprice;
@@ -9,49 +10,45 @@ import uk.ac.york.eng2.products.resources.offers.generated.conditions.CheckQuant
 import uk.ac.york.eng2.products.resources.offers.generated.offers.Reduction5GBP;
 
 /**
-* Auto-generated offer handler for rule: Orders with chocolate cake £5 off (50 GBP minimum order)
+* Auto-generated offer  handler for rule: Orders with chocolate cake £5 off (50 GBP minimum order)
 */
 public class Orderswithchocolatecake5off50GBPminimumorder {
 
-	public boolean isOfferValid(Map<Long, Integer> order) {
-		boolean allValid = true;
+	public OfferPricingContext pricingContext;
 
+	public Orderswithchocolatecake5off50GBPminimumorder(OfferPricingContext pricingContext) {
+		this.pricingContext = pricingContext;
+	}
+
+	public boolean isOfferValid() {
 		// protected region check_Check50minprice on begin //
-		Boolean Check50minpriceIsValid = new Check50minprice().checkCondition(); //some parameter tbd//
-		// TODO: use correct parameter per condition
+		Boolean Check50minpriceIsValid = new Check50minprice().checkCondition(pricingContext.getTotalPrice());
 		// protected region check_Check50minprice end //
 
 		// protected region check_CheckQuantityChocolateCake1 on begin //
-		Boolean CheckQuantityChocolateCake1IsValid = new CheckQuantityChocolateCake1().checkCondition(); //some parameter tbd//
-		// TODO: use correct parameter per condition
+		Boolean CheckQuantityChocolateCake1IsValid = new CheckQuantityChocolateCake1().checkCondition(pricingContext.getOrderWithNameAndQuantity());
 		// protected region check_CheckQuantityChocolateCake1 end //
 
 		if (!Check50minpriceIsValid) {
 			return false;
 		}
-
-		return true;
 		if (!CheckQuantityChocolateCake1IsValid) {
 			return false;
 		}
-
 		return true;
 	}
 
 	public float applyOffer() {
-		float totalReduction = 0;
 		// protected region Reduction5GBP on begin //
-		totalReduction += Reduction5GBP.[appropriate_method_for_offer];
-		// TODO: use correct method per offer and apply specific logic
+		return new Reduction5GBP().getPriceReduction();
 		// protected region Reduction5GBP end //
-		return totalReduction;
 	}
 
 	/**
 	* Main logic to calculate the new price of the offer
 	*/
-	public float useOfferRule(Map<Long, Integer> order) {
-		boolean offerValid = this.isOfferValid(order);
+	public float useOfferRule() {
+		boolean offerValid = this.isOfferValid();
 		float totalReduction = 0;
 
 		if (offerValid) {

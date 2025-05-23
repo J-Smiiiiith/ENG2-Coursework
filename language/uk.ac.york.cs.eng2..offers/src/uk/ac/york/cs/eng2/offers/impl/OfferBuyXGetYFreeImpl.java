@@ -2,14 +2,18 @@
  */
 package uk.ac.york.cs.eng2.offers.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import uk.ac.york.cs.eng2.offers.OfferBuyXGetYFree;
 import uk.ac.york.cs.eng2.offers.OffersPackage;
+import uk.ac.york.cs.eng2.offers.Product;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,6 +23,7 @@ import uk.ac.york.cs.eng2.offers.OffersPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferBuyXGetYFreeImpl#getProduct <em>Product</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferBuyXGetYFreeImpl#getX <em>X</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.impl.OfferBuyXGetYFreeImpl#getY <em>Y</em>}</li>
  * </ul>
@@ -26,6 +31,16 @@ import uk.ac.york.cs.eng2.offers.OffersPackage;
  * @generated
  */
 public class OfferBuyXGetYFreeImpl extends OfferImpl implements OfferBuyXGetYFree {
+	/**
+	 * The cached value of the '{@link #getProduct() <em>Product</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProduct()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Product> product;
+
 	/**
 	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,6 +106,19 @@ public class OfferBuyXGetYFreeImpl extends OfferImpl implements OfferBuyXGetYFre
 	 * @generated
 	 */
 	@Override
+	public EList<Product> getProduct() {
+		if (product == null) {
+			product = new EObjectResolvingEList<Product>(Product.class, this, OffersPackage.OFFER_BUY_XGET_YFREE__PRODUCT);
+		}
+		return product;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public int getX() {
 		return x;
 	}
@@ -139,6 +167,8 @@ public class OfferBuyXGetYFreeImpl extends OfferImpl implements OfferBuyXGetYFre
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case OffersPackage.OFFER_BUY_XGET_YFREE__PRODUCT:
+				return getProduct();
 			case OffersPackage.OFFER_BUY_XGET_YFREE__X:
 				return getX();
 			case OffersPackage.OFFER_BUY_XGET_YFREE__Y:
@@ -152,9 +182,14 @@ public class OfferBuyXGetYFreeImpl extends OfferImpl implements OfferBuyXGetYFre
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case OffersPackage.OFFER_BUY_XGET_YFREE__PRODUCT:
+				getProduct().clear();
+				getProduct().addAll((Collection<? extends Product>)newValue);
+				return;
 			case OffersPackage.OFFER_BUY_XGET_YFREE__X:
 				setX((Integer)newValue);
 				return;
@@ -173,6 +208,9 @@ public class OfferBuyXGetYFreeImpl extends OfferImpl implements OfferBuyXGetYFre
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case OffersPackage.OFFER_BUY_XGET_YFREE__PRODUCT:
+				getProduct().clear();
+				return;
 			case OffersPackage.OFFER_BUY_XGET_YFREE__X:
 				setX(X_EDEFAULT);
 				return;
@@ -191,6 +229,8 @@ public class OfferBuyXGetYFreeImpl extends OfferImpl implements OfferBuyXGetYFre
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case OffersPackage.OFFER_BUY_XGET_YFREE__PRODUCT:
+				return product != null && !product.isEmpty();
 			case OffersPackage.OFFER_BUY_XGET_YFREE__X:
 				return x != X_EDEFAULT;
 			case OffersPackage.OFFER_BUY_XGET_YFREE__Y:

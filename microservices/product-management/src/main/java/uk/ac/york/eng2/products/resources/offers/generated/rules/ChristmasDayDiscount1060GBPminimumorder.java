@@ -1,6 +1,7 @@
 
 package uk.ac.york.eng2.products.resources.offers.generated.rules;
 
+import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.CheckChristmasDay;
@@ -9,57 +10,55 @@ import uk.ac.york.eng2.products.resources.offers.generated.conditions.Check60min
 import uk.ac.york.eng2.products.resources.offers.generated.offers.ChristmasReduction10;
 
 /**
-* Auto-generated offer handler for rule: Christmas Day Discount 10% (60 GBP minimum order)
+* Auto-generated offer  handler for rule: Christmas Day Discount 10% (60 GBP minimum order)
 */
 public class ChristmasDayDiscount1060GBPminimumorder {
 
-	public boolean isOfferValid(Map<Long, Integer> order) {
-		boolean allValid = true;
+	public OfferPricingContext pricingContext;
 
+	public ChristmasDayDiscount1060GBPminimumorder(OfferPricingContext pricingContext) {
+		this.pricingContext = pricingContext;
+	}
+
+	public boolean isOfferValid() {
 		// protected region check_CheckChristmasDay on begin //
-		Boolean CheckChristmasDayIsValid = new CheckChristmasDay().checkCondition(); //some parameter tbd//
+		Boolean CheckChristmasDayIsValid = new CheckChristmasDay().checkCondition(pricingContext.getDateToday()); //some parameter tbd//
 		// TODO: use correct parameter per condition
 		// protected region check_CheckChristmasDay end //
 
 		// protected region check_Check60minprice on begin //
-		Boolean Check60minpriceIsValid = new Check60minprice().checkCondition(); //some parameter tbd//
+		Boolean Check60minpriceIsValid = new Check60minprice().checkCondition(pricingContext.getTotalPrice()); //some parameter tbd//
 		// TODO: use correct parameter per condition
 		// protected region check_Check60minprice end //
 
 		if (!CheckChristmasDayIsValid) {
 			return false;
 		}
-
-		return true;
 		if (!Check60minpriceIsValid) {
 			return false;
 		}
-
 		return true;
 	}
 
 	public float applyOffer() {
-		float totalReduction = 0;
 		// protected region ChristmasReduction10 on begin //
-		totalReduction += ChristmasReduction10.[appropriate_method_for_offer];
-		// TODO: use correct method per offer and apply specific logic
+		return new ChristmasReduction10(pricingContext.getTotalPrice()).apply();
 		// protected region ChristmasReduction10 end //
-		return totalReduction;
 	}
 
 	/**
 	* Main logic to calculate the new price of the offer
 	*/
-	public float useOfferRule(Map<Long, Integer> order) {
-		boolean offerValid = this.isOfferValid(order);
+	public float useOfferRule() {
+		boolean offerValid = this.isOfferValid();
 		float totalReduction = 0;
 
 		if (offerValid) {
 			totalReduction = this.applyOffer();
 		}
 
-		if (!offerValid) return totalReduction + new Orderswithchocolatecake5off5§0GBPminimumorder().useOfferRule(order);
-		return totalReduction;
+		if (!offerValid) return totalReduction + new Orderswithchocolatecake5off50GBPminimumorder(pricingContext).useOfferRule();
+		else { return totalReduction; }
 	}
 
 	public String getRuleName() {
