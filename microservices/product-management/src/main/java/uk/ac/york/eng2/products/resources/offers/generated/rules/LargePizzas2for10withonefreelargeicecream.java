@@ -5,6 +5,7 @@ import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 import java.util.Map;
 
 import uk.ac.york.eng2.products.resources.offers.generated.conditions.Check2LargePizzas;
+import uk.ac.york.eng2.products.resources.offers.generated.conditions.CheckQuantityIceCream;
 
 import uk.ac.york.eng2.products.resources.offers.generated.offers.Fixed10;
 import uk.ac.york.eng2.products.resources.offers.generated.offers.FreeIceCream;
@@ -21,14 +22,20 @@ public class LargePizzas2for10withonefreelargeicecream {
 	}
 
 	public boolean isOfferValid() {
-		boolean allValid = true;
-
 		// protected region check_Check2LargePizzas on begin //
 		Boolean Check2LargePizzasIsValid = new Check2LargePizzas().checkCondition(pricingContext.getOrderWithNameAndQuantity()); //some parameter tbd//
 		// TODO: use correct parameter per condition
 		// protected region check_Check2LargePizzas end //
 
+		// protected region check_CheckQuantityIceCream on begin //
+		Boolean CheckQuantityIceCreamIsValid = new CheckQuantityIceCream().checkCondition(pricingContext.getOrderWithNameAndQuantity()); //some parameter tbd//
+		// TODO: use correct parameter per condition
+		// protected region check_CheckQuantityIceCream end //
+
 		if (!Check2LargePizzasIsValid) {
+			return false;
+		}
+		if (!CheckQuantityIceCreamIsValid) {
 			return false;
 		}
 		return true;

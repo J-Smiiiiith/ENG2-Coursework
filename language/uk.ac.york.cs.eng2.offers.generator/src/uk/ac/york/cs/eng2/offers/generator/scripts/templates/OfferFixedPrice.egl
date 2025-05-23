@@ -3,6 +3,8 @@ package uk.ac.york.eng2.products.resources.offers.generated.offers;
 
 import uk.ac.york.eng2.products.resources.offers.src.AbstractOfferHandlerOperations;
 
+import java.util.Map;
+
 /**
  * Auto-generated offer handler for offer: [%=o.name%]
  */
@@ -24,6 +26,6 @@ public class [%=className%] extends AbstractOfferHandlerOperations {
     }
     
     public float apply() {
-		return applyFixedPrice();
+		return applyFixedPrice(fixedPrice, fixedPriceProducts);
 	}
 }

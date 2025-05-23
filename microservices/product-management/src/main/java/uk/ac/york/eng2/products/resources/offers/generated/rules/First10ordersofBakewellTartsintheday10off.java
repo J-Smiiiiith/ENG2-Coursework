@@ -22,8 +22,6 @@ public class First10ordersofBakewellTartsintheday10off {
 	}
 
 	public boolean isOfferValid() {
-		boolean allValid = true;
-
 		// protected region check_Checknumorders10 on begin //
 		Boolean Checknumorders10IsValid = new Checknumorders10().checkCondition(pricingContext.getNumOrdersToday());
 		// protected region check_Checknumorders10 end //

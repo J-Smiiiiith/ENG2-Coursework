@@ -30,8 +30,6 @@ public class [%=className%] {
 	}
 
 	public boolean isOfferValid() {
-	    boolean allValid = true;
-	
 	    [%for (c in rule.conditions) { 
 	       var CondClassName = c.name.replaceAll("[^a-zA-Z0-9]", "");
 	    %]

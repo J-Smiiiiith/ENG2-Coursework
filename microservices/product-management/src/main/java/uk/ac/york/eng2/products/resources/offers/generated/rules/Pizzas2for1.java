@@ -20,8 +20,6 @@ public class Pizzas2for1 {
 	}
 
 	public boolean isOfferValid() {
-		boolean allValid = true;
-
 		// protected region check_Check2Pizzas on begin //
 		Boolean Check2PizzasIsValid = new Check2Pizzas().checkCondition(pricingContext.getOrderWithNameAndQuantity());
 		// protected region check_Check2Pizzas end //

@@ -21,8 +21,6 @@ public class ChristmasDayDiscount1060GBPminimumorder {
 	}
 
 	public boolean isOfferValid() {
-		boolean allValid = true;
-
 		// protected region check_CheckChristmasDay on begin //
 		Boolean CheckChristmasDayIsValid = new CheckChristmasDay().checkCondition(pricingContext.getDateToday()); //some parameter tbd//
 		// TODO: use correct parameter per condition

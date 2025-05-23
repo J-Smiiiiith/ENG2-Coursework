@@ -84,7 +84,13 @@ public class ProductController {
         OfferPricingContext pricingContext = createPricingContext(products);
 
         try {
-            return findTotalOrderPrice(products) - new StartingRule(pricingContext).start();
+            float totalPriceWithOffer = findTotalOrderPrice(products) - new StartingRule(pricingContext).start();
+            if (totalPriceWithOffer < 0) {
+                return 0;
+            }
+            else {
+                return totalPriceWithOffer;
+            }
         } catch (Exception e) {
             return findTotalOrderPrice(products);
         }

@@ -21,8 +21,6 @@ public class Orderswithchocolatecake5off50GBPminimumorder {
 	}
 
 	public boolean isOfferValid() {
-		boolean allValid = true;
-
 		// protected region check_Check50minprice on begin //
 		Boolean Check50minpriceIsValid = new Check50minprice().checkCondition(pricingContext.getTotalPrice());
 		// protected region check_Check50minprice end //
