@@ -11,6 +11,7 @@ import uk.ac.york.eng2.products.dto.ProductDTO;
 import uk.ac.york.eng2.products.repository.OrdersByDayRepository;
 import uk.ac.york.eng2.products.repository.ProductRepository;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import uk.ac.york.eng2.products.resources.offers.generated.StartingRule;
 import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 
 import java.net.URI;
@@ -81,8 +82,12 @@ public class ProductController {
     @Transactional
     public float getProductsPrice(@Body Map<Long, Integer> products) {
         OfferPricingContext pricingContext = createPricingContext(products);
-        System.out.println(pricingContext);
-        return findTotalOrderPrice(products);
+
+        try {
+            return findTotalOrderPrice(products) - new StartingRule(pricingContext).start();
+        } catch (Exception e) {
+            return findTotalOrderPrice(products);
+        }
     }
 
     @Put("/{id}")
