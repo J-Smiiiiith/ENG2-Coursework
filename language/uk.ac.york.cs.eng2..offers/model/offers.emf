@@ -64,6 +64,7 @@ class OfferFixedPrice extends Offer {
 }
 
 class OfferBuyXGetYFree extends Offer {
+	ref Product[*] product;
 	attr int x;
 	attr int y;
 }

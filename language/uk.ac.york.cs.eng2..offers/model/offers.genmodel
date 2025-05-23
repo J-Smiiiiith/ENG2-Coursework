@@ -54,6 +54,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//OfferFixedPrice/newPrice"/>
     </genClasses>
     <genClasses ecoreClass="offers.ecore#//OfferBuyXGetYFree">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference offers.ecore#//OfferBuyXGetYFree/product"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//OfferBuyXGetYFree/x"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute offers.ecore#//OfferBuyXGetYFree/y"/>
     </genClasses>

@@ -9,7 +9,7 @@ import uk.ac.york.eng2.products.resources.offers.generated.rules.[%=startingRule
 import uk.ac.york.eng2.products.resources.offers.src.OfferPricingContext;
 
 /**
- * Auto-generated code to determine starting rule
+ * Auto-generated code to determine the starting rule
  */
 public class StartingRule {
 

@@ -2,6 +2,8 @@
  */
 package uk.ac.york.cs.eng2.offers;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -12,6 +14,7 @@ package uk.ac.york.cs.eng2.offers;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link uk.ac.york.cs.eng2.offers.OfferBuyXGetYFree#getProduct <em>Product</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.OfferBuyXGetYFree#getX <em>X</em>}</li>
  *   <li>{@link uk.ac.york.cs.eng2.offers.OfferBuyXGetYFree#getY <em>Y</em>}</li>
  * </ul>
@@ -21,6 +24,18 @@ package uk.ac.york.cs.eng2.offers;
  * @generated
  */
 public interface OfferBuyXGetYFree extends Offer {
+	/**
+	 * Returns the value of the '<em><b>Product</b></em>' reference list.
+	 * The list contents are of type {@link uk.ac.york.cs.eng2.offers.Product}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Product</em>' reference list.
+	 * @see uk.ac.york.cs.eng2.offers.OffersPackage#getOfferBuyXGetYFree_Product()
+	 * @model
+	 * @generated
+	 */
+	EList<Product> getProduct();
+
 	/**
 	 * Returns the value of the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->

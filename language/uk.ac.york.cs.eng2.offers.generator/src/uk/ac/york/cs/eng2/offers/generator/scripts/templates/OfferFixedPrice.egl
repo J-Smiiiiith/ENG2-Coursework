@@ -8,7 +8,8 @@ import uk.ac.york.eng2.products.resources.offers.src.AbstractOfferHandlerOperati
  */
 public class [%=className%] extends AbstractOfferHandlerOperations {
 
-	private float fixedPrice;
+	private Map<Float, Integer> fixedPriceProducts;
+	float fixedPrice;
 	
 	public [%=className%]() {
 		this.fixedPrice = [%=o.newPrice%]f;
@@ -21,4 +22,8 @@ public class [%=className%] extends AbstractOfferHandlerOperations {
     public float getFixedPrice() {
     	return fixedPrice;
     }
+    
+    public float apply() {
+		return applyFixedPrice();
+	}
 }

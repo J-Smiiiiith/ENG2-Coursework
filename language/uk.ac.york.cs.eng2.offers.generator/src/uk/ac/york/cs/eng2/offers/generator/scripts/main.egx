@@ -102,7 +102,7 @@
   	}
   
   	
-   rule OfferBuyXGetYFreeToJava
+   rule OfferXPoundsOff
   	transform offer : OfferXPoundsOff {
   		
   		guard: offer.name.isDefined()

@@ -45,10 +45,33 @@ public class OfferBuyXGetYFreeItemProvider extends OfferItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addProductPropertyDescriptor(object);
 			addXPropertyDescriptor(object);
 			addYPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Product feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProductPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OfferBuyXGetYFree_product_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OfferBuyXGetYFree_product_feature", "_UI_OfferBuyXGetYFree_type"),
+				 OffersPackage.Literals.OFFER_BUY_XGET_YFREE__PRODUCT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

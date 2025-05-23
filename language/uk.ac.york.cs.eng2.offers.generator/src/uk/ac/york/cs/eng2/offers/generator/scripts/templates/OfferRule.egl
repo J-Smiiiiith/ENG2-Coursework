@@ -19,7 +19,7 @@ import uk.ac.york.eng2.products.resources.offers.generated.offers.[%=OfferClassN
 [% } %]
 
 /**
- * Auto-generated offer handler for rule: [%=rule.name%]
+ * Auto-generated offer  handler for rule: [%=rule.name%]
  */
 public class [%=className%] {
 
@@ -48,48 +48,55 @@ public class [%=className%] {
 	    if (![%=CondClassName%]IsValid) {
 	    	return false;
 	    }
-	
-	    return true;
 	    [% } %]
+	    return true;
 	}
 
     public float applyOffer() {
-        float totalReduction = 0;
         [%for (o in rule.offers) { 
         	var OfferClassName = o.name.replaceAll("[^a-zA-Z0-9]", "");
         %]
         [%=out.startPreserve("//", "//", "" + OfferClassName, true)%]
-        totalReduction += [%=OfferClassName%].[appropriate_method_for_offer];
+        float totalReduction = 0;
+        return totalReduction;
         // TODO: use correct method per offer and apply specific logic
         [%=out.stopPreserve()%]
+        
         [% } %]
-        return totalReduction;
     }
     
     /**
-     * Main logic to calculate the new price of the offer
-     */
-    public float useOfferRule() {
-    	boolean offerValid = this.isOfferValid();
-    	float totalReduction = 0;
-
-    	if (offerValid) {
-    		totalReduction = this.applyOffer();
-    	}
-    	
-    	[%for (t in rule.triggers) {
-	    	var targetName = t.target.name.replaceAll("[^a-zA-Z0-9]", "");
+	 * Main logic to calculate the new price of the offer
+	 */
+	public float useOfferRule() {
+		boolean offerValid = this.isOfferValid();
+		float totalReduction = 0;
+	
+		if (offerValid) {
+			totalReduction = this.applyOffer();
+		}
+	
+		[% 
+			var hasConditionalTrigger = rule.triggers.exists(t | t.type.name == "IF_MATCH" or t.type.name == "IF_NOT_MATCH");
+			var hasTriggers = not rule.triggers.isEmpty();
+			var printedSomething = false;
+			for (t in rule.triggers) {
+			    var targetName = t.target.name.replaceAll("[^a-zA-Z0-9]", "");
 		%]
-		    [%if (t.type.name == "ALWAYS") { %]
-		    return totalReduction + new [%=targetName%](pricingContext).useOfferRule();
-		    [%} else if (t.type.name == "IF_MATCH") { %]
-		    if (offerValid) return totalReduction + new [%=targetName%](pricingContext).useOfferRule();
-		    [%} else if (t.type.name == "IF_NOT_MATCH") { %]
-		    if (!offerValid) return totalReduction + new [%=targetName%](pricingContext).useOfferRule();
-		    [%} %]
+			[%if (t.type.name == "ALWAYS") { printedSomething = true; %]
+			return totalReduction + new [%=targetName%](pricingContext).useOfferRule();
+			[%} else if (t.type.name == "IF_MATCH") { printedSomething = true; %]
+			if (offerValid) return totalReduction + new [%=targetName%](pricingContext).useOfferRule();
+			[%} else if (t.type.name == "IF_NOT_MATCH") { printedSomething = true; %]
+			if (!offerValid) return totalReduction + new [%=targetName%](pricingContext).useOfferRule();
+			[%} %]
 		[% } %]
+		[%if (hasConditionalTrigger) { %]
+		else { return totalReduction; }
+		[%} else if (not hasTriggers) { %]
 		return totalReduction;
-    }
+		[%} %]
+	}
     
     public String getRuleName() {
     	return "[%=rule.name%]";
