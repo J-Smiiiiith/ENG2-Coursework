@@ -12,7 +12,7 @@ public class Checknumorders10 {
 	}
 
 	public boolean checkCondition(int totalOrders) {
-		return numOrders <= totalOrders;
+		return numOrders >= totalOrders;
 	}
 
 	public String getConditionName() {
