@@ -4,4 +4,4 @@ This is a repository with the code of the assessment of the 2024-25 edition of t
 
 Detailed instructions for this assessment can be found in the [Assessment Specification](eng2h-assessment-2024.pdf). 
 
-In this coursework I achieved a grade of 82%.
+In this coursework I achieved a grade of 80%.
